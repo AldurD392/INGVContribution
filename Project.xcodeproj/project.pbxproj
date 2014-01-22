@@ -24,6 +24,7 @@
 		43D4251318834829008D68F3 /* moreStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43D4251218834829008D68F3 /* moreStoryboard.storyboard */; };
 		43D8625B185E361B0000BDBE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D8625A185E361B0000BDBE /* MapKit.framework */; };
 		43E9DC00185906C2004E9491 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43E9DBFF185906C1004E9491 /* CoreLocation.framework */; };
+		76FCFD95189034A900F72C64 /* coWhereTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 76FCFD94189034A900F72C64 /* coWhereTVC.m */; };
 		C95304C814FECBB400BF68B6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C95304C714FECBB400BF68B6 /* UIKit.framework */; };
 		C95304CA14FECBB400BF68B6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C95304C914FECBB400BF68B6 /* Foundation.framework */; };
 		C95304CC14FECBB400BF68B6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C95304CB14FECBB400BF68B6 /* CoreGraphics.framework */; };
@@ -51,6 +52,8 @@
 		43D4251218834829008D68F3 /* moreStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = moreStoryboard.storyboard; path = IngvAppIOS/more/moreStoryboard.storyboard; sourceTree = SOURCE_ROOT; };
 		43D8625A185E361B0000BDBE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		43E9DBFF185906C1004E9491 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		76FCFD93189034A900F72C64 /* coWhereTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = coWhereTVC.h; path = IngvAppIOS/contribution/coWhereTVC.h; sourceTree = "<group>"; };
+		76FCFD94189034A900F72C64 /* coWhereTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = coWhereTVC.m; path = IngvAppIOS/contribution/coWhereTVC.m; sourceTree = "<group>"; };
 		C95304C314FECBB400BF68B6 /* IngvAppIos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IngvAppIos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C95304C714FECBB400BF68B6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C95304C914FECBB400BF68B6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -155,6 +158,7 @@
 		43EA2DDC187FF37300598DB1 /* contribution */ = {
 			isa = PBXGroup;
 			children = (
+				76FCFD921890347800F72C64 /* ViewControllers */,
 				4304CA4118832A7000539F13 /* coStoryboard.storyboard */,
 			);
 			name = contribution;
@@ -166,6 +170,15 @@
 				4304CA4318832A8100539F13 /* infStoryboard.storyboard */,
 			);
 			name = informazioni;
+			sourceTree = "<group>";
+		};
+		76FCFD921890347800F72C64 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				76FCFD93189034A900F72C64 /* coWhereTVC.h */,
+				76FCFD94189034A900F72C64 /* coWhereTVC.m */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 		C95304B814FECBB300BF68B6 = {
@@ -274,6 +287,7 @@
 				4304CA5218832C9E00539F13 /* MainTabBarController.m in Sources */,
 				4304CA4B18832C4E00539F13 /* MainNavigationController.m in Sources */,
 				4304CA5C18832E2900539F13 /* main.m in Sources */,
+				76FCFD95189034A900F72C64 /* coWhereTVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

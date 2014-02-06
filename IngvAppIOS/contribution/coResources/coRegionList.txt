@@ -1,0 +1,20 @@
+ITC1	Piemonte
+ITC2	Valle d'Aosta
+ITC3	Liguria
+ITC4	Lombardia
+-	Trentino-Alto Adige
+ITH3	Veneto
+ITH4	Friuli-Venezia Giulia
+ITH5	Emilia-Romagna
+ITI1	Toscana
+ITI2	Umbria
+ITI3	Marche
+ITI4	Lazio
+ITF1	Abruzzo
+ITF2	Molise
+ITF3	Campania
+ITF4	Puglia
+ITF5	Basilicata
+ITF6	Calabria
+ITG1	Sicilia
+ITG2	Sardegna

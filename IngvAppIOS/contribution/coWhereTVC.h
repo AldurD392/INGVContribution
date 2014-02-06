@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface coWhereTVC : UITableViewController
+@property (strong, nonatomic) NSDictionary *region;
 
 @end

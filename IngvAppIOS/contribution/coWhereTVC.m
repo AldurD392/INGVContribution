@@ -9,7 +9,7 @@
 #import "coWhereTVC.h"
 #import "coIndirizzoTVC.h"
 
-@interface coWhereTVC ()
+@interface coWhereTVC () <coIndirizzoTVCDelegate>
 @property (weak, nonatomic) IBOutlet UISwitch *currentPositionSwitch;
 
 @end
@@ -21,8 +21,11 @@
     _region = region;
     UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:1]];
     cell.textLabel.text = [[_region allValues] firstObject];
-    
-    NSLog(@"%@", cell);
+}
+
+# pragma mark - coIndirizzoTVC Delegate Methods
+- (void)didFinishSelectingAddress:(NSDictionary *)dataDictionary {
+    self.region = dataDictionary;
 }
 
 # pragma mark - IBActions
@@ -34,8 +37,6 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    // Return the number of sections.
-
     if ([self.currentPositionSwitch isOn]) {
         return 1;
     } else {
@@ -45,14 +46,13 @@
 
 #pragma mark - Navigation
 
-// In a story board-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
     
     if ([segue.identifier isEqualToString:@"coIndirizzoSegue"]) {
         UINavigationController *nc = segue.destinationViewController;
         coIndirizzoTVC *dvc = (coIndirizzoTVC *)[nc topViewController];
+        
+        dvc.delegate = self;
         [dvc loadRegions];
     }
 }

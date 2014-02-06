@@ -8,10 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol coIndirizzoTVCDelegate
+- (void)didFinishSelectingAddress:(NSDictionary *)dataDictionary;
+@end
+
 @interface coIndirizzoTVC : UITableViewController
 
-- (void) loadRegions;
-- (void) loadProvince: (NSString *) regionCode;
-- (void) loadComuni: (NSString *) provinciaCode;
+@property (nonatomic, assign) id <coIndirizzoTVCDelegate> delegate;
+
+- (void)loadRegions;
+- (void)loadProvince:(NSString *)regionCode;
+- (void)loadComuni:(NSString *)provinciaCode;
 
 @end

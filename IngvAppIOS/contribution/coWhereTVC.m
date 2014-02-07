@@ -20,6 +20,7 @@ typedef enum tipoIndirizzo {
 @property (weak, nonatomic) IBOutlet UISwitch *currentPositionSwitch;
 @property (weak, nonatomic) IBOutlet UITextField *viaTextField;
 @property (weak, nonatomic) IBOutlet UIView *dettagliTextField;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *nextBarButtonItem;
 @property tipoIndirizzo tipoIndirizzo;
 @end
 
@@ -75,6 +76,12 @@ typedef enum tipoIndirizzo {
     self.viaTextField.text = Nil;
 }
 
+- (void) setFrazione:(NSDictionary *)frazione {
+    _frazione = frazione;
+    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForItem:3 inSection:1]];
+    cell.detailTextLabel.text = [[_frazione allValues] firstObject];
+}
+
 # pragma mark - coIndirizzoTVC Delegate Methods
 - (void)didFinishSelectingAddress:(NSDictionary *)dataDictionary {
     if (self.tipoIndirizzo == regione) {
@@ -90,7 +97,30 @@ typedef enum tipoIndirizzo {
 
 # pragma mark - IBActions
 - (IBAction)currestPositionSwitchDidChanged:(UISwitch *)sender {
-    [self.tableView reloadData];
+    if ([sender isOn]) {
+        self.nextBarButtonItem.enabled = TRUE;
+    } else {
+        self.nextBarButtonItem.enabled = FALSE;
+    }
+    
+    //Put this code where you want to reload your table view
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [UIView transitionWithView:self.tableView
+                          duration:0.1f
+                           options:UIViewAnimationOptionTransitionCrossDissolve
+                        animations:^(void) {
+                            [self.tableView reloadData];
+                        } completion:NULL];
+    });
+}
+
+- (IBAction)didEndOnExitEnteringDetail:(UITextField *)sender {
+    // Quando l'utente preme "Fatto" sulla tastiera, viene mostrato il dettaglio.
+    if ([sender isEqual:self.viaTextField]) {
+        self.nextBarButtonItem.enabled = TRUE;
+    } else {
+        
+    }
 }
 
 #pragma mark - Table view data source
@@ -139,7 +169,7 @@ typedef enum tipoIndirizzo {
         
         dvc.delegate = self;
         self.tipoIndirizzo = frazione;
-        [dvc loadFrazioni:[[self.provincia allKeys] firstObject]];
+        [dvc loadFrazioni:[[self.comune allKeys] firstObject] withRegionCode:[[self.region allKeys] firstObject]];
     }
 }
 

@@ -24,6 +24,28 @@
 		43D4251318834829008D68F3 /* moreStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43D4251218834829008D68F3 /* moreStoryboard.storyboard */; };
 		43D8625B185E361B0000BDBE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D8625A185E361B0000BDBE /* MapKit.framework */; };
 		43E9DC00185906C2004E9491 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43E9DBFF185906C1004E9491 /* CoreLocation.framework */; };
+		76001ECF18A5185B00608083 /* coWhereDetailTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 76001ECE18A5185B00608083 /* coWhereDetailTVC.m */; };
+		76001ED218A520CF00608083 /* coFloorTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 76001ED118A520CF00608083 /* coFloorTVC.m */; };
+		76001EEB18A52D7300608083 /* -.csv in Resources */ = {isa = PBXBuildFile; fileRef = 76001ED718A52D7300608083 /* -.csv */; };
+		76001EEC18A52D7300608083 /* ITC1.csv in Resources */ = {isa = PBXBuildFile; fileRef = 76001ED818A52D7300608083 /* ITC1.csv */; };
+		76001EED18A52D7300608083 /* ITC2.csv in Resources */ = {isa = PBXBuildFile; fileRef = 76001ED918A52D7300608083 /* ITC2.csv */; };
+		76001EEE18A52D7300608083 /* ITC3.csv in Resources */ = {isa = PBXBuildFile; fileRef = 76001EDA18A52D7300608083 /* ITC3.csv */; };
+		76001EEF18A52D7300608083 /* ITC4.csv in Resources */ = {isa = PBXBuildFile; fileRef = 76001EDB18A52D7300608083 /* ITC4.csv */; };
+		76001EF018A52D7300608083 /* ITF1.csv in Resources */ = {isa = PBXBuildFile; fileRef = 76001EDC18A52D7300608083 /* ITF1.csv */; };
+		76001EF118A52D7300608083 /* ITF2.csv in Resources */ = {isa = PBXBuildFile; fileRef = 76001EDD18A52D7300608083 /* ITF2.csv */; };
+		76001EF218A52D7300608083 /* ITF3.csv in Resources */ = {isa = PBXBuildFile; fileRef = 76001EDE18A52D7300608083 /* ITF3.csv */; };
+		76001EF318A52D7300608083 /* ITF4.csv in Resources */ = {isa = PBXBuildFile; fileRef = 76001EDF18A52D7300608083 /* ITF4.csv */; };
+		76001EF418A52D7300608083 /* ITF5.csv in Resources */ = {isa = PBXBuildFile; fileRef = 76001EE018A52D7300608083 /* ITF5.csv */; };
+		76001EF518A52D7300608083 /* ITF6.csv in Resources */ = {isa = PBXBuildFile; fileRef = 76001EE118A52D7300608083 /* ITF6.csv */; };
+		76001EF618A52D7300608083 /* ITG1.csv in Resources */ = {isa = PBXBuildFile; fileRef = 76001EE218A52D7300608083 /* ITG1.csv */; };
+		76001EF718A52D7300608083 /* ITG2.csv in Resources */ = {isa = PBXBuildFile; fileRef = 76001EE318A52D7300608083 /* ITG2.csv */; };
+		76001EF818A52D7300608083 /* ITH3.csv in Resources */ = {isa = PBXBuildFile; fileRef = 76001EE418A52D7300608083 /* ITH3.csv */; };
+		76001EF918A52D7300608083 /* ITH4.csv in Resources */ = {isa = PBXBuildFile; fileRef = 76001EE518A52D7300608083 /* ITH4.csv */; };
+		76001EFA18A52D7300608083 /* ITH5.csv in Resources */ = {isa = PBXBuildFile; fileRef = 76001EE618A52D7300608083 /* ITH5.csv */; };
+		76001EFB18A52D7300608083 /* ITI1.csv in Resources */ = {isa = PBXBuildFile; fileRef = 76001EE718A52D7300608083 /* ITI1.csv */; };
+		76001EFC18A52D7300608083 /* ITI2.csv in Resources */ = {isa = PBXBuildFile; fileRef = 76001EE818A52D7300608083 /* ITI2.csv */; };
+		76001EFD18A52D7300608083 /* ITI3.csv in Resources */ = {isa = PBXBuildFile; fileRef = 76001EE918A52D7300608083 /* ITI3.csv */; };
+		76001EFE18A52D7300608083 /* ITI4.csv in Resources */ = {isa = PBXBuildFile; fileRef = 76001EEA18A52D7300608083 /* ITI4.csv */; };
 		76765F6118A3DEEE0069A76C /* coWhenTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 76765F6018A3DEEE0069A76C /* coWhenTVC.m */; };
 		76765F6B18A3E59C0069A76C /* coIndirizzoTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 76765F6A18A3E59C0069A76C /* coIndirizzoTVC.m */; };
 		76765F6F18A3E9710069A76C /* coComuniList.txt in Resources */ = {isa = PBXBuildFile; fileRef = 76765F6C18A3E9710069A76C /* coComuniList.txt */; };
@@ -57,6 +79,30 @@
 		43D4251218834829008D68F3 /* moreStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = moreStoryboard.storyboard; path = IngvAppIOS/more/moreStoryboard.storyboard; sourceTree = SOURCE_ROOT; };
 		43D8625A185E361B0000BDBE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		43E9DBFF185906C1004E9491 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		76001ECD18A5185B00608083 /* coWhereDetailTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = coWhereDetailTVC.h; path = IngvAppIOS/contribution/coWhereDetailTVC.h; sourceTree = "<group>"; };
+		76001ECE18A5185B00608083 /* coWhereDetailTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = coWhereDetailTVC.m; path = IngvAppIOS/contribution/coWhereDetailTVC.m; sourceTree = "<group>"; };
+		76001ED018A520CF00608083 /* coFloorTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = coFloorTVC.h; path = IngvAppIOS/contribution/coFloorTVC.h; sourceTree = "<group>"; };
+		76001ED118A520CF00608083 /* coFloorTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = coFloorTVC.m; path = IngvAppIOS/contribution/coFloorTVC.m; sourceTree = "<group>"; };
+		76001ED718A52D7300608083 /* -.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "-.csv"; sourceTree = "<group>"; };
+		76001ED818A52D7300608083 /* ITC1.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ITC1.csv; sourceTree = "<group>"; };
+		76001ED918A52D7300608083 /* ITC2.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ITC2.csv; sourceTree = "<group>"; };
+		76001EDA18A52D7300608083 /* ITC3.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ITC3.csv; sourceTree = "<group>"; };
+		76001EDB18A52D7300608083 /* ITC4.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ITC4.csv; sourceTree = "<group>"; };
+		76001EDC18A52D7300608083 /* ITF1.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ITF1.csv; sourceTree = "<group>"; };
+		76001EDD18A52D7300608083 /* ITF2.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ITF2.csv; sourceTree = "<group>"; };
+		76001EDE18A52D7300608083 /* ITF3.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ITF3.csv; sourceTree = "<group>"; };
+		76001EDF18A52D7300608083 /* ITF4.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ITF4.csv; sourceTree = "<group>"; };
+		76001EE018A52D7300608083 /* ITF5.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ITF5.csv; sourceTree = "<group>"; };
+		76001EE118A52D7300608083 /* ITF6.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ITF6.csv; sourceTree = "<group>"; };
+		76001EE218A52D7300608083 /* ITG1.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ITG1.csv; sourceTree = "<group>"; };
+		76001EE318A52D7300608083 /* ITG2.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ITG2.csv; sourceTree = "<group>"; };
+		76001EE418A52D7300608083 /* ITH3.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ITH3.csv; sourceTree = "<group>"; };
+		76001EE518A52D7300608083 /* ITH4.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ITH4.csv; sourceTree = "<group>"; };
+		76001EE618A52D7300608083 /* ITH5.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ITH5.csv; sourceTree = "<group>"; };
+		76001EE718A52D7300608083 /* ITI1.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ITI1.csv; sourceTree = "<group>"; };
+		76001EE818A52D7300608083 /* ITI2.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ITI2.csv; sourceTree = "<group>"; };
+		76001EE918A52D7300608083 /* ITI3.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ITI3.csv; sourceTree = "<group>"; };
+		76001EEA18A52D7300608083 /* ITI4.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ITI4.csv; sourceTree = "<group>"; };
 		76765F5F18A3DEEE0069A76C /* coWhenTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = coWhenTVC.h; path = IngvAppIOS/contribution/coWhenTVC.h; sourceTree = "<group>"; };
 		76765F6018A3DEEE0069A76C /* coWhenTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = coWhenTVC.m; path = IngvAppIOS/contribution/coWhenTVC.m; sourceTree = "<group>"; };
 		76765F6918A3E59C0069A76C /* coIndirizzoTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = coIndirizzoTVC.h; path = IngvAppIOS/contribution/coIndirizzoTVC.h; sourceTree = "<group>"; };
@@ -185,9 +231,38 @@
 			name = informazioni;
 			sourceTree = "<group>";
 		};
+		76001ED618A52D7300608083 /* Frazioni */ = {
+			isa = PBXGroup;
+			children = (
+				76001ED718A52D7300608083 /* -.csv */,
+				76001ED818A52D7300608083 /* ITC1.csv */,
+				76001ED918A52D7300608083 /* ITC2.csv */,
+				76001EDA18A52D7300608083 /* ITC3.csv */,
+				76001EDB18A52D7300608083 /* ITC4.csv */,
+				76001EDC18A52D7300608083 /* ITF1.csv */,
+				76001EDD18A52D7300608083 /* ITF2.csv */,
+				76001EDE18A52D7300608083 /* ITF3.csv */,
+				76001EDF18A52D7300608083 /* ITF4.csv */,
+				76001EE018A52D7300608083 /* ITF5.csv */,
+				76001EE118A52D7300608083 /* ITF6.csv */,
+				76001EE218A52D7300608083 /* ITG1.csv */,
+				76001EE318A52D7300608083 /* ITG2.csv */,
+				76001EE418A52D7300608083 /* ITH3.csv */,
+				76001EE518A52D7300608083 /* ITH4.csv */,
+				76001EE618A52D7300608083 /* ITH5.csv */,
+				76001EE718A52D7300608083 /* ITI1.csv */,
+				76001EE818A52D7300608083 /* ITI2.csv */,
+				76001EE918A52D7300608083 /* ITI3.csv */,
+				76001EEA18A52D7300608083 /* ITI4.csv */,
+			);
+			name = Frazioni;
+			path = IngvAppIOS/contribution/coResources/Frazioni;
+			sourceTree = "<group>";
+		};
 		76765F6818A3E5200069A76C /* coResources */ = {
 			isa = PBXGroup;
 			children = (
+				76001ED618A52D7300608083 /* Frazioni */,
 				76765F6C18A3E9710069A76C /* coComuniList.txt */,
 				76765F6D18A3E9710069A76C /* coProvinceList.txt */,
 				76765F6E18A3E9710069A76C /* coRegionList.txt */,
@@ -198,6 +273,10 @@
 		76FCFD921890347800F72C64 /* coViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				76001ED018A520CF00608083 /* coFloorTVC.h */,
+				76001ED118A520CF00608083 /* coFloorTVC.m */,
+				76001ECD18A5185B00608083 /* coWhereDetailTVC.h */,
+				76001ECE18A5185B00608083 /* coWhereDetailTVC.m */,
 				76765F6918A3E59C0069A76C /* coIndirizzoTVC.h */,
 				76765F6A18A3E59C0069A76C /* coIndirizzoTVC.m */,
 				76FCFD93189034A900F72C64 /* coWhereTVC.h */,
@@ -290,18 +369,38 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76001EF218A52D7300608083 /* ITF3.csv in Resources */,
 				4304CA4418832A8100539F13 /* infStoryboard.storyboard in Resources */,
 				4304CA841883363000539F13 /* InfoPlist.strings in Resources */,
+				76001EFB18A52D7300608083 /* ITI1.csv in Resources */,
+				76001EF518A52D7300608083 /* ITF6.csv in Resources */,
 				76765F7118A3E9710069A76C /* coRegionList.txt in Resources */,
+				76001EF118A52D7300608083 /* ITF2.csv in Resources */,
+				76001EEC18A52D7300608083 /* ITC1.csv in Resources */,
+				76001EED18A52D7300608083 /* ITC2.csv in Resources */,
+				76001EF618A52D7300608083 /* ITG1.csv in Resources */,
 				4304CA4218832A7000539F13 /* coStoryboard.storyboard in Resources */,
+				76001EEF18A52D7300608083 /* ITC4.csv in Resources */,
+				76001EF318A52D7300608083 /* ITF4.csv in Resources */,
+				76001EEB18A52D7300608083 /* -.csv in Resources */,
 				4304CA5318832C9E00539F13 /* mainTabBar1.png in Resources */,
 				4304CA801883339400539F13 /* pcStoryboard.storyboard in Resources */,
+				76001EF018A52D7300608083 /* ITF1.csv in Resources */,
+				76001EEE18A52D7300608083 /* ITC3.csv in Resources */,
 				4304CA4818832BB500539F13 /* mainStoryboard.storyboard in Resources */,
 				4304CA821883348E00539F13 /* Default-568h@2x.png in Resources */,
 				4304CA8D18833F3E00539F13 /* beStoryboard.storyboard in Resources */,
 				76765F7018A3E9710069A76C /* coProvinceList.txt in Resources */,
 				76765F6F18A3E9710069A76C /* coComuniList.txt in Resources */,
+				76001EF718A52D7300608083 /* ITG2.csv in Resources */,
+				76001EF918A52D7300608083 /* ITH4.csv in Resources */,
+				76001EF418A52D7300608083 /* ITF5.csv in Resources */,
+				76001EF818A52D7300608083 /* ITH3.csv in Resources */,
+				76001EFE18A52D7300608083 /* ITI4.csv in Resources */,
+				76001EFD18A52D7300608083 /* ITI3.csv in Resources */,
+				76001EFA18A52D7300608083 /* ITH5.csv in Resources */,
 				43D4251318834829008D68F3 /* moreStoryboard.storyboard in Resources */,
+				76001EFC18A52D7300608083 /* ITI2.csv in Resources */,
 				4304CA5418832C9E00539F13 /* mainTabBar2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -319,7 +418,9 @@
 				4304CA4B18832C4E00539F13 /* MainNavigationController.m in Sources */,
 				76765F6B18A3E59C0069A76C /* coIndirizzoTVC.m in Sources */,
 				4304CA5C18832E2900539F13 /* main.m in Sources */,
+				76001ECF18A5185B00608083 /* coWhereDetailTVC.m in Sources */,
 				76FCFD95189034A900F72C64 /* coWhereTVC.m in Sources */,
+				76001ED218A520CF00608083 /* coFloorTVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

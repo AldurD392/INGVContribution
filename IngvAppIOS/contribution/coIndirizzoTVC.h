@@ -19,6 +19,6 @@
 - (void)loadRegions;
 - (void)loadProvince:(NSString *)regionCode;
 - (void)loadComuni:(NSString *)provinciaCode;
-- (void)loadFrazioni:(NSString *)comuneCode;
+- (void) loadFrazioni:(NSString *)comuneCode withRegionCode:(NSString*) regionCode;
 
 @end

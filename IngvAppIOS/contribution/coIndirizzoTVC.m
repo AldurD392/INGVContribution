@@ -97,11 +97,11 @@
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void) {
         NSMutableDictionary *returnDict = [[NSMutableDictionary alloc] init];
         
-        NSString* provincePath = [[NSBundle mainBundle] pathForResource:COMUNILIST ofType:@"txt"];
+        NSString* comuniPath = [[NSBundle mainBundle] pathForResource:COMUNILIST ofType:@"txt"];
         
         //TODO: handle accents
         NSError *error;
-        NSString *bufferString = [NSString stringWithContentsOfFile:provincePath encoding:NSISOLatin1StringEncoding error:&error];
+        NSString *bufferString = [NSString stringWithContentsOfFile:comuniPath encoding:NSISOLatin1StringEncoding error:&error];
         
         if (error != Nil) {
             NSLog(@"%@", [error description]);
@@ -133,9 +133,45 @@
     });
 }
 
-- (void) loadFrazioni:(NSString *)comuneCode {
-    //TODO
-    self.dataDict = @{@"A" : @"Acilia"};
+- (void) loadFrazioni:(NSString *)comuneCode withRegionCode:(NSString*) regionCode {
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void) {
+        NSMutableDictionary *returnDict = [[NSMutableDictionary alloc] init];
+        
+        NSString* frazioniPath = [[NSBundle mainBundle] pathForResource:regionCode ofType:@"csv"];
+        
+        //TODO: handle accents
+        NSError *error;
+        NSString *bufferString = [NSString stringWithContentsOfFile:frazioniPath encoding:NSISOLatin1StringEncoding error:&error];
+        
+        if (error != Nil) {
+            NSLog(@"%@", [error description]);
+        }
+        
+        NSCharacterSet *cset = [NSCharacterSet characterSetWithCharactersInString:@"\r"];
+        
+        BOOL code = FALSE;
+        for (NSString *string in [bufferString componentsSeparatedByCharactersInSet:cset]) {
+           
+            NSCharacterSet *tabSet = [NSCharacterSet characterSetWithCharactersInString:@";"];
+            NSArray* splitString = [string componentsSeparatedByCharactersInSet:tabSet];
+            
+            if ([[splitString firstObject] isEqualToString:comuneCode]) {
+                code = TRUE;
+                NSString *code = [splitString objectAtIndex:1];
+                NSString *frazione = [splitString objectAtIndex:2];
+                
+                [returnDict setValue:frazione forKey:code];
+                
+            } else if (code == TRUE) {
+                break;
+            }
+        }
+        
+        dispatch_async(dispatch_get_main_queue(), ^(void) {
+            self.dataDict = [returnDict copy];
+            [self.tableView reloadData];
+        });
+    });
 }
 
 #pragma mark - Table view data source

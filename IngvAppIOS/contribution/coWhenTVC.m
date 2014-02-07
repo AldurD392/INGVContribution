@@ -17,7 +17,16 @@
 
 # pragma mark - IBActions
 - (IBAction)currestPositionSwitchDidChanged:(UISwitch *)sender {
-    [self.tableView reloadData];
+
+    //Put this code where you want to reload your table view
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [UIView transitionWithView:self.tableView
+                          duration:0.2f
+                           options:UIViewAnimationOptionTransitionCrossDissolve
+                        animations:^(void) {
+                            [self.tableView reloadData];
+                        } completion:NULL];
+    });
 }
 
 #pragma mark - Table view data source

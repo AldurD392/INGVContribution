@@ -6,7 +6,7 @@ ITC1	ITC17	Asti	AT
 ITC1	ITC18	Alessandria	AL
 ITC1	ITC13	Biella	BI
 ITC1	ITC14	Verbano-Cusio-Ossola	VB
-ITC2	ITC2	Valle d'Aosta/Vallée d'Aoste	AO
+ITC2	ITC2	Valle d'Aosta	AO
 ITC4	ITC41	Varese	VA
 ITC4	ITC42	Como	CO
 ITC4	ITC44	Sondrio	SO
@@ -18,8 +18,8 @@ ITC4	ITC4A	Cremona	CR
 ITC4	ITC4B	Mantova	MN
 ITC4	ITC43	Lecco	LC
 ITC4	ITC49	Lodi	LO
-ITC4	ITC4D	Monza e della Brianza	MB
--	ITH10	Bolzano/Bozen	BZ
+ITC4	ITC4D	Monza	MB
+-	ITH10	Bolzano	BZ
 -	ITH20	Trento	TN
 ITH3	ITH31	Verona	VR
 ITH3	ITH32	Vicenza	VI
@@ -43,7 +43,7 @@ ITH5	ITH54	Modena	MO
 ITH5	ITH55	Bologna	BO
 ITH5	ITH56	Ferrara	FE
 ITH5	ITH57	Ravenna	RA
-ITH5	ITH58	Forlì-Cesena	FC
+ITH5	ITH58	Forl“-Cesena	FC
 ITH5	ITH59	Rimini	RN
 ITI1	ITI11	Massa-Carrara	MS
 ITI1	ITI12	Lucca	LU

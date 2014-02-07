@@ -9,9 +9,18 @@
 #import "coWhereTVC.h"
 #import "coIndirizzoTVC.h"
 
+typedef enum tipoIndirizzo {
+    regione = 1,
+    provincia,
+    comuni,
+    frazione
+} tipoIndirizzo;
+
 @interface coWhereTVC () <coIndirizzoTVCDelegate>
 @property (weak, nonatomic) IBOutlet UISwitch *currentPositionSwitch;
-
+@property (weak, nonatomic) IBOutlet UITextField *viaTextField;
+@property (weak, nonatomic) IBOutlet UIView *dettagliTextField;
+@property tipoIndirizzo tipoIndirizzo;
 @end
 
 @implementation coWhereTVC
@@ -20,12 +29,63 @@
 - (void) setRegion:(NSDictionary *)region {
     _region = region;
     UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:1]];
-    cell.textLabel.text = [[_region allValues] firstObject];
+    cell.detailTextLabel.text = [[_region allValues] firstObject];
+    
+    cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:1]];
+    cell.hidden = NO;
+    
+    self.provincia = Nil;
+}
+
+- (void) setProvincia:(NSDictionary *)provincia {
+    _provincia = provincia;
+    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:1]];
+    cell.detailTextLabel.text = [[_provincia allValues] firstObject];
+    
+    cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:2 inSection:1]];
+    if (_provincia != Nil) {
+        cell.hidden = NO;
+    } else {
+        cell.hidden = YES;
+    }
+    self.comune = Nil;
+}
+
+- (void) setComune:(NSDictionary *)comune {
+    _comune = comune;
+    
+    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:2 inSection:1]];
+    cell.detailTextLabel.text = [[_comune allValues] firstObject];
+    
+    if (_comune != Nil) {
+        cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:3 inSection:1]];
+        cell.hidden = NO;
+        
+        cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:4 inSection:1]];
+        cell.hidden = NO;
+    } else {
+        cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:3 inSection:1]];
+        cell.hidden = YES;
+        
+        cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:4 inSection:1]];
+        cell.hidden = YES;
+    }
+    
+    self.frazione = Nil;
+    self.viaTextField.text = Nil;
 }
 
 # pragma mark - coIndirizzoTVC Delegate Methods
 - (void)didFinishSelectingAddress:(NSDictionary *)dataDictionary {
-    self.region = dataDictionary;
+    if (self.tipoIndirizzo == regione) {
+        self.region = dataDictionary;
+    } else if (self.tipoIndirizzo == provincia) {
+        self.provincia = dataDictionary;
+    } else if (self.tipoIndirizzo == comuni) {
+        self.comune = dataDictionary;
+    } else if (self.tipoIndirizzo == frazione) {
+        self.frazione = dataDictionary;
+    }
 }
 
 # pragma mark - IBActions
@@ -48,12 +108,38 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
-    if ([segue.identifier isEqualToString:@"coIndirizzoSegue"]) {
+    if ([segue.identifier isEqualToString:@"coRegioneSegue"]) {
         UINavigationController *nc = segue.destinationViewController;
         coIndirizzoTVC *dvc = (coIndirizzoTVC *)[nc topViewController];
+        [dvc setTitle:@"Regione"];
         
         dvc.delegate = self;
+        self.tipoIndirizzo = regione;
         [dvc loadRegions];
+    } else if ([segue.identifier isEqualToString:@"coProvinciaSegue"]) {
+        UINavigationController *nc = segue.destinationViewController;
+        coIndirizzoTVC *dvc = (coIndirizzoTVC *)[nc topViewController];
+        [dvc setTitle:@"Provincia"];
+        
+        dvc.delegate = self;
+        self.tipoIndirizzo = provincia;
+        [dvc loadProvince:[[self.region allKeys] firstObject]];
+    } else if ([segue.identifier isEqualToString:@"coComuneSegue"]) {
+        UINavigationController *nc = segue.destinationViewController;
+        coIndirizzoTVC *dvc = (coIndirizzoTVC *)[nc topViewController];
+        [dvc setTitle:@"Comune"];
+        
+        dvc.delegate = self;
+        self.tipoIndirizzo = comuni;
+        [dvc loadComuni:[[self.provincia allKeys] firstObject]];
+    } else if ([segue.identifier isEqualToString:@"coFrazioneSegue"]) {
+        UINavigationController *nc = segue.destinationViewController;
+        coIndirizzoTVC *dvc = (coIndirizzoTVC *)[nc topViewController];
+        [dvc setTitle:@"Frazione"];
+        
+        dvc.delegate = self;
+        self.tipoIndirizzo = frazione;
+        [dvc loadFrazioni:[[self.provincia allKeys] firstObject]];
     }
 }
 

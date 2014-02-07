@@ -30,6 +30,8 @@
 # pragma mark - File parsing
 
 #define REGIONLIST @"coRegionList"
+#define PROVINCELIST @"coProvinceList"
+#define COMUNILIST @"coComuniList"
 
 - (void) loadRegions {
     NSMutableDictionary* mutableDict = [[NSMutableDictionary alloc] init];
@@ -58,11 +60,82 @@
 }
 
 - (void) loadProvince:(NSString *)regionCode {
-    //    TODO
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void) {
+        NSMutableDictionary *returnDict = [[NSMutableDictionary alloc] init];
+        
+        NSString* provincePath = [[NSBundle mainBundle] pathForResource:PROVINCELIST ofType:@"txt"];
+
+        //TODO: handle accents
+        NSError *error;
+        NSString *bufferString = [NSString stringWithContentsOfFile:provincePath encoding:NSISOLatin1StringEncoding error:&error];
+        
+        if (error != Nil) {
+            NSLog(@"%@", [error description]);
+        }
+        
+        NSCharacterSet *cset = [NSCharacterSet characterSetWithCharactersInString:@"\n"];
+        for (NSString *string in [bufferString componentsSeparatedByCharactersInSet:cset]) {
+            NSCharacterSet *tabSet = [NSCharacterSet characterSetWithCharactersInString:@"\t"];
+            NSArray* splitString = [string componentsSeparatedByCharactersInSet:tabSet];
+            
+            if ([[splitString firstObject] isEqualToString:regionCode]) {
+                NSString* code = [splitString objectAtIndex:1];
+                NSString *provincia = [splitString objectAtIndex:2];
+                                
+                [returnDict setValue:provincia forKey:code];
+            }
+        }
+        
+        dispatch_async(dispatch_get_main_queue(), ^(void) {
+            self.dataDict = [returnDict copy];
+        });
+    });
 }
 
 - (void) loadComuni:(NSString *)provinciaCode {
-    //    TODO
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void) {
+        NSMutableDictionary *returnDict = [[NSMutableDictionary alloc] init];
+        
+        NSString* provincePath = [[NSBundle mainBundle] pathForResource:COMUNILIST ofType:@"txt"];
+        
+        //TODO: handle accents
+        NSError *error;
+        NSString *bufferString = [NSString stringWithContentsOfFile:provincePath encoding:NSISOLatin1StringEncoding error:&error];
+        
+        if (error != Nil) {
+            NSLog(@"%@", [error description]);
+        }
+        
+        NSCharacterSet *cset = [NSCharacterSet characterSetWithCharactersInString:@"\n"];
+        
+        BOOL code = FALSE;
+        for (NSString *string in [bufferString componentsSeparatedByCharactersInSet:cset]) {
+            NSCharacterSet *tabSet = [NSCharacterSet characterSetWithCharactersInString:@"\t"];
+            NSArray* splitString = [string componentsSeparatedByCharactersInSet:tabSet];
+            
+            if ([[splitString firstObject] isEqualToString:provinciaCode]) {
+                code = TRUE;
+                NSString *code = [splitString objectAtIndex:1];
+                NSString *comune = [[splitString objectAtIndex:2] stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+                
+                [returnDict setValue:comune forKey:code];
+                
+            } else if (code == TRUE) {
+                break;
+            }
+        }
+        
+        dispatch_async(dispatch_get_main_queue(), ^(void) {
+            self.dataDict = [returnDict copy];
+            [self.tableView reloadData];
+        });
+    });
+}
+
+- (void) loadFrazioni:(NSString *)comuneCode {
+    //TODO
+    self.dataDict = @{@"A" : @"Acilia"};
 }
 
 #pragma mark - Table view data source

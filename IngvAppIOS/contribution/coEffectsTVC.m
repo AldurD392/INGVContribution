@@ -18,6 +18,7 @@
 @end
 
 @implementation coEffectsTVC
+
 - (IBAction)sliderValueChanged:(UISlider *)sender {
     self.effectSlider.value = round(sender.value);
     

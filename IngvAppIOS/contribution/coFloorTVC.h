@@ -11,5 +11,4 @@
 
 @interface coFloorTVC : UITableViewController
 @property (assign, nonatomic) coWhereDetailTVC* delegate;
-@property (strong, nonatomic) NSArray *floorsArray; // of NSStrings
 @end

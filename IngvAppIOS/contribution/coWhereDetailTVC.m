@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UITableViewCell *apertoCell;
 @property (weak, nonatomic) IBOutlet UITableViewCell *floorCell;
 @property (weak, nonatomic) IBOutlet UITableViewCell *totalFloorsCell;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *nextBarButtonItem;
 
 @end
 
@@ -23,18 +24,34 @@
 # pragma mark - Setters and Getters
 - (void) setTotalFloors:(NSInteger)totalFloors {
     _totalFloors = totalFloors;
-    self.totalFloorsCell.detailTextLabel.text = [NSString stringWithFormat:@"%d", _totalFloors];
+    
+    if (_totalFloors == 0) {
+        self.totalFloorsCell.hidden = YES;
+    }
+    
+    self.totalFloorsCell.detailTextLabel.text = (_totalFloors != 0) ? [NSString stringWithFormat:@"%d", _totalFloors] : Nil;
 
     [self.tableView reloadData];
-//    [self.tableView reloadRowsAtIndexPaths:@[[self.tableView indexPathForCell:self.totalFloorsCell]] withRowAnimation:UITableViewRowAnimationAutomatic];
+    self.nextBarButtonItem.enabled = YES;
 }
 
 - (void) setFloor:(NSInteger)floor {
     _floor = floor;
-    self.floorCell.detailTextLabel.text = [NSString stringWithFormat:@"%d", _floor];
+    self.floorCell.detailTextLabel.text = (_floor != -2) ? [NSString stringWithFormat:@"%d", _floor] : Nil;
+    self.totalFloorsCell.hidden = NO;
     
     [self.tableView reloadData];
-//    [self.tableView reloadRowsAtIndexPaths:@[[self.tableView indexPathForCell:self.floorCell]] withRowAnimation:UITableViewRowAnimationAutomatic];
+}
+
+- (void) setWhereDetail:(NSInteger)whereDetail {
+    _whereDetail = whereDetail;
+    if (_whereDetail == 0) {
+        self.nextBarButtonItem.enabled = NO;
+        self.floor = -2;
+        self.totalFloors = 0;
+    } else {
+        self.nextBarButtonItem.enabled = YES;
+    }
 }
 
 - (void)markDetailCell:(UITableViewCell *) cell {
@@ -87,41 +104,10 @@
     UINavigationController *nc = segue.destinationViewController;
     coFloorTVC *cftvc = (coFloorTVC *)[nc topViewController];
     cftvc.delegate = self;
-
     
     if ([segue.identifier isEqualToString:@"coWhereFloorSegue"]) {
-        
-        cftvc.title = @"Piano";
-        cftvc.floorsArray = @[@"Interrato",
-                              @"Terreno",
-                              @"1° Piano",
-                              @"2° Piano",
-                              @"3° Piano",
-                              @"4° Piano",
-                              @"5° Piano",
-                              @"6° Piano",
-                              @"7° Piano",
-                              @"8° Piano",
-                              @"9° Piano",
-                              @"10° Piano",
-                              @"Superiore"
-                              ];
         self.value = numberFloor;
     } else if ([segue.identifier isEqualToString:@"coWhereTotalFloorsSegue"]) {
-        
-        cftvc.title = @"Numero totale di piani";
-        cftvc.floorsArray = @[@"1 Piano",
-                              @"2 Piani",
-                              @"3 Piani",
-                              @"4 Piani",
-                              @"5 Piani",
-                              @"6 Piani",
-                              @"7 Piani",
-                              @"8 Piani",
-                              @"9 Piani",
-                              @"10 Piani",
-                              @"Superiore"
-                              ];
         self.value = totalFloor;
     }
 }

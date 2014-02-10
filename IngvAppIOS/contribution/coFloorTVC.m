@@ -14,40 +14,36 @@
 
 @implementation coFloorTVC
 
-# pragma mark - Setters and Getters
--(void)setFloorsArray:(NSArray *)floorsArray {
-    _floorsArray = floorsArray;
-    [self.tableView reloadData];
-}
-
 #pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.floorsArray count];
-}
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (self.delegate.value == numberFloor) {
         self.delegate.floor = indexPath.row - 1;
     } else if (self.delegate.value == totalFloor) {
-        self.delegate.totalFloors = indexPath.row;
+        self.delegate.totalFloors = indexPath.row + 1;
     }
     
     [self dismissViewControllerAnimated:TRUE completion:Nil];
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *CellIdentifier = @"coFloorIdentifierCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row < self.delegate.floor && self.delegate.value == totalFloor) {
+            return 0;
+    }
     
-    cell.textLabel.text = [self.floorsArray objectAtIndex:indexPath.row];
+    return tableView.rowHeight;
+}
+
+- (void) viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     
-    return cell;
+    if (self.delegate.value == totalFloor) {
+        for (int i = 0; i < self.delegate.floor; i++) {
+            [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForItem:i inSection:0]].hidden = YES;
+        }
+        
+        [self.tableView reloadData];
+    }
 }
 
 @end

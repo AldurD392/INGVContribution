@@ -701,13 +701,14 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     <navigationItem key="navigationItem" title="Effetti percepiti" id="M7K-Xg-rqN">
                         <barButtonItem key="rightBarButtonItem" title="Avanti" id="Uqs-H4-FB8">
                             <connections>
-                                <segue destination="lQI-40-Lsr" kind="push" id="ua9-eq-keY"/>
+                                <action selector="nextButtonTapped:" destination="d0E-rG-JUs" id="Vi4-NJ-8Yf"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="effectSlider" destination="383-GZ-V2P" id="r9J-d6-vis"/>
                         <outlet property="effectsTextView" destination="kze-q1-qag" id="6XQ-a0-06M"/>
+                        <segue destination="lQI-40-Lsr" kind="push" identifier="coPauraEquilibrioSegue" id="zEb-wg-bxK"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yQ8-Et-cr6" userLabel="First Responder" sceneMemberID="firstResponder"/>

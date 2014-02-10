@@ -8,7 +8,8 @@
 
 #import "coEffectsTVC.h"
 
-@interface coEffectsTVC ()
+
+@interface coEffectsTVC () <UIActionSheetDelegate>
 @property (weak, nonatomic) IBOutlet UISlider *effectSlider;
 @property (weak, nonatomic) IBOutlet UITextView *effectsTextView;
 
@@ -17,7 +18,6 @@
 @end
 
 @implementation coEffectsTVC
-
 - (IBAction)sliderValueChanged:(UISlider *)sender {
     self.effectSlider.value = round(sender.value);
     
@@ -40,6 +40,32 @@
     self.effectsTextView.text = [self.labelArray objectAtIndex:0];
     self.effectsTextView.selectable = NO;
 }
+
+- (IBAction)nextButtonTapped:(id)sender
+{
+    UIActionSheet *actionSheet = [[UIActionSheet alloc]
+                                  initWithTitle:@"Vuoi compilare il questionario esteso?"
+                                  delegate:self
+                                  cancelButtonTitle:@"Indietro"
+                                  destructiveButtonTitle:nil
+                                  otherButtonTitles:@"Si",@"No",nil];
+    [actionSheet showInView:self.view];
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    NSString* buttonName = [actionSheet buttonTitleAtIndex:buttonIndex];
+    
+    if ([buttonName isEqualToString:@"Si"]) {
+        [self performSegueWithIdentifier:@"coPauraEquilibrioSegue" sender:self];
+    }
+    else if ([buttonName isEqualToString:@"Si"]) {
+        
+    } else {
+        
+    }
+}
+
 
 - (CGFloat) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     return 80;

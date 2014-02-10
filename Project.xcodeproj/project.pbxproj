@@ -145,9 +145,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43E9DC00185906C2004E9491 /* CoreLocation.framework in Frameworks */,
 				43C43926187CBA7E001059FA /* AddressBookUI.framework in Frameworks */,
 				43D8625B185E361B0000BDBE /* MapKit.framework in Frameworks */,
-				43E9DC00185906C2004E9491 /* CoreLocation.framework in Frameworks */,
 				C95304C814FECBB400BF68B6 /* UIKit.framework in Frameworks */,
 				C95304CA14FECBB400BF68B6 /* Foundation.framework in Frameworks */,
 				C95304CC14FECBB400BF68B6 /* CoreGraphics.framework in Frameworks */,
@@ -399,6 +399,15 @@
 			attributes = {
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Swipe Stack Ltd";
+				TargetAttributes = {
+					C95304C214FECBB400BF68B6 = {
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+				};
 			};
 			buildConfigurationList = C95304BD14FECBB300BF68B6 /* Build configuration list for PBXProject "Project" */;
 			compatibilityVersion = "Xcode 3.2";

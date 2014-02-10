@@ -57,4 +57,12 @@
     cqtvc.delegate = self.delegate;
 }
 
+- (void) viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    if (self.delegate.questionario.whenDetail != nil) {
+        self.datePicker.date = self.delegate.questionario.whenDetail;
+    }
+}
+
 @end

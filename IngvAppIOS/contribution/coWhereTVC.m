@@ -8,6 +8,8 @@
 
 #import "coWhereTVC.h"
 #import "coIndirizzoTVC.h"
+#import "coWhereLocation.h"
+#import <CoreLocation/CoreLocation.h>
 
 typedef enum tipoIndirizzo {
     regione = 1,
@@ -16,17 +18,37 @@ typedef enum tipoIndirizzo {
     frazione
 } tipoIndirizzo;
 
-@interface coWhereTVC () <coIndirizzoTVCDelegate>
+@interface coWhereTVC () <coIndirizzoTVCDelegate, CLLocationManagerDelegate>
 @property (weak, nonatomic) IBOutlet UISwitch *currentPositionSwitch;
 @property (weak, nonatomic) IBOutlet UITextField *viaTextField;
-@property (weak, nonatomic) IBOutlet UIView *dettagliTextField;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *nextBarButtonItem;
 @property tipoIndirizzo tipoIndirizzo;
+
+@property (strong, nonatomic) coWhereLocation *location;
+@property (strong, nonatomic) CLLocationManager* locationManager;
 @end
 
 @implementation coWhereTVC
 
 # pragma mark - Setters and getters
+- (coWhereLocation *) location {
+    if (_location == NULL) {
+        _location = [[coWhereLocation alloc] init];
+    }
+    
+    return _location;
+}
+
+- (CLLocationManager *) locationManager {
+    if (_locationManager == Nil) {
+        _locationManager = [[CLLocationManager alloc] init];
+        _locationManager.delegate = self;
+        _locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters;
+        _locationManager.distanceFilter = kCLDistanceFilterNone;
+    }
+    return _locationManager;
+}
+
 - (void) setRegion:(NSDictionary *)region {
     _region = region;
     UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:1]];
@@ -82,6 +104,25 @@ typedef enum tipoIndirizzo {
     cell.detailTextLabel.text = [[_frazione allValues] firstObject];
 }
 
+# pragma mark - Location methods
+- (CLLocationCoordinate2D) getLocation {
+    [self.locationManager startUpdatingLocation];
+    CLLocation *location = [self.locationManager location];
+    CLLocationCoordinate2D coordinate = [location coordinate];
+    
+    return coordinate;
+}
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
+    //    Take the last updated location, and put it in the location object.
+    self.location.coordinate = [[locations lastObject] coordinate];
+    [self.locationManager stopUpdatingLocation];
+}
+
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
+    //    TODO!
+}
+
 # pragma mark - coIndirizzoTVC Delegate Methods
 - (void)didFinishSelectingAddress:(NSDictionary *)dataDictionary {
     if (self.tipoIndirizzo == regione) {
@@ -99,6 +140,7 @@ typedef enum tipoIndirizzo {
 - (IBAction)currestPositionSwitchDidChanged:(UISwitch *)sender {
     if ([sender isOn]) {
         self.nextBarButtonItem.enabled = TRUE;
+        self.location.coordinate = [self getLocation];
     } else {
         self.nextBarButtonItem.enabled = FALSE;
     }
@@ -118,8 +160,12 @@ typedef enum tipoIndirizzo {
     // Quando l'utente preme "Fatto" sulla tastiera, viene mostrato il dettaglio.
     if ([sender isEqual:self.viaTextField]) {
         self.nextBarButtonItem.enabled = TRUE;
-    } else {
         
+        self.location.regione = self.region;
+        self.location.provincia = self.provincia;
+        self.location.comune = self.comune;
+        self.location.frazione = self.frazione;
+        self.location.via = sender.text;
     }
 }
 
@@ -137,6 +183,13 @@ typedef enum tipoIndirizzo {
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+
+    if ([segue.destinationViewController isKindOfClass:[coQuestionTVC class]]) {
+        coQuestionTVC* qtvc = (coQuestionTVC *) [segue destinationViewController];
+        qtvc.delegate = self.delegate;
+        
+        qtvc.delegate.questionario.where = self.location;
+    }
     
     if ([segue.identifier isEqualToString:@"coRegioneSegue"]) {
         UINavigationController *nc = segue.destinationViewController;
@@ -173,9 +226,18 @@ typedef enum tipoIndirizzo {
     }
 }
 
-- (void) viewDidLoad {
-    [super viewDidLoad];
-    NSLog(@"%@", self.delegate.questionario.whenDetail);
+- (void) viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    if (self.delegate.questionario.where != Nil) {
+        self.region = self.delegate.questionario.where.regione;
+        self.provincia = self.delegate.questionario.where.provincia;
+        self.comune = self.delegate.questionario.where.comune;
+        self.frazione = self.delegate.questionario.where.frazione;
+        self.viaTextField.text = self.delegate.questionario.where.via;
+        
+        self.nextBarButtonItem.enabled = YES;
+    }
 }
 
 @end

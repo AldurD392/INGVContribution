@@ -46,6 +46,8 @@
 		76001EFC18A52D7300608083 /* ITI2.csv in Resources */ = {isa = PBXBuildFile; fileRef = 76001EE818A52D7300608083 /* ITI2.csv */; };
 		76001EFD18A52D7300608083 /* ITI3.csv in Resources */ = {isa = PBXBuildFile; fileRef = 76001EE918A52D7300608083 /* ITI3.csv */; };
 		76001EFE18A52D7300608083 /* ITI4.csv in Resources */ = {isa = PBXBuildFile; fileRef = 76001EEA18A52D7300608083 /* ITI4.csv */; };
+		762B99F418A8E76C00B7D3CB /* coEffectsTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 762B99F318A8E76C00B7D3CB /* coEffectsTVC.m */; };
+		764195C118A9168D00D6D939 /* coWhatTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 764195C018A9168D00D6D939 /* coWhatTVC.m */; };
 		76765F6118A3DEEE0069A76C /* coWhenTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 76765F6018A3DEEE0069A76C /* coWhenTVC.m */; };
 		76765F6B18A3E59C0069A76C /* coIndirizzoTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 76765F6A18A3E59C0069A76C /* coIndirizzoTVC.m */; };
 		76765F6F18A3E9710069A76C /* coComuniList.txt in Resources */ = {isa = PBXBuildFile; fileRef = 76765F6C18A3E9710069A76C /* coComuniList.txt */; };
@@ -103,6 +105,10 @@
 		76001EE818A52D7300608083 /* ITI2.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ITI2.csv; sourceTree = "<group>"; };
 		76001EE918A52D7300608083 /* ITI3.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ITI3.csv; sourceTree = "<group>"; };
 		76001EEA18A52D7300608083 /* ITI4.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ITI4.csv; sourceTree = "<group>"; };
+		762B99F218A8E76C00B7D3CB /* coEffectsTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = coEffectsTVC.h; path = IngvAppIOS/contribution/coEffectsTVC.h; sourceTree = "<group>"; };
+		762B99F318A8E76C00B7D3CB /* coEffectsTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = coEffectsTVC.m; path = IngvAppIOS/contribution/coEffectsTVC.m; sourceTree = "<group>"; };
+		764195BF18A9168D00D6D939 /* coWhatTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = coWhatTVC.h; path = IngvAppIOS/contribution/coWhatTVC.h; sourceTree = "<group>"; };
+		764195C018A9168D00D6D939 /* coWhatTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = coWhatTVC.m; path = IngvAppIOS/contribution/coWhatTVC.m; sourceTree = "<group>"; };
 		76765F5F18A3DEEE0069A76C /* coWhenTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = coWhenTVC.h; path = IngvAppIOS/contribution/coWhenTVC.h; sourceTree = "<group>"; };
 		76765F6018A3DEEE0069A76C /* coWhenTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = coWhenTVC.m; path = IngvAppIOS/contribution/coWhenTVC.m; sourceTree = "<group>"; };
 		76765F6918A3E59C0069A76C /* coIndirizzoTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = coIndirizzoTVC.h; path = IngvAppIOS/contribution/coIndirizzoTVC.h; sourceTree = "<group>"; };
@@ -259,6 +265,21 @@
 			path = IngvAppIOS/contribution/coResources/Frazioni;
 			sourceTree = "<group>";
 		};
+		764195C218A9169B00D6D939 /* Indirizzo */ = {
+			isa = PBXGroup;
+			children = (
+				76001ECD18A5185B00608083 /* coWhereDetailTVC.h */,
+				76001ECE18A5185B00608083 /* coWhereDetailTVC.m */,
+				76765F6918A3E59C0069A76C /* coIndirizzoTVC.h */,
+				76765F6A18A3E59C0069A76C /* coIndirizzoTVC.m */,
+				76FCFD93189034A900F72C64 /* coWhereTVC.h */,
+				76FCFD94189034A900F72C64 /* coWhereTVC.m */,
+				76001ED018A520CF00608083 /* coFloorTVC.h */,
+				76001ED118A520CF00608083 /* coFloorTVC.m */,
+			);
+			name = Indirizzo;
+			sourceTree = "<group>";
+		};
 		76765F6818A3E5200069A76C /* coResources */ = {
 			isa = PBXGroup;
 			children = (
@@ -273,14 +294,11 @@
 		76FCFD921890347800F72C64 /* coViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				76001ED018A520CF00608083 /* coFloorTVC.h */,
-				76001ED118A520CF00608083 /* coFloorTVC.m */,
-				76001ECD18A5185B00608083 /* coWhereDetailTVC.h */,
-				76001ECE18A5185B00608083 /* coWhereDetailTVC.m */,
-				76765F6918A3E59C0069A76C /* coIndirizzoTVC.h */,
-				76765F6A18A3E59C0069A76C /* coIndirizzoTVC.m */,
-				76FCFD93189034A900F72C64 /* coWhereTVC.h */,
-				76FCFD94189034A900F72C64 /* coWhereTVC.m */,
+				764195C218A9169B00D6D939 /* Indirizzo */,
+				764195BF18A9168D00D6D939 /* coWhatTVC.h */,
+				764195C018A9168D00D6D939 /* coWhatTVC.m */,
+				762B99F218A8E76C00B7D3CB /* coEffectsTVC.h */,
+				762B99F318A8E76C00B7D3CB /* coEffectsTVC.m */,
 				76765F5F18A3DEEE0069A76C /* coWhenTVC.h */,
 				76765F6018A3DEEE0069A76C /* coWhenTVC.m */,
 			);
@@ -413,7 +431,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4304CA5B18832E2900539F13 /* AppDelegate.m in Sources */,
+				764195C118A9168D00D6D939 /* coWhatTVC.m in Sources */,
 				76765F6118A3DEEE0069A76C /* coWhenTVC.m in Sources */,
+				762B99F418A8E76C00B7D3CB /* coEffectsTVC.m in Sources */,
 				4304CA5218832C9E00539F13 /* MainTabBarController.m in Sources */,
 				4304CA4B18832C4E00539F13 /* MainNavigationController.m in Sources */,
 				76765F6B18A3E59C0069A76C /* coIndirizzoTVC.m in Sources */,

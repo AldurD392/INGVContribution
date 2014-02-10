@@ -15,6 +15,7 @@ typedef enum floorValue {
 
 @interface coWhereDetailTVC : UITableViewController
 @property (nonatomic) NSInteger whereDetail;
+@property (nonatomic) NSInteger whatDetail;
 @property (nonatomic) NSInteger floor;
 @property (nonatomic) NSInteger totalFloors;
 @property (nonatomic) floorValue value;

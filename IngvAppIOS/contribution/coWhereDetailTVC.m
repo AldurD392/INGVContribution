@@ -46,9 +46,9 @@
 - (void) setWhereDetail:(NSInteger)whereDetail {
     _whereDetail = whereDetail;
     if (_whereDetail == 0) {
-        self.nextBarButtonItem.enabled = NO;
         self.floor = -2;
         self.totalFloors = 0;
+        self.nextBarButtonItem.enabled = NO;
     } else {
         self.nextBarButtonItem.enabled = YES;
     }
@@ -101,13 +101,17 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    UINavigationController *nc = segue.destinationViewController;
-    coFloorTVC *cftvc = (coFloorTVC *)[nc topViewController];
-    cftvc.delegate = self;
-    
     if ([segue.identifier isEqualToString:@"coWhereFloorSegue"]) {
+        UINavigationController *nc = segue.destinationViewController;
+        coFloorTVC *cftvc = (coFloorTVC *)[nc topViewController];
+        cftvc.delegate = self;
+        
         self.value = numberFloor;
     } else if ([segue.identifier isEqualToString:@"coWhereTotalFloorsSegue"]) {
+        UINavigationController *nc = segue.destinationViewController;
+        coFloorTVC *cftvc = (coFloorTVC *)[nc topViewController];
+        cftvc.delegate = self;
+        
         self.value = totalFloor;
     }
 }

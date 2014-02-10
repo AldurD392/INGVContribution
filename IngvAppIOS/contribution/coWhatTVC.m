@@ -9,36 +9,10 @@
 #import "coWhatTVC.h"
 
 @interface coWhatTVC ()
-@property (strong, nonatomic) IBOutletCollection(UITableViewCell) NSArray *whatCells;
 
 @end
 
 @implementation coWhatTVC
-
-- (void) markCellForSelection:(UITableViewCell *)cell {
-
-    for (UITableViewCell *c in self.whatCells) {
-        c.accessoryType = UITableViewCellAccessoryNone;
-    }
-    
-    cell.accessoryType = UITableViewCellAccessoryCheckmark;
-}
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-}
-
-- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
-    [self markCellForSelection:cell];
-}
 
 /*
 #pragma mark - Navigation

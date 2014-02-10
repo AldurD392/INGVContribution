@@ -47,7 +47,12 @@
 		76001EFD18A52D7300608083 /* ITI3.csv in Resources */ = {isa = PBXBuildFile; fileRef = 76001EE918A52D7300608083 /* ITI3.csv */; };
 		76001EFE18A52D7300608083 /* ITI4.csv in Resources */ = {isa = PBXBuildFile; fileRef = 76001EEA18A52D7300608083 /* ITI4.csv */; };
 		762B99F418A8E76C00B7D3CB /* coEffectsTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 762B99F318A8E76C00B7D3CB /* coEffectsTVC.m */; };
+		76406C2818A9276A00A20BF3 /* coQuestionTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 76406C2718A9276A00A20BF3 /* coQuestionTVC.m */; };
 		764195C118A9168D00D6D939 /* coWhatTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 764195C018A9168D00D6D939 /* coWhatTVC.m */; };
+		764C9E1F18A91B880048EB92 /* coCheckmarkQuestionTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 764C9E1E18A91B880048EB92 /* coCheckmarkQuestionTVC.m */; };
+		764C9E2218A920F50048EB92 /* coQuestionario.m in Sources */ = {isa = PBXBuildFile; fileRef = 764C9E2118A920F50048EB92 /* coQuestionario.m */; };
+		764C9E2518A9224A0048EB92 /* coWhereLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 764C9E2418A9224A0048EB92 /* coWhereLocation.m */; };
+		764C9E2918A923AB0048EB92 /* coStartingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 764C9E2818A923AB0048EB92 /* coStartingViewController.m */; };
 		76765F6118A3DEEE0069A76C /* coWhenTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 76765F6018A3DEEE0069A76C /* coWhenTVC.m */; };
 		76765F6B18A3E59C0069A76C /* coIndirizzoTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 76765F6A18A3E59C0069A76C /* coIndirizzoTVC.m */; };
 		76765F6F18A3E9710069A76C /* coComuniList.txt in Resources */ = {isa = PBXBuildFile; fileRef = 76765F6C18A3E9710069A76C /* coComuniList.txt */; };
@@ -107,8 +112,19 @@
 		76001EEA18A52D7300608083 /* ITI4.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ITI4.csv; sourceTree = "<group>"; };
 		762B99F218A8E76C00B7D3CB /* coEffectsTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = coEffectsTVC.h; path = IngvAppIOS/contribution/coEffectsTVC.h; sourceTree = "<group>"; };
 		762B99F318A8E76C00B7D3CB /* coEffectsTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = coEffectsTVC.m; path = IngvAppIOS/contribution/coEffectsTVC.m; sourceTree = "<group>"; };
+		76406C2618A9276A00A20BF3 /* coQuestionTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = coQuestionTVC.h; path = IngvAppIOS/contribution/coModel/coQuestionTVC.h; sourceTree = "<group>"; };
+		76406C2718A9276A00A20BF3 /* coQuestionTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = coQuestionTVC.m; path = IngvAppIOS/contribution/coModel/coQuestionTVC.m; sourceTree = "<group>"; };
 		764195BF18A9168D00D6D939 /* coWhatTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = coWhatTVC.h; path = IngvAppIOS/contribution/coWhatTVC.h; sourceTree = "<group>"; };
 		764195C018A9168D00D6D939 /* coWhatTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = coWhatTVC.m; path = IngvAppIOS/contribution/coWhatTVC.m; sourceTree = "<group>"; };
+		764C9E1D18A91B880048EB92 /* coCheckmarkQuestionTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = coCheckmarkQuestionTVC.h; path = IngvAppIOS/contribution/coCheckmarkQuestionTVC.h; sourceTree = "<group>"; };
+		764C9E1E18A91B880048EB92 /* coCheckmarkQuestionTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = coCheckmarkQuestionTVC.m; path = IngvAppIOS/contribution/coCheckmarkQuestionTVC.m; sourceTree = "<group>"; };
+		764C9E2018A920F50048EB92 /* coQuestionario.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = coQuestionario.h; path = IngvAppIOS/contribution/coModel/coQuestionario.h; sourceTree = "<group>"; };
+		764C9E2118A920F50048EB92 /* coQuestionario.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = coQuestionario.m; path = IngvAppIOS/contribution/coModel/coQuestionario.m; sourceTree = "<group>"; };
+		764C9E2318A9224A0048EB92 /* coWhereLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = coWhereLocation.h; path = IngvAppIOS/contribution/coModel/coWhereLocation.h; sourceTree = "<group>"; };
+		764C9E2418A9224A0048EB92 /* coWhereLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = coWhereLocation.m; path = IngvAppIOS/contribution/coModel/coWhereLocation.m; sourceTree = "<group>"; };
+		764C9E2718A923AB0048EB92 /* coStartingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = coStartingViewController.h; path = IngvAppIOS/contribution/coStartingViewController.h; sourceTree = "<group>"; };
+		764C9E2818A923AB0048EB92 /* coStartingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = coStartingViewController.m; path = IngvAppIOS/contribution/coStartingViewController.m; sourceTree = "<group>"; };
+		764C9E2A18A924E10048EB92 /* coQuestionarioProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = coQuestionarioProtocol.h; path = IngvAppIOS/contribution/coModel/coQuestionarioProtocol.h; sourceTree = "<group>"; };
 		76765F5F18A3DEEE0069A76C /* coWhenTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = coWhenTVC.h; path = IngvAppIOS/contribution/coWhenTVC.h; sourceTree = "<group>"; };
 		76765F6018A3DEEE0069A76C /* coWhenTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = coWhenTVC.m; path = IngvAppIOS/contribution/coWhenTVC.m; sourceTree = "<group>"; };
 		76765F6918A3E59C0069A76C /* coIndirizzoTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = coIndirizzoTVC.h; path = IngvAppIOS/contribution/coIndirizzoTVC.h; sourceTree = "<group>"; };
@@ -222,6 +238,7 @@
 		43EA2DDC187FF37300598DB1 /* contribution */ = {
 			isa = PBXGroup;
 			children = (
+				764C9E2618A922540048EB92 /* coModel */,
 				76765F6818A3E5200069A76C /* coResources */,
 				76FCFD921890347800F72C64 /* coViewControllers */,
 				4304CA4118832A7000539F13 /* coStoryboard.storyboard */,
@@ -280,6 +297,17 @@
 			name = Indirizzo;
 			sourceTree = "<group>";
 		};
+		764C9E2618A922540048EB92 /* coModel */ = {
+			isa = PBXGroup;
+			children = (
+				764C9E2318A9224A0048EB92 /* coWhereLocation.h */,
+				764C9E2418A9224A0048EB92 /* coWhereLocation.m */,
+				764C9E2018A920F50048EB92 /* coQuestionario.h */,
+				764C9E2118A920F50048EB92 /* coQuestionario.m */,
+			);
+			name = coModel;
+			sourceTree = "<group>";
+		};
 		76765F6818A3E5200069A76C /* coResources */ = {
 			isa = PBXGroup;
 			children = (
@@ -295,8 +323,15 @@
 			isa = PBXGroup;
 			children = (
 				764195C218A9169B00D6D939 /* Indirizzo */,
+				764C9E1D18A91B880048EB92 /* coCheckmarkQuestionTVC.h */,
+				76406C2618A9276A00A20BF3 /* coQuestionTVC.h */,
+				76406C2718A9276A00A20BF3 /* coQuestionTVC.m */,
+				764C9E1E18A91B880048EB92 /* coCheckmarkQuestionTVC.m */,
 				764195BF18A9168D00D6D939 /* coWhatTVC.h */,
 				764195C018A9168D00D6D939 /* coWhatTVC.m */,
+				764C9E2A18A924E10048EB92 /* coQuestionarioProtocol.h */,
+				764C9E2718A923AB0048EB92 /* coStartingViewController.h */,
+				764C9E2818A923AB0048EB92 /* coStartingViewController.m */,
 				762B99F218A8E76C00B7D3CB /* coEffectsTVC.h */,
 				762B99F318A8E76C00B7D3CB /* coEffectsTVC.m */,
 				76765F5F18A3DEEE0069A76C /* coWhenTVC.h */,
@@ -431,16 +466,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				4304CA5B18832E2900539F13 /* AppDelegate.m in Sources */,
+				76406C2818A9276A00A20BF3 /* coQuestionTVC.m in Sources */,
 				764195C118A9168D00D6D939 /* coWhatTVC.m in Sources */,
 				76765F6118A3DEEE0069A76C /* coWhenTVC.m in Sources */,
 				762B99F418A8E76C00B7D3CB /* coEffectsTVC.m in Sources */,
+				764C9E2518A9224A0048EB92 /* coWhereLocation.m in Sources */,
 				4304CA5218832C9E00539F13 /* MainTabBarController.m in Sources */,
 				4304CA4B18832C4E00539F13 /* MainNavigationController.m in Sources */,
 				76765F6B18A3E59C0069A76C /* coIndirizzoTVC.m in Sources */,
+				764C9E1F18A91B880048EB92 /* coCheckmarkQuestionTVC.m in Sources */,
 				4304CA5C18832E2900539F13 /* main.m in Sources */,
+				764C9E2218A920F50048EB92 /* coQuestionario.m in Sources */,
 				76001ECF18A5185B00608083 /* coWhereDetailTVC.m in Sources */,
 				76FCFD95189034A900F72C64 /* coWhereTVC.m in Sources */,
 				76001ED218A520CF00608083 /* coFloorTVC.m in Sources */,
+				764C9E2918A923AB0048EB92 /* coStartingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

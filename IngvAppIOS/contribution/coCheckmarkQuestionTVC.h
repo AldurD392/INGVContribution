@@ -1,5 +1,5 @@
 //
-//  coEffectsTVC.h
+//  coCheckmarkQuestionTVC.h
 //  Project
 //
 //  Created by Adriano Di Luzio on 10/02/14.
@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "coQuestionTVC.h"
 
-@interface coEffectsTVC : coQuestionTVC
-
+@interface coCheckmarkQuestionTVC : UITableViewController
+@property (nonatomic) NSInteger choosenValue;
 @end

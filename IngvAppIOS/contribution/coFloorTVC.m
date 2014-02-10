@@ -17,17 +17,17 @@
 #pragma mark - Table view data source
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (self.delegate.value == numberFloor) {
-        self.delegate.floor = indexPath.row - 1;
-    } else if (self.delegate.value == totalFloor) {
-        self.delegate.totalFloors = indexPath.row + 1;
+    if (self.detailDelegate.value == numberFloor) {
+        self.detailDelegate.floor = indexPath.row - 1;
+    } else if (self.detailDelegate.value == totalFloor) {
+        self.detailDelegate.totalFloors = indexPath.row + 1;
     }
     
     [self dismissViewControllerAnimated:TRUE completion:Nil];
 }
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row < self.delegate.floor && self.delegate.value == totalFloor) {
+    if (indexPath.row < self.detailDelegate.floor && self.detailDelegate.value == totalFloor) {
             return 0;
     }
     
@@ -37,8 +37,8 @@
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    if (self.delegate.value == totalFloor) {
-        for (int i = 0; i < self.delegate.floor; i++) {
+    if (self.detailDelegate.value == totalFloor) {
+        for (int i = 0; i < self.detailDelegate.floor; i++) {
             [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForItem:i inSection:0]].hidden = YES;
         }
         

@@ -104,13 +104,13 @@
     if ([segue.identifier isEqualToString:@"coWhereFloorSegue"]) {
         UINavigationController *nc = segue.destinationViewController;
         coFloorTVC *cftvc = (coFloorTVC *)[nc topViewController];
-        cftvc.delegate = self;
+        cftvc.detailDelegate = self;
         
         self.value = numberFloor;
     } else if ([segue.identifier isEqualToString:@"coWhereTotalFloorsSegue"]) {
         UINavigationController *nc = segue.destinationViewController;
         coFloorTVC *cftvc = (coFloorTVC *)[nc topViewController];
-        cftvc.delegate = self;
+        cftvc.detailDelegate = self;
         
         self.value = totalFloor;
     }

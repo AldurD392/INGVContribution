@@ -10,10 +10,15 @@
 
 @interface coWhenTVC ()
 @property (weak, nonatomic) IBOutlet UISwitch *currentDateTimeSwitch;
+@property (strong, nonatomic) NSDate* date;
+@property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
 
 @end
 
 @implementation coWhenTVC
+
+# pragma mark - Setters / Getters
+
 
 # pragma mark - IBActions
 - (IBAction)currestPositionSwitchDidChanged:(UISwitch *)sender {
@@ -38,6 +43,18 @@
     } else {
         return 2;
     }
+}
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([self.currentDateTimeSwitch isOn]) {
+        self.date = [NSDate date];
+    } else {
+        self.date = [self.datePicker date];
+    }
+    
+    self.delegate.questionario.whenDetail = self.date;
+    coQuestionTVC* cqtvc = (coQuestionTVC *) [segue destinationViewController];
+    cqtvc.delegate = self.delegate;
 }
 
 @end

@@ -143,7 +143,7 @@ typedef enum tipoIndirizzo {
         coIndirizzoTVC *dvc = (coIndirizzoTVC *)[nc topViewController];
         [dvc setTitle:@"Regione"];
         
-        dvc.delegate = self;
+        dvc.whereDelegate = self;
         self.tipoIndirizzo = regione;
         [dvc loadRegions];
     } else if ([segue.identifier isEqualToString:@"coProvinciaSegue"]) {
@@ -151,7 +151,7 @@ typedef enum tipoIndirizzo {
         coIndirizzoTVC *dvc = (coIndirizzoTVC *)[nc topViewController];
         [dvc setTitle:@"Provincia"];
         
-        dvc.delegate = self;
+        dvc.whereDelegate = self;
         self.tipoIndirizzo = provincia;
         [dvc loadProvince:[[self.region allKeys] firstObject]];
     } else if ([segue.identifier isEqualToString:@"coComuneSegue"]) {
@@ -159,7 +159,7 @@ typedef enum tipoIndirizzo {
         coIndirizzoTVC *dvc = (coIndirizzoTVC *)[nc topViewController];
         [dvc setTitle:@"Comune"];
         
-        dvc.delegate = self;
+        dvc.whereDelegate = self;
         self.tipoIndirizzo = comuni;
         [dvc loadComuni:[[self.provincia allKeys] firstObject]];
     } else if ([segue.identifier isEqualToString:@"coFrazioneSegue"]) {
@@ -167,10 +167,15 @@ typedef enum tipoIndirizzo {
         coIndirizzoTVC *dvc = (coIndirizzoTVC *)[nc topViewController];
         [dvc setTitle:@"Frazione"];
         
-        dvc.delegate = self;
+        dvc.whereDelegate = self;
         self.tipoIndirizzo = frazione;
         [dvc loadFrazioni:[[self.comune allKeys] firstObject] withRegionCode:[[self.region allKeys] firstObject]];
     }
+}
+
+- (void) viewDidLoad {
+    [super viewDidLoad];
+    NSLog(@"%@", self.delegate.questionario.whenDetail);
 }
 
 @end

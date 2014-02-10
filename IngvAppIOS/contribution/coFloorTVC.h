@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "coWhereDetailTVC.h"
+#import "coQuestionTVC.h"
 
-@interface coFloorTVC : UITableViewController
-@property (assign, nonatomic) coWhereDetailTVC* delegate;
+@interface coFloorTVC : coQuestionTVC
+@property (assign, nonatomic) coWhereDetailTVC* detailDelegate;
 @end

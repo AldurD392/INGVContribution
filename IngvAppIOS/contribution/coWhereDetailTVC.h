@@ -7,13 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "coQuestionTVC.h"
 
 typedef enum floorValue {
     numberFloor = 1,
     totalFloor
 } floorValue;
 
-@interface coWhereDetailTVC : UITableViewController
+@interface coWhereDetailTVC : coQuestionTVC
 @property (nonatomic) NSInteger whereDetail;
 @property (nonatomic) NSInteger whatDetail;
 @property (nonatomic) NSInteger floor;

@@ -199,7 +199,7 @@
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSArray *object = @[[self.dataDict objectForKey:[self.placeHolderArray objectAtIndex:indexPath.row]]];
     NSArray *key = @[[self.placeHolderArray objectAtIndex:indexPath.row]];
-    [self.delegate didFinishSelectingAddress:[NSDictionary dictionaryWithObjects:object forKeys:key]];
+    [self.whereDelegate didFinishSelectingAddress:[NSDictionary dictionaryWithObjects:object forKeys:key]];
     
     [self dismissViewControllerAnimated:TRUE completion:Nil];
 }

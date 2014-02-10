@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "coQuestionTVC.h"
 
-@interface coWhereTVC : UITableViewController
+@interface coWhereTVC : coQuestionTVC
 @property (strong, nonatomic) NSDictionary *region;
 @property (strong, nonatomic) NSDictionary *provincia;
 @property (strong, nonatomic) NSDictionary *comune;

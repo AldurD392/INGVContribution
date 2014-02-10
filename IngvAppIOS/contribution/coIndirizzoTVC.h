@@ -7,14 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "coQuestionTVC.h"
 
 @protocol coIndirizzoTVCDelegate
 - (void)didFinishSelectingAddress:(NSDictionary *)dataDictionary;
 @end
 
-@interface coIndirizzoTVC : UITableViewController
+@interface coIndirizzoTVC : coQuestionTVC
 
-@property (nonatomic, assign) id <coIndirizzoTVCDelegate> delegate;
+@property (nonatomic, assign) id <coIndirizzoTVCDelegate> whereDelegate;
 
 - (void)loadRegions;
 - (void)loadProvince:(NSString *)regionCode;

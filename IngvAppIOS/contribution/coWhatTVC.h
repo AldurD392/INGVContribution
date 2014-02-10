@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "coCheckmarkQuestionTVC.h"
 
-@interface coWhatTVC : UITableViewController
+@interface coWhatTVC : coCheckmarkQuestionTVC
 
 @end

@@ -1,5 +1,5 @@
 //
-//  coEffectsTVC.h
+//  coStartingViewController.h
 //  Project
 //
 //  Created by Adriano Di Luzio on 10/02/14.
@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "coQuestionarioProtocol.h"
 #import "coQuestionTVC.h"
 
-@interface coEffectsTVC : coQuestionTVC
+@interface coStartingViewController: UIViewController <coQuestionarioProtocol>
 
 @end

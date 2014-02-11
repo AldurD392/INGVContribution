@@ -267,13 +267,7 @@ typedef enum tipoIndirizzo {
     
     if (self.delegate.questionario.where != Nil) {     
         self.nextBarButtonItem.enabled = YES;
-        
-//        self.region = self.region;
-//        self.provincia = self.provincia;
-//        self.comune = self.comune;
-//        self.frazione = self.frazione;
-//        self.via = self.via;
-//        NSLog(@"%@, %@, %@", self.region, self.provincia, self.comune);
+
         [self reloadTableView];
     }
 }

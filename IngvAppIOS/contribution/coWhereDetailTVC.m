@@ -19,8 +19,6 @@
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *nextBarButtonItem;
 
 @property (strong, nonatomic) NSNumber* whereDetail;
-@property (strong, nonatomic) NSNumber* floor;
-@property (strong, nonatomic) NSNumber* totalFloors;
 
 @end
 

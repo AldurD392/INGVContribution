@@ -12,6 +12,7 @@
 @interface coEffectsTVC () <UIActionSheetDelegate>
 @property (weak, nonatomic) IBOutlet UISlider *effectSlider;
 @property (weak, nonatomic) IBOutlet UITextView *effectsTextView;
+@property (strong, nonatomic) NSNumber* effects;
 
 @property (strong, nonatomic) NSArray *labelArray;
 
@@ -19,37 +20,32 @@
 
 @implementation coEffectsTVC
 
+- (void) setEffects:(NSNumber *)effects {
+    self.delegate.questionario.effects = effects;
+}
+
+- (NSNumber *) effects {
+    return self.delegate.questionario.effects;
+}
+
 - (IBAction)sliderValueChanged:(UISlider *)sender {
     self.effectSlider.value = round(sender.value);
     
     self.effectsTextView.selectable = YES;
     self.effectsTextView.text = [self.labelArray objectAtIndex:sender.value];
     self.effectsTextView.selectable = NO;
-}
-
--(void)viewDidLoad {
-    [super viewDidLoad];
-
-    self.labelArray = @[@"Nessun effetto.",
-                        @"Vibrazione appena percettibile.",
-                        @"Vibrazione leggera o moderata.",
-                        @"Vibrazione forte, piccoli oggetti spostati o caduti.",
-                        @"Scuotimento, caduta di oggetti, spostamento mobili, possibilità danni leggeri.",
-                        @"Scuotimento molto forte, danni."];
     
-    self.effectsTextView.selectable = YES;
-    self.effectsTextView.text = [self.labelArray objectAtIndex:0];
-    self.effectsTextView.selectable = NO;
+    self.effects = [NSNumber numberWithInt:self.effectSlider.value];
 }
 
 - (IBAction)nextButtonTapped:(id)sender
 {
     UIActionSheet *actionSheet = [[UIActionSheet alloc]
-                                  initWithTitle:@"Vuoi compilare il questionario esteso?"
-                                  delegate:self
-                                  cancelButtonTitle:@"Indietro"
-                                  destructiveButtonTitle:nil
-                                  otherButtonTitles:@"Si",@"No",nil];
+                                  initWithTitle: @"Vuoi compilare il questionario esteso?"
+                                  delegate: self
+                                  cancelButtonTitle: @"Indietro"
+                                  destructiveButtonTitle: nil
+                                  otherButtonTitles: @"Si", @"No", nil];
     [actionSheet showInView:self.view];
 }
 
@@ -71,6 +67,19 @@
     return 80;
 }
 
+- (void) updateView {
+    if (self.effects != nil) {
+        self.effectSlider.value = [self.effects integerValue];
+        self.effectsTextView.selectable = YES;
+        self.effectsTextView.text = [self.labelArray objectAtIndex:self.effects.integerValue];
+        self.effectsTextView.selectable = NO;
+    } else {
+        self.effectsTextView.selectable = YES;
+        self.effectsTextView.text = [self.labelArray objectAtIndex:0];
+        self.effectsTextView.selectable = NO;
+    }
+}
+
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -78,16 +87,24 @@
     if ([segue.destinationViewController isKindOfClass:[coQuestionTVC class]]) {
         coQuestionTVC* cqtvc = (coQuestionTVC *) segue.destinationViewController;
         cqtvc.delegate = self.delegate;
-        
-        cqtvc.delegate.questionario.effects = [NSNumber numberWithInt:self.effectSlider.value];
     }
 }
 
 # pragma mark - ViewController Life Cycle
 - (void) viewWillAppear:(BOOL)animated {
-    if (self.delegate.questionario.effects) {
-        self.effectSlider.value = [self.delegate.questionario.effects integerValue];
-    }
+    [super viewWillAppear:animated];
+    [self updateView];
+}
+
+-(void)viewDidLoad {
+    [super viewDidLoad];
+    
+    self.labelArray = @[@"Nessun effetto.",
+                        @"Vibrazione appena percettibile.",
+                        @"Vibrazione leggera o moderata.",
+                        @"Vibrazione forte, piccoli oggetti spostati o caduti.",
+                        @"Scuotimento, caduta di oggetti, spostamento mobili, possibilità danni leggeri.",
+                        @"Scuotimento molto forte, danni."];
 }
 
 @end

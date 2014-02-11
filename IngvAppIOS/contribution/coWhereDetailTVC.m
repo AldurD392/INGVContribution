@@ -134,7 +134,7 @@
     
     if (self.whereDetail == 0 &&
         self.delegate.questionario.floor != Nil &&
-        self.delegate.questionario.totalFloors != nil) {
+        self.delegate.questionario.totalFloors != Nil) {
         self.floor = [self.delegate.questionario.floor integerValue];
         self.totalFloors = [self.delegate.questionario.totalFloors integerValue];
     }

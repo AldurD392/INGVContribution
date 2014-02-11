@@ -513,7 +513,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <!--Co WhatTVC - Cosa stavi facendo?-->
         <scene sceneID="ojN-4K-UKd">
             <objects>
-                <tableViewController id="Msc-Qu-JcB" customClass="coWhatTVC" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="coWhatTVC" id="Msc-Qu-JcB" customClass="coWhatTVC" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="TIt-DN-C9v">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -621,6 +621,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <keyCommands/>
                     <connections>
                         <outlet property="nextBarButton" destination="mEW-yT-QPN" id="Bhw-0k-NkI"/>
                         <outletCollection property="whatCells" destination="MJf-gp-qVU" id="Wtm-GW-F4e"/>

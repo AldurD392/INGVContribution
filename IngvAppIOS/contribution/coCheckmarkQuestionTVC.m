@@ -11,6 +11,8 @@
 @interface coCheckmarkQuestionTVC ()
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *nextBarButton;
 @property (strong, nonatomic) IBOutletCollection(UITableViewCell) NSArray *cells;
+
+@property (strong, nonatomic) NSNumber* choosenValue;
 @end
 
 @implementation coCheckmarkQuestionTVC

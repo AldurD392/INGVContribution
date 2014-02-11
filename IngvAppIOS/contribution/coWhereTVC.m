@@ -26,6 +26,12 @@ typedef enum tipoIndirizzo {
 
 @property (strong, nonatomic) coWhereLocation *location;
 @property (strong, nonatomic) CLLocationManager* locationManager;
+
+@property (strong, nonatomic) NSDictionary *region;
+@property (strong, nonatomic) NSDictionary *provincia;
+@property (strong, nonatomic) NSDictionary *comune;
+@property (strong, nonatomic) NSDictionary *frazione;
+@property (strong, nonatomic) NSString *via;
 @end
 
 @implementation coWhereTVC

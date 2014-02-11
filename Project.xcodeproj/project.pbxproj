@@ -301,6 +301,7 @@
 				764C9E2418A9224A0048EB92 /* coWhereLocation.m */,
 				764C9E2018A920F50048EB92 /* coQuestionario.h */,
 				764C9E2118A920F50048EB92 /* coQuestionario.m */,
+				764C9E2A18A924E10048EB92 /* coQuestionarioProtocol.h */,
 			);
 			name = coModel;
 			sourceTree = "<group>";
@@ -324,7 +325,6 @@
 				76406C2718A9276A00A20BF3 /* coQuestionTVC.m */,
 				764C9E1D18A91B880048EB92 /* coCheckmarkQuestionTVC.h */,
 				764C9E1E18A91B880048EB92 /* coCheckmarkQuestionTVC.m */,
-				764C9E2A18A924E10048EB92 /* coQuestionarioProtocol.h */,
 				764C9E2718A923AB0048EB92 /* coStartingViewController.h */,
 				764C9E2818A923AB0048EB92 /* coStartingViewController.m */,
 				762B99F218A8E76C00B7D3CB /* coEffectsTVC.h */,

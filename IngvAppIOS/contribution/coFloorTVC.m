@@ -18,16 +18,16 @@
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (self.detailDelegate.value == numberFloor) {
-        self.detailDelegate.floor = indexPath.row - 1;
+        self.detailDelegate.floor = [NSNumber numberWithInt:indexPath.row - 1];
     } else if (self.detailDelegate.value == totalFloor) {
-        self.detailDelegate.totalFloors = indexPath.row + 1;
+        self.detailDelegate.totalFloors = [NSNumber numberWithInt:indexPath.row + 1];
     }
     
     [self dismissViewControllerAnimated:TRUE completion:Nil];
 }
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row < self.detailDelegate.floor && self.detailDelegate.value == totalFloor) {
+    if (indexPath.row < self.detailDelegate.floor.integerValue && self.detailDelegate.value == totalFloor) {
             return 0;
     }
     
@@ -38,7 +38,7 @@
     [super viewWillAppear:animated];
     
     if (self.detailDelegate.value == totalFloor) {
-        for (int i = 0; i < self.detailDelegate.floor; i++) {
+        for (int i = 0; i < self.detailDelegate.floor.integerValue; i++) {
             [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForItem:i inSection:0]].hidden = YES;
         }
         

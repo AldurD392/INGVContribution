@@ -23,44 +23,34 @@
 @implementation coWhereDetailTVC
 
 # pragma mark - Setters and Getters
-- (void) setTotalFloors:(NSInteger)totalFloors {
-    _totalFloors = totalFloors;
-    self.delegate.questionario.totalFloors = _totalFloors != 0 ? [NSNumber numberWithInt:_totalFloors] : Nil;
-    
-    if (_totalFloors == 0) {
-        self.totalFloorsCell.hidden = YES;
-    }
-    
-    self.totalFloorsCell.detailTextLabel.text = (_totalFloors != 0) ? [NSString stringWithFormat:@"%d", _totalFloors] : Nil;
 
-    [self.tableView reloadData];
-    self.nextBarButtonItem.enabled = YES;
+- (void) setTotalFloors:(NSNumber *)totalFloors {
+    self.delegate.questionario.totalFloors = totalFloors;
 }
 
-- (void) setFloor:(NSInteger)floor {
-    _floor = floor;
-    self.delegate.questionario.floor = _floor != -2 ? [NSNumber numberWithInt:_floor] : Nil;
-    
-    
-    self.floorCell.detailTextLabel.text = (_floor != -2) ? [NSString stringWithFormat:@"%d", _floor] : Nil;
-    self.totalFloorsCell.hidden = NO;
-    
-    [self.tableView reloadData];
+- (NSNumber *)totalFloors {
+    return self.delegate.questionario.totalFloors;
 }
 
-- (void) setWhereDetail:(NSInteger)whereDetail {
-    _whereDetail = whereDetail;
-    self.delegate.questionario.whereDetail = _whereDetail;
+- (void) setFloor:(NSNumber *)floor {
+    self.delegate.questionario.floor = floor;
+}
+
+- (NSNumber *)floor {
+    return self.delegate.questionario.floor;
+}
+
+- (void) setWhereDetail:(NSNumber *)whereDetail {
+    self.delegate.questionario.whereDetail = whereDetail;
     
-    [self markDetailCell:[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForItem:_whereDetail inSection:0]]];
-    
-    if (_whereDetail == 0) {
-        self.floor = -2;
-        self.totalFloors = 0;
-        self.nextBarButtonItem.enabled = NO;
-    } else {
-        self.nextBarButtonItem.enabled = YES;
+    if (whereDetail.integerValue == 0) {
+        self.totalFloors = nil;
+        self.floor = nil;
     }
+}
+
+- (NSNumber *)whereDetail {
+    return self.delegate.questionario.whereDetail;
 }
 
 - (void)markDetailCell:(UITableViewCell *) cell {
@@ -73,7 +63,7 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
-        self.whereDetail = indexPath.row;
+        self.whereDetail = [NSNumber numberWithInt:indexPath.row];
         
         //Put this code where you want to reload your table view
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -84,6 +74,8 @@
                                 [self.tableView reloadData];
                             } completion:NULL];
         });
+        
+        [self updateView];
     }
 }
 
@@ -98,6 +90,33 @@
     }
 }
 
+- (void) updateView {
+    
+    [self markDetailCell:[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForItem:self.whereDetail.integerValue inSection:0               ]]];
+    
+    if (self.whereDetail.integerValue != 0) {
+        self.nextBarButtonItem.enabled = YES;
+    } else {
+        
+        if (self.floor == nil) {
+            self.floorCell.detailTextLabel.text = nil;
+            self.totalFloorsCell.hidden = YES;
+        } else {
+            self.floorCell.detailTextLabel.text = [NSString stringWithFormat:@"%@", self.floor];
+            self.totalFloorsCell.hidden = NO;
+        }
+        
+        if (self.totalFloors == nil) {
+            self.totalFloorsCell.detailTextLabel.text = nil;
+            self.nextBarButtonItem.enabled = NO;
+        } else {
+            self.totalFloorsCell.detailTextLabel.text = [NSString stringWithFormat:@"%@", self.totalFloors];
+            self.nextBarButtonItem.enabled = YES;
+        }
+    }
+    
+    [self.tableView reloadData];
+}
 
 #pragma mark - Navigation
 
@@ -127,17 +146,7 @@
 
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
-    if (self.whereDetail != self.delegate.questionario.whereDetail) {
-        self.whereDetail = self.delegate.questionario.whereDetail;
-    }
-    
-    if (self.whereDetail == 0 &&
-        self.delegate.questionario.floor != Nil &&
-        self.delegate.questionario.totalFloors != Nil) {
-        self.floor = [self.delegate.questionario.floor integerValue];
-        self.totalFloors = [self.delegate.questionario.totalFloors integerValue];
-    }
+    [self updateView];
 }
 
 @end

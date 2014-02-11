@@ -79,14 +79,14 @@
         coQuestionTVC* cqtvc = (coQuestionTVC *) segue.destinationViewController;
         cqtvc.delegate = self.delegate;
         
-        cqtvc.delegate.questionario.effects = self.effectSlider.value;
+        cqtvc.delegate.questionario.effects = [NSNumber numberWithInt:self.effectSlider.value];
     }
 }
 
 # pragma mark - ViewController Life Cycle
 - (void) viewWillAppear:(BOOL)animated {
     if (self.delegate.questionario.effects) {
-        self.effectSlider.value = self.delegate.questionario.effects;
+        self.effectSlider.value = [self.delegate.questionario.effects integerValue];
     }
 }
 

@@ -17,6 +17,7 @@
 
 @implementation coCheckmarkQuestionTVC
 
+# pragma mark - Setters and getters
 - (void) setChoosenValue:(NSNumber *)choosenValue {
     switch (self.view.tag) {
 // In case alla view, aggiorniamo il valore appropriato del delegate.
@@ -168,6 +169,11 @@
             return Nil;
     }
 }
+
+- (IBAction)nextButtonPressed:(UIBarButtonItem *)sender {
+
+}
+
 
 - (void) markCellForSelection:(UITableViewCell *)cell {
     

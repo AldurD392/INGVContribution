@@ -617,6 +617,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     <navigationItem key="navigationItem" title="Cosa stavi facendo?" id="sWi-go-z1x">
                         <barButtonItem key="rightBarButtonItem" enabled="NO" title="Avanti" id="mEW-yT-QPN">
                             <connections>
+                                <action selector="nextButtonPressed:" destination="Msc-Qu-JcB" id="LDx-pE-xmt"/>
                                 <segue destination="d0E-rG-JUs" kind="push" id="SmQ-hy-eTl"/>
                             </connections>
                         </barButtonItem>

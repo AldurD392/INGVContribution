@@ -26,4 +26,12 @@
     }
 }
 
+# pragma mark - ViewController Life Cycle
+- (void) viewWillAppear:(BOOL)animated {
+    NSLog(@"%d", self.delegate.questionario.whereDetail);
+    if (self.delegate.questionario.what) {
+        self.choosenValue = self.delegate.questionario.what;
+    }
+}
+
 @end

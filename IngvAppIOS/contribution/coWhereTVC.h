@@ -14,4 +14,5 @@
 @property (strong, nonatomic) NSDictionary *provincia;
 @property (strong, nonatomic) NSDictionary *comune;
 @property (strong, nonatomic) NSDictionary *frazione;
+@property (strong, nonatomic) NSString *via;
 @end

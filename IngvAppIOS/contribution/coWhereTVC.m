@@ -32,11 +32,11 @@ typedef enum tipoIndirizzo {
 
 # pragma mark - Setters and getters
 - (coWhereLocation *) location {
-    if (_location == NULL) {
-        _location = [[coWhereLocation alloc] init];
+    if (self.delegate.questionario.where == Nil) {
+        self.delegate.questionario.where = [[coWhereLocation alloc] init];
     }
     
-    return _location;
+    return self.delegate.questionario.where;
 }
 
 - (CLLocationManager *) locationManager {
@@ -50,58 +50,58 @@ typedef enum tipoIndirizzo {
 }
 
 - (void) setRegion:(NSDictionary *)region {
-    _region = region;
-    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:1]];
-    cell.detailTextLabel.text = [[_region allValues] firstObject];
-    
-    cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:1]];
-    cell.hidden = NO;
-    
+    self.location.regione = region;
     self.provincia = Nil;
+    
+    [self reloadTableView];
+}
+
+- (NSDictionary *) region {
+    return self.location.regione;
 }
 
 - (void) setProvincia:(NSDictionary *)provincia {
-    _provincia = provincia;
-    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:1]];
-    cell.detailTextLabel.text = [[_provincia allValues] firstObject];
-    
-    cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:2 inSection:1]];
-    if (_provincia != Nil) {
-        cell.hidden = NO;
-    } else {
-        cell.hidden = YES;
-    }
+    self.location.provincia = provincia;
     self.comune = Nil;
+    
+    [self reloadTableView];
+}
+
+- (NSDictionary *) provincia {
+    return self.location.provincia;
 }
 
 - (void) setComune:(NSDictionary *)comune {
-    _comune = comune;
-    
-    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:2 inSection:1]];
-    cell.detailTextLabel.text = [[_comune allValues] firstObject];
-    
-    if (_comune != Nil) {
-        cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:3 inSection:1]];
-        cell.hidden = NO;
-        
-        cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:4 inSection:1]];
-        cell.hidden = NO;
-    } else {
-        cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:3 inSection:1]];
-        cell.hidden = YES;
-        
-        cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:4 inSection:1]];
-        cell.hidden = YES;
-    }
+    self.location.comune = comune;
     
     self.frazione = Nil;
     self.viaTextField.text = Nil;
+    
+    [self reloadTableView];
+}
+
+- (NSDictionary *) comune {
+    return self.location.comune;
 }
 
 - (void) setFrazione:(NSDictionary *)frazione {
-    _frazione = frazione;
-    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForItem:3 inSection:1]];
-    cell.detailTextLabel.text = [[_frazione allValues] firstObject];
+    self.location.frazione = frazione;
+    
+    [self reloadTableView];
+}
+
+- (NSDictionary *) frazione {
+    return self.location.frazione;
+}
+
+- (void) setVia:(NSString *)via {
+    self.location.via = via;
+    
+    [self reloadTableView];
+}
+
+- (NSString *) via {
+    return self.location.via;
 }
 
 # pragma mark - Location methods
@@ -157,15 +157,10 @@ typedef enum tipoIndirizzo {
 }
 
 - (IBAction)didEndOnExitEnteringDetail:(UITextField *)sender {
-    // Quando l'utente preme "Fatto" sulla tastiera, viene mostrato il dettaglio.
+    // Quando l'utente preme "Fatto" sulla tastiera, può andare avanti.
     if ([sender isEqual:self.viaTextField]) {
         self.nextBarButtonItem.enabled = TRUE;
-        
-        self.location.regione = self.region;
-        self.location.provincia = self.provincia;
-        self.location.comune = self.comune;
-        self.location.frazione = self.frazione;
-        self.location.via = sender.text;
+        self.via = sender.text;
     }
 }
 
@@ -180,6 +175,46 @@ typedef enum tipoIndirizzo {
     }
 }
 
+- (void) reloadTableView {
+    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:1]];
+    cell.detailTextLabel.text = [[self.region allValues] firstObject];
+    
+    cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:1]];
+    cell.hidden = NO;
+    
+    cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:1]];
+    cell.detailTextLabel.text = [[self.provincia allValues] firstObject];
+    
+    cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:2 inSection:1]];
+    if (self.provincia != Nil) {
+        cell.hidden = NO;
+    } else {
+        cell.hidden = YES;
+    }
+    
+    cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:2 inSection:1]];
+    cell.detailTextLabel.text = [[self.comune allValues] firstObject];
+    
+    if (self.comune != Nil) {
+        cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:3 inSection:1]];
+        cell.hidden = NO;
+        
+        cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:4 inSection:1]];
+        cell.hidden = NO;
+    } else {
+        cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:3 inSection:1]];
+        cell.hidden = YES;
+        
+        cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:4 inSection:1]];
+        cell.hidden = YES;
+    }
+    
+    cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForItem:3 inSection:1]];
+    cell.detailTextLabel.text = [[self.frazione allValues] firstObject];
+    
+    self.viaTextField.text = self.via;
+}
+
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -187,8 +222,6 @@ typedef enum tipoIndirizzo {
     if ([segue.destinationViewController isKindOfClass:[coQuestionTVC class]]) {
         coQuestionTVC* qtvc = (coQuestionTVC *) [segue destinationViewController];
         qtvc.delegate = self.delegate;
-        
-        qtvc.delegate.questionario.where = self.location;
     }
     
     if ([segue.identifier isEqualToString:@"coRegioneSegue"]) {
@@ -199,6 +232,7 @@ typedef enum tipoIndirizzo {
         dvc.whereDelegate = self;
         self.tipoIndirizzo = regione;
         [dvc loadRegions];
+        
     } else if ([segue.identifier isEqualToString:@"coProvinciaSegue"]) {
         UINavigationController *nc = segue.destinationViewController;
         coIndirizzoTVC *dvc = (coIndirizzoTVC *)[nc topViewController];
@@ -207,6 +241,7 @@ typedef enum tipoIndirizzo {
         dvc.whereDelegate = self;
         self.tipoIndirizzo = provincia;
         [dvc loadProvince:[[self.region allKeys] firstObject]];
+        
     } else if ([segue.identifier isEqualToString:@"coComuneSegue"]) {
         UINavigationController *nc = segue.destinationViewController;
         coIndirizzoTVC *dvc = (coIndirizzoTVC *)[nc topViewController];
@@ -215,6 +250,7 @@ typedef enum tipoIndirizzo {
         dvc.whereDelegate = self;
         self.tipoIndirizzo = comuni;
         [dvc loadComuni:[[self.provincia allKeys] firstObject]];
+        
     } else if ([segue.identifier isEqualToString:@"coFrazioneSegue"]) {
         UINavigationController *nc = segue.destinationViewController;
         coIndirizzoTVC *dvc = (coIndirizzoTVC *)[nc topViewController];
@@ -229,14 +265,16 @@ typedef enum tipoIndirizzo {
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    if (self.delegate.questionario.where != Nil) {
-        self.region = self.delegate.questionario.where.regione;
-        self.provincia = self.delegate.questionario.where.provincia;
-        self.comune = self.delegate.questionario.where.comune;
-        self.frazione = self.delegate.questionario.where.frazione;
-        self.viaTextField.text = self.delegate.questionario.where.via;
-        
+    if (self.delegate.questionario.where != Nil) {     
         self.nextBarButtonItem.enabled = YES;
+        
+//        self.region = self.region;
+//        self.provincia = self.provincia;
+//        self.comune = self.comune;
+//        self.frazione = self.frazione;
+//        self.via = self.via;
+//        NSLog(@"%@, %@, %@", self.region, self.provincia, self.comune);
+        [self reloadTableView];
     }
 }
 

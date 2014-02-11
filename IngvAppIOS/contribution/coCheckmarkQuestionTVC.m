@@ -15,6 +15,13 @@
 
 @implementation coCheckmarkQuestionTVC
 
+- (void) setChoosenValue:(NSInteger)choosenValue {
+    _choosenValue = choosenValue;
+
+    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForItem:choosenValue inSection:0]];
+    [self markCellForSelection:cell];
+}
+
 - (void) markCellForSelection:(UITableViewCell *)cell {
     
     for (UITableViewCell *c in self.whatCells) {
@@ -22,13 +29,13 @@
     }
     
     cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    self.nextBarButton.enabled = YES;
 }
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
     [self markCellForSelection:cell];
 
-    self.nextBarButton.enabled = YES;
     self.choosenValue = indexPath.row;
 }
 

@@ -25,6 +25,7 @@
 # pragma mark - Setters and Getters
 - (void) setTotalFloors:(NSInteger)totalFloors {
     _totalFloors = totalFloors;
+    self.delegate.questionario.totalFloors = _totalFloors != 0 ? [NSNumber numberWithInt:_totalFloors] : Nil;
     
     if (_totalFloors == 0) {
         self.totalFloorsCell.hidden = YES;
@@ -38,6 +39,9 @@
 
 - (void) setFloor:(NSInteger)floor {
     _floor = floor;
+    self.delegate.questionario.floor = _floor != -2 ? [NSNumber numberWithInt:_floor] : Nil;
+    
+    
     self.floorCell.detailTextLabel.text = (_floor != -2) ? [NSString stringWithFormat:@"%d", _floor] : Nil;
     self.totalFloorsCell.hidden = NO;
     
@@ -46,6 +50,10 @@
 
 - (void) setWhereDetail:(NSInteger)whereDetail {
     _whereDetail = whereDetail;
+    self.delegate.questionario.whereDetail = _whereDetail;
+    
+    [self markDetailCell:[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForItem:_whereDetail inSection:0]]];
+    
     if (_whereDetail == 0) {
         self.floor = -2;
         self.totalFloors = 0;
@@ -63,15 +71,8 @@
     cell.accessoryType = UITableViewCellAccessoryCheckmark;
 }
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    [self markDetailCell:self.edificioCell];
-}
-
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
-        [self markDetailCell:[self.tableView cellForRowAtIndexPath:indexPath]];
         self.whereDetail = indexPath.row;
         
         //Put this code where you want to reload your table view
@@ -105,10 +106,6 @@
     if ([segue.destinationViewController isKindOfClass:[coQuestionTVC class]]) {
         coQuestionTVC* cqtvc = (coQuestionTVC *) segue.destinationViewController;
         cqtvc.delegate = self.delegate;
-        
-        cqtvc.delegate.questionario.floor = self.floor;
-        cqtvc.delegate.questionario.totalFloors = self.totalFloors;
-        cqtvc.delegate.questionario.whereDetail = self.whereDetail;
     }
     
     if ([segue.identifier isEqualToString:@"coWhereFloorSegue"]) {
@@ -126,8 +123,21 @@
     }
 }
 
+# pragma mark - ViewController Life Cycle
+
 - (void) viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     
+    if (self.whereDetail != self.delegate.questionario.whereDetail) {
+        self.whereDetail = self.delegate.questionario.whereDetail;
+    }
+    
+    if (self.whereDetail == 0 &&
+        self.delegate.questionario.floor != Nil &&
+        self.delegate.questionario.totalFloors != nil) {
+        self.floor = [self.delegate.questionario.floor integerValue];
+        self.totalFloors = [self.delegate.questionario.totalFloors integerValue];
+    }
 }
 
 @end

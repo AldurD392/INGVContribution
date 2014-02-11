@@ -12,8 +12,8 @@
 @interface coQuestionario : NSObject
 @property (strong, nonatomic) NSDate *whenDetail;
 @property (nonatomic) coWhereLocation *where;
-@property (nonatomic) NSInteger floor;
-@property (nonatomic) NSInteger totalFloors;
+@property (nonatomic) NSNumber* floor;
+@property (nonatomic) NSNumber* totalFloors;
 @property (nonatomic) NSInteger whereDetail;
 @property (nonatomic) NSInteger what;
 @property (nonatomic) NSInteger effects;

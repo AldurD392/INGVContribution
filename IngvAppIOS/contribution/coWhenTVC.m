@@ -18,10 +18,20 @@
 @implementation coWhenTVC
 
 # pragma mark - Setters / Getters
+- (void) setDate:(NSDate *)date {
+    self.delegate.questionario.whenDetail = date;
+}
 
+- (NSDate *) date {
+    return self.delegate.questionario.whenDetail;
+}
 
 # pragma mark - IBActions
 - (IBAction)currestPositionSwitchDidChanged:(UISwitch *)sender {
+    
+    if (sender.isOn) {
+        self.date = [NSDate date];
+    }
 
     //Put this code where you want to reload your table view
     dispatch_async(dispatch_get_main_queue(), ^{
@@ -45,14 +55,11 @@
     }
 }
 
+- (IBAction)datePickerValueChanger:(UIDatePicker *)sender {
+    self.date = sender.date;
+}
+
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([self.currentDateTimeSwitch isOn]) {
-        self.date = [NSDate date];
-    } else {
-        self.date = [self.datePicker date];
-    }
-    
-    self.delegate.questionario.whenDetail = self.date;
     coQuestionTVC* cqtvc = (coQuestionTVC *) [segue destinationViewController];
     cqtvc.delegate = self.delegate;
 }
@@ -60,8 +67,8 @@
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    if (self.delegate.questionario.whenDetail != nil) {
-        self.datePicker.date = self.delegate.questionario.whenDetail;
+    if (self.date != nil) {
+        self.datePicker.date = self.date;
     }
 }
 

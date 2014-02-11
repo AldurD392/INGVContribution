@@ -842,7 +842,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Paura" id="laY-cK-lak">
-                        <barButtonItem key="rightBarButtonItem" title="Avanti" id="BiM-pI-ifp"/>
+                        <barButtonItem key="rightBarButtonItem" title="Avanti" id="BiM-pI-ifp">
+                            <connections>
+                                <action selector="nextButtonPressed:" destination="lQI-40-Lsr" id="mP0-OI-FbL"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="nextBarButton" destination="BiM-pI-ifp" id="IPp-3G-Zcg"/>
@@ -852,7 +856,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <outletCollection property="cells" destination="N5r-Xa-qkb" id="5l2-bc-50d"/>
                         <outletCollection property="cells" destination="EMH-5e-vHt" id="Ede-J7-LKj"/>
                         <outletCollection property="cells" destination="RpH-pS-ORH" id="uWQ-oZ-akJ"/>
-                        <segue destination="elx-l1-Lnf" kind="push" identifier="coSegueequilibro" id="0ke-JO-cY1"/>
+                        <segue destination="elx-l1-Lnf" kind="push" identifier="coEquilibroSegue" id="0ke-JO-cY1"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mo5-5r-z89" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -964,7 +968,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Equilibrio" id="4nA-Q2-2to">
-                        <barButtonItem key="rightBarButtonItem" title="Avanti" id="Te9-ul-Ny1"/>
+                        <barButtonItem key="rightBarButtonItem" title="Avanti" id="Te9-ul-Ny1">
+                            <connections>
+                                <action selector="nextButtonPressed:" destination="elx-l1-Lnf" id="gzi-OE-3oF"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="nextBarButton" destination="Te9-ul-Ny1" id="yAv-h5-vXi"/>
@@ -1624,7 +1632,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Animali" id="CII-LX-5Yy">
-                        <barButtonItem key="rightBarButtonItem" title="Avanti" id="sPL-xn-Eco"/>
+                        <barButtonItem key="rightBarButtonItem" title="Avanti" id="sPL-xn-Eco">
+                            <connections>
+                                <action selector="nextButtonPressed:" destination="tDI-Ul-82O" id="UUO-CF-1Aa"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="nextBarButton" destination="sPL-xn-Eco" id="hBx-hV-TBx"/>
@@ -1727,7 +1739,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Lampadari" id="0OR-XH-AZM">
-                        <barButtonItem key="rightBarButtonItem" title="Avanti" id="qov-Sp-OTj"/>
+                        <barButtonItem key="rightBarButtonItem" title="Avanti" id="qov-Sp-OTj">
+                            <connections>
+                                <action selector="nextButtonPressed:" destination="W82-Ws-ER1" id="qS7-dH-lY1"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="nextBarButton" destination="qov-Sp-OTj" id="iqJ-5J-QGZ"/>
@@ -1847,7 +1863,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Porcellane e cristallerie" id="Uvg-9c-Qse">
-                        <barButtonItem key="rightBarButtonItem" title="Avanti" id="GUQ-wg-Saj"/>
+                        <barButtonItem key="rightBarButtonItem" title="Avanti" id="GUQ-wg-Saj">
+                            <connections>
+                                <action selector="nextButtonPressed:" destination="3LJ-PU-31p" id="X4j-lF-4jj"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="nextBarButton" destination="GUQ-wg-Saj" id="C9t-Ls-Lg0"/>
@@ -1951,7 +1971,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Piccoli soprammobili" id="t5a-RJ-WbN">
-                        <barButtonItem key="rightBarButtonItem" title="Avanti" id="rOR-X8-GNO"/>
+                        <barButtonItem key="rightBarButtonItem" title="Avanti" id="rOR-X8-GNO">
+                            <connections>
+                                <action selector="nextButtonPressed:" destination="jNU-du-6qh" id="1Ty-wc-j8o"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="nextBarButton" destination="rOR-X8-GNO" id="2Ni-Sa-rgH"/>
@@ -2072,7 +2096,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Porte, finestre e sportelli" id="Y3R-68-9TB">
-                        <barButtonItem key="rightBarButtonItem" title="Avanti" id="urf-U9-SvW"/>
+                        <barButtonItem key="rightBarButtonItem" title="Avanti" id="urf-U9-SvW">
+                            <connections>
+                                <action selector="nextButtonPressed:" destination="eix-XR-WGa" id="eOe-2Z-gfq"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="nextBarButton" destination="urf-U9-SvW" id="gVq-Lq-1e1"/>
@@ -2193,7 +2221,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Liquidi" id="IaJ-Lf-JJH">
-                        <barButtonItem key="rightBarButtonItem" title="Avanti" id="Mho-aq-jmN"/>
+                        <barButtonItem key="rightBarButtonItem" title="Avanti" id="Mho-aq-jmN">
+                            <connections>
+                                <action selector="nextButtonPressed:" destination="RSD-jd-vBa" id="1nd-E3-JX6"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="nextBarButton" destination="Mho-aq-jmN" id="bfc-2M-MeF"/>
@@ -2314,7 +2346,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Quadri, libri e vasi" id="H4u-JE-9P9">
-                        <barButtonItem key="rightBarButtonItem" title="Avanti" id="jig-Hh-dla"/>
+                        <barButtonItem key="rightBarButtonItem" title="Avanti" id="jig-Hh-dla">
+                            <connections>
+                                <action selector="nextButtonPressed:" destination="3BU-Td-xhD" id="pBU-pv-1a9"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="nextBarButton" destination="jig-Hh-dla" id="YBq-lV-al9"/>
@@ -2435,7 +2471,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Mobili e altri oggetti pesanti" id="rnh-RN-EYO">
-                        <barButtonItem key="rightBarButtonItem" title="Avanti" id="ail-el-hmk"/>
+                        <barButtonItem key="rightBarButtonItem" title="Avanti" id="ail-el-hmk">
+                            <connections>
+                                <action selector="nextButtonPressed:" destination="7tb-Id-qQa" id="TNk-lO-0WR"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="nextBarButton" destination="ail-el-hmk" id="isU-Qh-pAi"/>
@@ -2522,7 +2562,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Rumore del terremoto" id="dhe-qm-9bO">
-                        <barButtonItem key="rightBarButtonItem" title="Avanti" id="MPb-r0-XMU"/>
+                        <barButtonItem key="rightBarButtonItem" title="Avanti" id="MPb-r0-XMU">
+                            <connections>
+                                <action selector="nextButtonPressed:" destination="nUQ-0C-Scn" id="as8-Uw-r1a"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="nextBarButton" destination="MPb-r0-XMU" id="Ju8-I5-loA"/>
@@ -2625,7 +2669,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Inizio del rumore" id="1Yi-Vb-jRD">
-                        <barButtonItem key="rightBarButtonItem" title="Avanti" id="M68-5P-jOg"/>
+                        <barButtonItem key="rightBarButtonItem" title="Avanti" id="M68-5P-jOg">
+                            <connections>
+                                <action selector="nextButtonPressed:" destination="wa1-gm-07O" id="kqN-03-4Ez"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="nextBarButton" destination="M68-5P-jOg" id="ElQ-av-6IW"/>
@@ -2729,7 +2777,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Provenienza del rumore" id="ccZ-QS-jNY">
-                        <barButtonItem key="rightBarButtonItem" title="Avanti" id="824-k7-Q0c"/>
+                        <barButtonItem key="rightBarButtonItem" title="Avanti" id="824-k7-Q0c">
+                            <connections>
+                                <action selector="nextButtonPressed:" destination="CEw-ki-owC" id="Nxf-0J-PQv"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="nextBarButton" destination="824-k7-Q0c" id="za4-Y0-BfD"/>
@@ -2831,7 +2883,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Acqua nelle piscine" id="L2n-1B-eNP">
-                        <barButtonItem key="rightBarButtonItem" title="Avanti" id="iU0-VW-RP4"/>
+                        <barButtonItem key="rightBarButtonItem" title="Avanti" id="iU0-VW-RP4">
+                            <connections>
+                                <action selector="nextButtonPressed:" destination="oeZ-J5-wAT" id="qlS-b7-rgE"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="nextBarButton" destination="iU0-VW-RP4" id="KdP-ae-brw"/>
@@ -2952,7 +3008,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Piante ed alberi" id="kNb-F2-1ok">
-                        <barButtonItem key="rightBarButtonItem" title="Avanti" id="AoQ-im-PaJ"/>
+                        <barButtonItem key="rightBarButtonItem" title="Avanti" id="AoQ-im-PaJ">
+                            <connections>
+                                <action selector="nextButtonPressed:" destination="BE1-jp-oXl" id="unS-3z-1tb"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="nextBarButton" destination="AoQ-im-PaJ" id="BPT-WY-bNJ"/>
@@ -2961,7 +3021,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <outletCollection property="cells" destination="lyJ-ej-tIr" id="w2e-vr-z4s"/>
                         <outletCollection property="cells" destination="pr8-Sq-ZGF" id="mwt-Ud-oa6"/>
                         <outletCollection property="cells" destination="jG4-X4-TtF" id="pW3-Uy-cW3"/>
-                        <segue destination="nUQ-0C-Scn" kind="push" identifier="coRumoreDall'ApertoSegue" id="IHd-pH-WL7"/>
+                        <segue destination="nUQ-0C-Scn" kind="push" identifier="coRumoreDaApertoSegue" id="IHd-pH-WL7"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2bO-Ud-7qL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2975,7 +3035,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="761-aj-Is8"/>
         <segue reference="IHd-pH-WL7"/>
+        <segue reference="761-aj-Is8"/>
     </inferredMetricsTieBreakers>
 </document>

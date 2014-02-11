@@ -88,6 +88,7 @@
             break;
             
         default:
+            NSLog(@"Invalig tag.");
             break;
     }
 
@@ -171,7 +172,84 @@
 }
 
 - (IBAction)nextButtonPressed:(UIBarButtonItem *)sender {
+    [self performSwitchedSegueWithSender:sender];
+}
 
+
+- (void) performSwitchedSegueWithSender:(id)sender {
+    switch (self.view.tag) {
+        case -1:
+            
+            break;
+            
+        case 1:
+            [self performSegueWithIdentifier:@"coEquilibroSegue" sender:sender];
+            break;
+            
+        case 2:
+            [self performSegueWithIdentifier:@"coAnimaliSegue" sender:sender];
+            break;
+            
+        case 3:
+            //            Se si era in un edificio:
+            if (self.delegate.questionario.whereDetail.integerValue == 0) {
+                [self performSegueWithIdentifier:@"coLampadariSegue" sender:sender];
+            } else {
+                [self performSegueWithIdentifier:@"coPiscineSegue" sender:sender];
+            }
+            break;
+            
+        case 4:
+            [self performSegueWithIdentifier:@"coPorcellaneSegue" sender:sender];
+            break;
+            
+        case 5:
+            [self performSegueWithIdentifier:@"coSoprammobiliSegue" sender:sender];
+            break;
+            
+        case 6:
+            [self performSegueWithIdentifier:@"coFinestreSegue" sender:sender];
+            break;
+            
+        case 7:
+            [self performSegueWithIdentifier:@"coLiquidiSegue" sender:sender];
+            break;
+            
+        case 8:
+            [self performSegueWithIdentifier:@"coQuadriSegue" sender:sender];
+            break;
+            
+        case 9:
+            [self performSegueWithIdentifier:@"coMobiliSegue" sender:sender];
+            break;
+            
+        case 10:
+            [self performSegueWithIdentifier:@"coRumoreDaEdificioSegue" sender:sender];
+            break;
+            
+        case 11:
+            [self performSegueWithIdentifier:@"coInizioRumoreSegue" sender:sender];
+            break;
+            
+        case 12:
+            [self performSegueWithIdentifier:@"coProvenienzaRumoreSegue" sender:sender];
+            break;
+            
+        case 13:
+            //            TODO:
+            break;
+            
+        case 14:
+            [self performSegueWithIdentifier:@"coPianteSegue" sender:sender];
+            break;
+            
+        case 15:
+            [self performSegueWithIdentifier:@"coRumoreDaApertoSegue" sender:sender];
+            break;
+            
+        default:
+            break;
+    }
 }
 
 
@@ -199,8 +277,9 @@
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
     [self markCellForSelection:cell];
-
     self.choosenValue = [NSNumber numberWithInt:indexPath.row];
+
+    [self performSwitchedSegueWithSender:cell];
 }
 
 - (void) viewWillAppear:(BOOL)animated {

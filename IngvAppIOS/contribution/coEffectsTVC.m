@@ -58,7 +58,7 @@
     NSString* buttonName = [actionSheet buttonTitleAtIndex:buttonIndex];
     
     if ([buttonName isEqualToString:@"Si"]) {
-        [self performSegueWithIdentifier:@"coPauraEquilibrioSegue" sender:self];
+        [self performSegueWithIdentifier:@"coPauraSegue" sender:self];
     }
     else if ([buttonName isEqualToString:@"No"]) {
         

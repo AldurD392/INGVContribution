@@ -10,5 +10,4 @@
 #import "coQuestionTVC.h"
 
 @interface coCheckmarkQuestionTVC : coQuestionTVC
-@property (strong, nonatomic) NSNumber* choosenValue;
 @end

@@ -10,9 +10,4 @@
 #import "coQuestionTVC.h"
 
 @interface coWhereTVC : coQuestionTVC
-@property (strong, nonatomic) NSDictionary *region;
-@property (strong, nonatomic) NSDictionary *provincia;
-@property (strong, nonatomic) NSDictionary *comune;
-@property (strong, nonatomic) NSDictionary *frazione;
-@property (strong, nonatomic) NSString *via;
 @end

@@ -83,4 +83,11 @@
     }
 }
 
+# pragma mark - ViewController Life Cycle
+- (void) viewWillAppear:(BOOL)animated {
+    if (self.delegate.questionario.effects) {
+        self.effectSlider.value = self.delegate.questionario.effects;
+    }
+}
+
 @end

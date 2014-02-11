@@ -16,7 +16,6 @@ typedef enum floorValue {
 
 @interface coWhereDetailTVC : coQuestionTVC
 @property (nonatomic) NSInteger whereDetail;
-@property (nonatomic) NSInteger whatDetail;
 @property (nonatomic) NSInteger floor;
 @property (nonatomic) NSInteger totalFloors;
 @property (nonatomic) floorValue value;

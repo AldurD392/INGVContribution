@@ -14,5 +14,7 @@
 @property (nonatomic) coWhereLocation *where;
 @property (nonatomic) NSInteger floor;
 @property (nonatomic) NSInteger totalFloors;
+@property (nonatomic) NSInteger whereDetail;
 @property (nonatomic) NSInteger what;
+@property (nonatomic) NSInteger effects;
 @end

@@ -323,9 +323,9 @@
 			isa = PBXGroup;
 			children = (
 				764195C218A9169B00D6D939 /* Indirizzo */,
-				764C9E1D18A91B880048EB92 /* coCheckmarkQuestionTVC.h */,
 				76406C2618A9276A00A20BF3 /* coQuestionTVC.h */,
 				76406C2718A9276A00A20BF3 /* coQuestionTVC.m */,
+				764C9E1D18A91B880048EB92 /* coCheckmarkQuestionTVC.h */,
 				764C9E1E18A91B880048EB92 /* coCheckmarkQuestionTVC.m */,
 				764195BF18A9168D00D6D939 /* coWhatTVC.h */,
 				764195C018A9168D00D6D939 /* coWhatTVC.m */,

@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "coQuestionTVC.h"
 
-@interface coCheckmarkQuestionTVC : UITableViewController
+@interface coCheckmarkQuestionTVC : coQuestionTVC
 @property (nonatomic) NSInteger choosenValue;
 @end

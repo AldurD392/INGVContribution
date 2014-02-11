@@ -8,6 +8,7 @@
 
 #import "coWhereDetailTVC.h"
 #import "coFloorTVC.h"
+#import "coQuestionTVC.h"
 
 @interface coWhereDetailTVC ()
 @property (weak, nonatomic) IBOutlet UITableViewCell *edificioCell;
@@ -101,6 +102,15 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    if ([segue.destinationViewController isKindOfClass:[coQuestionTVC class]]) {
+        coQuestionTVC* cqtvc = (coQuestionTVC *) segue.destinationViewController;
+        cqtvc.delegate = self.delegate;
+        
+        cqtvc.delegate.questionario.floor = self.floor;
+        cqtvc.delegate.questionario.totalFloors = self.totalFloors;
+        cqtvc.delegate.questionario.whereDetail = self.whereDetail;
+    }
+    
     if ([segue.identifier isEqualToString:@"coWhereFloorSegue"]) {
         UINavigationController *nc = segue.destinationViewController;
         coFloorTVC *cftvc = (coFloorTVC *)[nc topViewController];

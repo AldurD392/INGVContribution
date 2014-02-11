@@ -507,10 +507,10 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="1662" y="-147"/>
         </scene>
-        <!--Co Checkmark QuestionTVC - Cosa stavi facendo?-->
+        <!--Co WhatTVC - Cosa stavi facendo?-->
         <scene sceneID="ojN-4K-UKd">
             <objects>
-                <tableViewController id="Msc-Qu-JcB" customClass="coCheckmarkQuestionTVC" sceneMemberID="viewController">
+                <tableViewController id="Msc-Qu-JcB" customClass="coWhatTVC" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="TIt-DN-C9v">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

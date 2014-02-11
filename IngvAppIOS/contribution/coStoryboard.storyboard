@@ -2492,7 +2492,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <barButtonItem key="rightBarButtonItem" title="Avanti" id="MPb-r0-XMU"/>
                     </navigationItem>
                     <connections>
-                        <segue destination="wa1-gm-07O" kind="push" id="JVv-J9-1RX"/>
+                        <segue destination="wa1-gm-07O" kind="push" identifier="coInizioRumoreSegue" id="JVv-J9-1RX"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WRp-ll-sxP" userLabel="First Responder" sceneMemberID="firstResponder"/>

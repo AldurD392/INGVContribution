@@ -860,9 +860,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
-                            <tableViewSection id="3jy-4u-BzF">
-                                <cells/>
-                            </tableViewSection>
                             <tableViewSection headerTitle="Come era il tuo equilibrio?" footerTitle="Scegli tra le precedenti" id="ATJ-Xa-vCh">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" editingAccessoryType="checkmark" textLabel="OGZ-DB-BtW" style="IBUITableViewCellStyleDefault" id="GRA-FL-jaT">
@@ -1551,9 +1548,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
-                            <tableViewSection id="tHU-fA-gUM">
-                                <cells/>
-                            </tableViewSection>
                             <tableViewSection headerTitle="Erano agitati gli animali durante la scossa o pochi minuti prima?" footerTitle="Scegli tra le precedenti" id="hFk-05-Noh">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" editingAccessoryType="checkmark" textLabel="niK-rY-e0x" style="IBUITableViewCellStyleDefault" id="wYp-cQ-e8O">
@@ -1636,9 +1630,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
-                            <tableViewSection id="4LO-Df-IDC">
-                                <cells/>
-                            </tableViewSection>
                             <tableViewSection headerTitle="Quanto oscillavano i lampadari?" footerTitle="Scegli tra le precedenti" id="9V3-AY-lXK">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" editingAccessoryType="checkmark" textLabel="0te-73-oTu" style="IBUITableViewCellStyleDefault" id="0U9-P4-E6g">
@@ -1737,9 +1728,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
-                            <tableViewSection id="eD6-aI-7oC">
-                                <cells/>
-                            </tableViewSection>
                             <tableViewSection headerTitle="Le porcellane e le cristallerie si muovevano?" footerTitle="Scegli tra le precedenti" id="Izq-0K-t0M">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" editingAccessoryType="checkmark" textLabel="zmp-gU-wkr" style="IBUITableViewCellStyleDefault" id="Wxq-DG-GdO">
@@ -1855,9 +1843,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
-                            <tableViewSection id="NeF-OW-AwW">
-                                <cells/>
-                            </tableViewSection>
                             <tableViewSection headerTitle="I soprammobili si muovevano?" footerTitle="Scegli tra le precedenti" id="NMB-jm-Otq">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" editingAccessoryType="checkmark" textLabel="URQ-64-Rm6" style="IBUITableViewCellStyleDefault" id="PUw-c5-paI">
@@ -1956,9 +1941,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
-                            <tableViewSection id="ruO-h8-T0N">
-                                <cells/>
-                            </tableViewSection>
                             <tableViewSection headerTitle="Le porte, finestre, sportelli sbattevano?" footerTitle="Scegli tra le precedenti" id="d1p-kH-cSV">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" editingAccessoryType="checkmark" textLabel="oZd-xQ-LTV" style="IBUITableViewCellStyleDefault" id="hWH-eQ-nKV">
@@ -2074,9 +2056,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
-                            <tableViewSection id="QgF-oK-r5O">
-                                <cells/>
-                            </tableViewSection>
                             <tableViewSection headerTitle="Come era il comportamento dei liquidi?" footerTitle="Scegli tra le precedenti" id="eoR-LT-HOq">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" editingAccessoryType="checkmark" textLabel="CgS-Mi-eBZ" style="IBUITableViewCellStyleDefault" id="3Fe-P0-KoQ">
@@ -2192,9 +2171,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
-                            <tableViewSection id="0aI-5X-wzq">
-                                <cells/>
-                            </tableViewSection>
                             <tableViewSection headerTitle="Come era il comportamento di quadri, libri e vasi?" footerTitle="Scegli tra le precedenti" id="Hqs-6l-eK9">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" editingAccessoryType="checkmark" textLabel="kkY-Kn-gNp" style="IBUITableViewCellStyleDefault" id="08C-9o-2K7">
@@ -2310,9 +2286,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
-                            <tableViewSection id="bb6-zU-TPX">
-                                <cells/>
-                            </tableViewSection>
                             <tableViewSection headerTitle="Come era il comportamento di mobili e altri oggetti pesanti?" footerTitle="Scegli tra le precedenti" id="obs-I6-axU">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" editingAccessoryType="checkmark" textLabel="vGP-Ez-cZU" style="IBUITableViewCellStyleDefault" id="6jy-NZ-clY">
@@ -2428,9 +2401,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
-                            <tableViewSection id="zB9-pH-Ifr">
-                                <cells/>
-                            </tableViewSection>
                             <tableViewSection headerTitle="Era udibile il rumore del terremoto?" footerTitle="Scegli tra le precedenti" id="NuT-Lg-Aru">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" editingAccessoryType="checkmark" textLabel="zke-0Z-R4F" style="IBUITableViewCellStyleDefault" id="RD8-r4-w1t">
@@ -2512,9 +2482,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
-                            <tableViewSection id="x5d-dy-pJn">
-                                <cells/>
-                            </tableViewSection>
                             <tableViewSection headerTitle="Quando è cominciato il rumore del terremoto rispetto allo scuotimento?" footerTitle="Scegli tra le precedenti" id="VuP-Yb-nJu">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" editingAccessoryType="checkmark" textLabel="pFL-AQ-L5F" style="IBUITableViewCellStyleDefault" id="qyY-hY-aNw">
@@ -2613,9 +2580,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
-                            <tableViewSection id="5Nv-ZP-jng">
-                                <cells/>
-                            </tableViewSection>
                             <tableViewSection headerTitle="Da dove proveniva il rumore del terremoto?" footerTitle="Scegli tra le precedenti" id="yfZ-rM-B6y">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" editingAccessoryType="checkmark" textLabel="LG4-Z1-7IU" style="IBUITableViewCellStyleDefault" id="QBO-t4-ETj">
@@ -2711,9 +2675,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
-                            <tableViewSection id="FYm-Lz-9wn">
-                                <cells/>
-                            </tableViewSection>
                             <tableViewSection headerTitle="Quale era il comportamento dell'acqua nelle piscine?" footerTitle="Scegli tra le precedenti" id="tyh-Ry-aqh">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" editingAccessoryType="checkmark" textLabel="cmS-3f-DYK" style="IBUITableViewCellStyleDefault" id="Se2-Dx-BWi">
@@ -2812,9 +2773,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
-                            <tableViewSection id="Uau-UG-KQ7">
-                                <cells/>
-                            </tableViewSection>
                             <tableViewSection headerTitle="Che effetti hai notato su piante ed alberi?" footerTitle="Scegli tra le precedenti" id="s9Z-UR-NTu">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" editingAccessoryType="checkmark" textLabel="b8d-aO-ukI" style="IBUITableViewCellStyleDefault" id="00d-Sz-NSu">

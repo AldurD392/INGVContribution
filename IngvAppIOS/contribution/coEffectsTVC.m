@@ -57,14 +57,10 @@
         [self performSegueWithIdentifier:@"coPauraSegue" sender:self];
     }
     else if ([buttonName isEqualToString:@"No"]) {
-        
+//        TODO
     } else {
         
     }
-}
-
-- (CGFloat) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 80;
 }
 
 - (void) updateView {

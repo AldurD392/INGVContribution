@@ -9,7 +9,6 @@
 #import "coWhenTVC.h"
 
 @interface coWhenTVC ()
-@property (weak, nonatomic) IBOutlet UISwitch *currentDateTimeSwitch;
 @property (strong, nonatomic) NSDate* date;
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
 
@@ -26,34 +25,7 @@
     return self.delegate.questionario.whenDetail;
 }
 
-# pragma mark - IBActions
-- (IBAction)currestPositionSwitchDidChanged:(UISwitch *)sender {
-    
-    if (sender.isOn) {
-        self.date = [NSDate date];
-    }
-
-    //Put this code where you want to reload your table view
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [UIView transitionWithView:self.tableView
-                          duration:0.2f
-                           options:UIViewAnimationOptionTransitionCrossDissolve
-                        animations:^(void) {
-                            [self.tableView reloadData];
-                        } completion:NULL];
-    });
-}
-
 #pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{   
-    if ([self.currentDateTimeSwitch isOn]) {
-        return 1;
-    } else {
-        return 2;
-    }
-}
 
 - (IBAction)datePickerValueChanger:(UIDatePicker *)sender {
     self.date = sender.date;

@@ -57,6 +57,7 @@
 		76765F6F18A3E9710069A76C /* coComuniList.txt in Resources */ = {isa = PBXBuildFile; fileRef = 76765F6C18A3E9710069A76C /* coComuniList.txt */; };
 		76765F7018A3E9710069A76C /* coProvinceList.txt in Resources */ = {isa = PBXBuildFile; fileRef = 76765F6D18A3E9710069A76C /* coProvinceList.txt */; };
 		76765F7118A3E9710069A76C /* coRegionList.txt in Resources */ = {isa = PBXBuildFile; fileRef = 76765F6E18A3E9710069A76C /* coRegionList.txt */; };
+		76B2F04118ABD36A00515F97 /* coTextViewQTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B2F04018ABD36A00515F97 /* coTextViewQTVC.m */; };
 		76FCFD95189034A900F72C64 /* coWhereTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 76FCFD94189034A900F72C64 /* coWhereTVC.m */; };
 		C95304C814FECBB400BF68B6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C95304C714FECBB400BF68B6 /* UIKit.framework */; };
 		C95304CA14FECBB400BF68B6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C95304C914FECBB400BF68B6 /* Foundation.framework */; };
@@ -129,6 +130,8 @@
 		76765F6C18A3E9710069A76C /* coComuniList.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = coComuniList.txt; path = IngvAppIOS/contribution/coResources/coComuniList.txt; sourceTree = "<group>"; };
 		76765F6D18A3E9710069A76C /* coProvinceList.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = coProvinceList.txt; path = IngvAppIOS/contribution/coResources/coProvinceList.txt; sourceTree = "<group>"; };
 		76765F6E18A3E9710069A76C /* coRegionList.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = coRegionList.txt; path = IngvAppIOS/contribution/coResources/coRegionList.txt; sourceTree = "<group>"; };
+		76B2F03F18ABD36A00515F97 /* coTextViewQTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = coTextViewQTVC.h; path = IngvAppIOS/contribution/coTextViewQTVC.h; sourceTree = "<group>"; };
+		76B2F04018ABD36A00515F97 /* coTextViewQTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = coTextViewQTVC.m; path = IngvAppIOS/contribution/coTextViewQTVC.m; sourceTree = "<group>"; };
 		76FCFD93189034A900F72C64 /* coWhereTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = coWhereTVC.h; path = IngvAppIOS/contribution/coWhereTVC.h; sourceTree = "<group>"; };
 		76FCFD94189034A900F72C64 /* coWhereTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = coWhereTVC.m; path = IngvAppIOS/contribution/coWhereTVC.m; sourceTree = "<group>"; };
 		C95304C314FECBB400BF68B6 /* IngvAppIos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IngvAppIos.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -320,6 +323,8 @@
 		76FCFD921890347800F72C64 /* coViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				76B2F03F18ABD36A00515F97 /* coTextViewQTVC.h */,
+				76B2F04018ABD36A00515F97 /* coTextViewQTVC.m */,
 				764195C218A9169B00D6D939 /* Indirizzo */,
 				76406C2618A9276A00A20BF3 /* coQuestionTVC.h */,
 				76406C2718A9276A00A20BF3 /* coQuestionTVC.m */,
@@ -480,6 +485,7 @@
 				764C9E1F18A91B880048EB92 /* coCheckmarkQuestionTVC.m in Sources */,
 				4304CA5C18832E2900539F13 /* main.m in Sources */,
 				764C9E2218A920F50048EB92 /* coQuestionario.m in Sources */,
+				76B2F04118ABD36A00515F97 /* coTextViewQTVC.m in Sources */,
 				76001ECF18A5185B00608083 /* coWhereDetailTVC.m in Sources */,
 				76FCFD95189034A900F72C64 /* coWhereTVC.m in Sources */,
 				76001ED218A520CF00608083 /* coFloorTVC.m in Sources */,

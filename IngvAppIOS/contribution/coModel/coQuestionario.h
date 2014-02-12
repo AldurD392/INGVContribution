@@ -10,7 +10,10 @@
 #import "coWhereLocation.h"
 
 @interface coQuestionario : NSObject
+@property (strong, nonatomic) NSString *terremotoID;
+@property (strong, nonatomic) NSString *utenteID;
 @property (strong, nonatomic) NSDate *whenDetail;
+@property (strong, nonatomic) NSDate *whenCompiled;
 @property (nonatomic) coWhereLocation *where;
 @property (nonatomic) NSNumber* floor;
 @property (nonatomic) NSNumber* totalFloors;
@@ -32,4 +35,10 @@
 @property (nonatomic) NSNumber* provenienzaRumore;
 @property (nonatomic) NSNumber* piscine;
 @property (nonatomic) NSNumber* piante;
+@property (strong, nonatomic) NSString *altriFenomeni;
+@property (nonatomic) NSNumber* danni;
+@property (nonatomic) NSNumber* struttura;
+@property (nonatomic) NSNumber* muri;
+@property (nonatomic) NSNumber* tegole;
+@property (nonatomic) NSNumber* camini;
 @end

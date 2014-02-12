@@ -288,7 +288,8 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                                     <connections>
-                                                        <action selector="didEndOnExitEnteringDetail:" destination="lU3-7F-Osg" eventType="editingDidEndOnExit" id="ohu-FE-9BM"/>
+                                                        <action selector="didEndOnExitEnteringDetail:" destination="lU3-7F-Osg" eventType="editingDidEndOnExit" id="0SP-1s-Aiu"/>
+                                                        <action selector="didEndOnExitEnteringDetail:" destination="lU3-7F-Osg" eventType="editingDidEnd" id="maG-I7-Jk2"/>
                                                     </connections>
                                                 </textField>
                                             </subviews>
@@ -316,8 +317,13 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="comuneCell" destination="FKO-vL-lsb" id="chf-M6-q3f"/>
                         <outlet property="currentPositionSwitch" destination="hJa-f2-h65" id="eWg-jA-xIl"/>
+                        <outlet property="frazioneCell" destination="fPj-j5-x6J" id="LDI-wg-5SF"/>
                         <outlet property="nextBarButtonItem" destination="utY-9h-GDk" id="PNV-QN-TxD"/>
+                        <outlet property="provinciaCell" destination="uNm-5W-hpr" id="0Bf-JM-V98"/>
+                        <outlet property="regioneCell" destination="EYs-NY-naw" id="zah-gV-DLd"/>
+                        <outlet property="viaCell" destination="UbW-Gl-8kX" id="aAs-xM-4ja"/>
                         <outlet property="viaTextField" destination="z3u-Fn-1Li" id="7wG-2O-bX8"/>
                     </connections>
                 </tableViewController>
@@ -2650,7 +2656,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="los-df-o6a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7556" y="-152"/>
+            <point key="canvasLocation" x="7571" y="-152"/>
         </scene>
         <!--Co Checkmark QuestionTVC - Provenienza del rumore-->
         <scene sceneID="sh4-KJ-sjY">
@@ -2752,11 +2758,76 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <outletCollection property="cells" destination="QBO-t4-ETj" id="0go-qi-B8T"/>
                         <outletCollection property="cells" destination="k4q-7U-qyh" id="Jxz-rz-WJ6"/>
                         <outletCollection property="cells" destination="Rla-Xn-XfU" id="rYM-QB-AY8"/>
+                        <segue destination="hbN-ZU-8eZ" kind="push" identifier="coAltriFenomeniSegue" id="MNj-tk-RH0"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nsC-R4-cb8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7935" y="-147"/>
+            <point key="canvasLocation" x="7987" y="-149"/>
+        </scene>
+        <!--Co Text ViewQTVC - Altri fenomeni-->
+        <scene sceneID="7ll-9g-Gle">
+            <objects>
+                <tableViewController id="hbN-ZU-8eZ" customClass="coTextViewQTVC" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="gN2-uk-OsK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="Hai osservato altri fenomeni? Raccontaceli:" footerTitle="Scrivi quanto osservato nello spazio sovrastante" id="Hfc-i8-JJy">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="220" id="1X6-05-Ydt">
+                                        <rect key="frame" x="0.0" y="119" width="320" height="220"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1X6-05-Ydt" id="ukz-gC-A3O">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="219"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" text="Scrivi qui..." translatesAutoresizingMaskIntoConstraints="NO" id="crh-fa-Tyy">
+                                                    <rect key="frame" x="10" y="10" width="300" height="199"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="8"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="hbN-ZU-8eZ" id="0yj-z4-cSG"/>
+                                                    </connections>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="crh-fa-Tyy" firstAttribute="leading" secondItem="ukz-gC-A3O" secondAttribute="leading" constant="10" id="3aa-Bt-5iS"/>
+                                                <constraint firstItem="crh-fa-Tyy" firstAttribute="centerY" secondItem="ukz-gC-A3O" secondAttribute="centerY" id="ejB-Vu-BvO"/>
+                                                <constraint firstItem="crh-fa-Tyy" firstAttribute="top" secondItem="ukz-gC-A3O" secondAttribute="top" constant="10" id="teI-bJ-EB6"/>
+                                                <constraint firstItem="crh-fa-Tyy" firstAttribute="centerX" secondItem="ukz-gC-A3O" secondAttribute="centerX" id="zdT-c4-Oi9"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="hbN-ZU-8eZ" id="6kl-tg-xBg"/>
+                            <outlet property="delegate" destination="hbN-ZU-8eZ" id="48Q-Gf-umZ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Altri fenomeni" id="VQh-LH-gle">
+                        <barButtonItem key="rightBarButtonItem" title="Avanti" id="gZj-2V-e9M"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="nextBarButtonItem" destination="gZj-2V-e9M" id="5fP-4S-D9A"/>
+                        <outlet property="textView" destination="crh-fa-Tyy" id="WBa-EA-MZH"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E0p-UX-l1v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8423" y="-152"/>
         </scene>
         <!--Co Checkmark QuestionTVC - Acqua nelle piscine-->
         <scene sceneID="B3l-Rk-T20">

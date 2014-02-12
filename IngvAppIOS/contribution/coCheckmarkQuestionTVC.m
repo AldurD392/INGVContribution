@@ -236,7 +236,7 @@
             break;
             
         case 13:
-            //            TODO:
+            [self performSegueWithIdentifier:@"coAltriFenomeniSegue" sender:sender];
             break;
             
         case 14:

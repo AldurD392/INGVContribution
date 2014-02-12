@@ -24,6 +24,12 @@ typedef enum tipoIndirizzo {
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *nextBarButtonItem;
 @property tipoIndirizzo tipoIndirizzo;
 
+@property (weak, nonatomic) IBOutlet UITableViewCell *regioneCell;
+@property (weak, nonatomic) IBOutlet UITableViewCell *provinciaCell;
+@property (weak, nonatomic) IBOutlet UITableViewCell *comuneCell;
+@property (weak, nonatomic) IBOutlet UITableViewCell *frazioneCell;
+@property (weak, nonatomic) IBOutlet UITableViewCell *viaCell;
+
 @property (strong, nonatomic) coWhereLocation *location;
 @property (strong, nonatomic) CLLocationManager* locationManager;
 
@@ -165,7 +171,6 @@ typedef enum tipoIndirizzo {
 - (IBAction)didEndOnExitEnteringDetail:(UITextField *)sender {
     // Quando l'utente preme "Fatto" sulla tastiera, può andare avanti.
     if ([sender isEqual:self.viaTextField]) {
-        self.nextBarButtonItem.enabled = TRUE;
         self.via = sender.text;
     }
 }
@@ -182,43 +187,43 @@ typedef enum tipoIndirizzo {
 }
 
 - (void) reloadTableView {
-    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:1]];
-    cell.detailTextLabel.text = [[self.region allValues] firstObject];
-    
-    cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:1]];
-    cell.hidden = NO;
-    
-    cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:1]];
-    cell.detailTextLabel.text = [[self.provincia allValues] firstObject];
-    
-    cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:2 inSection:1]];
-    if (self.provincia != Nil) {
-        cell.hidden = NO;
+    if (!self.currentPositionSwitch.isOn) {
+        self.nextBarButtonItem.enabled = NO;
+
+        self.regioneCell.detailTextLabel.text = [[self.region allValues] firstObject];
+        
+        if (self.region != nil) {
+            self.provinciaCell.hidden = NO;
+        } else {
+            self.provinciaCell.hidden = YES;
+        }
+        
+        self.provinciaCell.detailTextLabel.text = [[self.provincia allValues] firstObject];
+        
+        if (self.provincia != nil) {
+            self.comuneCell.hidden = NO;
+        } else {
+            self.comuneCell.hidden = YES;
+        }
+        
+        self.comuneCell.detailTextLabel.text = [[self.comune allValues] firstObject];
+        
+        if (self.comune != nil) {
+            self.nextBarButtonItem.enabled = YES;
+            self.frazioneCell.hidden = NO;
+            self.viaCell.hidden = NO;
+        } else {
+            self.frazioneCell.hidden = YES;
+            self.viaCell.hidden = YES;
+        }
+        
+        self.frazioneCell.detailTextLabel.text = [[self.frazione allValues] firstObject];
+        self.viaTextField.text = self.via;
     } else {
-        cell.hidden = YES;
+        self.nextBarButtonItem.enabled = YES;
     }
     
-    cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:2 inSection:1]];
-    cell.detailTextLabel.text = [[self.comune allValues] firstObject];
-    
-    if (self.comune != Nil) {
-        cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:3 inSection:1]];
-        cell.hidden = NO;
-        
-        cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:4 inSection:1]];
-        cell.hidden = NO;
-    } else {
-        cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:3 inSection:1]];
-        cell.hidden = YES;
-        
-        cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:4 inSection:1]];
-        cell.hidden = YES;
-    }
-    
-    cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForItem:3 inSection:1]];
-    cell.detailTextLabel.text = [[self.frazione allValues] firstObject];
-    
-    self.viaTextField.text = self.via;
+    [self.tableView reloadData];
 }
 
 #pragma mark - Navigation
@@ -270,12 +275,7 @@ typedef enum tipoIndirizzo {
 
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
-    if (self.delegate.questionario.where != Nil) {     
-        self.nextBarButtonItem.enabled = YES;
-
-        [self reloadTableView];
-    }
+    [self reloadTableView];
 }
 
 @end

@@ -37,8 +37,14 @@
         self.textView.text = nil;
         self.textView.textColor = [UIColor blackColor];
     } else {
-        [self.textView setSelectedTextRange:[self.textView textRangeFromPosition:self.textView.beginningOfDocument toPosition:self.textView.endOfDocument]];
+        [self performSelector:@selector(selectAllTextInTextView:) withObject:textView afterDelay:0.01f];
     }
+}
+
+- (void) selectAllTextInTextView: (UITextView *)textView {
+    UITextRange* range = [self.textView textRangeFromPosition:self.textView.beginningOfDocument
+                                                   toPosition:self.textView.endOfDocument];
+    [self.textView setSelectedTextRange:range];
 }
 
 - (void) textViewDidChange:(UITextView *)textView {

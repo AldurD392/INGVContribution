@@ -2898,13 +2898,15 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     <navigationItem key="navigationItem" title="Altri fenomeni" id="VQh-LH-gle">
                         <barButtonItem key="rightBarButtonItem" title="Avanti" id="gZj-2V-e9M">
                             <connections>
-                                <segue destination="tIY-qS-VW9" kind="push" id="r9y-Jf-vOc"/>
+                                <action selector="nextButtonPressed:" destination="hbN-ZU-8eZ" id="We6-5x-4eH"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="nextBarButtonItem" destination="gZj-2V-e9M" id="5fP-4S-D9A"/>
                         <outlet property="textView" destination="crh-fa-Tyy" id="WBa-EA-MZH"/>
+                        <segue destination="tIY-qS-VW9" kind="push" identifier="coCostruzioneSegue" id="aO7-hn-lrz"/>
+                        <segue destination="xzv-hk-dPE" kind="push" identifier="coEndThanksBisSegue" id="Rej-Oi-8LG"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E0p-UX-l1v" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3878,7 +3880,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nyU-e6-x4y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="11026" y="-148"/>
+            <point key="canvasLocation" x="11006" y="-455"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

@@ -56,6 +56,7 @@
     self.altriFenomeni = self.textView.text;
 }
 
+
 - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range
  replacementText:(NSString *)text
 {
@@ -89,12 +90,27 @@
     
     self.textView.delegate = self;
 }
+#pragma mark - segue
+
+- (IBAction)nextButtonPressed:(UIBarButtonItem *)sender {
+    [self performSwitchedSegueWithSender:sender];
+}
+
+- (void) performSwitchedSegueWithSender:(id)sender {
+    if (self.delegate.questionario.whereDetail.integerValue == 0) {
+        [self performSegueWithIdentifier:@"coCostruzioneSegue" sender:self];
+    } else if (self.delegate.questionario.whereDetail.integerValue == 2) {
+        [self performSegueWithIdentifier:@"coEndThanksBisSegue" sender:self];
+    }
+}
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([segue.destinationViewController isKindOfClass:[coQuestionTVC class]]) {
-        coQuestionTVC* cqtvc = (coQuestionTVC *) segue.destinationViewController;
-        cqtvc.delegate = self.delegate;
+        if ([segue.identifier isEqualToString:@"coCostruzioneSegue"]) {
+            coQuestionTVC* cqtvc = (coQuestionTVC *) segue.destinationViewController;
+            cqtvc.delegate = self.delegate;
+        }
     }
 }
 

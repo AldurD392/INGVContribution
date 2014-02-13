@@ -18,4 +18,47 @@
     
     return self;
 }
+
+- (void) resetBuildingAnswer {
+    self.lampadari = nil;
+    self.porcellane = nil;
+    self.soprammobili = nil;
+    self.porcellane = nil;
+    self.liquidi = nil;
+    self.quadri = nil;
+    self.mobili = nil;
+    self.struttura = nil;
+    self.muri = nil;
+    self.tegole = nil;
+    self.camini = nil;
+}
+
+- (void) resetOpenAirAnswer {
+    self.piante =nil;
+    self.piscine = nil;
+}
+
+- (void) resetAllAnswer {
+    self.lampadari = nil;
+    self.porcellane = nil;
+    self.soprammobili = nil;
+    self.porcellane = nil;
+    self.liquidi = nil;
+    self.quadri = nil;
+    self.mobili = nil;
+    self.struttura = nil;
+    self.muri = nil;
+    self.tegole = nil;
+    self.camini = nil;
+    self.piante =nil;
+    self.piscine = nil;
+    self.altriFenomeni = nil;
+    self.rumore = nil;
+    self.inizioRumore = nil;
+    self.provenienzaRumore = nil;
+    self.effects = nil;
+    self.paura = nil;
+    self.equilibrio = nil;
+}
+
 @end

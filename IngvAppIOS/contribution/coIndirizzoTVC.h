@@ -17,6 +17,7 @@
 
 @property (nonatomic, assign) id <coIndirizzoTVCDelegate> whereDelegate;
 
+- (void) loadContries;
 - (void)loadRegions;
 - (void)loadProvince:(NSString *)regionCode;
 - (void)loadComuni:(NSString *)provinciaCode;

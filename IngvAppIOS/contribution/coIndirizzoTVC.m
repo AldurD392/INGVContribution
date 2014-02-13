@@ -29,9 +29,27 @@
 
 # pragma mark - File parsing
 
+#define STATILIST @"coStatiList"
 #define REGIONLIST @"coRegionList"
 #define PROVINCELIST @"coProvinceList"
 #define COMUNILIST @"coComuniList"
+
+- (void) loadContries {
+    NSString* countriesPath = [[NSBundle mainBundle] pathForResource:STATILIST ofType:@"txt"];
+    NSFileHandle* file = [NSFileHandle fileHandleForReadingAtPath:countriesPath];
+    
+    if (file == Nil) {
+        NSLog(@"Error opening countries file.");
+    }
+    
+    NSData* buffer = [file readDataToEndOfFile];
+    NSString* bufferString = [[NSString alloc] initWithData:buffer encoding:NSUTF8StringEncoding];
+    
+    NSCharacterSet *cset = [NSCharacterSet characterSetWithCharactersInString:@"\n"];
+    NSArray *splitString = [bufferString componentsSeparatedByCharactersInSet:cset];
+    
+    self.dataDict = [NSDictionary dictionaryWithObjects:splitString forKeys:splitString];
+}
 
 - (void) loadRegions {
     NSMutableDictionary* mutableDict = [[NSMutableDictionary alloc] init];

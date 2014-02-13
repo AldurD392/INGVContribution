@@ -11,6 +11,7 @@
 
 @interface coWhereLocation : NSObject
 @property (nonatomic) CLLocationCoordinate2D coordinate;
+@property (strong, nonatomic) NSString *stato;
 @property (strong, nonatomic) NSDictionary *regione;
 @property (strong, nonatomic) NSDictionary *provincia;
 @property (strong, nonatomic) NSDictionary *comune;

@@ -47,6 +47,7 @@
 		76001EFD18A52D7300608083 /* ITI3.csv in Resources */ = {isa = PBXBuildFile; fileRef = 76001EE918A52D7300608083 /* ITI3.csv */; };
 		76001EFE18A52D7300608083 /* ITI4.csv in Resources */ = {isa = PBXBuildFile; fileRef = 76001EEA18A52D7300608083 /* ITI4.csv */; };
 		762B99F418A8E76C00B7D3CB /* coEffectsTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 762B99F318A8E76C00B7D3CB /* coEffectsTVC.m */; };
+		763A85B518AD130B00AE8E6C /* coStatiList.txt in Resources */ = {isa = PBXBuildFile; fileRef = 763A85B418AD130B00AE8E6C /* coStatiList.txt */; };
 		764010F118ACD4DD0042D2E1 /* coEndTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 764010F018ACD4DD0042D2E1 /* coEndTVC.m */; };
 		76406C2818A9276A00A20BF3 /* coQuestionTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 76406C2718A9276A00A20BF3 /* coQuestionTVC.m */; };
 		764C9E1F18A91B880048EB92 /* coCheckmarkQuestionTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 764C9E1E18A91B880048EB92 /* coCheckmarkQuestionTVC.m */; };
@@ -113,6 +114,7 @@
 		76001EEA18A52D7300608083 /* ITI4.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ITI4.csv; sourceTree = "<group>"; };
 		762B99F218A8E76C00B7D3CB /* coEffectsTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = coEffectsTVC.h; path = IngvAppIOS/contribution/coEffectsTVC.h; sourceTree = "<group>"; };
 		762B99F318A8E76C00B7D3CB /* coEffectsTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = coEffectsTVC.m; path = IngvAppIOS/contribution/coEffectsTVC.m; sourceTree = "<group>"; };
+		763A85B418AD130B00AE8E6C /* coStatiList.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = coStatiList.txt; path = IngvAppIOS/contribution/coResources/coStatiList.txt; sourceTree = "<group>"; };
 		764010EF18ACD4DD0042D2E1 /* coEndTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = coEndTVC.h; path = IngvAppIOS/contribution/coEndTVC.h; sourceTree = "<group>"; };
 		764010F018ACD4DD0042D2E1 /* coEndTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = coEndTVC.m; path = IngvAppIOS/contribution/coEndTVC.m; sourceTree = "<group>"; };
 		76406C2618A9276A00A20BF3 /* coQuestionTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = coQuestionTVC.h; path = IngvAppIOS/contribution/coModel/coQuestionTVC.h; sourceTree = "<group>"; };
@@ -323,6 +325,7 @@
 				76765F6C18A3E9710069A76C /* coComuniList.txt */,
 				76765F6D18A3E9710069A76C /* coProvinceList.txt */,
 				76765F6E18A3E9710069A76C /* coRegionList.txt */,
+				763A85B418AD130B00AE8E6C /* coStatiList.txt */,
 			);
 			name = coResources;
 			sourceTree = "<group>";
@@ -458,6 +461,7 @@
 				4304CA821883348E00539F13 /* Default-568h@2x.png in Resources */,
 				4304CA8D18833F3E00539F13 /* beStoryboard.storyboard in Resources */,
 				76765F7018A3E9710069A76C /* coProvinceList.txt in Resources */,
+				763A85B518AD130B00AE8E6C /* coStatiList.txt in Resources */,
 				76765F6F18A3E9710069A76C /* coComuniList.txt in Resources */,
 				76001EF718A52D7300608083 /* ITG2.csv in Resources */,
 				76001EF918A52D7300608083 /* ITH4.csv in Resources */,

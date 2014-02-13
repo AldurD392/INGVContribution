@@ -12,7 +12,8 @@
 #import <CoreLocation/CoreLocation.h>
 
 typedef enum tipoIndirizzo {
-    regione = 1,
+    stato = 1,
+    regione,
     provincia,
     comuni,
     frazione
@@ -24,17 +25,24 @@ typedef enum tipoIndirizzo {
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *nextBarButtonItem;
 @property tipoIndirizzo tipoIndirizzo;
 
+@property (weak, nonatomic) IBOutlet UITableViewCell *statoCell;
 @property (weak, nonatomic) IBOutlet UITableViewCell *regioneCell;
 @property (weak, nonatomic) IBOutlet UITableViewCell *provinciaCell;
 @property (weak, nonatomic) IBOutlet UITableViewCell *comuneCell;
 @property (weak, nonatomic) IBOutlet UITableViewCell *frazioneCell;
 @property (weak, nonatomic) IBOutlet UITableViewCell *viaCell;
+@property (weak, nonatomic) IBOutlet UILabel *viaLabel;
 
+@property (weak, nonatomic) IBOutlet UITableViewCell *internationalAddressCell;
+@property (weak, nonatomic) IBOutlet UITextField *internationalAddressTextField;
+
+@property (nonatomic) BOOL international;
 @property (strong, nonatomic) coWhereLocation *location;
 @property (strong, nonatomic) CLLocationManager* locationManager;
 @property (strong, nonatomic) NSError* locationError;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *locationActivityIndicator;
 
+@property (strong, nonatomic) NSString *stato;
 @property (strong, nonatomic) NSDictionary *region;
 @property (strong, nonatomic) NSDictionary *provincia;
 @property (strong, nonatomic) NSDictionary *comune;
@@ -61,6 +69,22 @@ typedef enum tipoIndirizzo {
         _locationManager.distanceFilter = 100;
     }
     return _locationManager;
+}
+
+- (void) setStato:(NSString *)stato {
+    self.location.stato = stato;
+    self.region = nil;
+    
+    self.international = ![stato isEqualToString:@"Italia"];
+    
+    [self reloadTableView];
+}
+
+- (NSString *) stato {
+    if (!self.location.stato) {
+        self.location.stato = @"Italia";
+    }
+    return self.location.stato;
 }
 
 - (void) setRegion:(NSDictionary *)region {
@@ -132,7 +156,9 @@ typedef enum tipoIndirizzo {
 
 # pragma mark - coIndirizzoTVC Delegate Methods
 - (void)didFinishSelectingAddress:(NSDictionary *)dataDictionary {
-    if (self.tipoIndirizzo == regione) {
+    if (self.tipoIndirizzo == stato) {
+        self.stato = [[dataDictionary allValues] firstObject];
+    } else if (self.tipoIndirizzo == regione) {
         self.region = dataDictionary;
     } else if (self.tipoIndirizzo == provincia) {
         self.provincia = dataDictionary;
@@ -177,15 +203,74 @@ typedef enum tipoIndirizzo {
     if ([self.currentPositionSwitch isOn]) {
         return 1;
     } else {
-        return 2;
+        if (!self.international) {
+            return 2;
+        } else {
+            return 3;
+        }
+    }
+}
+//
+//- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+//    if (self.international == YES) {
+//        if (indexPath.section == 1) {
+//            if (indexPath.row != 0) {
+//                return 0;
+//            }
+//        }
+//    }
+//    
+//    return 44;
+//}
+
+- (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    if (section == 0) {
+        return 1;
+    }
+    else if (section == 1) {
+        if (self.international) {
+            return 1;
+        } else {
+            return 6;
+        }
+    } else {
+        return 1;
+    }
+}
+
+- (NSString *) tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
+    if (section == 1) {
+        if (self.comune) {
+            return @"Nota: frazione e via sono opzionali.";
+        } else {
+            return nil;
+        }
+    } else if (section == 0) {
+        return @"Scegli se utilizzare la posizione corrente.";
+    } else if (section == 2) {
+        if (self.international) {
+            return @"Inserisci l'indirizzo come da segnaposto.";
+        } else {
+            return nil;
+        }
+    }
+    else {
+        return nil;
     }
 }
 
 - (void) reloadTableView {
     if (!self.currentPositionSwitch.isOn) {
         self.nextBarButtonItem.enabled = NO;
-
-        self.regioneCell.detailTextLabel.text = [[self.region allValues] firstObject];
+        
+        self.statoCell.detailTextLabel.text = self.stato;
+        
+        if ([self.stato isEqualToString:@"Italia"]) {
+            self.regioneCell.hidden = NO;
+            self.regioneCell.detailTextLabel.text = [[self.region allValues] firstObject];
+        } else {
+            self.regioneCell.hidden = YES;
+        }
         
         if (self.region != nil) {
             self.provinciaCell.hidden = NO;
@@ -228,7 +313,16 @@ typedef enum tipoIndirizzo {
         qtvc.delegate = self.delegate;
     }
     
-    if ([segue.identifier isEqualToString:@"coRegioneSegue"]) {
+    if ([segue.identifier isEqualToString:@"coStatoSegue"]) {
+        UINavigationController *nc = segue.destinationViewController;
+        coIndirizzoTVC *dvc = (coIndirizzoTVC *)[nc topViewController];
+        [dvc setTitle:@"Stato"];
+        
+        dvc.whereDelegate = self;
+        self.tipoIndirizzo = stato;
+        [dvc loadContries];
+        
+    } else if ([segue.identifier isEqualToString:@"coRegioneSegue"]) {
         UINavigationController *nc = segue.destinationViewController;
         coIndirizzoTVC *dvc = (coIndirizzoTVC *)[nc topViewController];
         [dvc setTitle:@"Regione"];

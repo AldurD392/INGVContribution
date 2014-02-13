@@ -32,6 +32,8 @@ typedef enum tipoIndirizzo {
 
 @property (strong, nonatomic) coWhereLocation *location;
 @property (strong, nonatomic) CLLocationManager* locationManager;
+@property (strong, nonatomic) NSError* locationError;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *locationActivityIndicator;
 
 @property (strong, nonatomic) NSDictionary *region;
 @property (strong, nonatomic) NSDictionary *provincia;
@@ -52,18 +54,18 @@ typedef enum tipoIndirizzo {
 }
 
 - (CLLocationManager *) locationManager {
-    if (_locationManager == Nil) {
+    if (!_locationManager) {
         _locationManager = [[CLLocationManager alloc] init];
         _locationManager.delegate = self;
-        _locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters;
-        _locationManager.distanceFilter = kCLDistanceFilterNone;
+        _locationManager.desiredAccuracy = kCLLocationAccuracyKilometer;
+        _locationManager.distanceFilter = 100;
     }
     return _locationManager;
 }
 
 - (void) setRegion:(NSDictionary *)region {
     self.location.regione = region;
-    self.provincia = Nil;
+    self.provincia = nil;
     
     [self reloadTableView];
 }
@@ -74,7 +76,7 @@ typedef enum tipoIndirizzo {
 
 - (void) setProvincia:(NSDictionary *)provincia {
     self.location.provincia = provincia;
-    self.comune = Nil;
+    self.comune = nil;
     
     [self reloadTableView];
 }
@@ -86,8 +88,8 @@ typedef enum tipoIndirizzo {
 - (void) setComune:(NSDictionary *)comune {
     self.location.comune = comune;
     
-    self.frazione = Nil;
-    self.viaTextField.text = Nil;
+    self.frazione = nil;
+    self.viaTextField.text = nil;
     
     [self reloadTableView];
 }
@@ -117,28 +119,15 @@ typedef enum tipoIndirizzo {
 }
 
 # pragma mark - Location methods
-- (CLLocationCoordinate2D) getLocation {
-    [self.locationManager startUpdatingLocation];
-    CLLocation *location = [self.locationManager location];
-    CLLocationCoordinate2D coordinate = [location coordinate];
-    
-    return coordinate;
-}
-
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
     //    Take the last updated location, and put it in the location object.
     self.location.coordinate = [[locations lastObject] coordinate];
-    [self.locationManager stopUpdatingLocation];
+    self.nextBarButtonItem.enabled = YES;
+    [self.locationActivityIndicator stopAnimating];
 }
 
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
-    //    TODO!
-    if (error.code == kCLErrorDenied) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Locazione disabilitata" message:@"Per utilizzare la locazione corrente concedi all'applicazione il permesso di utilizzare la localizzazione dalle impostazioni." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
-        [alert show];
-        
-        self.currentPositionSwitch.on = NO;
-    }
+    self.locationError = error;
 }
 
 # pragma mark - coIndirizzoTVC Delegate Methods
@@ -157,21 +146,21 @@ typedef enum tipoIndirizzo {
 # pragma mark - IBActions
 - (IBAction)currestPositionSwitchDidChanged:(UISwitch *)sender {
     if ([sender isOn]) {
-        self.nextBarButtonItem.enabled = TRUE;
-        self.location.coordinate = [self getLocation];
+        [self.locationManager startUpdatingLocation];
+        [self.locationActivityIndicator startAnimating];
+        
+        self.region = nil;
     } else {
-        self.nextBarButtonItem.enabled = FALSE;
+        [self.locationActivityIndicator stopAnimating];
+        self.locationManager.delegate = nil;
+        [self.locationManager stopUpdatingLocation];
+        self.nextBarButtonItem.enabled = NO;
+
+        self.locationManager = nil;
+        self.location = nil;
     }
     
-    //Put this code where you want to reload your table view
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [UIView transitionWithView:self.tableView
-                          duration:0.1f
-                           options:UIViewAnimationOptionTransitionCrossDissolve
-                        animations:^(void) {
-                            [self.tableView reloadData];
-                        } completion:NULL];
-    });
+    [self reloadTableView];
 }
 
 - (IBAction)didEndOnExitEnteringDetail:(UITextField *)sender {
@@ -225,8 +214,6 @@ typedef enum tipoIndirizzo {
         
         self.frazioneCell.detailTextLabel.text = [[self.frazione allValues] firstObject];
         self.viaTextField.text = self.via;
-    } else {
-        self.nextBarButtonItem.enabled = YES;
     }
     
     [self.tableView reloadData];
@@ -281,7 +268,25 @@ typedef enum tipoIndirizzo {
 
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    
+    if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusRestricted) {
+        self.currentPositionSwitch.enabled = NO;
+    }
+    ;
+    self.locationManager.delegate = nil;
+    [self.locationManager stopUpdatingLocation];
+    self.nextBarButtonItem.enabled = NO;
+    
+    self.locationManager = nil;
+    self.location = nil;
+    
     [self reloadTableView];
+}
+
+- (void) viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    [self.locationManager stopUpdatingLocation];
 }
 
 @end

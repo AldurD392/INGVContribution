@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="hbN-ZU-8eZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="10H-S8-kof">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
@@ -587,7 +587,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <barButtonItem key="rightBarButtonItem" enabled="NO" title="Avanti" id="mEW-yT-QPN">
                             <connections>
                                 <action selector="nextButtonPressed:" destination="Msc-Qu-JcB" id="LDx-pE-xmt"/>
-                                <segue destination="d0E-rG-JUs" kind="push" id="SmQ-hy-eTl"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -599,6 +598,8 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <outletCollection property="cells" destination="4AU-ix-k7x" id="3ct-Y4-CXj"/>
                         <outletCollection property="cells" destination="4Md-NA-tVX" id="LIe-OT-5mA"/>
                         <outletCollection property="cells" destination="MJf-gp-qVU" id="PAx-13-o2Q"/>
+                        <segue destination="xzv-hk-dPE" kind="push" identifier="coEndThanksSegue" id="7QD-ov-zdQ"/>
+                        <segue destination="d0E-rG-JUs" kind="push" identifier="coEffectSegue" id="uud-aF-Ium"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gxm-DN-qca" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3696,11 +3697,61 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <outletCollection property="cells" destination="vT2-Bv-lSb" id="NOr-4u-T2P"/>
                         <outletCollection property="cells" destination="Odj-Zz-YCX" id="nbU-L4-nDZ"/>
                         <outletCollection property="cells" destination="vyp-62-XMd" id="GJb-Hp-gFh"/>
+                        <segue destination="xzv-hk-dPE" kind="push" identifier="coThanksSegue" id="muB-fZ-O2l"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rkx-W4-YJF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="10477" y="-148"/>
+        </scene>
+        <!--Table View Controller - Grazie! :)-->
+        <scene sceneID="2Nk-FD-fXI">
+            <objects>
+                <tableViewController id="xzv-hk-dPE" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="sac-uw-sf7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="JcL-f3-d9Z">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="6ku-ag-Em1">
+                                        <rect key="frame" x="0.0" y="99" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6ku-ag-Em1" id="X74-hQ-bWb">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="CYY-zJ-Zqt">
+                                        <rect key="frame" x="0.0" y="143" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CYY-zJ-Zqt" id="SVw-rX-12U">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="MMq-GX-XZL">
+                                        <rect key="frame" x="0.0" y="187" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MMq-GX-XZL" id="2TG-au-Hii">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="xzv-hk-dPE" id="Rwa-24-cTg"/>
+                            <outlet property="delegate" destination="xzv-hk-dPE" id="bZ5-eX-bCx"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Grazie! :)" id="y7b-yB-JgD"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nyU-e6-x4y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="11026" y="-148"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -3710,6 +3761,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="761-aj-Is8"/>
-        <segue reference="IHd-pH-WL7"/>
+        <segue reference="7QD-ov-zdQ"/>
+        <segue reference="Ph7-cm-2dU"/>
     </inferredMetricsTieBreakers>
 </document>

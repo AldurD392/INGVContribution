@@ -71,6 +71,17 @@
     return TRUE;
 }
 
+- (void) viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    if (self.altriFenomeni == nil) {
+        self.textView.text = self.placeHolder;
+    } else {
+        self.textView.text = self.altriFenomeni;
+        self.textView.textColor = [UIColor blackColor];
+    }
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];

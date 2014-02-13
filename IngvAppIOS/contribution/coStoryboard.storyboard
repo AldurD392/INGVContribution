@@ -3736,7 +3736,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="y5W-0N-Qio" rowHeight="70" style="IBUITableViewCellStyleDefault" id="dew-UO-MZe">
                                         <rect key="frame" x="0.0" y="119" width="320" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dew-UO-MZe" id="Gzd-VE-kG0">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dew-UO-MZe" id="o6E-xz-FEF">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -3824,7 +3824,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
     <inferredMetricsTieBreakers>
         <segue reference="Ph7-cm-2dU"/>
         <segue reference="761-aj-Is8"/>
-        <segue reference="Ph7-cm-2dU"/>
-        <segue reference="Rej-Oi-8LG"/>
+        <segue reference="7QD-ov-zdQ"/>
     </inferredMetricsTieBreakers>
 </document>

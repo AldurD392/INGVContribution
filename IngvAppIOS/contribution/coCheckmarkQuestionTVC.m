@@ -86,6 +86,25 @@
         case 15:
             self.delegate.questionario.piante = choosenValue;
             break;
+        case 16:
+            self.delegate.questionario.danni = choosenValue;
+            break;
+            
+        case 17:
+            self.delegate.questionario.struttura = choosenValue;
+            break;
+            
+        case 18:
+            self.delegate.questionario.muri = choosenValue;
+            break;
+            
+        case 19:
+            self.delegate.questionario.tegole = choosenValue;
+            break;
+            
+        case 20:
+            self.delegate.questionario.camini = choosenValue;
+            break;
             
         default:
             NSLog(@"Invalig tag.");
@@ -163,6 +182,26 @@
             
         case 15:
             return self.delegate.questionario.piante;
+            break;
+            
+        case 16:
+            return self.delegate.questionario.danni;
+            break;
+            
+        case 17:
+            return self.delegate.questionario.struttura;
+            break;
+            
+        case 18:
+            return self.delegate.questionario.muri;
+            break;
+            
+        case 19:
+            return self.delegate.questionario.tegole;
+            break;
+            
+        case 20:
+            return self.delegate.questionario.camini;
             break;
             
         default:

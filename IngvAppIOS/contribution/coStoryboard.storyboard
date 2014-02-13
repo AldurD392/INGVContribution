@@ -147,18 +147,27 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                                     </connections>
                                                 </switch>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Posizione corrente" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sb9-K4-7u1">
-                                                    <rect key="frame" x="20" y="11" width="143" height="21"/>
+                                                    <rect key="frame" x="20" y="11" width="153" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="wrm-xp-NmD">
+                                                    <rect key="frame" x="223" y="7" width="20" height="29"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="color" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                </activityIndicatorView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="hJa-f2-h65" secondAttribute="trailing" constant="20" id="7aJ-5E-4Bf"/>
+                                                <constraint firstItem="wrm-xp-NmD" firstAttribute="top" secondItem="hdq-jU-J34" secondAttribute="top" constant="7" id="MwK-qi-O9U"/>
                                                 <constraint firstAttribute="bottom" secondItem="Sb9-K4-7u1" secondAttribute="bottom" constant="11" id="R3x-1c-hKP"/>
                                                 <constraint firstItem="hJa-f2-h65" firstAttribute="top" secondItem="hdq-jU-J34" secondAttribute="top" constant="6" id="RDV-3f-BXK"/>
                                                 <constraint firstItem="Sb9-K4-7u1" firstAttribute="top" secondItem="hdq-jU-J34" secondAttribute="top" constant="11" id="TrR-9M-nMf"/>
+                                                <constraint firstAttribute="bottom" secondItem="wrm-xp-NmD" secondAttribute="bottom" constant="7" id="f16-lf-LbC"/>
+                                                <constraint firstItem="hJa-f2-h65" firstAttribute="leading" secondItem="wrm-xp-NmD" secondAttribute="trailing" constant="8" id="k10-JM-ndM"/>
                                                 <constraint firstAttribute="bottom" secondItem="hJa-f2-h65" secondAttribute="bottom" constant="6" id="kxA-P8-mu8"/>
+                                                <constraint firstItem="wrm-xp-NmD" firstAttribute="leading" secondItem="Sb9-K4-7u1" secondAttribute="trailing" constant="50" id="lyi-7D-Cxd"/>
                                                 <constraint firstItem="Sb9-K4-7u1" firstAttribute="leading" secondItem="hdq-jU-J34" secondAttribute="leading" constant="20" id="vqS-Au-3fg"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -320,6 +329,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <outlet property="comuneCell" destination="FKO-vL-lsb" id="chf-M6-q3f"/>
                         <outlet property="currentPositionSwitch" destination="hJa-f2-h65" id="eWg-jA-xIl"/>
                         <outlet property="frazioneCell" destination="fPj-j5-x6J" id="LDI-wg-5SF"/>
+                        <outlet property="locationActivityIndicator" destination="wrm-xp-NmD" id="wWX-jc-z52"/>
                         <outlet property="nextBarButtonItem" destination="utY-9h-GDk" id="PNV-QN-TxD"/>
                         <outlet property="provinciaCell" destination="uNm-5W-hpr" id="0Bf-JM-V98"/>
                         <outlet property="regioneCell" destination="EYs-NY-naw" id="zah-gV-DLd"/>
@@ -3724,7 +3734,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="y5W-0N-Qio" rowHeight="70" style="IBUITableViewCellStyleDefault" id="dew-UO-MZe">
                                         <rect key="frame" x="0.0" y="119" width="320" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dew-UO-MZe">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dew-UO-MZe" id="o6E-xz-FEF">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -3810,8 +3820,8 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="Ph7-cm-2dU"/>
         <segue reference="761-aj-Is8"/>
         <segue reference="7QD-ov-zdQ"/>
-        <segue reference="Ph7-cm-2dU"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -9,5 +9,13 @@
 #import "coQuestionario.h"
 
 @implementation coQuestionario
-
+- (id)init {
+    self = [super init];
+    
+    if (self) {
+        self.whenCompiled = [NSDate date];
+    }
+    
+    return self;
+}
 @end

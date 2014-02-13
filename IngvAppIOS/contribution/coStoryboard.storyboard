@@ -325,7 +325,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                                     <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                                     <connections>
                                                         <action selector="didEndOnExitEnteringDetail:" destination="lU3-7F-Osg" eventType="editingDidEndOnExit" id="0SP-1s-Aiu"/>
-                                                        <action selector="didEndOnExitEnteringDetail:" destination="lU3-7F-Osg" eventType="editingDidEnd" id="maG-I7-Jk2"/>
                                                     </connections>
                                                 </textField>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Via" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dfo-cz-uOd">
@@ -357,52 +356,20 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" tag="-1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Via Salaria 113, Roma, IT" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LbW-HI-Zsz">
+                                                <textField opaque="NO" clipsSubviews="YES" tag="-1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Via Salaria 113, Roma" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="LbW-HI-Zsz">
                                                     <rect key="frame" x="20" y="7" width="280" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                    <connections>
+                                                        <action selector="didEndOnExitEnteringDetail:" destination="lU3-7F-Osg" eventType="editingDidEndOnExit" id="5TC-qW-Iev"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="LbW-HI-Zsz" secondAttribute="trailing" constant="20" symbolic="YES" id="5gv-UQ-7fA"/>
                                                 <constraint firstItem="LbW-HI-Zsz" firstAttribute="top" secondItem="wXg-Cs-dYT" secondAttribute="top" constant="7" id="Jhq-17-Gj2"/>
                                                 <constraint firstItem="LbW-HI-Zsz" firstAttribute="leading" secondItem="wXg-Cs-dYT" secondAttribute="leading" constant="20" symbolic="YES" id="ezn-4g-a4c"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell hidden="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="uTi-xb-Hea">
-                                        <rect key="frame" x="0.0" y="594" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uTi-xb-Hea" id="SPk-kG-ySX">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Via Salaria, 113" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="8Sd-ay-0gq">
-                                                    <rect key="frame" x="47" y="7" width="253" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
-                                                    <connections>
-                                                        <action selector="didEndOnExitEnteringDetail:" destination="lU3-7F-Osg" eventType="editingDidEndOnExit" id="aJM-e0-ed3"/>
-                                                        <action selector="didEndOnExitEnteringDetail:" destination="lU3-7F-Osg" eventType="editingDidEnd" id="q95-RB-Cnj"/>
-                                                    </connections>
-                                                </textField>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Via" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2aT-g1-29V">
-                                                    <rect key="frame" x="15" y="11" width="24" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="8Sd-ay-0gq" firstAttribute="leading" secondItem="2aT-g1-29V" secondAttribute="trailing" constant="8" symbolic="YES" id="4e1-bw-Bby"/>
-                                                <constraint firstItem="2aT-g1-29V" firstAttribute="leading" secondItem="SPk-kG-ySX" secondAttribute="leading" constant="15" id="MOQ-3O-KFc"/>
-                                                <constraint firstAttribute="trailing" secondItem="8Sd-ay-0gq" secondAttribute="trailing" constant="20" symbolic="YES" id="YRb-XP-pJ1"/>
-                                                <constraint firstAttribute="bottom" secondItem="2aT-g1-29V" secondAttribute="bottom" constant="11" id="ilZ-gc-Ruj"/>
-                                                <constraint firstItem="2aT-g1-29V" firstAttribute="top" secondItem="SPk-kG-ySX" secondAttribute="top" constant="11" id="t7M-PR-IiW"/>
-                                                <constraint firstItem="8Sd-ay-0gq" firstAttribute="top" secondItem="SPk-kG-ySX" secondAttribute="top" constant="7" id="tSY-KX-SWS"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -3913,13 +3880,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="11026" y="-148"/>
         </scene>
-        <!--Page View Controller-->
-        <scene sceneID="WkP-7b-LME">
-            <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="Qyu-8i-Cll" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zeE-eR-fwu" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-        </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
@@ -3928,7 +3888,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="Ph7-cm-2dU"/>
-        <segue reference="qmH-bS-rKg"/>
+        <segue reference="IsM-oi-Ul1"/>
         <segue reference="7QD-ov-zdQ"/>
     </inferredMetricsTieBreakers>
 </document>

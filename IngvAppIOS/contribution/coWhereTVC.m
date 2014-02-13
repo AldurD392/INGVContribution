@@ -191,8 +191,29 @@ typedef enum tipoIndirizzo {
 
 - (IBAction)didEndOnExitEnteringDetail:(UITextField *)sender {
     // Quando l'utente preme "Fatto" sulla tastiera, può andare avanti.
-    if ([sender isEqual:self.viaTextField]) {
-        self.via = sender.text;
+    self.via = sender.text;
+    
+//   TODO: salvare i dettagli delle coordinate
+    if (sender == self.viaTextField) {
+//        TODO: maybe geolocalizzazione?
+    } else if (sender == self.internationalAddressTextField) {
+        CLGeocoder *geocoder = [[CLGeocoder alloc] init];
+        NSString *completeString = [self.internationalAddressTextField.text stringByAppendingString:[NSString stringWithFormat:@", %@", self.stato]];
+        [geocoder geocodeAddressString:completeString inRegion:nil completionHandler:^(NSArray *placemarks, NSError *error) {
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void) {
+                if (!placemarks) {
+                    if (error.code == kCLErrorNetwork) {
+                        NSLog(@"Maximum request exceded!");
+                    }
+                } else {
+                    dispatch_async(dispatch_get_main_queue(), ^(void) {
+                        CLPlacemark *lastObject = (CLPlacemark *)[placemarks lastObject];
+                        self.location.coordinate = lastObject.location.coordinate;
+                        self.nextBarButtonItem.enabled = YES;
+                    });
+                }
+            });
+        }];
     }
 }
 
@@ -210,18 +231,6 @@ typedef enum tipoIndirizzo {
         }
     }
 }
-//
-//- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    if (self.international == YES) {
-//        if (indexPath.section == 1) {
-//            if (indexPath.row != 0) {
-//                return 0;
-//            }
-//        }
-//    }
-//    
-//    return 44;
-//}
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (section == 0) {
@@ -366,7 +375,7 @@ typedef enum tipoIndirizzo {
     if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusRestricted) {
         self.currentPositionSwitch.enabled = NO;
     }
-    ;
+
     self.locationManager.delegate = nil;
     [self.locationManager stopUpdatingLocation];
     self.nextBarButtonItem.enabled = NO;

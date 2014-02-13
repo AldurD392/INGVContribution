@@ -67,6 +67,14 @@
     if (indexPath.section == 0) {
         self.whereDetail = [NSNumber numberWithInt:indexPath.row];
         
+        if (indexPath.row == 0) {
+            [self.delegate.questionario resetOpenAirAnswer];
+        } else if (indexPath.row == 1) {
+            [self.delegate.questionario resetAllAnswer];
+        } else if (indexPath.row == 2) {
+            [self.delegate.questionario resetBuildingAnswer];
+        }
+        
         //Put this code where you want to reload your table view
         dispatch_async(dispatch_get_main_queue(), ^{
             [UIView transitionWithView:self.tableView

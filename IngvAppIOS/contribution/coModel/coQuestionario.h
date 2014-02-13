@@ -41,4 +41,8 @@
 @property (nonatomic) NSNumber* muri;
 @property (nonatomic) NSNumber* tegole;
 @property (nonatomic) NSNumber* camini;
+
+- (void) resetBuildingAnswer;
+- (void) resetOpenAirAnswer;
+- (void) resetAllAnswer;
 @end

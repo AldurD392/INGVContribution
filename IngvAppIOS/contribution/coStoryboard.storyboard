@@ -2821,13 +2821,15 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     <navigationItem key="navigationItem" title="Altri fenomeni" id="VQh-LH-gle">
                         <barButtonItem key="rightBarButtonItem" title="Avanti" id="gZj-2V-e9M">
                             <connections>
-                                <segue destination="tIY-qS-VW9" kind="push" id="r9y-Jf-vOc"/>
+                                <action selector="nextButtonPressed:" destination="hbN-ZU-8eZ" id="We6-5x-4eH"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="nextBarButtonItem" destination="gZj-2V-e9M" id="5fP-4S-D9A"/>
                         <outlet property="textView" destination="crh-fa-Tyy" id="WBa-EA-MZH"/>
+                        <segue destination="tIY-qS-VW9" kind="push" identifier="coCostruzioneSegue" id="aO7-hn-lrz"/>
+                        <segue destination="xzv-hk-dPE" kind="push" identifier="coEndThanksBisSegue" id="Rej-Oi-8LG"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E0p-UX-l1v" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3724,7 +3726,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="y5W-0N-Qio" rowHeight="70" style="IBUITableViewCellStyleDefault" id="dew-UO-MZe">
                                         <rect key="frame" x="0.0" y="119" width="320" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dew-UO-MZe">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dew-UO-MZe" id="Gzd-VE-kG0">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -3801,7 +3803,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nyU-e6-x4y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="11026" y="-148"/>
+            <point key="canvasLocation" x="11006" y="-455"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -3811,7 +3813,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="761-aj-Is8"/>
-        <segue reference="7QD-ov-zdQ"/>
         <segue reference="Ph7-cm-2dU"/>
+        <segue reference="Rej-Oi-8LG"/>
     </inferredMetricsTieBreakers>
 </document>

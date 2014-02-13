@@ -90,4 +90,12 @@
     self.textView.delegate = self;
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.destinationViewController isKindOfClass:[coQuestionTVC class]]) {
+        coQuestionTVC* cqtvc = (coQuestionTVC *) segue.destinationViewController;
+        cqtvc.delegate = self.delegate;
+    }
+}
+
 @end

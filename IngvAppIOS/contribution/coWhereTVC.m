@@ -18,7 +18,7 @@ typedef enum tipoIndirizzo {
     frazione
 } tipoIndirizzo;
 
-@interface coWhereTVC () <coIndirizzoTVCDelegate, CLLocationManagerDelegate>
+@interface coWhereTVC () <coIndirizzoTVCDelegate, CLLocationManagerDelegate, UIAlertViewDelegate>
 @property (weak, nonatomic) IBOutlet UISwitch *currentPositionSwitch;
 @property (weak, nonatomic) IBOutlet UITextField *viaTextField;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *nextBarButtonItem;
@@ -133,6 +133,12 @@ typedef enum tipoIndirizzo {
 
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
     //    TODO!
+    if (error.code == kCLErrorDenied) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Locazione disabilitata" message:@"Per utilizzare la locazione corrente concedi all'applicazione il permesso di utilizzare la localizzazione dalle impostazioni." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        [alert show];
+        
+        self.currentPositionSwitch.on = NO;
+    }
 }
 
 # pragma mark - coIndirizzoTVC Delegate Methods

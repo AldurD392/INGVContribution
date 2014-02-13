@@ -179,7 +179,11 @@
 - (void) performSwitchedSegueWithSender:(id)sender {
     switch (self.view.tag) {
         case -1:
-            
+            if (self.delegate.questionario.whereDetail.integerValue == 1) {  // Se si trova in un mezzo di trasporto
+                [self performSegueWithIdentifier:@"coEndThanksSegue" sender:sender];
+            } else {
+                [self performSegueWithIdentifier:@"coEffectSegue" sender:sender];
+            }
             break;
             
         case 1:
@@ -247,6 +251,26 @@
             [self performSegueWithIdentifier:@"coRumoreDaApertoSegue" sender:sender];
             break;
             
+        case 16:
+            [self performSegueWithIdentifier:@"coMaterialeSegue" sender:sender];
+            break;
+            
+        case 17:
+            [self performSegueWithIdentifier:@"coMuriSegue" sender:sender];
+            break;
+
+        case 18:
+            [self performSegueWithIdentifier:@"coTegoleSegue" sender:sender];
+            break;
+            
+        case 19:
+            [self performSegueWithIdentifier:@"coCaminiSegue" sender:sender];
+            break;
+            
+        case 20:
+            [self performSegueWithIdentifier:@"coThanksSegue" sender:sender];
+            break;
+
         default:
             break;
     }

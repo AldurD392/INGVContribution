@@ -423,6 +423,8 @@ typedef enum tipoIndirizzo {
     self.locationManager = nil;
     self.location = nil;
     
+    self.currentPositionSwitch.on = NO;
+    
     [self reloadTableView];
 }
 

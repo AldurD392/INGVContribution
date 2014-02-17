@@ -8,7 +8,7 @@
 
 #import "coTextViewQTVC.h"
 
-@interface coTextViewQTVC ()
+@interface coTextViewQTVC () <UIActionSheetDelegate>
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *nextBarButtonItem;
 
@@ -81,6 +81,12 @@
         self.textView.text = self.altriFenomeni;
         self.textView.textColor = [UIColor blackColor];
     }
+    
+    if (self.delegate.questionario.whereDetail.integerValue == 2) {
+        self.nextBarButtonItem.title = @"Fine";
+    } else {
+        self.nextBarButtonItem.title = @"Avanti";
+    }
 }
 
 - (void)viewDidLoad
@@ -100,6 +106,21 @@
     if (self.delegate.questionario.whereDetail.integerValue == 0) {
         [self performSegueWithIdentifier:@"coCostruzioneSegue" sender:self];
     } else if (self.delegate.questionario.whereDetail.integerValue == 2) {
+        UIActionSheet *actionSheet = [[UIActionSheet alloc]
+                                      initWithTitle: @"Proseguendo non si potranno più modificare le risposte inserite. Vuoi continuare?"
+                                      delegate: self
+                                      cancelButtonTitle: @"Annulla"
+                                      destructiveButtonTitle: nil
+                                      otherButtonTitles: @"Si", nil];
+        [actionSheet showInView:self.view];
+    }
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    NSString* buttonName = [actionSheet buttonTitleAtIndex:buttonIndex];
+    
+    if ([buttonName isEqualToString:@"Si"]) {
         [self performSegueWithIdentifier:@"coEndThanksBisSegue" sender:self];
     }
 }

@@ -298,10 +298,6 @@
 				76FCFD94189034A900F72C64 /* coWhereTVC.m */,
 				76001ED018A520CF00608083 /* coFloorTVC.h */,
 				76001ED118A520CF00608083 /* coFloorTVC.m */,
-				76B2F03F18ABD36A00515F97 /* coTextViewQTVC.h */,
-				76B2F04018ABD36A00515F97 /* coTextViewQTVC.m */,
-				764010EF18ACD4DD0042D2E1 /* coEndTVC.h */,
-				764010F018ACD4DD0042D2E1 /* coEndTVC.m */,
 			);
 			name = Indirizzo;
 			sourceTree = "<group>";
@@ -342,8 +338,12 @@
 				764C9E2818A923AB0048EB92 /* coStartingViewController.m */,
 				762B99F218A8E76C00B7D3CB /* coEffectsTVC.h */,
 				762B99F318A8E76C00B7D3CB /* coEffectsTVC.m */,
+				76B2F03F18ABD36A00515F97 /* coTextViewQTVC.h */,
+				76B2F04018ABD36A00515F97 /* coTextViewQTVC.m */,
 				76765F5F18A3DEEE0069A76C /* coWhenTVC.h */,
 				76765F6018A3DEEE0069A76C /* coWhenTVC.m */,
+				764010EF18ACD4DD0042D2E1 /* coEndTVC.h */,
+				764010F018ACD4DD0042D2E1 /* coEndTVC.m */,
 			);
 			name = coViewControllers;
 			sourceTree = "<group>";

@@ -24,4 +24,9 @@
     [self dismissViewControllerAnimated:TRUE completion:nil];
 }
 
+- (void) viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+	[self.navigationItem setHidesBackButton:YES];
+}
+
 @end

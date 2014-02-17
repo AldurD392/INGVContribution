@@ -8,7 +8,7 @@
 
 #import "coCheckmarkQuestionTVC.h"
 
-@interface coCheckmarkQuestionTVC ()
+@interface coCheckmarkQuestionTVC () <UIActionSheetDelegate>
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *nextBarButton;
 @property (strong, nonatomic) IBOutletCollection(UITableViewCell) NSArray *cells;
 
@@ -219,7 +219,13 @@
     switch (self.view.tag) {
         case -1:
             if (self.delegate.questionario.whereDetail.integerValue == 1) {  // Se si trova in un mezzo di trasporto
-                [self performSegueWithIdentifier:@"coEndThanksSegue" sender:sender];
+                UIActionSheet *actionSheet = [[UIActionSheet alloc]
+                                              initWithTitle: @"Proseguendo non si potranno più modificare le risposte inserite. Vuoi continuare?"
+                                              delegate: self
+                                              cancelButtonTitle: @"Annulla"
+                                              destructiveButtonTitle: nil
+                                              otherButtonTitles: @"Si", nil];
+                [actionSheet showInView:self.view];
             } else {
                 [self performSegueWithIdentifier:@"coEffectSegue" sender:sender];
             }
@@ -307,7 +313,15 @@
             break;
             
         case 20:
-            [self performSegueWithIdentifier:@"coThanksSegue" sender:sender];
+            if (TRUE) {  // switch bug!
+                UIActionSheet *actionSheet = [[UIActionSheet alloc]
+                                              initWithTitle: @"Proseguendo non si potranno più modificare le risposte inserite. Vuoi continuare?"
+                                              delegate: self
+                                              cancelButtonTitle: @"Annulla"
+                                              destructiveButtonTitle: nil
+                                              otherButtonTitles: @"Si", nil];
+                [actionSheet showInView:self.view];
+            }
             break;
 
         default:
@@ -315,6 +329,18 @@
     }
 }
 
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    NSString* buttonName = [actionSheet buttonTitleAtIndex:buttonIndex];
+    
+    if ([buttonName isEqualToString:@"Si"]) {
+        if (self.view.tag == -1) {
+            [self performSegueWithIdentifier:@"coEndThanksSegue" sender:self];
+        } else {
+            [self performSegueWithIdentifier:@"coThanksSegue" sender:self];
+        }
+    }
+}
 
 - (void) markCellForSelection:(UITableViewCell *)cell {
     
@@ -347,6 +373,15 @@
 
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    
+    if (self.view.tag == -1) {
+        if (self.delegate.questionario.whereDetail.integerValue == 1) {
+            self.nextBarButton.title = @"Fine";
+        }
+    } else {
+        self.nextBarButton.title = @"Avanti";
+    }
+    
     [self updateView];
 }
 

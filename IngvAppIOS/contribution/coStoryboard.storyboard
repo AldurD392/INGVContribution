@@ -3905,7 +3905,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Dettagli: danni edificio" id="8Xf-U2-UQ8">
-                        <barButtonItem key="rightBarButtonItem" title="Avanti" id="oaq-3D-6Ja">
+                        <barButtonItem key="rightBarButtonItem" title="Fine" id="oaq-3D-6Ja">
                             <connections>
                                 <action selector="nextButtonPressed:" destination="C4V-3k-44L" id="e9H-Nx-Vrg"/>
                             </connections>
@@ -4025,7 +4025,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="IsM-oi-Ul1"/>
-        <segue reference="Ph7-cm-2dU"/>
-        <segue reference="muB-fZ-O2l"/>
+        <segue reference="IHd-pH-WL7"/>
+        <segue reference="Rej-Oi-8LG"/>
     </inferredMetricsTieBreakers>
 </document>

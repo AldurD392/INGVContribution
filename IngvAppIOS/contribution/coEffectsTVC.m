@@ -57,7 +57,7 @@
         [self performSegueWithIdentifier:@"coPauraSegue" sender:self];
     }
     else if ([buttonName isEqualToString:@"No"]) {
-//        TODO
+        [self performSegueWithIdentifier:@"coEndBreveSegue" sender:self];
     } else {
         
     }

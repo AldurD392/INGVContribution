@@ -126,14 +126,14 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             <objects>
                 <tableViewController id="lU3-7F-Osg" customClass="coWhereTVC" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="AXM-Pp-j2V">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
                             <tableViewSection headerTitle="Posizione" footerTitle="Scegli se utilizzare la posizione corrente." id="RrR-sd-V7F">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="rYs-TO-Rdl">
-                                        <rect key="frame" x="0.0" y="55" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="119" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rYs-TO-Rdl" id="hdq-jU-J34">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -177,7 +177,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                             <tableViewSection headerTitle="Luogo" id="vr8-Ze-y7w">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="aV7-EM-bNF" detailTextLabel="fXQ-26-bFL" style="IBUITableViewCellStyleValue1" id="5PL-KW-G0T">
-                                        <rect key="frame" x="0.0" y="174" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="238" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5PL-KW-G0T" id="EcB-Gu-Zd2">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -204,7 +204,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="kOm-eH-Wkp" detailTextLabel="Err-wX-FKU" style="IBUITableViewCellStyleValue1" id="EYs-NY-naw">
-                                        <rect key="frame" x="0.0" y="218" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="282" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EYs-NY-naw" id="Nzo-VE-VtB">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -231,7 +231,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell hidden="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="pO7-LC-dql" detailTextLabel="PZl-bS-nEI" style="IBUITableViewCellStyleValue1" id="uNm-5W-hpr">
-                                        <rect key="frame" x="0.0" y="262" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="326" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uNm-5W-hpr" id="Xlr-tm-P6e">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -258,7 +258,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell hidden="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="xps-Mj-bRN" detailTextLabel="Ce5-qX-ib8" style="IBUITableViewCellStyleValue1" id="FKO-vL-lsb">
-                                        <rect key="frame" x="0.0" y="306" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="370" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FKO-vL-lsb" id="tx7-eL-3d1">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -285,7 +285,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell hidden="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="8dr-DT-JMy" detailTextLabel="biP-CH-zoz" style="IBUITableViewCellStyleValue1" id="fPj-j5-x6J">
-                                        <rect key="frame" x="0.0" y="350" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="414" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fPj-j5-x6J" id="xlE-Fx-nwj">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -312,7 +312,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell hidden="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="UbW-Gl-8kX">
-                                        <rect key="frame" x="0.0" y="394" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="458" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UbW-Gl-8kX" id="HA2-GH-T1u">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -350,7 +350,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                             <tableViewSection headerTitle="Indirizzo" id="Suj-HX-3B7">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="GbA-9T-VZ2">
-                                        <rect key="frame" x="0.0" y="486" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="550" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GbA-9T-VZ2" id="wXg-Cs-dYT">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -389,7 +389,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                             <outlet property="delegate" destination="lU3-7F-Osg" id="sUP-mT-hxZ"/>
                         </connections>
                     </tableView>
-                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="Dove ti trovavi?" id="9C9-CJ-NBC">
                         <barButtonItem key="rightBarButtonItem" enabled="NO" title="Avanti" id="utY-9h-GDk">
                             <connections>
@@ -775,9 +774,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yQ8-Et-cr6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2734" y="-152"/>
+            <point key="canvasLocation" x="2671" y="-147"/>
         </scene>
-        <!--Co Checkmark QuestionTVC - Paura-->
+        <!--Co Checkmark QuestionTVC - Descrivi la tua esperienza-->
         <scene sceneID="NGe-Jw-j5q">
             <objects>
                 <tableViewController id="lQI-40-Lsr" customClass="coCheckmarkQuestionTVC" sceneMemberID="viewController">
@@ -785,6 +784,12 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <pageControl key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" id="IQY-0r-JNP">
+                            <rect key="frame" x="0.0" y="413" width="320" height="36"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="currentPageIndicatorTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        </pageControl>
                         <sections>
                             <tableViewSection headerTitle="Hai avuto paura?" footerTitle="Scegli tra le precedenti" id="n8H-fe-45o">
                                 <cells>
@@ -898,7 +903,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                             <outlet property="delegate" destination="lQI-40-Lsr" id="5qW-UV-SRO"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Paura" id="laY-cK-lak">
+                    <navigationItem key="navigationItem" title="Descrivi la tua esperienza" id="laY-cK-lak">
                         <barButtonItem key="rightBarButtonItem" title="Avanti" id="BiM-pI-ifp">
                             <connections>
                                 <action selector="nextButtonPressed:" destination="lQI-40-Lsr" id="mP0-OI-FbL"/>
@@ -918,9 +923,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mo5-5r-z89" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3134" y="-147"/>
+            <point key="canvasLocation" x="3116" y="-147"/>
         </scene>
-        <!--Co Checkmark QuestionTVC - Equilibrio-->
+        <!--Co Checkmark QuestionTVC - Descrivi la tua esperienza-->
         <scene sceneID="nhu-wH-AFf">
             <objects>
                 <tableViewController id="elx-l1-Lnf" customClass="coCheckmarkQuestionTVC" sceneMemberID="viewController">
@@ -928,6 +933,12 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <pageControl key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" currentPage="1" id="Ask-jc-xaL">
+                            <rect key="frame" x="0.0" y="369" width="320" height="36"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="currentPageIndicatorTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        </pageControl>
                         <sections>
                             <tableViewSection headerTitle="Come era il tuo equilibrio?" footerTitle="Scegli tra le precedenti" id="ATJ-Xa-vCh">
                                 <cells>
@@ -1024,7 +1035,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                             <outlet property="delegate" destination="elx-l1-Lnf" id="t5x-nz-BtZ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Equilibrio" id="4nA-Q2-2to">
+                    <navigationItem key="navigationItem" title="Descrivi la tua esperienza" id="4nA-Q2-2to">
                         <barButtonItem key="rightBarButtonItem" title="Avanti" id="Te9-ul-Ny1">
                             <connections>
                                 <action selector="nextButtonPressed:" destination="elx-l1-Lnf" id="gzi-OE-3oF"/>
@@ -1043,7 +1054,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZL0-oq-9iJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3526" y="-152"/>
+            <point key="canvasLocation" x="3522" y="-147"/>
         </scene>
         <!--Co FloorTVC - Piano-->
         <scene sceneID="rS8-Qs-iWR">
@@ -1618,7 +1629,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="1662" y="1268"/>
         </scene>
-        <!--Co Checkmark QuestionTVC - Animali-->
+        <!--Co Checkmark QuestionTVC - Descrivi la tua esperienza-->
         <scene sceneID="U2p-ge-COY">
             <objects>
                 <tableViewController id="tDI-Ul-82O" customClass="coCheckmarkQuestionTVC" sceneMemberID="viewController">
@@ -1626,8 +1637,14 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <pageControl key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" currentPage="2" id="Vck-sN-qKT">
+                            <rect key="frame" x="0.0" y="298" width="320" height="36"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="currentPageIndicatorTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        </pageControl>
                         <sections>
-                            <tableViewSection headerTitle="Erano agitati gli animali durante la scossa o pochi minuti prima?" footerTitle="Scegli tra le precedenti" id="hFk-05-Noh">
+                            <tableViewSection headerTitle="Durante la scossa o pochi minuti prima gli animali erano agitati?" footerTitle="Scegli tra le precedenti" id="hFk-05-Noh">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" editingAccessoryType="checkmark" textLabel="niK-rY-e0x" style="IBUITableViewCellStyleDefault" id="wYp-cQ-e8O">
                                         <rect key="frame" x="0.0" y="136" width="320" height="44"/>
@@ -1688,7 +1705,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                             <outlet property="delegate" destination="tDI-Ul-82O" id="CWw-q4-DJZ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Animali" id="CII-LX-5Yy">
+                    <navigationItem key="navigationItem" title="Descrivi la tua esperienza" id="CII-LX-5Yy">
                         <barButtonItem key="rightBarButtonItem" title="Avanti" id="sPL-xn-Eco">
                             <connections>
                                 <action selector="nextButtonPressed:" destination="tDI-Ul-82O" id="UUO-CF-1Aa"/>
@@ -1708,7 +1725,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="3912" y="-149"/>
         </scene>
-        <!--Co Checkmark QuestionTVC - Lampadari-->
+        <!--Co Checkmark QuestionTVC - Esperienza: edificio-->
         <scene sceneID="elX-tH-mGQ">
             <objects>
                 <tableViewController id="W82-Ws-ER1" customClass="coCheckmarkQuestionTVC" sceneMemberID="viewController">
@@ -1795,7 +1812,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                             <outlet property="delegate" destination="W82-Ws-ER1" id="fne-cz-upq"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Lampadari" id="0OR-XH-AZM">
+                    <navigationItem key="navigationItem" title="Esperienza: edificio" id="0OR-XH-AZM">
                         <barButtonItem key="rightBarButtonItem" title="Avanti" id="qov-Sp-OTj">
                             <connections>
                                 <action selector="nextButtonPressed:" destination="W82-Ws-ER1" id="qS7-dH-lY1"/>
@@ -1815,7 +1832,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="4349" y="-147"/>
         </scene>
-        <!--Co Checkmark QuestionTVC - Porcellane e cristallerie-->
+        <!--Co Checkmark QuestionTVC - Esperienza: edificio-->
         <scene sceneID="9UI-Y1-88R">
             <objects>
                 <tableViewController id="3LJ-PU-31p" customClass="coCheckmarkQuestionTVC" sceneMemberID="viewController">
@@ -1919,7 +1936,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                             <outlet property="delegate" destination="3LJ-PU-31p" id="oxJ-hP-Fqn"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Porcellane e cristallerie" id="Uvg-9c-Qse">
+                    <navigationItem key="navigationItem" title="Esperienza: edificio" id="Uvg-9c-Qse">
                         <barButtonItem key="rightBarButtonItem" title="Avanti" id="GUQ-wg-Saj">
                             <connections>
                                 <action selector="nextButtonPressed:" destination="3LJ-PU-31p" id="X4j-lF-4jj"/>
@@ -3899,8 +3916,8 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Ph7-cm-2dU"/>
         <segue reference="IsM-oi-Ul1"/>
         <segue reference="7QD-ov-zdQ"/>
+        <segue reference="Ph7-cm-2dU"/>
     </inferredMetricsTieBreakers>
 </document>

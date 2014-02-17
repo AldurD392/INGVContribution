@@ -51,12 +51,31 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Lista terremoti" id="RMq-b6-paE">
-                        <barButtonItem key="rightBarButtonItem" title="Segnala" id="fVy-d1-huc"/>
+                        <barButtonItem key="rightBarButtonItem" title="Segnala" id="fVy-d1-huc">
+                            <connections>
+                                <segue destination="t6f-17-MgI" kind="modal" identifier="coQuestionarioSegue" id="3MK-j2-2oj"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C2M-ov-3Pz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="291" y="-147"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4dV-WO-N0L">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="t6f-17-MgI" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="o14-i0-wNe">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="UI1-3g-Sfk" kind="relationship" relationship="rootViewController" id="s9d-ms-nlu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ak6-zM-7pc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="777" y="-147"/>
         </scene>
         <!--Co WhenTVC - Quando l'hai sentito?-->
         <scene sceneID="S2d-YQ-dnU">
@@ -70,7 +89,7 @@
                             <tableViewSection headerTitle="Inserisci la data e l'ora" id="Szb-Iz-qpo">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="203" id="eD4-Mr-Kep">
-                                        <rect key="frame" x="0.0" y="55" width="320" height="203"/>
+                                        <rect key="frame" x="0.0" y="119" width="320" height="203"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eD4-Mr-Kep" id="fRm-4m-lyJ">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="202"/>
@@ -3182,7 +3201,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dze-Rp-OJm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4349" y="568"/>
+            <point key="canvasLocation" x="4438" y="576"/>
         </scene>
         <!--Co Checkmark QuestionTVC - Esperienza: all'aperto-->
         <scene sceneID="XRR-G4-CQs">
@@ -3312,7 +3331,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2bO-Ud-7qL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6707" y="576"/>
+            <point key="canvasLocation" x="7233" y="568"/>
         </scene>
         <!--Co Checkmark QuestionTVC - Dettagli: danni edificio-->
         <scene sceneID="qUP-7n-qic">
@@ -4072,7 +4091,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nyU-e6-x4y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="11532" y="-455"/>
+            <point key="canvasLocation" x="11003" y="-889"/>
         </scene>
         <!--Co EndTVC - Grazie! :)-->
         <scene sceneID="NHg-ia-Sgn">
@@ -4165,7 +4184,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rS9-4g-5EV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="10442" y="-897"/>
+            <point key="canvasLocation" x="3197" y="-889"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -4174,9 +4193,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="IHd-pH-WL7"/>
-        <segue reference="PMZ-yB-gJK"/>
+        <segue reference="HL5-Vh-JOw"/>
         <segue reference="IsM-oi-Ul1"/>
+        <segue reference="IHd-pH-WL7"/>
         <segue reference="Rej-Oi-8LG"/>
     </inferredMetricsTieBreakers>
 </document>

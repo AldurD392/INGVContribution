@@ -36,6 +36,11 @@
 
 - (void) setFloor:(NSNumber *)floor {
     self.delegate.questionario.floor = floor;
+    if (floor.integerValue == 11) {
+        self.totalFloors = [NSNumber numberWithInt:11];
+    } else {
+        self.totalFloors = nil;
+    }
 }
 
 - (NSNumber *)floor {
@@ -123,6 +128,27 @@
             self.totalFloorsCell.detailTextLabel.text = [NSString stringWithFormat:@"%@", self.totalFloors];
             self.nextBarButtonItem.enabled = YES;
         }
+    }
+    
+    if (self.floor.integerValue == 11) {
+        self.totalFloorsCell.detailTextLabel.text = @"Superiore";
+    }
+    
+    if (self.totalFloors.integerValue == 11){
+        self.totalFloorsCell.detailTextLabel.text = @"Superiore";
+    }
+    
+    if (self.floor.integerValue == 11){
+        self.totalFloorsCell.userInteractionEnabled = NO;
+        self.totalFloorsCell.textLabel.enabled = NO;
+        self.totalFloorsCell.accessoryType = UITableViewCellAccessoryNone;
+    }
+    else{
+        self.totalFloorsCell.userInteractionEnabled = YES;
+        self.totalFloorsCell.textLabel.enabled = YES;
+        self.totalFloorsCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+
+        
     }
     
     [self.tableView reloadData];

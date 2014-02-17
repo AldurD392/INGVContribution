@@ -126,14 +126,14 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             <objects>
                 <tableViewController id="lU3-7F-Osg" customClass="coWhereTVC" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="AXM-Pp-j2V">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
                             <tableViewSection headerTitle="Posizione" footerTitle="Scegli se utilizzare la posizione corrente." id="RrR-sd-V7F">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="rYs-TO-Rdl">
-                                        <rect key="frame" x="0.0" y="119" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="55" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rYs-TO-Rdl" id="hdq-jU-J34">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -177,7 +177,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                             <tableViewSection headerTitle="Luogo" id="vr8-Ze-y7w">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="aV7-EM-bNF" detailTextLabel="fXQ-26-bFL" style="IBUITableViewCellStyleValue1" id="5PL-KW-G0T">
-                                        <rect key="frame" x="0.0" y="238" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="174" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5PL-KW-G0T" id="EcB-Gu-Zd2">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -204,7 +204,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="kOm-eH-Wkp" detailTextLabel="Err-wX-FKU" style="IBUITableViewCellStyleValue1" id="EYs-NY-naw">
-                                        <rect key="frame" x="0.0" y="282" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="218" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EYs-NY-naw" id="Nzo-VE-VtB">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -231,7 +231,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell hidden="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="pO7-LC-dql" detailTextLabel="PZl-bS-nEI" style="IBUITableViewCellStyleValue1" id="uNm-5W-hpr">
-                                        <rect key="frame" x="0.0" y="326" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="262" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uNm-5W-hpr" id="Xlr-tm-P6e">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -258,7 +258,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell hidden="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="xps-Mj-bRN" detailTextLabel="Ce5-qX-ib8" style="IBUITableViewCellStyleValue1" id="FKO-vL-lsb">
-                                        <rect key="frame" x="0.0" y="370" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="306" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FKO-vL-lsb" id="tx7-eL-3d1">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -285,7 +285,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell hidden="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="8dr-DT-JMy" detailTextLabel="biP-CH-zoz" style="IBUITableViewCellStyleValue1" id="fPj-j5-x6J">
-                                        <rect key="frame" x="0.0" y="414" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="350" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fPj-j5-x6J" id="xlE-Fx-nwj">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -312,7 +312,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell hidden="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="UbW-Gl-8kX">
-                                        <rect key="frame" x="0.0" y="458" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="394" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UbW-Gl-8kX" id="HA2-GH-T1u">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -350,14 +350,14 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                             <tableViewSection headerTitle="Indirizzo" id="Suj-HX-3B7">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="GbA-9T-VZ2">
-                                        <rect key="frame" x="0.0" y="550" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="486" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GbA-9T-VZ2" id="wXg-Cs-dYT">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" tag="-1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Via Salaria 113, Roma" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="LbW-HI-Zsz">
-                                                    <rect key="frame" x="20" y="7" width="280" height="30"/>
+                                                    <rect key="frame" x="20" y="7" width="252" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
@@ -365,11 +365,19 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                                         <action selector="didEndOnExitEnteringDetail:" destination="lU3-7F-Osg" eventType="editingDidEndOnExit" id="5TC-qW-Iev"/>
                                                     </connections>
                                                 </textField>
+                                                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="abd-RG-ow8">
+                                                    <rect key="frame" x="280" y="12" width="20" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="color" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                </activityIndicatorView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="LbW-HI-Zsz" secondAttribute="trailing" constant="20" symbolic="YES" id="5gv-UQ-7fA"/>
+                                                <constraint firstItem="abd-RG-ow8" firstAttribute="top" secondItem="wXg-Cs-dYT" secondAttribute="top" constant="12" id="0cA-lI-YJH"/>
+                                                <constraint firstAttribute="trailing" secondItem="LbW-HI-Zsz" secondAttribute="trailing" constant="48" id="5gv-UQ-7fA"/>
+                                                <constraint firstAttribute="trailing" secondItem="abd-RG-ow8" secondAttribute="trailing" constant="20" id="8tw-Y6-MyJ"/>
                                                 <constraint firstItem="LbW-HI-Zsz" firstAttribute="top" secondItem="wXg-Cs-dYT" secondAttribute="top" constant="7" id="Jhq-17-Gj2"/>
                                                 <constraint firstItem="LbW-HI-Zsz" firstAttribute="leading" secondItem="wXg-Cs-dYT" secondAttribute="leading" constant="20" symbolic="YES" id="ezn-4g-a4c"/>
+                                                <constraint firstAttribute="bottom" secondItem="abd-RG-ow8" secondAttribute="bottom" constant="11" id="qrl-XQ-LDz"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -381,6 +389,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                             <outlet property="delegate" destination="lU3-7F-Osg" id="sUP-mT-hxZ"/>
                         </connections>
                     </tableView>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="Dove ti trovavi?" id="9C9-CJ-NBC">
                         <barButtonItem key="rightBarButtonItem" enabled="NO" title="Avanti" id="utY-9h-GDk">
                             <connections>
@@ -392,6 +401,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <outlet property="comuneCell" destination="FKO-vL-lsb" id="chf-M6-q3f"/>
                         <outlet property="currentPositionSwitch" destination="hJa-f2-h65" id="eWg-jA-xIl"/>
                         <outlet property="frazioneCell" destination="fPj-j5-x6J" id="LDI-wg-5SF"/>
+                        <outlet property="internationalAddressActivityIndicator" destination="abd-RG-ow8" id="TSF-Wa-I3I"/>
                         <outlet property="internationalAddressCell" destination="GbA-9T-VZ2" id="5r4-DA-mgH"/>
                         <outlet property="internationalAddressTextField" destination="LbW-HI-Zsz" id="egX-TF-4T8"/>
                         <outlet property="locationActivityIndicator" destination="wrm-xp-NmD" id="wWX-jc-z52"/>

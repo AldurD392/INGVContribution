@@ -35,6 +35,7 @@ typedef enum tipoIndirizzo {
 
 @property (weak, nonatomic) IBOutlet UITableViewCell *internationalAddressCell;
 @property (weak, nonatomic) IBOutlet UITextField *internationalAddressTextField;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *internationalAddressActivityIndicator;
 
 @property (nonatomic) BOOL international;
 @property (strong, nonatomic) coWhereLocation *location;
@@ -154,6 +155,39 @@ typedef enum tipoIndirizzo {
     self.locationError = error;
 }
 
+- (void)getCoordinatesFromAddress {
+//    Try to get coordinate from italian addresses
+    if (![self.currentPositionSwitch isOn]) {
+        if ([self.stato isEqualToString:@"Italia"]) {
+            NSString *address = [[NSString alloc] init];
+
+            if (self.via != nil) {
+                address = [address stringByAppendingString:[NSString stringWithFormat:@"%@", self.via]];
+            }
+            if (self.frazione != nil) {
+                address = [address stringByAppendingString:[NSString stringWithFormat:@", %@", [[self.frazione allValues] firstObject]]];
+            }
+            address = [address stringByAppendingString:[NSString stringWithFormat:@", %@, %@, %@, %@", [[self.comune allValues] firstObject], [[self.provincia allValues] firstObject], [[self.region allValues] firstObject], self.stato]];
+            NSLog(@"%@", address);
+            
+            CLGeocoder *geocoder = [[CLGeocoder alloc] init];
+            [geocoder geocodeAddressString:address inRegion:nil completionHandler:^(NSArray *placemarks, NSError *error) {
+                dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void) {
+                    if (!placemarks) {
+                        // TODO: Error handling
+                        if (error.code == kCLErrorNetwork) {
+                            NSLog(@"Maximum request exceded!");
+                        }
+                    } else {
+                        CLPlacemark *lastObject = (CLPlacemark *)[placemarks lastObject];
+                        self.location.coordinate = lastObject.location.coordinate;
+                    }
+                });
+            }];
+        }
+    }
+}
+
 # pragma mark - coIndirizzoTVC Delegate Methods
 - (void)didFinishSelectingAddress:(NSDictionary *)dataDictionary {
     if (self.tipoIndirizzo == stato) {
@@ -193,15 +227,18 @@ typedef enum tipoIndirizzo {
     // Quando l'utente preme "Fatto" sulla tastiera, può andare avanti.
     self.via = sender.text;
     
-//   TODO: salvare i dettagli delle coordinate
     if (sender == self.viaTextField) {
-//        TODO: maybe geolocalizzazione?
     } else if (sender == self.internationalAddressTextField) {
+        self.location = nil;
+        self.nextBarButtonItem.enabled = NO;
+        
+        [self.internationalAddressActivityIndicator startAnimating];
         CLGeocoder *geocoder = [[CLGeocoder alloc] init];
         NSString *completeString = [self.internationalAddressTextField.text stringByAppendingString:[NSString stringWithFormat:@", %@", self.stato]];
         [geocoder geocodeAddressString:completeString inRegion:nil completionHandler:^(NSArray *placemarks, NSError *error) {
             dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void) {
                 if (!placemarks) {
+                    // TODO: Error handling
                     if (error.code == kCLErrorNetwork) {
                         NSLog(@"Maximum request exceded!");
                     }
@@ -210,6 +247,7 @@ typedef enum tipoIndirizzo {
                         CLPlacemark *lastObject = (CLPlacemark *)[placemarks lastObject];
                         self.location.coordinate = lastObject.location.coordinate;
                         self.nextBarButtonItem.enabled = YES;
+                        [self.internationalAddressActivityIndicator stopAnimating];
                     });
                 }
             });
@@ -320,6 +358,8 @@ typedef enum tipoIndirizzo {
     if ([segue.destinationViewController isKindOfClass:[coQuestionTVC class]]) {
         coQuestionTVC* qtvc = (coQuestionTVC *) [segue destinationViewController];
         qtvc.delegate = self.delegate;
+        
+        [self getCoordinatesFromAddress];
     }
     
     if ([segue.identifier isEqualToString:@"coStatoSegue"]) {

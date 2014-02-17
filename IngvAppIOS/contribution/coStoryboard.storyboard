@@ -1969,7 +1969,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="4750" y="-152"/>
         </scene>
-        <!--Co Checkmark QuestionTVC - Piccoli soprammobili-->
+        <!--Co Checkmark QuestionTVC - Esperienza: edificio-->
         <scene sceneID="01R-gs-PhZ">
             <objects>
                 <tableViewController id="jNU-du-6qh" customClass="coCheckmarkQuestionTVC" sceneMemberID="viewController">
@@ -2062,7 +2062,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                             <outlet property="delegate" destination="jNU-du-6qh" id="2gB-gb-I9Y"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Piccoli soprammobili" id="t5a-RJ-WbN">
+                    <navigationItem key="navigationItem" title="Esperienza: edificio" id="t5a-RJ-WbN">
                         <barButtonItem key="rightBarButtonItem" title="Avanti" id="rOR-X8-GNO">
                             <connections>
                                 <action selector="nextButtonPressed:" destination="jNU-du-6qh" id="1Ty-wc-j8o"/>
@@ -2083,7 +2083,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="5126" y="-147"/>
         </scene>
-        <!--Co Checkmark QuestionTVC - Porte, finestre e sportelli-->
+        <!--Co Checkmark QuestionTVC - Esperienza: edificio-->
         <scene sceneID="nJl-Lp-bya">
             <objects>
                 <tableViewController id="eix-XR-WGa" customClass="coCheckmarkQuestionTVC" sceneMemberID="viewController">
@@ -2193,7 +2193,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                             <outlet property="delegate" destination="eix-XR-WGa" id="CBs-3e-apc"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Porte, finestre e sportelli" id="Y3R-68-9TB">
+                    <navigationItem key="navigationItem" title="Esperienza: edificio" id="Y3R-68-9TB">
                         <barButtonItem key="rightBarButtonItem" title="Avanti" id="urf-U9-SvW">
                             <connections>
                                 <action selector="nextButtonPressed:" destination="eix-XR-WGa" id="eOe-2Z-gfq"/>
@@ -2214,7 +2214,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="5511" y="-147"/>
         </scene>
-        <!--Co Checkmark QuestionTVC - Liquidi-->
+        <!--Co Checkmark QuestionTVC - Esperienza: edificio-->
         <scene sceneID="Yfv-Zl-smS">
             <objects>
                 <tableViewController id="RSD-jd-vBa" customClass="coCheckmarkQuestionTVC" sceneMemberID="viewController">
@@ -2324,7 +2324,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                             <outlet property="delegate" destination="RSD-jd-vBa" id="3ej-rQ-YHc"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Liquidi" id="IaJ-Lf-JJH">
+                    <navigationItem key="navigationItem" title="Esperienza: edificio" id="IaJ-Lf-JJH">
                         <barButtonItem key="rightBarButtonItem" title="Avanti" id="Mho-aq-jmN">
                             <connections>
                                 <action selector="nextButtonPressed:" destination="RSD-jd-vBa" id="1nd-E3-JX6"/>
@@ -2345,7 +2345,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="5890" y="-147"/>
         </scene>
-        <!--Co Checkmark QuestionTVC - Quadri, libri e vasi-->
+        <!--Co Checkmark QuestionTVC - Esperienza: edificio-->
         <scene sceneID="lJW-He-0ix">
             <objects>
                 <tableViewController id="3BU-Td-xhD" customClass="coCheckmarkQuestionTVC" sceneMemberID="viewController">
@@ -2455,7 +2455,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                             <outlet property="delegate" destination="3BU-Td-xhD" id="4B1-GR-ztU"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Quadri, libri e vasi" id="H4u-JE-9P9">
+                    <navigationItem key="navigationItem" title="Esperienza: edificio" id="H4u-JE-9P9">
                         <barButtonItem key="rightBarButtonItem" title="Avanti" id="jig-Hh-dla">
                             <connections>
                                 <action selector="nextButtonPressed:" destination="3BU-Td-xhD" id="pBU-pv-1a9"/>
@@ -2476,7 +2476,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="6294" y="-147"/>
         </scene>
-        <!--Co Checkmark QuestionTVC - Mobili e altri oggetti pesanti-->
+        <!--Co Checkmark QuestionTVC - Esperienza: edificio-->
         <scene sceneID="Km6-cj-0UR">
             <objects>
                 <tableViewController id="7tb-Id-qQa" customClass="coCheckmarkQuestionTVC" sceneMemberID="viewController">
@@ -2586,7 +2586,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                             <outlet property="delegate" destination="7tb-Id-qQa" id="0M9-Yl-uoz"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Mobili e altri oggetti pesanti" id="rnh-RN-EYO">
+                    <navigationItem key="navigationItem" title="Esperienza: edificio" id="rnh-RN-EYO">
                         <barButtonItem key="rightBarButtonItem" title="Avanti" id="ail-el-hmk">
                             <connections>
                                 <action selector="nextButtonPressed:" destination="7tb-Id-qQa" id="TNk-lO-0WR"/>
@@ -2607,7 +2607,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="6707" y="-147"/>
         </scene>
-        <!--Co Checkmark QuestionTVC - Rumore del terremoto-->
+        <!--Co Checkmark QuestionTVC - Esperienza: rumore-->
         <scene sceneID="DmV-fF-ka9">
             <objects>
                 <tableViewController id="nUQ-0C-Scn" customClass="coCheckmarkQuestionTVC" sceneMemberID="viewController">
@@ -2683,7 +2683,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                             <outlet property="delegate" destination="nUQ-0C-Scn" id="s4w-uB-Pku"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Rumore del terremoto" id="dhe-qm-9bO">
+                    <navigationItem key="navigationItem" title="Esperienza: rumore" id="dhe-qm-9bO">
                         <barButtonItem key="rightBarButtonItem" title="Avanti" id="MPb-r0-XMU">
                             <connections>
                                 <action selector="nextButtonPressed:" destination="nUQ-0C-Scn" id="as8-Uw-r1a"/>
@@ -2703,7 +2703,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="7176" y="-152"/>
         </scene>
-        <!--Co Checkmark QuestionTVC - Inizio del rumore-->
+        <!--Co Checkmark QuestionTVC - Esperienza: rumore-->
         <scene sceneID="D6w-VZ-ZDN">
             <objects>
                 <tableViewController id="wa1-gm-07O" customClass="coCheckmarkQuestionTVC" sceneMemberID="viewController">
@@ -2796,7 +2796,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                             <outlet property="delegate" destination="wa1-gm-07O" id="UAB-ej-ESt"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Inizio del rumore" id="1Yi-Vb-jRD">
+                    <navigationItem key="navigationItem" title="Esperienza: rumore" id="1Yi-Vb-jRD">
                         <barButtonItem key="rightBarButtonItem" title="Avanti" id="M68-5P-jOg">
                             <connections>
                                 <action selector="nextButtonPressed:" destination="wa1-gm-07O" id="kqN-03-4Ez"/>
@@ -2817,7 +2817,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="7571" y="-152"/>
         </scene>
-        <!--Co Checkmark QuestionTVC - Provenienza del rumore-->
+        <!--Co Checkmark QuestionTVC - Esperienza: rumore-->
         <scene sceneID="sh4-KJ-sjY">
             <objects>
                 <tableViewController id="CEw-ki-owC" customClass="coCheckmarkQuestionTVC" sceneMemberID="viewController">
@@ -2910,7 +2910,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                             <outlet property="delegate" destination="CEw-ki-owC" id="bKd-YU-XqE"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Provenienza del rumore" id="ccZ-QS-jNY">
+                    <navigationItem key="navigationItem" title="Esperienza: rumore" id="ccZ-QS-jNY">
                         <barButtonItem key="rightBarButtonItem" title="Avanti" id="824-k7-Q0c">
                             <connections>
                                 <action selector="nextButtonPressed:" destination="CEw-ki-owC" id="Nxf-0J-PQv"/>
@@ -2930,7 +2930,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="7987" y="-149"/>
         </scene>
-        <!--Co Text ViewQTVC - Altri fenomeni-->
+        <!--Co Text ViewQTVC - Esperienza: altro-->
         <scene sceneID="7ll-9g-Gle">
             <objects>
                 <tableViewController id="hbN-ZU-8eZ" customClass="coTextViewQTVC" sceneMemberID="viewController">
@@ -2988,7 +2988,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                             <outlet property="delegate" destination="hbN-ZU-8eZ" id="48Q-Gf-umZ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Altri fenomeni" id="VQh-LH-gle">
+                    <navigationItem key="navigationItem" title="Esperienza: altro" id="VQh-LH-gle">
                         <barButtonItem key="rightBarButtonItem" title="Avanti" id="gZj-2V-e9M">
                             <connections>
                                 <action selector="nextButtonPressed:" destination="hbN-ZU-8eZ" id="We6-5x-4eH"/>
@@ -3006,7 +3006,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="8423" y="-152"/>
         </scene>
-        <!--Co Checkmark QuestionTVC - Acqua nelle piscine-->
+        <!--Co Checkmark QuestionTVC - Esperienza: all'aperto-->
         <scene sceneID="B3l-Rk-T20">
             <objects>
                 <tableViewController id="oeZ-J5-wAT" customClass="coCheckmarkQuestionTVC" sceneMemberID="viewController">
@@ -3099,7 +3099,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                             <outlet property="delegate" destination="oeZ-J5-wAT" id="o6W-Ac-k7A"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Acqua nelle piscine" id="L2n-1B-eNP">
+                    <navigationItem key="navigationItem" title="Esperienza: all'aperto" id="L2n-1B-eNP">
                         <barButtonItem key="rightBarButtonItem" title="Avanti" id="iU0-VW-RP4">
                             <connections>
                                 <action selector="nextButtonPressed:" destination="oeZ-J5-wAT" id="qlS-b7-rgE"/>
@@ -3120,7 +3120,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="4349" y="568"/>
         </scene>
-        <!--Co Checkmark QuestionTVC - Piante ed alberi-->
+        <!--Co Checkmark QuestionTVC - Esperienza: all'aperto-->
         <scene sceneID="XRR-G4-CQs">
             <objects>
                 <tableViewController id="BE1-jp-oXl" customClass="coCheckmarkQuestionTVC" sceneMemberID="viewController">
@@ -3230,7 +3230,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                             <outlet property="delegate" destination="BE1-jp-oXl" id="qvD-aa-nbF"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Piante ed alberi" id="kNb-F2-1ok">
+                    <navigationItem key="navigationItem" title="Esperienza: all'aperto" id="kNb-F2-1ok">
                         <barButtonItem key="rightBarButtonItem" title="Avanti" id="AoQ-im-PaJ">
                             <connections>
                                 <action selector="nextButtonPressed:" destination="BE1-jp-oXl" id="unS-3z-1tb"/>
@@ -3251,7 +3251,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="6707" y="576"/>
         </scene>
-        <!--Co Checkmark QuestionTVC - Costruzione-->
+        <!--Co Checkmark QuestionTVC - Dettagli: danni edificio-->
         <scene sceneID="qUP-7n-qic">
             <objects>
                 <tableViewController id="tIY-qS-VW9" customClass="coCheckmarkQuestionTVC" sceneMemberID="viewController">
@@ -3378,7 +3378,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                             <outlet property="delegate" destination="tIY-qS-VW9" id="prd-Hg-Taw"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Costruzione" id="Zwc-j6-AYK">
+                    <navigationItem key="navigationItem" title="Dettagli: danni edificio" id="Zwc-j6-AYK">
                         <barButtonItem key="rightBarButtonItem" title="Avanti" id="Ku0-dT-MjC">
                             <connections>
                                 <action selector="nextButtonPressed:" destination="tIY-qS-VW9" id="XFT-4m-qMy"/>
@@ -3400,7 +3400,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="8853" y="-148"/>
         </scene>
-        <!--Co Checkmark QuestionTVC - Materiale dell'edificio-->
+        <!--Co Checkmark QuestionTVC - Dettagli: danni edificio-->
         <scene sceneID="Ol9-f4-GYO">
             <objects>
                 <tableViewController id="4A2-AV-kHc" customClass="coCheckmarkQuestionTVC" sceneMemberID="viewController">
@@ -3527,7 +3527,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                             <outlet property="delegate" destination="4A2-AV-kHc" id="7b8-uW-5P5"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Materiale dell'edificio" id="S5L-va-cP9">
+                    <navigationItem key="navigationItem" title="Dettagli: danni edificio" id="S5L-va-cP9">
                         <barButtonItem key="rightBarButtonItem" title="Avanti" id="GZK-VX-QnI">
                             <connections>
                                 <action selector="nextButtonPressed:" destination="4A2-AV-kHc" id="YEU-l9-0zm"/>
@@ -3549,7 +3549,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="9268" y="-150"/>
         </scene>
-        <!--Co Checkmark QuestionTVC - Muri-->
+        <!--Co Checkmark QuestionTVC - Dettagli: danni edificio-->
         <scene sceneID="bRp-Gc-XtB">
             <objects>
                 <tableViewController id="70E-rX-2if" customClass="coCheckmarkQuestionTVC" sceneMemberID="viewController">
@@ -3676,7 +3676,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                             <outlet property="delegate" destination="70E-rX-2if" id="Q9u-ST-tLF"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Muri" id="qLx-KW-4Gw">
+                    <navigationItem key="navigationItem" title="Dettagli: danni edificio" id="qLx-KW-4Gw">
                         <barButtonItem key="rightBarButtonItem" title="Avanti" id="FoU-y3-XdP">
                             <connections>
                                 <action selector="nextButtonPressed:" destination="70E-rX-2if" id="ZRp-XX-tXG"/>
@@ -3698,7 +3698,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="9668" y="-150"/>
         </scene>
-        <!--Co Checkmark QuestionTVC - Tetti-->
+        <!--Co Checkmark QuestionTVC - Dettagli: danni edificio-->
         <scene sceneID="tHN-7D-LuR">
             <objects>
                 <tableViewController id="76Z-bq-H6e" customClass="coCheckmarkQuestionTVC" sceneMemberID="viewController">
@@ -3791,7 +3791,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                             <outlet property="delegate" destination="76Z-bq-H6e" id="7IU-fW-7Jc"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Tetti" id="msK-ia-zWW">
+                    <navigationItem key="navigationItem" title="Dettagli: danni edificio" id="msK-ia-zWW">
                         <barButtonItem key="rightBarButtonItem" title="Avanti" id="oPH-OM-TKk">
                             <connections>
                                 <action selector="nextButtonPressed:" destination="76Z-bq-H6e" id="qgx-9J-QXh"/>
@@ -3811,7 +3811,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="10085" y="-148"/>
         </scene>
-        <!--Co Checkmark QuestionTVC - Camini-->
+        <!--Co Checkmark QuestionTVC - Dettagli: danni edificio-->
         <scene sceneID="3yK-j1-7h6">
             <objects>
                 <tableViewController id="C4V-3k-44L" customClass="coCheckmarkQuestionTVC" sceneMemberID="viewController">
@@ -3904,7 +3904,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                             <outlet property="delegate" destination="C4V-3k-44L" id="WvL-QN-zYZ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Camini" id="8Xf-U2-UQ8">
+                    <navigationItem key="navigationItem" title="Dettagli: danni edificio" id="8Xf-U2-UQ8">
                         <barButtonItem key="rightBarButtonItem" title="Avanti" id="oaq-3D-6Ja">
                             <connections>
                                 <action selector="nextButtonPressed:" destination="C4V-3k-44L" id="e9H-Nx-Vrg"/>

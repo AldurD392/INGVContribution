@@ -10,6 +10,6 @@
 #import "coQuestionarioProtocol.h"
 #import "coQuestionTVC.h"
 
-@interface coStartingViewController: UIViewController <coQuestionarioProtocol>
+@interface coStartingViewController: UITableViewController <coQuestionarioProtocol>
 
 @end

@@ -784,12 +784,10 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <pageControl key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" id="IQY-0r-JNP">
-                            <rect key="frame" x="0.0" y="413" width="320" height="36"/>
+                        <progressView key="tableFooterView" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" id="ml1-YP-AJg">
+                            <rect key="frame" x="0.0" y="413" width="320" height="2"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                            <color key="currentPageIndicatorTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                        </pageControl>
+                        </progressView>
                         <sections>
                             <tableViewSection headerTitle="Hai avuto paura?" footerTitle="Scegli tra le precedenti" id="n8H-fe-45o">
                                 <cells>
@@ -933,12 +931,10 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <pageControl key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" currentPage="1" id="Ask-jc-xaL">
-                            <rect key="frame" x="0.0" y="369" width="320" height="36"/>
+                        <progressView key="tableFooterView" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.33000000000000002" id="prW-1l-E57">
+                            <rect key="frame" x="0.0" y="369" width="320" height="2"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                            <color key="currentPageIndicatorTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                        </pageControl>
+                        </progressView>
                         <sections>
                             <tableViewSection headerTitle="Come era il tuo equilibrio?" footerTitle="Scegli tra le precedenti" id="ATJ-Xa-vCh">
                                 <cells>
@@ -1637,12 +1633,10 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <pageControl key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" currentPage="2" id="Vck-sN-qKT">
-                            <rect key="frame" x="0.0" y="298" width="320" height="36"/>
+                        <progressView key="tableFooterView" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.66000000000000003" id="s9g-7a-BU1">
+                            <rect key="frame" x="0.0" y="298" width="320" height="2"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                            <color key="currentPageIndicatorTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                        </pageControl>
+                        </progressView>
                         <sections>
                             <tableViewSection headerTitle="Durante la scossa o pochi minuti prima gli animali erano agitati?" footerTitle="Scegli tra le precedenti" id="hFk-05-Noh">
                                 <cells>
@@ -1733,12 +1727,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <pageControl key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="7" id="vbH-Vk-C1W">
-                            <rect key="frame" x="0.0" y="325" width="320" height="36"/>
+                        <progressView key="tableFooterView" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" id="IeR-vd-bnc">
+                            <rect key="frame" x="0.0" y="325" width="320" height="2"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                            <color key="currentPageIndicatorTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                        </pageControl>
+                            <color key="progressTintColor" red="0.042661239029999999" green="0.5361328125" blue="0.2350088323" alpha="1" colorSpace="calibratedRGB"/>
+                        </progressView>
                         <sections>
                             <tableViewSection headerTitle="Quanto oscillavano i lampadari?" footerTitle="Scegli tra le precedenti" id="9V3-AY-lXK">
                                 <cells>
@@ -1846,12 +1839,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <pageControl key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="7" currentPage="1" id="geu-nh-DNW">
-                            <rect key="frame" x="0.0" y="369" width="320" height="36"/>
+                        <progressView key="tableFooterView" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.14280000000000001" id="iO7-HO-Gj7">
+                            <rect key="frame" x="0.0" y="369" width="320" height="2"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                            <color key="currentPageIndicatorTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                        </pageControl>
+                            <color key="progressTintColor" red="0.042661239029999999" green="0.5361328125" blue="0.2350088323" alpha="1" colorSpace="calibratedRGB"/>
+                        </progressView>
                         <sections>
                             <tableViewSection headerTitle="Le porcellane e le cristallerie si muovevano?" footerTitle="Scegli tra le precedenti" id="Izq-0K-t0M">
                                 <cells>
@@ -1977,12 +1969,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <pageControl key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="7" currentPage="2" id="BbE-xy-hn8">
-                            <rect key="frame" x="0.0" y="325" width="320" height="36"/>
+                        <progressView key="tableFooterView" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.28000000000000003" id="2L2-8b-2GV">
+                            <rect key="frame" x="0.0" y="325" width="320" height="2"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                            <color key="currentPageIndicatorTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                        </pageControl>
+                            <color key="progressTintColor" red="0.042661239029999999" green="0.5361328125" blue="0.2350088323" alpha="1" colorSpace="calibratedRGB"/>
+                        </progressView>
                         <sections>
                             <tableViewSection headerTitle="I soprammobili si muovevano?" footerTitle="Scegli tra le precedenti" id="NMB-jm-Otq">
                                 <cells>
@@ -2091,12 +2082,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <pageControl key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="7" currentPage="3" id="bNh-x6-cRD">
-                            <rect key="frame" x="0.0" y="369" width="320" height="36"/>
+                        <progressView key="tableFooterView" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.4284" id="BqV-sT-dS9">
+                            <rect key="frame" x="0.0" y="369" width="320" height="2"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                            <color key="currentPageIndicatorTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                        </pageControl>
+                            <color key="progressTintColor" red="0.042661239029999999" green="0.5361328125" blue="0.2350088323" alpha="1" colorSpace="calibratedRGB"/>
+                        </progressView>
                         <sections>
                             <tableViewSection headerTitle="Le porte, finestre, sportelli sbattevano?" footerTitle="Scegli tra le precedenti" id="d1p-kH-cSV">
                                 <cells>
@@ -2222,12 +2212,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <pageControl key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="7" currentPage="4" id="KqG-ux-o0l">
-                            <rect key="frame" x="0.0" y="369" width="320" height="36"/>
+                        <progressView key="tableFooterView" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.57120000000000004" id="rGJ-zD-nPM">
+                            <rect key="frame" x="0.0" y="369" width="320" height="2"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                            <color key="currentPageIndicatorTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                        </pageControl>
+                            <color key="progressTintColor" red="0.042661239029999999" green="0.5361328125" blue="0.2350088323" alpha="1" colorSpace="calibratedRGB"/>
+                        </progressView>
                         <sections>
                             <tableViewSection headerTitle="Come era il comportamento dei liquidi?" footerTitle="Scegli tra le precedenti" id="eoR-LT-HOq">
                                 <cells>
@@ -2353,12 +2342,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <pageControl key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="7" currentPage="5" id="1GA-UJ-8Xb">
-                            <rect key="frame" x="0.0" y="386" width="320" height="36"/>
+                        <progressView key="tableFooterView" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.71399999999999997" id="mEt-pG-w20">
+                            <rect key="frame" x="0.0" y="386" width="320" height="2"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                            <color key="currentPageIndicatorTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                        </pageControl>
+                            <color key="progressTintColor" red="0.042661239029999999" green="0.5361328125" blue="0.2350088323" alpha="1" colorSpace="calibratedRGB"/>
+                        </progressView>
                         <sections>
                             <tableViewSection headerTitle="Come era il comportamento di quadri, libri e vasi?" footerTitle="Scegli tra le precedenti" id="Hqs-6l-eK9">
                                 <cells>
@@ -2484,12 +2472,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <pageControl key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="7" currentPage="6" id="J6W-ci-x3P">
-                            <rect key="frame" x="0.0" y="386" width="320" height="36"/>
+                        <progressView key="tableFooterView" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.86580000000000001" id="0z9-BQ-P6x">
+                            <rect key="frame" x="0.0" y="386" width="320" height="2"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                            <color key="currentPageIndicatorTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                        </pageControl>
+                            <color key="progressTintColor" red="0.042661239029999999" green="0.5361328125" blue="0.2350088323" alpha="1" colorSpace="calibratedRGB"/>
+                        </progressView>
                         <sections>
                             <tableViewSection headerTitle="Come era il comportamento di mobili e altri oggetti pesanti?" footerTitle="Scegli tra le precedenti" id="obs-I6-axU">
                                 <cells>
@@ -2615,12 +2602,10 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <pageControl key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" id="vEg-aB-BEs">
-                            <rect key="frame" x="0.0" y="281" width="320" height="36"/>
+                        <progressView key="tableFooterView" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" id="3WH-Kr-Hjq">
+                            <rect key="frame" x="0.0" y="281" width="320" height="2"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                            <color key="currentPageIndicatorTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                        </pageControl>
+                        </progressView>
                         <sections>
                             <tableViewSection headerTitle="Era udibile il rumore del terremoto?" footerTitle="Scegli tra le precedenti" id="NuT-Lg-Aru">
                                 <cells>
@@ -2711,12 +2696,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <pageControl key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" currentPage="1" id="tpo-zD-Vo9">
-                            <rect key="frame" x="0.0" y="342" width="320" height="36"/>
+                        <progressView key="tableFooterView" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.25" id="wBk-vx-h9y">
+                            <rect key="frame" x="0.0" y="342" width="320" height="2"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                            <color key="currentPageIndicatorTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                        </pageControl>
+                            <color key="progressTintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </progressView>
                         <sections>
                             <tableViewSection headerTitle="Quando è cominciato il rumore del terremoto rispetto allo scuotimento?" footerTitle="Scegli tra le precedenti" id="VuP-Yb-nJu">
                                 <cells>
@@ -2825,12 +2809,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <pageControl key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" currentPage="2" id="u0K-3r-Rex">
-                            <rect key="frame" x="0.0" y="325" width="320" height="36"/>
+                        <progressView key="tableFooterView" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" id="8G7-O7-X8k">
+                            <rect key="frame" x="0.0" y="325" width="320" height="2"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                            <color key="currentPageIndicatorTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                        </pageControl>
+                            <color key="progressTintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </progressView>
                         <sections>
                             <tableViewSection headerTitle="Da dove proveniva il rumore del terremoto?" footerTitle="Scegli tra le precedenti" id="yfZ-rM-B6y">
                                 <cells>
@@ -2938,12 +2921,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <pageControl key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" currentPage="3" id="nAa-vp-Kcl">
-                            <rect key="frame" x="0.0" y="386" width="320" height="36"/>
+                        <progressView key="tableFooterView" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.75" id="e9U-Lk-CVI">
+                            <rect key="frame" x="0.0" y="386" width="320" height="2"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                            <color key="currentPageIndicatorTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                        </pageControl>
+                            <color key="progressTintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </progressView>
                         <sections>
                             <tableViewSection headerTitle="Hai osservato altri fenomeni? Raccontaceli:" footerTitle="Scrivi quanto osservato nello spazio sovrastante" id="Hfc-i8-JJy">
                                 <cells>
@@ -3014,12 +2996,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <pageControl key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" id="I6y-Qx-Kcg">
-                            <rect key="frame" x="0.0" y="342" width="320" height="36"/>
+                        <progressView key="tableFooterView" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" id="h1A-qk-Lh6">
+                            <rect key="frame" x="0.0" y="342" width="320" height="2"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                            <color key="currentPageIndicatorTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                        </pageControl>
+                            <color key="progressTintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </progressView>
                         <sections>
                             <tableViewSection headerTitle="Quale era il comportamento dell'acqua nelle piscine?" footerTitle="Scegli tra le precedenti" id="tyh-Ry-aqh">
                                 <cells>
@@ -3128,12 +3109,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <pageControl key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" currentPage="1" id="eeU-O4-nXN">
-                            <rect key="frame" x="0.0" y="369" width="320" height="36"/>
+                        <progressView key="tableFooterView" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" id="8RY-QJ-318">
+                            <rect key="frame" x="0.0" y="369" width="320" height="2"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                            <color key="currentPageIndicatorTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                        </pageControl>
+                            <color key="progressTintColor" red="0.042661239029999999" green="0.5361328125" blue="0.2350088323" alpha="1" colorSpace="calibratedRGB"/>
+                        </progressView>
                         <sections>
                             <tableViewSection headerTitle="Che effetti hai notato su piante ed alberi?" footerTitle="Scegli tra le precedenti" id="s9Z-UR-NTu">
                                 <cells>
@@ -3259,12 +3239,10 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <pageControl key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" id="rO3-Ld-Ure">
-                            <rect key="frame" x="0.0" y="413" width="320" height="36"/>
+                        <progressView key="tableFooterView" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" id="ezx-Xe-04P">
+                            <rect key="frame" x="0.0" y="413" width="320" height="2"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                            <color key="currentPageIndicatorTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                        </pageControl>
+                        </progressView>
                         <sections>
                             <tableViewSection headerTitle="Che danni ha subito l'intera costruzione?" footerTitle="Scegli tra le precedenti" id="muL-Te-i3b">
                                 <cells>
@@ -3408,12 +3386,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <pageControl key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" currentPage="1" id="0VD-RM-Uva">
-                            <rect key="frame" x="0.0" y="420" width="320" height="36"/>
+                        <progressView key="tableFooterView" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.20000000000000001" id="yyw-vm-DQe">
+                            <rect key="frame" x="0.0" y="420" width="320" height="2"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                            <color key="currentPageIndicatorTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                        </pageControl>
+                            <color key="progressTintColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </progressView>
                         <sections>
                             <tableViewSection headerTitle="Di che materiale era costituito l'edificio?" footerTitle="Scegli tra le precedenti" id="4G5-IB-63Q">
                                 <cells>
@@ -3557,12 +3534,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <pageControl key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" currentPage="2" id="Lto-KF-zzF">
-                            <rect key="frame" x="0.0" y="426" width="320" height="36"/>
+                        <progressView key="tableFooterView" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.40000000000000002" id="niZ-Rn-Tx6">
+                            <rect key="frame" x="0.0" y="426" width="320" height="2"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                            <color key="currentPageIndicatorTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                        </pageControl>
+                            <color key="progressTintColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </progressView>
                         <sections>
                             <tableViewSection headerTitle="Che danni hanno riportato i muri?" footerTitle="Scegli tra le precedenti" id="1WL-bU-h6Y">
                                 <cells>
@@ -3706,12 +3682,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <pageControl key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" currentPage="3" id="WkQ-et-vbo">
-                            <rect key="frame" x="0.0" y="344" width="320" height="36"/>
+                        <progressView key="tableFooterView" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.59999999999999998" id="qiF-eY-hkE">
+                            <rect key="frame" x="0.0" y="344" width="320" height="2"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                            <color key="currentPageIndicatorTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                        </pageControl>
+                            <color key="progressTintColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </progressView>
                         <sections>
                             <tableViewSection headerTitle="Qual'è stato il comportamento delle tegole sui tetti" footerTitle="Scegli tra le precedenti" id="rSm-B2-FNE">
                                 <cells>
@@ -3819,12 +3794,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <pageControl key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" currentPage="4" id="r0Q-yl-z4w">
-                            <rect key="frame" x="0.0" y="327" width="320" height="36"/>
+                        <progressView key="tableFooterView" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.80000000000000004" id="SEn-Th-l60">
+                            <rect key="frame" x="0.0" y="327" width="320" height="2"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                            <color key="currentPageIndicatorTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                        </pageControl>
+                            <color key="progressTintColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </progressView>
                         <sections>
                             <tableViewSection headerTitle="Che danni hanno riportato i camini?" footerTitle="Scegli tra le precedenti" id="fPS-6i-pSj">
                                 <cells>
@@ -4025,7 +3999,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="IsM-oi-Ul1"/>
-        <segue reference="Ph7-cm-2dU"/>
+        <segue reference="IHd-pH-WL7"/>
         <segue reference="muB-fZ-O2l"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -959,6 +959,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     </navigationItem>
                     <connections>
                         <outlet property="nextBarButton" destination="BiM-pI-ifp" id="IPp-3G-Zcg"/>
+                        <outlet property="progressionBar" destination="ml1-YP-AJg" id="2RH-DB-GA8"/>
                         <outletCollection property="cells" destination="Ngz-X1-z2l" id="85z-gJ-Vt6"/>
                         <outletCollection property="cells" destination="RRK-vu-F6M" id="zce-CG-qV7"/>
                         <outletCollection property="cells" destination="7n0-hg-144" id="SIi-Jr-cjW"/>
@@ -1089,6 +1090,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     </navigationItem>
                     <connections>
                         <outlet property="nextBarButton" destination="Te9-ul-Ny1" id="yAv-h5-vXi"/>
+                        <outlet property="progressionBar" destination="prW-1l-E57" id="l5r-VD-O2W"/>
                         <outletCollection property="cells" destination="xFL-ZQ-D9S" id="brU-dW-Pb2"/>
                         <outletCollection property="cells" destination="SwW-Oy-OND" id="YCK-WE-Ldh"/>
                         <outletCollection property="cells" destination="mcd-7Z-sKa" id="n4P-nC-JmR"/>
@@ -1816,6 +1818,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     </navigationItem>
                     <connections>
                         <outlet property="nextBarButton" destination="sPL-xn-Eco" id="hBx-hV-TBx"/>
+                        <outlet property="progressionBar" destination="s9g-7a-BU1" id="7Dl-zy-8Hg"/>
                         <outletCollection property="cells" destination="NjZ-Ja-kQq" id="2qv-Nq-RqL"/>
                         <outletCollection property="cells" destination="8bz-H1-0Wh" id="KS3-Cc-upD"/>
                         <outletCollection property="cells" destination="wYp-cQ-e8O" id="rk5-an-PUN"/>
@@ -1838,7 +1841,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <progressView key="tableFooterView" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" id="IeR-vd-bnc">
                             <rect key="frame" x="0.0" y="325" width="320" height="2"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="progressTintColor" red="0.042661239029999999" green="0.5361328125" blue="0.2350088323" alpha="1" colorSpace="calibratedRGB"/>
                         </progressView>
                         <sections>
                             <tableViewSection headerTitle="Quanto oscillavano i lampadari?" footerTitle="Scegli tra le precedenti" id="9V3-AY-lXK">
@@ -1928,6 +1930,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     </navigationItem>
                     <connections>
                         <outlet property="nextBarButton" destination="qov-Sp-OTj" id="iqJ-5J-QGZ"/>
+                        <outlet property="progressionBar" destination="IeR-vd-bnc" id="do2-V9-cfT"/>
                         <outletCollection property="cells" destination="5Tp-1x-ora" id="AFv-IO-jcj"/>
                         <outletCollection property="cells" destination="zKs-Uk-ZXV" id="q1F-iM-F0Y"/>
                         <outletCollection property="cells" destination="3LL-HQ-GaP" id="Hvp-xd-ObY"/>
@@ -1950,7 +1953,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <progressView key="tableFooterView" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.14280000000000001" id="iO7-HO-Gj7">
                             <rect key="frame" x="0.0" y="369" width="320" height="2"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="progressTintColor" red="0.042661239029999999" green="0.5361328125" blue="0.2350088323" alpha="1" colorSpace="calibratedRGB"/>
                         </progressView>
                         <sections>
                             <tableViewSection headerTitle="Le porcellane e le cristallerie si muovevano?" footerTitle="Scegli tra le precedenti" id="Izq-0K-t0M">
@@ -2057,6 +2059,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     </navigationItem>
                     <connections>
                         <outlet property="nextBarButton" destination="GUQ-wg-Saj" id="C9t-Ls-Lg0"/>
+                        <outlet property="progressionBar" destination="iO7-HO-Gj7" id="yjV-fH-v7u"/>
                         <outletCollection property="cells" destination="bqW-no-Oik" id="oL2-mM-ju7"/>
                         <outletCollection property="cells" destination="OAO-pP-Uo6" id="xAn-sw-u7I"/>
                         <outletCollection property="cells" destination="qX5-gu-He0" id="mrD-wZ-Cnk"/>
@@ -2080,7 +2083,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <progressView key="tableFooterView" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.28000000000000003" id="2L2-8b-2GV">
                             <rect key="frame" x="0.0" y="325" width="320" height="2"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="progressTintColor" red="0.042661239029999999" green="0.5361328125" blue="0.2350088323" alpha="1" colorSpace="calibratedRGB"/>
                         </progressView>
                         <sections>
                             <tableViewSection headerTitle="I soprammobili si muovevano?" footerTitle="Scegli tra le precedenti" id="NMB-jm-Otq">
@@ -2170,6 +2172,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     </navigationItem>
                     <connections>
                         <outlet property="nextBarButton" destination="rOR-X8-GNO" id="2Ni-Sa-rgH"/>
+                        <outlet property="progressionBar" destination="2L2-8b-2GV" id="pD0-bw-rjO"/>
                         <outletCollection property="cells" destination="4ou-bZ-1MJ" id="osT-ga-n0u"/>
                         <outletCollection property="cells" destination="PUw-c5-paI" id="so2-cq-4U5"/>
                         <outletCollection property="cells" destination="4ou-bZ-1MJ" id="Ev9-mg-7bU"/>
@@ -2193,7 +2196,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <progressView key="tableFooterView" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.4284" id="BqV-sT-dS9">
                             <rect key="frame" x="0.0" y="369" width="320" height="2"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="progressTintColor" red="0.042661239029999999" green="0.5361328125" blue="0.2350088323" alpha="1" colorSpace="calibratedRGB"/>
                         </progressView>
                         <sections>
                             <tableViewSection headerTitle="Le porte, finestre, sportelli sbattevano?" footerTitle="Scegli tra le precedenti" id="d1p-kH-cSV">
@@ -2300,6 +2302,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     </navigationItem>
                     <connections>
                         <outlet property="nextBarButton" destination="urf-U9-SvW" id="gVq-Lq-1e1"/>
+                        <outlet property="progressionBar" destination="BqV-sT-dS9" id="qqV-pf-JYf"/>
                         <outletCollection property="cells" destination="eF5-SJ-Duu" id="1ax-y5-heJ"/>
                         <outletCollection property="cells" destination="hWH-eQ-nKV" id="4LG-Ys-JjX"/>
                         <outletCollection property="cells" destination="B7V-3n-mGu" id="mqS-1b-zYk"/>
@@ -2323,7 +2326,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <progressView key="tableFooterView" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.57120000000000004" id="rGJ-zD-nPM">
                             <rect key="frame" x="0.0" y="369" width="320" height="2"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="progressTintColor" red="0.042661239029999999" green="0.5361328125" blue="0.2350088323" alpha="1" colorSpace="calibratedRGB"/>
                         </progressView>
                         <sections>
                             <tableViewSection headerTitle="Come era il comportamento dei liquidi?" footerTitle="Scegli tra le precedenti" id="eoR-LT-HOq">
@@ -2430,6 +2432,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     </navigationItem>
                     <connections>
                         <outlet property="nextBarButton" destination="Mho-aq-jmN" id="bfc-2M-MeF"/>
+                        <outlet property="progressionBar" destination="rGJ-zD-nPM" id="vX7-TC-JlU"/>
                         <outletCollection property="cells" destination="ljU-WE-Rpv" id="cKD-jX-Bcy"/>
                         <outletCollection property="cells" destination="3Fe-P0-KoQ" id="iwZ-Ll-A6T"/>
                         <outletCollection property="cells" destination="un7-ID-etx" id="hIZ-yq-Cj3"/>
@@ -2453,7 +2456,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <progressView key="tableFooterView" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.71399999999999997" id="mEt-pG-w20">
                             <rect key="frame" x="0.0" y="386" width="320" height="2"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="progressTintColor" red="0.042661239029999999" green="0.5361328125" blue="0.2350088323" alpha="1" colorSpace="calibratedRGB"/>
                         </progressView>
                         <sections>
                             <tableViewSection headerTitle="Come era il comportamento di quadri, libri e vasi?" footerTitle="Scegli tra le precedenti" id="Hqs-6l-eK9">
@@ -2560,6 +2562,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     </navigationItem>
                     <connections>
                         <outlet property="nextBarButton" destination="jig-Hh-dla" id="YBq-lV-al9"/>
+                        <outlet property="progressionBar" destination="mEt-pG-w20" id="lAz-ar-cQd"/>
                         <outletCollection property="cells" destination="loW-7t-fLn" id="evM-UZ-bmF"/>
                         <outletCollection property="cells" destination="08C-9o-2K7" id="tgq-fq-ONC"/>
                         <outletCollection property="cells" destination="FJS-Dq-eTe" id="GAv-B4-Uh2"/>
@@ -2583,7 +2586,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <progressView key="tableFooterView" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.86580000000000001" id="0z9-BQ-P6x">
                             <rect key="frame" x="0.0" y="386" width="320" height="2"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="progressTintColor" red="0.042661239029999999" green="0.5361328125" blue="0.2350088323" alpha="1" colorSpace="calibratedRGB"/>
                         </progressView>
                         <sections>
                             <tableViewSection headerTitle="Come era il comportamento di mobili e altri oggetti pesanti?" footerTitle="Scegli tra le precedenti" id="obs-I6-axU">
@@ -2690,6 +2692,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     </navigationItem>
                     <connections>
                         <outlet property="nextBarButton" destination="ail-el-hmk" id="isU-Qh-pAi"/>
+                        <outlet property="progressionBar" destination="0z9-BQ-P6x" id="N3T-Tg-mQl"/>
                         <outletCollection property="cells" destination="Csf-wO-FxJ" id="Wko-hF-ig3"/>
                         <outletCollection property="cells" destination="6jy-NZ-clY" id="cBX-zh-B7p"/>
                         <outletCollection property="cells" destination="Cla-sZ-jDl" id="23A-Iy-3pH"/>
@@ -2785,6 +2788,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     </navigationItem>
                     <connections>
                         <outlet property="nextBarButton" destination="MPb-r0-XMU" id="Ju8-I5-loA"/>
+                        <outlet property="progressionBar" destination="3WH-Kr-Hjq" id="gdk-OQ-Ff6"/>
                         <outletCollection property="cells" destination="H7M-Bl-qvV" id="Va1-Vg-POs"/>
                         <outletCollection property="cells" destination="RD8-r4-w1t" id="wCj-nr-gYw"/>
                         <outletCollection property="cells" destination="H7M-Bl-qvV" id="Bbe-aS-oXy"/>
@@ -2807,7 +2811,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <progressView key="tableFooterView" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.25" id="wBk-vx-h9y">
                             <rect key="frame" x="0.0" y="342" width="320" height="2"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="progressTintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         </progressView>
                         <sections>
                             <tableViewSection headerTitle="Quando è cominciato il rumore del terremoto rispetto allo scuotimento?" footerTitle="Scegli tra le precedenti" id="VuP-Yb-nJu">
@@ -2897,6 +2900,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     </navigationItem>
                     <connections>
                         <outlet property="nextBarButton" destination="M68-5P-jOg" id="ElQ-av-6IW"/>
+                        <outlet property="progressionBar" destination="wBk-vx-h9y" id="MO8-Oq-2He"/>
                         <outletCollection property="cells" destination="3sd-HX-gSe" id="PDa-m2-c6F"/>
                         <outletCollection property="cells" destination="vUN-Sx-7av" id="LOu-5W-83o"/>
                         <outletCollection property="cells" destination="W8G-x2-nf3" id="vGK-jr-o0h"/>
@@ -2920,7 +2924,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <progressView key="tableFooterView" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" id="8G7-O7-X8k">
                             <rect key="frame" x="0.0" y="325" width="320" height="2"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="progressTintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         </progressView>
                         <sections>
                             <tableViewSection headerTitle="Da dove proveniva il rumore del terremoto?" footerTitle="Scegli tra le precedenti" id="yfZ-rM-B6y">
@@ -3010,6 +3013,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     </navigationItem>
                     <connections>
                         <outlet property="nextBarButton" destination="824-k7-Q0c" id="za4-Y0-BfD"/>
+                        <outlet property="progressionBar" destination="8G7-O7-X8k" id="w2g-1T-bxi"/>
                         <outletCollection property="cells" destination="R9W-l0-Mw0" id="ms7-eJ-vA9"/>
                         <outletCollection property="cells" destination="QBO-t4-ETj" id="0go-qi-B8T"/>
                         <outletCollection property="cells" destination="k4q-7U-qyh" id="Jxz-rz-WJ6"/>
@@ -3032,7 +3036,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <progressView key="tableFooterView" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.75" id="e9U-Lk-CVI">
                             <rect key="frame" x="0.0" y="386" width="320" height="2"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="progressTintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         </progressView>
                         <sections>
                             <tableViewSection headerTitle="Hai osservato altri fenomeni? Raccontaceli:" footerTitle="Scrivi quanto osservato nello spazio sovrastante" id="Hfc-i8-JJy">
@@ -3087,6 +3090,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     </navigationItem>
                     <connections>
                         <outlet property="nextBarButtonItem" destination="gZj-2V-e9M" id="5fP-4S-D9A"/>
+                        <outlet property="progressionBar" destination="e9U-Lk-CVI" id="urT-wF-s7w"/>
                         <outlet property="textView" destination="crh-fa-Tyy" id="WBa-EA-MZH"/>
                         <segue destination="tIY-qS-VW9" kind="push" identifier="coCostruzioneSegue" id="aO7-hn-lrz"/>
                         <segue destination="xzv-hk-dPE" kind="push" identifier="coEndThanksBisSegue" id="Rej-Oi-8LG"/>
@@ -3107,7 +3111,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <progressView key="tableFooterView" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" id="h1A-qk-Lh6">
                             <rect key="frame" x="0.0" y="342" width="320" height="2"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="progressTintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         </progressView>
                         <sections>
                             <tableViewSection headerTitle="Quale era il comportamento dell'acqua nelle piscine?" footerTitle="Scegli tra le precedenti" id="tyh-Ry-aqh">
@@ -3197,6 +3200,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     </navigationItem>
                     <connections>
                         <outlet property="nextBarButton" destination="iU0-VW-RP4" id="KdP-ae-brw"/>
+                        <outlet property="progressionBar" destination="h1A-qk-Lh6" id="su6-4s-C0q"/>
                         <outletCollection property="cells" destination="KO7-wR-fDn" id="6PW-zp-Hph"/>
                         <outletCollection property="cells" destination="Se2-Dx-BWi" id="6a7-ba-ysj"/>
                         <outletCollection property="cells" destination="sYw-hb-fIM" id="Q3F-us-9Qv"/>
@@ -3220,7 +3224,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <progressView key="tableFooterView" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" id="8RY-QJ-318">
                             <rect key="frame" x="0.0" y="369" width="320" height="2"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="progressTintColor" red="0.042661239029999999" green="0.5361328125" blue="0.2350088323" alpha="1" colorSpace="calibratedRGB"/>
                         </progressView>
                         <sections>
                             <tableViewSection headerTitle="Che effetti hai notato su piante ed alberi?" footerTitle="Scegli tra le precedenti" id="s9Z-UR-NTu">
@@ -3327,6 +3330,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     </navigationItem>
                     <connections>
                         <outlet property="nextBarButton" destination="AoQ-im-PaJ" id="BPT-WY-bNJ"/>
+                        <outlet property="progressionBar" destination="8RY-QJ-318" id="2sM-J4-5Gm"/>
                         <outletCollection property="cells" destination="00d-Sz-NSu" id="MqA-D5-x0R"/>
                         <outletCollection property="cells" destination="t1d-02-zTI" id="S3K-Ss-KrU"/>
                         <outletCollection property="cells" destination="lyJ-ej-tIr" id="w2e-vr-z4s"/>
@@ -3473,6 +3477,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     </navigationItem>
                     <connections>
                         <outlet property="nextBarButton" destination="Ku0-dT-MjC" id="cEk-WL-sEV"/>
+                        <outlet property="progressionBar" destination="ezx-Xe-04P" id="jKu-sR-bOy"/>
                         <outletCollection property="cells" destination="pqB-x9-1x6" id="oAV-kV-qe7"/>
                         <outletCollection property="cells" destination="2rh-0W-jTr" id="9Uy-1x-JSg"/>
                         <outletCollection property="cells" destination="PfM-E0-g3v" id="gOH-YF-kMd"/>
@@ -3497,7 +3502,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <progressView key="tableFooterView" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.20000000000000001" id="yyw-vm-DQe">
                             <rect key="frame" x="0.0" y="420" width="320" height="2"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="progressTintColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </progressView>
                         <sections>
                             <tableViewSection headerTitle="Di che materiale era costituito l'edificio?" footerTitle="Scegli tra le precedenti" id="4G5-IB-63Q">
@@ -3621,6 +3625,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     </navigationItem>
                     <connections>
                         <outlet property="nextBarButton" destination="GZK-VX-QnI" id="Lch-PY-C9n"/>
+                        <outlet property="progressionBar" destination="yyw-vm-DQe" id="Wte-Tw-itK"/>
                         <outletCollection property="cells" destination="h3e-wy-Mn4" id="0lO-Rp-voZ"/>
                         <outletCollection property="cells" destination="qoy-Hd-xUs" id="m8H-uW-VUf"/>
                         <outletCollection property="cells" destination="1Qx-ob-01M" id="775-7X-7vU"/>
@@ -3645,7 +3650,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <progressView key="tableFooterView" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.40000000000000002" id="niZ-Rn-Tx6">
                             <rect key="frame" x="0.0" y="426" width="320" height="2"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="progressTintColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </progressView>
                         <sections>
                             <tableViewSection headerTitle="Che danni hanno riportato i muri?" footerTitle="Scegli tra le precedenti" id="1WL-bU-h6Y">
@@ -3769,6 +3773,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     </navigationItem>
                     <connections>
                         <outlet property="nextBarButton" destination="FoU-y3-XdP" id="qhm-ic-RmA"/>
+                        <outlet property="progressionBar" destination="niZ-Rn-Tx6" id="FVh-NM-mGx"/>
                         <outletCollection property="cells" destination="Ksh-l7-6pA" id="m2d-3I-ZrU"/>
                         <outletCollection property="cells" destination="oNv-f0-VLl" id="buH-gl-5Vg"/>
                         <outletCollection property="cells" destination="4Ro-ps-5XJ" id="jvo-TY-3xc"/>
@@ -3793,7 +3798,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <progressView key="tableFooterView" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.59999999999999998" id="qiF-eY-hkE">
                             <rect key="frame" x="0.0" y="344" width="320" height="2"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="progressTintColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </progressView>
                         <sections>
                             <tableViewSection headerTitle="Qual'è stato il comportamento delle tegole sui tetti" footerTitle="Scegli tra le precedenti" id="rSm-B2-FNE">
@@ -3883,6 +3887,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     </navigationItem>
                     <connections>
                         <outlet property="nextBarButton" destination="oPH-OM-TKk" id="1Uq-Pz-B3j"/>
+                        <outlet property="progressionBar" destination="qiF-eY-hkE" id="QeP-Sd-DfA"/>
                         <outletCollection property="cells" destination="Adg-JM-LrS" id="hbc-26-lMK"/>
                         <outletCollection property="cells" destination="YWl-9C-46z" id="Cvw-fa-IlO"/>
                         <outletCollection property="cells" destination="St5-Y2-e4w" id="vRI-Ov-Co6"/>
@@ -3905,7 +3910,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <progressView key="tableFooterView" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.80000000000000004" id="SEn-Th-l60">
                             <rect key="frame" x="0.0" y="327" width="320" height="2"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="progressTintColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </progressView>
                         <sections>
                             <tableViewSection headerTitle="Che danni hanno riportato i camini?" footerTitle="Scegli tra le precedenti" id="fPS-6i-pSj">
@@ -3995,6 +3999,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     </navigationItem>
                     <connections>
                         <outlet property="nextBarButton" destination="oaq-3D-6Ja" id="qH4-m6-P3E"/>
+                        <outlet property="progressionBar" destination="SEn-Th-l60" id="15U-Sh-BmR"/>
                         <outletCollection property="cells" destination="mXC-BZ-1Uk" id="rqs-U3-MY2"/>
                         <outletCollection property="cells" destination="vT2-Bv-lSb" id="NOr-4u-T2P"/>
                         <outletCollection property="cells" destination="Odj-Zz-YCX" id="nbU-L4-nDZ"/>
@@ -4149,9 +4154,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="Ph7-cm-2dU"/>
         <segue reference="HL5-Vh-JOw"/>
         <segue reference="IsM-oi-Ul1"/>
-        <segue reference="IHd-pH-WL7"/>
         <segue reference="Rej-Oi-8LG"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -7,10 +7,12 @@
 //
 
 #import "coTextViewQTVC.h"
+#import "coCheckmarkQuestionTVC.h"
 
 @interface coTextViewQTVC () <UIActionSheetDelegate>
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *nextBarButtonItem;
+@property (weak, nonatomic) IBOutlet UIProgressView *progressionBar;
 
 @property (strong, nonatomic) NSString* altriFenomeni;
 @property (strong, readonly) NSString* placeHolder;
@@ -87,6 +89,7 @@
     } else {
         self.nextBarButtonItem.title = @"Avanti";
     }
+    [self upgradeBar];
 }
 
 - (void)viewDidLoad
@@ -95,6 +98,15 @@
 	// Do any additional setup after loading the view.
     
     self.textView.delegate = self;
+}
+
+#pragma mark - View
+- (void) upgradeBar {
+    if (self.delegate.questionario.whereDetail.integerValue == 0){
+        self.progressionBar.progress = EDIFICIO_QUESTION_PROGRESS * 13;
+    } else {
+        self.progressionBar.progress = APERTO_QUESTION_PROGRESS * 8;
+    }
 }
 #pragma mark - segue
 

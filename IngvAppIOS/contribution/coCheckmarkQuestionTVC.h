@@ -12,5 +12,5 @@
 #define EDIFICIO_QUESTION_PROGRESS 0.052
 #define APERTO_QUESTION_PROGRESS 0.11
 @interface coCheckmarkQuestionTVC : coQuestionTVC
-
+@property (nonatomic) BOOL resume;
 @end

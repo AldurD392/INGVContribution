@@ -51,16 +51,10 @@
     item2.image = [[UIImage imageNamed:@"mainTabBar1.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     item2.title=@" Be alerted";
     
-    
-    UITabBarItem *item3 = [self.tabBar.items objectAtIndex:3];
-    item3.image = [[UIImage imageNamed:@"mainTabBar2.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-   item3.title=@" Contribution";
-    
-    
   
-    UITabBarItem *item4 = [self.tabBar.items objectAtIndex:4];
-    item4.image = [[UIImage imageNamed:@"mainTabBar1.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    item4.title=@" More";
+    UITabBarItem *item3 = [self.tabBar.items objectAtIndex:3];
+    item3.image = [[UIImage imageNamed:@"mainTabBar1.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    item3.title=@" More";
     
     
     [super viewDidLoad];

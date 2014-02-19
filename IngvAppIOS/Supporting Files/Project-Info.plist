@@ -29,7 +29,7 @@
 		<string>location</string>
 	</array>
 	<key>UIMainStoryboardFile</key>
-	<string>coStoryboard</string>
+	<string>mainStoryboard</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

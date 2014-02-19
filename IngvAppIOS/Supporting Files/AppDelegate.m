@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "coQuestionTVC.h"
+#import "coStartingViewController.h"
 
 @implementation AppDelegate
 
@@ -14,7 +16,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    UILocalNotification *localNotif = [launchOptions objectForKey:UIApplicationLaunchOptionsLocalNotificationKey];
+    if (localNotif) {
+        NSLog(@"Notifica!");
+    }
     return YES;
 }
 							
@@ -43,6 +48,20 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (void) application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
+    NSLog(@"Local notification!");
+    UIStoryboard *coStoryboard = [UIStoryboard storyboardWithName:@"coStoryboard" bundle:Nil];
+    
+    coStartingViewController *startingViewController = [coStoryboard instantiateViewControllerWithIdentifier:@"coTerremotiList"];
+    UINavigationController *startingNavigationController = [[UINavigationController alloc] initWithRootViewController:startingViewController];
+    
+//    coQuestionTVC* firstLongQuestionTVC = [coStoryboard instantiateViewControllerWithIdentifier:@"coFirstLongQuestion"];
+//    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:firstLongQuestionTVC];
+    
+    self.window.rootViewController = startingNavigationController;
+//    [self.window.rootViewController presentViewController:startingViewController animated:YES completion:nil];
 }
 
 @end

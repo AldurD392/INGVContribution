@@ -89,7 +89,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="infStoryboard"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="coStoryboard"/>
                     </userDefinedRuntimeAttributes>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3DS-Jg-bcc" userLabel="First Responder" sceneMemberID="firstResponder"/>

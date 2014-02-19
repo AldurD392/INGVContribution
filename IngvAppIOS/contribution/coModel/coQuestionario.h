@@ -89,4 +89,6 @@
 - (void) resetAllAnswer;
 
 - (NSDictionary *) dictionaryWithPropertiesOfObject:(id)obj;
++ (coQuestionario*) dictionaryToQuestionario:(NSDictionary*) dizionario;
+
 @end

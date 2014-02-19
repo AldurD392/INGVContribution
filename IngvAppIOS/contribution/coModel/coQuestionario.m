@@ -72,7 +72,6 @@
     
     for (int i = 0; i < count; i++) {
         NSString *key = [NSString stringWithUTF8String:property_getName(properties[i])];
-        NSLog(@"%@", key);
         if ([obj valueForKey:key]) {
             [dict setObject:[obj valueForKey:key] forKey:key];
         }
@@ -81,6 +80,27 @@
     free(properties);
     
     return [NSDictionary dictionaryWithDictionary:dict];
+}
+
++ (coQuestionario*) dictionaryToQuestionario:(NSDictionary*) dizionario {
+    
+    coQuestionario* questionario = [[coQuestionario alloc] init];
+    
+    if (!questionario){
+    
+        unsigned count;
+        objc_property_t *properties = class_copyPropertyList([coQuestionario class], &count);
+
+        for (int i = 0; i < count; i++) {
+            NSString *propertyName = [NSString stringWithUTF8String:property_getName(properties[i])];
+            
+            [questionario setValue:dizionario[propertyName] forKey:propertyName];
+        }
+            
+    }
+    
+    return questionario;
+    
 }
 
 @end

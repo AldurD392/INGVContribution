@@ -12,4 +12,7 @@
 
 @interface coStartingViewController: UITableViewController <coQuestionarioProtocol>
 @property (strong, nonatomic) coQuestionario *questionario;
+
+// TODO: questo andrà sostituito con il metodo appropriato!
++ (NSString *) detailsForTerremoto: (NSString *) terremotoID;
 @end

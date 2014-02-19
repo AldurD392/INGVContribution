@@ -34,6 +34,10 @@
     return tableView.rowHeight;
 }
 
+- (IBAction)didPressCancelButton:(UIBarButtonItem *)sender {
+    [self dismissViewControllerAnimated:TRUE completion:nil];
+}
+
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     

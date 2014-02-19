@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "coQuestionTVC.h"
+#import "coCheckmarkQuestionTVC.h"
 #import "coStartingViewController.h"
 #import "MainTabBarController.h"
 
@@ -51,10 +51,13 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
-- (void) application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
+- (void) handleLongQuestionarioNotification:(UILocalNotification *)notification {
+//    TODO: Questo metodo si occupa di aprire la pagina dei dettagli del terremoto per cui compilare il questionario completo.
+//    Probabilmente andrà modificato in base allo storyboard utilizzato dal gruppo "Information"
+    
     UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"mainStoryboard" bundle:nil];
     UIStoryboard *coStoryboard = [UIStoryboard storyboardWithName:@"coStoryboard" bundle:nil];
-
+    
     MainTabBarController *mainTabBar = [mainStoryboard instantiateInitialViewController];
     mainTabBar.selectedIndex = 0;
     
@@ -64,7 +67,7 @@
     [startingViewController performSegueWithIdentifier:@"coTerremotoDetailSegue" sender:startingViewController];
     
     coQuestionario *questionario = [coQuestionario dictionaryToQuestionario:notification.userInfo];
-    coQuestionTVC *firstQuestion = [coStoryboard instantiateViewControllerWithIdentifier:@"coFirstLongQuestion"];
+    coCheckmarkQuestionTVC *firstQuestion = [coStoryboard instantiateViewControllerWithIdentifier:@"coFirstLongQuestion"];
     
     firstQuestion.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Annulla" style:UIBarButtonSystemItemUndo target:firstQuestion action:@selector(cancelButtonPressed:)];
     
@@ -72,11 +75,19 @@
     
     firstQuestion.delegate = startingViewController;
     firstQuestion.delegate.questionario = questionario;
+    firstQuestion.resume = YES;
     
     self.window.rootViewController = mainTabBar;
     
     [startingViewController presentViewController:questionNavigationController animated:NO completion:nil];
     [self.window makeKeyAndVisible];
+}
+
+- (void) application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
+    if([application applicationState] == UIApplicationStateInactive) {
+        //application was running in the background
+        [self handleLongQuestionarioNotification:notification];
+    }
 }
 
 @end

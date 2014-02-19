@@ -10,6 +10,10 @@
 #import "coQuestionario.h"
 #import "coQuestionTVC.h"
 
+/* 
+ TODO
+ Questo viewController è soltanto di esempio, per capire come poter integrare il questionario nelle proprie view! */
+
 @interface coStartingViewController ()
 
 @end
@@ -23,6 +27,13 @@
     }
     
     return _questionario;
+}
+
+/* TODO
+ Questo metodo dovrà essere rimpiazzato con l'opportuno metodo, in grado di
+ ritornare, tra le altre cose, una stringa contenente i dettagli di un terremoto a partire dall'ID */
++ (NSString *) detailsForTerremoto: (NSString *) terremotoID {
+    return @"terremoto di prova";
 }
 
 // Al momento del prepare for segue, si setta se stessi come delegati!

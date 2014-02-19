@@ -10,4 +10,5 @@
 #import "coQuestionTVC.h"
 
 @interface coCheckmarkQuestionTVC : coQuestionTVC
+@property (nonatomic) BOOL resume;
 @end

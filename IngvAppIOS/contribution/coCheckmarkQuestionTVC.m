@@ -7,6 +7,7 @@
 //
 
 #import "coCheckmarkQuestionTVC.h"
+#import "coStartingViewController.h"
 
 @interface coCheckmarkQuestionTVC () <UIActionSheetDelegate>
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *nextBarButton;
@@ -380,6 +381,12 @@
         }
     } else {
         self.nextBarButton.title = @"Avanti";
+    }
+    
+    if (self.view.tag == 1 && self.resume) {
+//        TODO: Inserire il metodo per ottenere la stringa di dettagli per un terremoto
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Questionario esteso" message:[NSString stringWithFormat:@"Stai compilando il questionario esteso per: %@.", [coStartingViewController detailsForTerremoto:self.delegate.questionario.terremotoID]] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
     }
     
     [self updateView];

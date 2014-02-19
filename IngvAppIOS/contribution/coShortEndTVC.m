@@ -26,7 +26,7 @@
     
     localNotification.fireDate = [NSDate dateWithTimeIntervalSinceNow:NOTIFICATION_FIRETIME];
     
-    localNotification.alertBody = @"Vuoi compilare il questionariok completo?";
+    localNotification.alertBody = @"Vuoi compilare il questionario completo?";
     localNotification.alertAction = @"compilare il questionario completo.";
     
     localNotification.soundName = UILocalNotificationDefaultSoundName;

@@ -415,12 +415,19 @@ typedef enum tipoIndirizzo {
         [dvc loadFrazioni:[[self.comune allKeys] firstObject] withRegionCode:[[self.region allKeys] firstObject]];
     }
 }
+- (IBAction)didPressCancelButton:(UIBarButtonItem *)sender {
+    [self dismissViewControllerAnimated:TRUE completion:nil];
+}
 
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
     if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusRestricted) {
         self.currentPositionSwitch.enabled = NO;
+    }
+    
+    if (self.delegate.questionario.whenDetail) {
+        self.navigationItem.leftBarButtonItem = nil;
     }
 
     self.locationManager.delegate = nil;

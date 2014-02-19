@@ -34,6 +34,11 @@
 #define PROVINCELIST @"coProvinceList"
 #define COMUNILIST @"coComuniList"
 
+- (IBAction)didPressCancel:(UIBarButtonItem *)sender {
+    self.dataDict = nil;
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 - (void) loadContries {
     NSString* countriesPath = [[NSBundle mainBundle] pathForResource:STATILIST ofType:@"txt"];
     NSFileHandle* file = [NSFileHandle fileHandleForReadingAtPath:countriesPath];
@@ -107,6 +112,7 @@
         
         dispatch_async(dispatch_get_main_queue(), ^(void) {
             self.dataDict = [returnDict copy];
+            [self.tableView reloadData];
         });
     });
 }

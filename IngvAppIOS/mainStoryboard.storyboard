@@ -24,7 +24,7 @@
         <!--Main Tab Bar Controller-->
         <scene sceneID="h4L-Vp-xYT">
             <objects>
-                <tabBarController definesPresentationContext="YES" id="mTe-FP-oMF" customClass="MainTabBarController" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="mainTabBar" definesPresentationContext="YES" id="mTe-FP-oMF" customClass="MainTabBarController" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="dev-5G-vUf">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>

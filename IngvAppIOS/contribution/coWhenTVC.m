@@ -31,6 +31,10 @@
     self.date = sender.date;
 }
 
+- (IBAction)didPressCancelButton:(UIBarButtonItem *)sender {
+    [self dismissViewControllerAnimated:YES completion:Nil];
+}
+
 # pragma mark - Prepare for segue
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     coQuestionTVC* cqtvc = (coQuestionTVC *) [segue destinationViewController];
@@ -42,6 +46,8 @@
     
     if (self.date != nil) {
         self.datePicker.date = self.date;
+    } else {
+        self.date = [NSDate date];
     }
 }
 

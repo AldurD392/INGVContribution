@@ -11,7 +11,7 @@
 #import "coQuestionTVC.h"
 
 @interface coStartingViewController ()
-@property (strong, nonatomic, readwrite) coQuestionario *questionario;
+
 @end
 
 @implementation coStartingViewController

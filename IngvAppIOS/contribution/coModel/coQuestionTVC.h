@@ -11,4 +11,7 @@
 
 @interface coQuestionTVC : UITableViewController
 @property (strong, nonatomic) id <coQuestionarioProtocol> delegate;
+
+- (IBAction)cancelButtonPressed:(UIBarButtonItem *)sender;
 @end
+

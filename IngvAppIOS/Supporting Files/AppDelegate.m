@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "coQuestionTVC.h"
 #import "coStartingViewController.h"
+#import "MainTabBarController.h"
 
 @implementation AppDelegate
 
@@ -51,17 +52,31 @@
 }
 
 - (void) application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
-    NSLog(@"Local notification!");
-    UIStoryboard *coStoryboard = [UIStoryboard storyboardWithName:@"coStoryboard" bundle:Nil];
+    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"mainStoryboard" bundle:nil];
+    UIStoryboard *coStoryboard = [UIStoryboard storyboardWithName:@"coStoryboard" bundle:nil];
+
+    MainTabBarController *mainTabBar = [mainStoryboard instantiateInitialViewController];
+    mainTabBar.selectedIndex = 0;
     
-    coStartingViewController *startingViewController = [coStoryboard instantiateViewControllerWithIdentifier:@"coTerremotiList"];
-    UINavigationController *startingNavigationController = [[UINavigationController alloc] initWithRootViewController:startingViewController];
+    UINavigationController *informationNavigationController = mainTabBar.viewControllers[0];
+    coStartingViewController *startingViewController = (coStartingViewController *)informationNavigationController.topViewController;
     
-//    coQuestionTVC* firstLongQuestionTVC = [coStoryboard instantiateViewControllerWithIdentifier:@"coFirstLongQuestion"];
-//    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:firstLongQuestionTVC];
+    [startingViewController performSegueWithIdentifier:@"coTerremotoDetailSegue" sender:startingViewController];
     
-    self.window.rootViewController = startingNavigationController;
-//    [self.window.rootViewController presentViewController:startingViewController animated:YES completion:nil];
+    coQuestionario *questionario = [coQuestionario dictionaryToQuestionario:notification.userInfo];
+    coQuestionTVC *firstQuestion = [coStoryboard instantiateViewControllerWithIdentifier:@"coFirstLongQuestion"];
+    
+    firstQuestion.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Annulla" style:UIBarButtonSystemItemUndo target:firstQuestion action:@selector(cancelButtonPressed:)];
+    
+    UINavigationController *questionNavigationController = [[UINavigationController alloc] initWithRootViewController:firstQuestion];
+    
+    firstQuestion.delegate = startingViewController;
+    firstQuestion.delegate.questionario = questionario;
+    
+    self.window.rootViewController = mainTabBar;
+    
+    [startingViewController presentViewController:questionNavigationController animated:NO completion:nil];
+    [self.window makeKeyAndVisible];
 }
 
 @end

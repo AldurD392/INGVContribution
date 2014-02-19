@@ -39,7 +39,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="11u-6n-eDv" kind="push" id="ZfU-tg-tAt"/>
+                                            <segue destination="11u-6n-eDv" kind="push" identifier="coTerremotoDetailSegue" id="ZfU-tg-tAt"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -145,6 +145,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Quando l'hai sentito?" id="RQ9-GU-uYi">
+                        <barButtonItem key="leftBarButtonItem" title="Annulla" id="mfa-yy-eWy">
+                            <connections>
+                                <action selector="didPressCancelButton:" destination="UI1-3g-Sfk" id="msN-85-VMe"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Avanti" id="FAJ-gW-wqC">
                             <connections>
                                 <segue destination="lU3-7F-Osg" kind="push" id="HL5-Vh-JOw"/>
@@ -428,6 +433,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Dove ti trovavi?" id="9C9-CJ-NBC">
+                        <barButtonItem key="leftBarButtonItem" title="Annulla" id="Xdb-Yg-2V8">
+                            <connections>
+                                <action selector="didPressCancelButton:" destination="lU3-7F-Osg" id="htR-jI-ta2"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" enabled="NO" title="Avanti" id="utY-9h-GDk">
                             <connections>
                                 <segue destination="fLf-Wr-81h" kind="push" id="aMe-34-Mt0"/>
@@ -1370,7 +1380,13 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                             <outlet property="delegate" destination="Qli-He-cNV" id="e4v-0l-aBq"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="k13-Ia-pEE"/>
+                    <navigationItem key="navigationItem" id="k13-Ia-pEE">
+                        <barButtonItem key="leftBarButtonItem" title="Annulla" id="l4y-66-sm1">
+                            <connections>
+                                <action selector="didPressCancel:" destination="Qli-He-cNV" id="RWl-n3-6q6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mqr-Wv-6UM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1379,7 +1395,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <!--Co Starting View Controller - L'Aquila - 6/4/2009-->
         <scene sceneID="GWx-33-DJA">
             <objects>
-                <tableViewController id="11u-6n-eDv" customClass="coStartingViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="coExampleTerremotoDetail" id="11u-6n-eDv" customClass="coStartingViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="560-iU-dJg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4174,6 +4190,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <segue reference="HL5-Vh-JOw"/>
         <segue reference="IsM-oi-Ul1"/>
         <segue reference="IHd-pH-WL7"/>
-        <segue reference="Rej-Oi-8LG"/>
+        <segue reference="muB-fZ-O2l"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -13,6 +13,6 @@
 
 @required
 // This will be the main "questionario", all mvc will be able to access it.
-@property (strong, nonatomic, readonly) coQuestionario *questionario;
+@property (strong, nonatomic) coQuestionario *questionario;
 
 @end

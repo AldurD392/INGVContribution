@@ -23,9 +23,8 @@
     return self;
 }
 
-- (void)viewDidLoad
+- (void)viewWillAppear:(BOOL)animated
 {
-    
     [[UITabBarItem appearance] setTitleTextAttributes:@{NSFontAttributeName : [UIFont fontWithName:@"HelveticaNeue-Bold" size:10.0f],
                                                         NSForegroundColorAttributeName : [UIColor whiteColor]
                                                         } forState:UIControlStateSelected];
@@ -39,25 +38,24 @@
     
     UITabBarItem *item0 = [self.tabBar.items objectAtIndex:0];
     item0.image = [[UIImage imageNamed:@"mainTabBar1.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-   item0.title=@" Informazioni";
+   item0.title=@"Informazioni";
    
     
     UITabBarItem *item1 = [self.tabBar.items objectAtIndex:1];
    item1.image = [[UIImage imageNamed:@"mainTabBar2.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    item1.title=@" Sismografo";
+    item1.title=@"Sismografo";
     
     
     UITabBarItem *item2 = [self.tabBar.items objectAtIndex:2];
     item2.image = [[UIImage imageNamed:@"mainTabBar1.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    item2.title=@" Be alerted";
+    item2.title=@"Be alerted";
     
   
     UITabBarItem *item3 = [self.tabBar.items objectAtIndex:3];
     item3.image = [[UIImage imageNamed:@"mainTabBar1.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    item3.title=@" More";
+    item3.title=@"More";
     
-    
-    [super viewDidLoad];
+    [super viewWillAppear:animated];
     
 }
 

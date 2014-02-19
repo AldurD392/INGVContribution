@@ -14,6 +14,10 @@
 
 @implementation coQuestionTVC
 
+- (IBAction)cancelButtonPressed:(UIBarButtonItem *)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 //- (id)initWithStyle:(UITableViewStyle)style
 //{
 //    self = [super initWithStyle:style];

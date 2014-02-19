@@ -11,5 +11,5 @@
 #import "coQuestionTVC.h"
 
 @interface coStartingViewController: UITableViewController <coQuestionarioProtocol>
-
+@property (strong, nonatomic) coQuestionario *questionario;
 @end

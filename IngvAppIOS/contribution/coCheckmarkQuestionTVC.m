@@ -214,7 +214,6 @@
     [self performSwitchedSegueWithSender:sender];
 }
 
-
 - (void) performSwitchedSegueWithSender:(id)sender {
     switch (self.view.tag) {
         case -1:
@@ -321,6 +320,7 @@
                                               destructiveButtonTitle: nil
                                               otherButtonTitles: @"Si", nil];
                 [actionSheet showInView:self.view];
+                [self.tableView deselectRowAtIndexPath:[NSIndexPath indexPathForItem:self.delegate.questionario.camini.integerValue inSection:0] animated:TRUE];
             }
             break;
 
@@ -374,7 +374,7 @@
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    if (self.view.tag == -1) {
+    if (self.view.tag == -1 || self.view.tag == 20) {
         if (self.delegate.questionario.whereDetail.integerValue == 1) {
             self.nextBarButton.title = @"Fine";
         }

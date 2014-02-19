@@ -9,6 +9,7 @@
 #import "coWhereTVC.h"
 #import "coIndirizzoTVC.h"
 #import "coWhereLocation.h"
+#import "coQuestionario.h"
 #import <CoreLocation/CoreLocation.h>
 
 typedef enum tipoIndirizzo {
@@ -38,7 +39,7 @@ typedef enum tipoIndirizzo {
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *internationalAddressActivityIndicator;
 
 @property (nonatomic) BOOL international;
-@property (strong, nonatomic) coWhereLocation *location;
+@property (strong, nonatomic) NSMutableDictionary *where;
 @property (strong, nonatomic) CLLocationManager* locationManager;
 @property (strong, nonatomic) NSError* locationError;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *locationActivityIndicator;
@@ -54,9 +55,9 @@ typedef enum tipoIndirizzo {
 @implementation coWhereTVC
 
 # pragma mark - Setters and getters
-- (coWhereLocation *) location {
+- (NSMutableDictionary *) where {
     if (self.delegate.questionario.where == Nil) {
-        self.delegate.questionario.where = [[coWhereLocation alloc] init];
+        self.delegate.questionario.where = [[NSMutableDictionary alloc] init];
     }
     
     return self.delegate.questionario.where;
@@ -73,7 +74,7 @@ typedef enum tipoIndirizzo {
 }
 
 - (void) setStato:(NSString *)stato {
-    self.location.stato = stato;
+    [self.where setValue:stato forKey:STATO_KEY];
     self.region = nil;
     
     self.international = ![stato isEqualToString:@"Italia"];
@@ -82,36 +83,36 @@ typedef enum tipoIndirizzo {
 }
 
 - (NSString *) stato {
-    if (!self.location.stato) {
-        self.location.stato = @"Italia";
+    if (!self.where[STATO_KEY]) {
+        [self.where setValue:@"Italia" forKey:STATO_KEY];
     }
-    return self.location.stato;
+    return self.where[STATO_KEY];
 }
 
 - (void) setRegion:(NSDictionary *)region {
-    self.location.regione = region;
+    [self.where setValue:region forKey:REGIONE_KEY];
     self.provincia = nil;
     
     [self reloadTableView];
 }
 
 - (NSDictionary *) region {
-    return self.location.regione;
+    return self.where[REGIONE_KEY];
 }
 
 - (void) setProvincia:(NSDictionary *)provincia {
-    self.location.provincia = provincia;
+    [self.where setValue:provincia forKey:PROVINCIA_KEY];
     self.comune = nil;
     
     [self reloadTableView];
 }
 
 - (NSDictionary *) provincia {
-    return self.location.provincia;
+    return self.where[PROVINCIA_KEY];
 }
 
 - (void) setComune:(NSDictionary *)comune {
-    self.location.comune = comune;
+    [self.where setValue:comune forKey:COMUNE_KEY];
     
     self.frazione = nil;
     self.viaTextField.text = nil;
@@ -120,33 +121,40 @@ typedef enum tipoIndirizzo {
 }
 
 - (NSDictionary *) comune {
-    return self.location.comune;
+    return self.where[COMUNE_KEY];
 }
 
 - (void) setFrazione:(NSDictionary *)frazione {
-    self.location.frazione = frazione;
+    [self.where setValue:frazione forKey:FRAZIONE_KEY];
     
     [self reloadTableView];
 }
 
 - (NSDictionary *) frazione {
-    return self.location.frazione;
+    return self.where[FRAZIONE_KEY];
 }
 
 - (void) setVia:(NSString *)via {
-    self.location.via = via;
+    [self.where setValue:via forKey:VIA_KEY];
     
     [self reloadTableView];
 }
 
 - (NSString *) via {
-    return self.location.via;
+    return self.where[VIA_KEY];
 }
 
 # pragma mark - Location methods
+- (void) fillDictionaryFromCoordinate2D:(CLLocationCoordinate2D) coordinate {
+    [self.where setValue:[NSNumber numberWithFloat:coordinate.latitude] forKey:LATITUDE_KEY];
+    [self.where setValue:[NSNumber numberWithFloat:coordinate.longitude] forKey:LONGITUDE_KEY];
+}
+
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
     //    Take the last updated location, and put it in the location object.
-    self.location.coordinate = [[locations lastObject] coordinate];
+    CLLocationCoordinate2D coordinate = [[locations lastObject] coordinate];
+    [self fillDictionaryFromCoordinate2D:coordinate];
+    
     self.nextBarButtonItem.enabled = YES;
     [self.locationActivityIndicator stopAnimating];
 }
@@ -162,13 +170,12 @@ typedef enum tipoIndirizzo {
             NSString *address = [[NSString alloc] init];
 
             if (self.via != nil) {
-                address = [address stringByAppendingString:[NSString stringWithFormat:@"%@", self.via]];
+                address = [address stringByAppendingString:[NSString stringWithFormat:@"%@, ", self.via]];
             }
             if (self.frazione != nil) {
-                address = [address stringByAppendingString:[NSString stringWithFormat:@", %@", [[self.frazione allValues] firstObject]]];
+                address = [address stringByAppendingString:[NSString stringWithFormat:@"%@, ", [[self.frazione allValues] firstObject]]];
             }
-            address = [address stringByAppendingString:[NSString stringWithFormat:@", %@, %@, %@, %@", [[self.comune allValues] firstObject], [[self.provincia allValues] firstObject], [[self.region allValues] firstObject], self.stato]];
-            NSLog(@"%@", address);
+            address = [address stringByAppendingString:[NSString stringWithFormat:@"%@, %@, %@, %@", [[self.comune allValues] firstObject], [[self.provincia allValues] firstObject], [[self.region allValues] firstObject], self.stato]];
             
             CLGeocoder *geocoder = [[CLGeocoder alloc] init];
             [geocoder geocodeAddressString:address inRegion:nil completionHandler:^(NSArray *placemarks, NSError *error) {
@@ -180,7 +187,7 @@ typedef enum tipoIndirizzo {
                         }
                     } else {
                         CLPlacemark *lastObject = (CLPlacemark *)[placemarks lastObject];
-                        self.location.coordinate = lastObject.location.coordinate;
+                        [self fillDictionaryFromCoordinate2D:lastObject.location.coordinate];
                     }
                 });
             }];
@@ -217,7 +224,7 @@ typedef enum tipoIndirizzo {
         self.nextBarButtonItem.enabled = NO;
 
         self.locationManager = nil;
-        self.location = nil;
+        self.where = nil;
     }
     
     [self reloadTableView];
@@ -229,7 +236,7 @@ typedef enum tipoIndirizzo {
     
     if (sender == self.viaTextField) {
     } else if (sender == self.internationalAddressTextField) {
-        self.location = nil;
+        self.where = nil;
         self.nextBarButtonItem.enabled = NO;
         
         [self.internationalAddressActivityIndicator startAnimating];
@@ -245,7 +252,7 @@ typedef enum tipoIndirizzo {
                 } else {
                     dispatch_async(dispatch_get_main_queue(), ^(void) {
                         CLPlacemark *lastObject = (CLPlacemark *)[placemarks lastObject];
-                        self.location.coordinate = lastObject.location.coordinate;
+                        [self fillDictionaryFromCoordinate2D:lastObject.location.coordinate];
                         self.nextBarButtonItem.enabled = YES;
                         [self.internationalAddressActivityIndicator stopAnimating];
                     });
@@ -421,7 +428,7 @@ typedef enum tipoIndirizzo {
     self.nextBarButtonItem.enabled = NO;
     
     self.locationManager = nil;
-    self.location = nil;
+    self.where = nil;
     
     self.currentPositionSwitch.on = NO;
     

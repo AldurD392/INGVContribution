@@ -4093,10 +4093,10 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="11003" y="-889"/>
         </scene>
-        <!--Co EndTVC - Grazie! :)-->
+        <!--Co Short EndTVC - Grazie! :)-->
         <scene sceneID="NHg-ia-Sgn">
             <objects>
-                <tableViewController id="aTq-35-bp8" customClass="coEndTVC" sceneMemberID="viewController">
+                <tableViewController id="aTq-35-bp8" customClass="coShortEndTVC" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="ZNo-YU-BHz">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

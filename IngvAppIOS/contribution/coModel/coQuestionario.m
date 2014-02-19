@@ -61,4 +61,20 @@
     self.equilibrio = nil;
 }
 
+- (NSDictionary *) questionarioToDictionary {
+    NSMutableDictionary *mutableDictionary = [[NSMutableDictionary alloc] init];
+    
+    if (self.terremotoID) {
+        [mutableDictionary setObject:self.terremotoID forKey:TERREMOTO_ID];
+    }
+    
+    if (self.utenteID) {
+        [mutableDictionary setObject:self.utenteID forKey:UTENTE_ID];
+    }
+    
+    
+    
+    return [mutableDictionary copy];
+};
+
 @end

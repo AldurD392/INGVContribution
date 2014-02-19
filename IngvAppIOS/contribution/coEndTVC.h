@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "coQuestionTVC.h"
 
-@interface coEndTVC : UITableViewController
+@interface coEndTVC : coQuestionTVC
 
 @end

@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "coQuestionTVC.h"
 
+#define EDIFICIO_QUESTION_PROGRESS 0.052
+#define APERTO_QUESTION_PROGRESS 0.11
 @interface coCheckmarkQuestionTVC : coQuestionTVC
+
 @end

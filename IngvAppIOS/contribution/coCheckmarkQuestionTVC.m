@@ -11,6 +11,7 @@
 @interface coCheckmarkQuestionTVC () <UIActionSheetDelegate>
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *nextBarButton;
 @property (strong, nonatomic) IBOutletCollection(UITableViewCell) NSArray *cells;
+@property (weak, nonatomic) IBOutlet UIProgressView *progressionBar;
 
 @property (strong, nonatomic) NSNumber* choosenValue;
 @end
@@ -361,6 +362,8 @@
         [self markCellForSelection:nil];
         self.nextBarButton.enabled = NO;
     }
+    [self upgradeBar];
+
 }
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -393,6 +396,116 @@
         coQuestionTVC* cqtvc = (coQuestionTVC *) segue.destinationViewController;
         cqtvc.delegate = self.delegate;
     }
+}
+
+#pragma mark - View
+- (void) upgradeBar {
+    switch (self.view.tag) {
+        case 1:
+            self.progressionBar.progress = 0;
+            break;
+            
+        case 2:
+            if (self.delegate.questionario.whereDetail.integerValue == 0){
+                self.progressionBar.progress = EDIFICIO_QUESTION_PROGRESS * 1;
+            } else {
+                NSLog(@"gdsgsdg");
+                self.progressionBar.progress = APERTO_QUESTION_PROGRESS * 1;
+            }
+            break;
+            
+        case 3:
+            if (self.delegate.questionario.whereDetail.integerValue == 0){
+                self.progressionBar.progress = EDIFICIO_QUESTION_PROGRESS * 2;
+            } else {
+                self.progressionBar.progress = APERTO_QUESTION_PROGRESS * 2;
+            }
+            break;
+            
+        case 4:
+            self.progressionBar.progress = EDIFICIO_QUESTION_PROGRESS * 3;
+            break;
+            
+        case 5:
+            self.progressionBar.progress = EDIFICIO_QUESTION_PROGRESS * 4;
+            break;
+            
+        case 6:
+            self.progressionBar.progress = EDIFICIO_QUESTION_PROGRESS * 5;
+            break;
+            
+        case 7:
+            self.progressionBar.progress = EDIFICIO_QUESTION_PROGRESS * 6;
+            break;
+            
+        case 8:
+            self.progressionBar.progress = EDIFICIO_QUESTION_PROGRESS * 7;
+            break;
+            
+        case 9:
+            self.progressionBar.progress = EDIFICIO_QUESTION_PROGRESS * 8;
+            break;
+            
+        case 10:
+            self.progressionBar.progress = EDIFICIO_QUESTION_PROGRESS * 9;
+            break;
+            
+        case 11:
+            if (self.delegate.questionario.whereDetail.integerValue == 0){
+                self.progressionBar.progress = EDIFICIO_QUESTION_PROGRESS * 10;
+            } else {
+                self.progressionBar.progress = APERTO_QUESTION_PROGRESS * 5;
+            }
+            break;
+            
+        case 12:
+            if (self.delegate.questionario.whereDetail.integerValue == 0){
+                self.progressionBar.progress = EDIFICIO_QUESTION_PROGRESS * 11;
+            } else {
+                self.progressionBar.progress = APERTO_QUESTION_PROGRESS * 6;
+            }
+            break;
+            
+        case 13:
+            if (self.delegate.questionario.whereDetail.integerValue == 0){
+                self.progressionBar.progress = EDIFICIO_QUESTION_PROGRESS * 12;
+            } else {
+                self.progressionBar.progress = APERTO_QUESTION_PROGRESS * 7;
+            }
+            break;
+            
+        case 14:
+            self.progressionBar.progress = APERTO_QUESTION_PROGRESS * 3;
+            break;
+            
+        case 15:
+            self.progressionBar.progress = APERTO_QUESTION_PROGRESS * 4;
+            break;
+            
+        case 16:
+            self.progressionBar.progress = EDIFICIO_QUESTION_PROGRESS * 14;
+            break;
+            
+        case 17:
+            self.progressionBar.progress = EDIFICIO_QUESTION_PROGRESS * 15;
+            break;
+            
+        case 18:
+            self.progressionBar.progress = EDIFICIO_QUESTION_PROGRESS * 16;
+            break;
+            
+        case 19:
+            self.progressionBar.progress = EDIFICIO_QUESTION_PROGRESS * 17;
+            break;
+            
+        case 20:
+            self.progressionBar.progress = EDIFICIO_QUESTION_PROGRESS * 18;
+            break;
+            
+        default:
+            break;
+    }
+
 }
 
 @end

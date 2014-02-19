@@ -55,17 +55,22 @@
 //    TODO: Questo metodo si occupa di aprire la pagina dei dettagli del terremoto per cui compilare il questionario completo.
 //    Probabilmente andrà modificato in base allo storyboard utilizzato dal gruppo "Information"
     
+//    Gli storyboard
     UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"mainStoryboard" bundle:nil];
     UIStoryboard *coStoryboard = [UIStoryboard storyboardWithName:@"coStoryboard" bundle:nil];
     
+//    Tab bar principale
     MainTabBarController *mainTabBar = [mainStoryboard instantiateInitialViewController];
     mainTabBar.selectedIndex = 0;
     
+//    Navigation controller di Information
     UINavigationController *informationNavigationController = mainTabBar.viewControllers[0];
     coStartingViewController *startingViewController = (coStartingViewController *)informationNavigationController.topViewController;
     
+//    Segue ai dettagli del terremoto
     [startingViewController performSegueWithIdentifier:@"coTerremotoDetailSegue" sender:startingViewController];
     
+// Da qui in poi non dovrebbe esservi bisogno di modificare nulla!
     coQuestionario *questionario = [coQuestionario dictionaryToQuestionario:notification.userInfo];
     coCheckmarkQuestionTVC *firstQuestion = [coStoryboard instantiateViewControllerWithIdentifier:@"coFirstLongQuestion"];
     

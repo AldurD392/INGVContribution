@@ -9,11 +9,36 @@
 #import "coShortEndTVC.h"
 #import "coQuestionario.h"
 
+#import "coStartingViewController.h"
+
 @interface coShortEndTVC ()
 
 @end
 
 @implementation coShortEndTVC
+
+- (NSDate *) comfortableNotificationFireDate {
+//    Avoid notification on night!
+    unsigned unitFlags = NSDayCalendarUnit | NSHourCalendarUnit;
+
+    NSDate *date = [NSDate dateWithTimeIntervalSinceNow:NOTIFICATION_FIRETIME];
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    
+    NSDateComponents *components = [calendar components:unitFlags fromDate:date];
+    
+    if (components.hour > 22) {
+        components.hour = 10;
+        components.day++;
+        
+        date = [calendar dateFromComponents:components];
+    } else if (components.hour < 10) {
+        components.hour = 10;
+        
+        date = [calendar dateFromComponents:components];
+    }
+    
+    return date;
+}
 
 - (void)viewDidLoad
 {
@@ -24,9 +49,10 @@
         NSLog(@"Error creating local notification.");
     }
     
-    localNotification.fireDate = [NSDate dateWithTimeIntervalSinceNow:NOTIFICATION_FIRETIME];
+    localNotification.fireDate = [self comfortableNotificationFireDate];
     
-    localNotification.alertBody = @"Vuoi compilare il questionario completo?";
+//    TODO: inserire la funzione per i dettagli del terremoto
+    localNotification.alertBody = [NSString stringWithFormat:@"Vuoi compilare il questionario completo per: %@?", [coStartingViewController detailsForTerremoto:self.delegate.questionario.terremotoID]];
     localNotification.alertAction = @"compilare il questionario completo.";
     
     localNotification.soundName = UILocalNotificationDefaultSoundName;

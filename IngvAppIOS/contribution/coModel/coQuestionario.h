@@ -88,5 +88,5 @@
 - (void) resetOpenAirAnswer;
 - (void) resetAllAnswer;
 
-- (NSDictionary *) questionarioToDictionary;
+- (NSDictionary *) dictionaryWithPropertiesOfObject:(id)obj;
 @end

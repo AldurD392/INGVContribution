@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 Swipe Stack Ltd. All rights reserved.
 //
 
+#import <objc/runtime.h>
 #import "coQuestionario.h"
 
 @implementation coQuestionario
@@ -61,20 +62,25 @@
     self.equilibrio = nil;
 }
 
-- (NSDictionary *) questionarioToDictionary {
-    NSMutableDictionary *mutableDictionary = [[NSMutableDictionary alloc] init];
+//Add this utility method in your class.
+- (NSDictionary *) dictionaryWithPropertiesOfObject:(id)obj
+{
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
     
-    if (self.terremotoID) {
-        [mutableDictionary setObject:self.terremotoID forKey:TERREMOTO_ID];
+    unsigned count;
+    objc_property_t *properties = class_copyPropertyList([obj class], &count);
+    
+    for (int i = 0; i < count; i++) {
+        NSString *key = [NSString stringWithUTF8String:property_getName(properties[i])];
+        NSLog(@"%@", key);
+        if ([obj valueForKey:key]) {
+            [dict setObject:[obj valueForKey:key] forKey:key];
+        }
     }
     
-    if (self.utenteID) {
-        [mutableDictionary setObject:self.utenteID forKey:UTENTE_ID];
-    }
+    free(properties);
     
-    
-    
-    return [mutableDictionary copy];
-};
+    return [NSDictionary dictionaryWithDictionary:dict];
+}
 
 @end

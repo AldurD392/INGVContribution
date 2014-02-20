@@ -129,6 +129,7 @@
 		764C9E2718A923AB0048EB92 /* coStartingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = coStartingViewController.h; path = IngvAppIOS/contribution/coStartingViewController.h; sourceTree = "<group>"; };
 		764C9E2818A923AB0048EB92 /* coStartingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = coStartingViewController.m; path = IngvAppIOS/contribution/coStartingViewController.m; sourceTree = "<group>"; };
 		764C9E2A18A924E10048EB92 /* coQuestionarioProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = coQuestionarioProtocol.h; path = IngvAppIOS/contribution/coModel/coQuestionarioProtocol.h; sourceTree = "<group>"; };
+		7671EAF018B65A39003D7A23 /* Server.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Server.h; sourceTree = "<group>"; };
 		76765F5F18A3DEEE0069A76C /* coWhenTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = coWhenTVC.h; path = IngvAppIOS/contribution/coWhenTVC.h; sourceTree = "<group>"; };
 		76765F6018A3DEEE0069A76C /* coWhenTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = coWhenTVC.m; path = IngvAppIOS/contribution/coWhenTVC.m; sourceTree = "<group>"; };
 		76765F6918A3E59C0069A76C /* coIndirizzoTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = coIndirizzoTVC.h; path = IngvAppIOS/contribution/coIndirizzoTVC.h; sourceTree = "<group>"; };
@@ -178,6 +179,7 @@
 		4304CA5518832E2900539F13 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7671EAF018B65A39003D7A23 /* Server.h */,
 				4304CA861883368E00539F13 /* Project-Prefix.pch */,
 				4304CA831883363000539F13 /* InfoPlist.strings */,
 				4304CA5618832E2900539F13 /* AppDelegate.h */,
@@ -499,7 +501,6 @@
 			shellScript = "export CODESIGN_ALLOCATE=/Library/JailCoder/codesign_allocate\nif [ \"${PLATFORM_NAME}\" == \"iphoneos\" ]; then\n/Library/JailCoder/Entitlements/Entitlements.py \"my.company.${PROJECT_NAME}\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/${PROJECT_NAME}.xcent\";\ncodesign -f -s \"iPhone Developer\" --entitlements \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/${PROJECT_NAME}.xcent\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/\"\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
-
 
 /* Begin PBXSourcesBuildPhase section */
 		C95304BF14FECBB400BF68B6 /* Sources */ = {

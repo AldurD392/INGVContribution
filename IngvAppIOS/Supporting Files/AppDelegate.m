@@ -12,6 +12,8 @@
 #import "MainTabBarController.h"
 #import <CoreLocation/CoreLocation.h>
 
+#import "Server.h"
+
 @interface AppDelegate () <CLLocationManagerDelegate>
 @property (strong, nonatomic) CLLocationManager* backgroundLocationManager;
 @property (nonatomic) UIBackgroundTaskIdentifier backgroundTaskIdentifier;
@@ -59,9 +61,31 @@
                   [[UIApplication sharedApplication] endBackgroundTask:self.backgroundTaskIdentifier];
                 }];
     
+    //TODO: UserID!
     
+    NSString *post = [[NSString alloc] initWithFormat:@"lat=%f&lng=%f&devid=%d",
+                      coordinate.latitude,
+                      coordinate.longitude,
+                      1
+                      ];
     
+    NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
     
+    NSString *postLength = [NSString stringWithFormat:@"%d", [postData length]];
+    
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+    NSString *urlstring = [NSString stringWithFormat:@"http://%@/%@", SERVER, LOCALIZATION];
+    [request setURL:[NSURL URLWithString:urlstring]];
+    [request setHTTPMethod:@"POST"];
+    [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
+    [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+    [request setHTTPBody:postData];
+    
+    NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+    
+    if (!connection) {
+        NSLog(@"Error on connection!");
+    }
     
     if (self.backgroundTaskIdentifier != UIBackgroundTaskInvalid) {
         [[UIApplication sharedApplication] endBackgroundTask:self.backgroundTaskIdentifier];
@@ -71,10 +95,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-//    TODO!
-    UILocalNotification *localNotif = [launchOptions objectForKey:UIApplicationLaunchOptionsLocalNotificationKey];
-    if (localNotif) {
-        NSLog(@"Notifica!");
+    if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusNotDetermined) {
+//        Al primo avvio, chiediamo all'utente i permessi giusti.
+        [self.backgroundLocationManager startMonitoringSignificantLocationChanges];
+    }
+    
+    UILocalNotification *localNotification = [launchOptions objectForKey:UIApplicationLaunchOptionsLocalNotificationKey];
+    if (localNotification) {
+        [self handleLongQuestionarioNotification:localNotification.userInfo];
     }
     return YES;
 }
@@ -89,7 +117,7 @@
 {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-    if ([CLLocationManager authorizationStatus] != kCLAuthorizationStatusRestricted) {
+    if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusAuthorized) {
         if ([CLLocationManager locationServicesEnabled]) {
             if (application.backgroundRefreshStatus == UIBackgroundRefreshStatusAvailable) {
                 [self.backgroundLocationManager startMonitoringSignificantLocationChanges];
@@ -114,7 +142,7 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
-- (void) handleLongQuestionarioNotification:(UILocalNotification *)notification {
+- (void) handleLongQuestionarioNotification:(NSDictionary *)questionarioDictionary {
 //    TODO: Questo metodo si occupa di aprire la pagina dei dettagli del terremoto per cui compilare il questionario completo.
 //    Probabilmente andrà modificato in base allo storyboard utilizzato dal gruppo "Information"
     
@@ -134,7 +162,7 @@
     [startingViewController performSegueWithIdentifier:@"coTerremotoDetailSegue" sender:startingViewController];
     
 // Da qui in poi non dovrebbe esservi bisogno di modificare nulla!
-    coQuestionario *questionario = [coQuestionario dictionaryToQuestionario:notification.userInfo];
+    coQuestionario *questionario = [coQuestionario dictionaryToQuestionario:questionarioDictionary];
     coCheckmarkQuestionTVC *firstQuestion = [coStoryboard instantiateViewControllerWithIdentifier:@"coFirstLongQuestion"];
     
     firstQuestion.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Annulla" style:UIBarButtonSystemItemUndo target:firstQuestion action:@selector(cancelButtonPressed:)];
@@ -154,7 +182,7 @@
 - (void) application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
     if([application applicationState] == UIApplicationStateInactive) {
         //application was running in the background
-        [self handleLongQuestionarioNotification:notification];
+        [self handleLongQuestionarioNotification:notification.userInfo];
     }
 }
 

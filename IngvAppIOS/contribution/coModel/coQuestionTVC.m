@@ -18,6 +18,11 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (void) dismissViewControllerAnimated:(BOOL)flag completion:(void (^)(void))completion {
+    self.delegate.questionario = nil;
+    [super dismissViewControllerAnimated:flag completion:completion];
+}
+
 //- (id)initWithStyle:(UITableViewStyle)style
 //{
 //    self = [super initWithStyle:style];

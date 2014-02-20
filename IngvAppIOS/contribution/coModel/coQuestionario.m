@@ -72,6 +72,7 @@
     
     for (int i = 0; i < count; i++) {
         NSString *key = [NSString stringWithUTF8String:property_getName(properties[i])];
+
         if ([obj valueForKey:key]) {
             [dict setObject:[obj valueForKey:key] forKey:key];
         }
@@ -100,7 +101,51 @@
     }
     
     return questionario;
+}
+
+- (NSDictionary *) bigDictionaryfromQuestionario:(id)obj
+{
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
     
+    unsigned count;
+    objc_property_t *properties = class_copyPropertyList([obj class], &count);
+    
+    for (int i = 0; i < count; i++) {
+        NSString *key = [NSString stringWithUTF8String:property_getName(properties[i])];
+        
+        if ([[obj valueForKey:key] isKindOfClass:[NSDictionary class]]) {
+            NSDictionary *innerDict = [obj valueForKey:key];
+            NSMutableDictionary *newInnerDict = [innerDict mutableCopy];
+            
+            for (id key in [innerDict allKeys]) {
+                if ([[innerDict objectForKey:key] isKindOfClass:[NSDictionary class]]) {
+                    [newInnerDict setObject:[[[innerDict objectForKey:key] allValues] firstObject] forKey:key];
+                } else {
+                    [newInnerDict setObject:[innerDict objectForKey:key] forKey:key];
+                }
+            }
+            
+            [dict addEntriesFromDictionary:newInnerDict];
+        } else if ([obj valueForKey:key]) {
+            [dict setObject:[obj valueForKey:key] forKey:key];
+        }
+    }
+    
+    free(properties);
+    
+    return [NSDictionary dictionaryWithDictionary:dict];
+}
+
+- (NSString *) questionarioToPostString {
+    NSMutableString* string = [[NSMutableString alloc] init];
+    
+    NSDictionary *dictionary = [self bigDictionaryfromQuestionario:self];
+    for (id key in [dictionary allKeys]) {
+        [string appendString:[NSString stringWithFormat:@"%@=%@&", key, [dictionary objectForKey:key]]];
+    }
+    
+    NSLog(@"%@", string);
+    return string;
 }
 
 @end

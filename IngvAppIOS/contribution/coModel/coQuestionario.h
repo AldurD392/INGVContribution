@@ -90,5 +90,6 @@
 
 - (NSDictionary *) dictionaryWithPropertiesOfObject:(id)obj;
 + (coQuestionario*) dictionaryToQuestionario:(NSDictionary*) dizionario;
+- (NSString *) questionarioToPostString;
 
 @end

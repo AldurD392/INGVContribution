@@ -57,9 +57,7 @@
     
     localNotification.soundName = UILocalNotificationDefaultSoundName;
     
-    self.delegate.questionario.where = nil;
     localNotification.userInfo = [self.delegate.questionario dictionaryWithPropertiesOfObject:self.delegate.questionario];
-    
     
     [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
 }

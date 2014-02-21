@@ -37,7 +37,6 @@
     
     // Handle location updates as normal
     CLLocationCoordinate2D coordinate = [[locations lastObject] coordinate];
-    NSLog(@"%f, %f", coordinate.latitude, coordinate.longitude);
     [self sendBackgroundLocationToServer:coordinate];
 }
 
@@ -93,17 +92,30 @@
     }
 }
 
+# pragma mark - Application life cycle
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:
+     (UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeNone | UIRemoteNotificationTypeNewsstandContentAvailability)];
+    
     if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusNotDetermined) {
 //        Al primo avvio, chiediamo all'utente i permessi giusti.
         [self.backgroundLocationManager startMonitoringSignificantLocationChanges];
     }
     
+//    Notifiche locali
     UILocalNotification *localNotification = [launchOptions objectForKey:UIApplicationLaunchOptionsLocalNotificationKey];
     if (localNotification) {
         [self handleLongQuestionarioNotification:localNotification.userInfo];
     }
+    
+//    Notifiche push
+    NSDictionary *remoteNotification = [launchOptions objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey];
+    if (remoteNotification) {
+        [self handleQuestionarioPushNotification:[remoteNotification objectForKey:TERREMOTO_ID]];
+    }
+    
     return YES;
 }
 							
@@ -140,11 +152,25 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    [[UIApplication sharedApplication] unregisterForRemoteNotifications];
+}
+
+# pragma mark - Handle local notifications
+
+- (void) application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
+    if ([application applicationState] == UIApplicationStateInactive) {
+        //application was running in the background
+        [self handleLongQuestionarioNotification:notification.userInfo];
+    }
 }
 
 - (void) handleLongQuestionarioNotification:(NSDictionary *)questionarioDictionary {
-//    TODO: Questo metodo si occupa di aprire la pagina dei dettagli del terremoto per cui compilare il questionario completo.
-//    Probabilmente andrà modificato in base allo storyboard utilizzato dal gruppo "Information"
+/*    TODO: Questo metodo si occupa di aprire la pagina dei dettagli del terremoto per cui compilare il questionario completo.
+    Probabilmente andrà modificato in base allo storyboard utilizzato dal gruppo "Information"
+    Quello che dev'essere fatto, in pratica, è caricare la tabbar, settare la sezione a quella di informatione poi aprire
+    i dettagli del terremoto in oggetto, avendo cura di permettere all'utente di tornare indietro, quindi implementando a dovere
+    lo stack della navigation bar.
+*/
     
 //    Gli storyboard
     UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"mainStoryboard" bundle:nil];
@@ -179,11 +205,56 @@
     [self.window makeKeyAndVisible];
 }
 
-- (void) application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
-    if([application applicationState] == UIApplicationStateInactive) {
-        //application was running in the background
-        [self handleLongQuestionarioNotification:notification.userInfo];
+# pragma mark - Handle remote notification
+- (void) application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    if ([application applicationState] == UIApplicationStateInactive) {
+        [self handleQuestionarioPushNotification:[userInfo objectForKey:TERREMOTO_ID]];
     }
 }
 
+- (void) handleQuestionarioPushNotification: (NSNumber *)terremotoID {
+    /*    TODO: Questo metodo si occupa di aprire la pagina dei dettagli del terremoto per cui compilare il questionario completo.
+     Probabilmente andrà modificato in base allo storyboard utilizzato dal gruppo "Information"
+     Quello che dev'essere fatto, in pratica, è caricare la tabbar, settare la sezione a quella di informatione poi aprire
+     i dettagli del terremoto in oggetto, avendo cura di permettere all'utente di tornare indietro, quindi implementando a dovere
+     lo stack della navigation bar.
+     */
+    
+    //    Gli storyboard
+    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"mainStoryboard" bundle:nil];
+    
+    //    Tab bar principale
+    MainTabBarController *mainTabBar = [mainStoryboard instantiateInitialViewController];
+    mainTabBar.selectedIndex = 0;
+    
+    self.window.rootViewController = mainTabBar;
+    
+    //    Navigation controller di Information
+    UINavigationController *informationNavigationController = mainTabBar.viewControllers[0];
+    coStartingViewController *startingViewController = (coStartingViewController *)informationNavigationController.topViewController;
+    
+    //    Inseriamo l'id del terremoto da visualizzare:
+    startingViewController.terremotoID = terremotoID;
+    
+    //    Segue ai dettagli del terremoto
+    [startingViewController performSegueWithIdentifier:@"coTerremotoDetailSegue" sender:startingViewController];
+    
+    //    Schermata di dettagli terremoto
+    coStartingViewController *exampleTerremotoDetailVC = (coStartingViewController *)informationNavigationController.visibleViewController;
+    [exampleTerremotoDetailVC performSegueWithIdentifier:@"coQuestionarioTerremotoSegueNoAnimation" sender:exampleTerremotoDetailVC];
+    
+    // Da qui in poi non dovrebbe esservi bisogno di modificare nulla!
+    [self.window makeKeyAndVisible];
+}
+
+# pragma mark - Remote notifications tokens
+- (void)application:(UIApplication*)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData*)deviceToken
+{
+	NSLog(@"Remote notification token is: %@", deviceToken);
+}
+
+- (void)application:(UIApplication*)application didFailToRegisterForRemoteNotificationsWithError:(NSError*)error
+{
+	NSLog(@"Failed to get token, error: %@", error);
+}
 @end

@@ -18,7 +18,7 @@
 #define FRAZIONE_KEY    @"frazione"
 #define VIA_KEY         @"via"
 
-#define TERREMOTO_ID    @"terremoto"
+#define TERREMOTO_ID    @"terremotoID"
 #define UTENTE_ID    	@"utente"
 #define WHEN_DETAIL    @"whenDetail"
 #define WHEN_COMPILED   @"whenCompiled"
@@ -52,7 +52,7 @@
 
 
 @interface coQuestionario : NSObject
-@property (strong, nonatomic) NSString *terremotoID;
+@property (strong, nonatomic) NSNumber *terremotoID;
 @property (strong, nonatomic) NSString *utenteID;
 @property (strong, nonatomic) NSDate *whenDetail;
 @property (strong, nonatomic) NSDate *whenCompiled;

@@ -144,7 +144,6 @@
         [string appendString:[NSString stringWithFormat:@"%@=%@&", key, [dictionary objectForKey:key]]];
     }
     
-    NSLog(@"%@", string);
     return string;
 }
 

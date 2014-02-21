@@ -416,7 +416,6 @@
             if (self.delegate.questionario.whereDetail.integerValue == 0){
                 self.progressionBar.progress = EDIFICIO_QUESTION_PROGRESS * 1;
             } else {
-                NSLog(@"gdsgsdg");
                 self.progressionBar.progress = APERTO_QUESTION_PROGRESS * 1;
             }
             break;

@@ -36,8 +36,9 @@
 - (void) locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
     
     // Handle location updates as normal
-    CLLocationCoordinate2D coordinate = [[locations lastObject] coordinate];
-    [self sendBackgroundLocationToServer:coordinate];
+    CLLocation *location = [locations lastObject];
+//    NSLog(@"%f, %f", coordinate.latitude, coordinate.longitude);
+    [self sendBackgroundLocationToServer:location];
 }
 
 - (void) locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
@@ -45,7 +46,7 @@
     NSLog(@"Background location manager error: %@", error);
 }
 
-- (void) sendBackgroundLocationToServer: (CLLocationCoordinate2D) coordinate
+- (void) sendBackgroundLocationToServer: (CLLocation *) location
 {
     // REMEMBER. We are running in the background if this is being executed.
     // We can't assume normal network access.
@@ -61,31 +62,33 @@
                 }];
     
     //TODO: UserID!
-    
-    NSString *post = [[NSString alloc] initWithFormat:@"lat=%f&lng=%f&devid=%d",
+#define USER_ID 41
+    CLLocationCoordinate2D coordinate = location.coordinate;
+    NSString *postString = [[NSString alloc] initWithFormat:@"lat=%f&lng=%f&devid=%d",
                       coordinate.latitude,
                       coordinate.longitude,
-                      1
+                      USER_ID
                       ];
     
-    NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+    NSURLSessionConfiguration *sessionConfiguration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:sessionConfiguration];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@/%@", SERVER, LOCALIZATION]];
+    NSMutableURLRequest *rqst = [NSMutableURLRequest requestWithURL:url];
+    rqst.HTTPBody = [postString dataUsingEncoding:NSUTF8StringEncoding];
+    rqst.HTTPMethod = @"POST";
+    NSURLSessionDataTask *postDataTask = [session dataTaskWithRequest:rqst completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        if (error == nil) {
+            NSString * text = [[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding];
+            NSLog(@"Data = %@",text);
+            [session invalidateAndCancel];
+        } else {
+            NSLog(@"%@", error);
+            [self performSelector:@selector(sendBackgroundLocationToServer:) withObject:location afterDelay:30.0f];
+        }
+    }];
     
-    NSString *postLength = [NSString stringWithFormat:@"%d", [postData length]];
-    
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
-    NSString *urlstring = [NSString stringWithFormat:@"http://%@/%@", SERVER, LOCALIZATION];
-    [request setURL:[NSURL URLWithString:urlstring]];
-    [request setHTTPMethod:@"POST"];
-    [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
-    [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
-    [request setHTTPBody:postData];
-    
-    NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
-    
-    if (!connection) {
-        NSLog(@"Error on connection!");
-    }
-    
+    [postDataTask resume];
+
     if (self.backgroundTaskIdentifier != UIBackgroundTaskInvalid) {
         [[UIApplication sharedApplication] endBackgroundTask:self.backgroundTaskIdentifier];
          self.backgroundTaskIdentifier = UIBackgroundTaskInvalid;

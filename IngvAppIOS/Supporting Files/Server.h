@@ -9,7 +9,7 @@
 #ifndef Project_Server_h
 #define Project_Server_h
 
-#define SERVER @"sql.itmeeting.it.cloud.seeweb.it"
+#define SERVER @"192.168.1.14"
 
 #define LOCALIZATION @"localization.php"
 #define QUESTIONARIO @"quest.php"

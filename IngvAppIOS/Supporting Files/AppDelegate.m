@@ -17,6 +17,7 @@
 @interface AppDelegate () <CLLocationManagerDelegate>
 @property (strong, nonatomic) CLLocationManager* backgroundLocationManager;
 @property (nonatomic) UIBackgroundTaskIdentifier backgroundTaskIdentifier;
+
 @end
 
 @implementation AppDelegate
@@ -39,6 +40,14 @@
     CLLocation *location = [locations lastObject];
 //    NSLog(@"%f, %f", coordinate.latitude, coordinate.longitude);
     [self sendBackgroundLocationToServer:location];
+    
+    UILocalNotification *localNotification = [[UILocalNotification alloc] init];
+    
+//    Debugging purposes
+    localNotification.alertBody = [NSString stringWithFormat:@"Nuova posizione: %f, %f", location.coordinate.latitude, location.coordinate.longitude];
+    localNotification.hasAction = NO;
+    
+    [[UIApplication sharedApplication] presentLocalNotificationNow:localNotification];
 }
 
 - (void) locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
@@ -83,7 +92,6 @@
             [session invalidateAndCancel];
         } else {
             NSLog(@"%@", error);
-//            [self performSelector:@selector(sendBackgroundLocationToServer:) withObject:location afterDelay:30.0f];
         }
     }];
     
@@ -162,8 +170,9 @@
 
 - (void) application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
     if ([application applicationState] == UIApplicationStateInactive) {
-        //application was running in the background
         [self handleLongQuestionarioNotification:notification.userInfo];
+
+        [[UIApplication sharedApplication] cancelLocalNotification:notification];
     }
 }
 

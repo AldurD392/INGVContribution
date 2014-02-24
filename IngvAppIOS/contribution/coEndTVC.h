@@ -10,5 +10,5 @@
 #import "coQuestionTVC.h"
 
 @interface coEndTVC : coQuestionTVC
-
+- (void) sendQuestionario;
 @end

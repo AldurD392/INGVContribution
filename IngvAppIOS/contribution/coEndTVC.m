@@ -9,7 +9,7 @@
 #import "coEndTVC.h"
 #import "Server.h"
 
-@interface coEndTVC () <NSURLConnectionDelegate>
+@interface coEndTVC ()
 
 @end
 
@@ -24,8 +24,9 @@
 }
 
 - (void) sendQuestionario {
-    
+
     NSString *noteDataString = [self.delegate.questionario questionarioToPostString];
+    NSLog(@"Sending questionario.");
     
     NSURLSessionConfiguration *sessionConfiguration = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *session = [NSURLSession sessionWithConfiguration:sessionConfiguration];
@@ -36,26 +37,24 @@
     request.HTTPMethod = @"POST";
     
     NSURLSessionDataTask *postDataTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-            if (!error) {
-                NSLog(@"%@", response);
-
-                NSString *text = [[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding];
-                NSLog(@"Data = %@",text);
-                [session invalidateAndCancel];
-            } else {
-                NSLog(@"%@", error);
-            }
+        if (!error) {
+            NSLog(@"%@", response);
+            
+            NSString *text = [[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding];
+            NSLog(@"Data = %@",text);
+            [session invalidateAndCancel];
+        } else {
+            NSLog(@"%@", error);
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self performSelector:@selector(sendQuestionario) withObject:nil afterDelay:30];
+            });
+        }
     }];
     
     [postDataTask resume];
 }
 
-# pragma mark - NSURLConnectionDelegate
-- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
-    NSLog(@"%@", error);
-}
-
-
+# pragma mark - ViewController Life Cycle
 
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];

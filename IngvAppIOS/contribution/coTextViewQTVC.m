@@ -140,10 +140,8 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([segue.destinationViewController isKindOfClass:[coQuestionTVC class]]) {
-        if ([segue.identifier isEqualToString:@"coCostruzioneSegue"]) {
-            coQuestionTVC* cqtvc = (coQuestionTVC *) segue.destinationViewController;
-            cqtvc.delegate = self.delegate;
-        }
+        coQuestionTVC* cqtvc = (coQuestionTVC *) segue.destinationViewController;
+        cqtvc.delegate = self.delegate;
     }
 }
 

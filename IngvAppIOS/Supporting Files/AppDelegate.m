@@ -83,7 +83,7 @@
             [session invalidateAndCancel];
         } else {
             NSLog(@"%@", error);
-            [self performSelector:@selector(sendBackgroundLocationToServer:) withObject:location afterDelay:30.0f];
+//            [self performSelector:@selector(sendBackgroundLocationToServer:) withObject:location afterDelay:30.0f];
         }
     }];
     

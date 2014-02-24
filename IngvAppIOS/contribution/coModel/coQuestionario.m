@@ -126,6 +126,12 @@
             }
             
             [dict addEntriesFromDictionary:newInnerDict];
+        } else if ([[obj valueForKey:key] isKindOfClass:[NSDate class]]) {
+            NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+            [dateFormatter setDateFormat: @"yyyy-MM-dd HH:mm:ss"];
+            [dateFormatter setTimeZone: [NSTimeZone timeZoneWithName:@"1340"]];  // salviamo con l'ora locale
+            NSString *sqlDate = [dateFormatter stringFromDate: [obj valueForKey:key]];
+            [dict setObject:sqlDate forKey:key];
         } else if ([obj valueForKey:key]) {
             [dict setObject:[obj valueForKey:key] forKey:key];
         }
@@ -140,10 +146,12 @@
     NSMutableString* string = [[NSMutableString alloc] init];
     
     NSDictionary *dictionary = [self bigDictionaryfromQuestionario:self];
+    
     for (id key in [dictionary allKeys]) {
         [string appendString:[NSString stringWithFormat:@"%@=%@&", key, [dictionary objectForKey:key]]];
     }
     
+    NSLog(@"%@", string);
     return string;
 }
 

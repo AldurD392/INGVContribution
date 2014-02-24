@@ -54,7 +54,7 @@
 //            Quando il terremoto non ha ancora un ID assegnato da INGV, si utilizza il valore nil.
 //            In questo caso infatti, si sta compilando un questionario per un terremoto non in lista
             cqtvc.delegate.questionario.terremotoID = nil;
-            cqtvc.delegate.questionario.utenteID = @"ID_UTENTE"; // TODO: Qui va inserito l'id dell'utente!
+            cqtvc.delegate.questionario.utenteID = [NSNumber numberWithInt:3]; // TODO: Qui va inserito l'id dell'utente!
         }
     } else if ([segue.identifier isEqualToString:@"coQuestionarioTerremotoSegue"] || [segue.identifier isEqualToString:@"coQuestionarioTerremotoSegueNoAnimation"]) {
         UINavigationController *nc = (UINavigationController *)[segue destinationViewController];
@@ -63,7 +63,7 @@
             cqtvc.delegate = self;
             
             cqtvc.delegate.questionario.terremotoID = self.terremotoID; //TODO: Qui va inserito l'id del terremoto!
-            cqtvc.delegate.questionario.utenteID = @"ID_UTENTE"; // TODO: Qui va inserito l'id dell'utente, ma allo stato attuale non sappiamo come sarà!
+            cqtvc.delegate.questionario.utenteID = [NSNumber numberWithInt:3]; // TODO: Qui va inserito l'id dell'utente, ma allo stato attuale non sappiamo come sarà!
         }
     } else if ([segue.identifier isEqualToString:@"coTerremotoDetailSegue"]) {
 /*        TODO: immaginando che sia qui che il gruppo di information prepara la vista dei dettagli del terremoto da visualizzare,

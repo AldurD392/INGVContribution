@@ -368,6 +368,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                                     <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                                     <connections>
                                                         <action selector="didEndOnExitEnteringDetail:" destination="lU3-7F-Osg" eventType="editingDidEndOnExit" id="0SP-1s-Aiu"/>
+                                                        <action selector="viaTextFieldDidChange:" destination="lU3-7F-Osg" eventType="editingChanged" id="vTa-Uz-5Jh"/>
                                                     </connections>
                                                 </textField>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Via" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dfo-cz-uOd">

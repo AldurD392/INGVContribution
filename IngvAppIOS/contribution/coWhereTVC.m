@@ -50,6 +50,7 @@ typedef enum tipoIndirizzo {
 @property (strong, nonatomic) NSDictionary *comune;
 @property (strong, nonatomic) NSDictionary *frazione;
 @property (strong, nonatomic) NSString *via;
+@property (strong, nonatomic) NSString *temporaryVia;
 @end
 
 @implementation coWhereTVC
@@ -230,12 +231,16 @@ typedef enum tipoIndirizzo {
     [self reloadTableView];
 }
 
+- (IBAction)viaTextFieldDidChange:(UITextField *)sender {
+    self.temporaryVia = sender.text;
+}
+
 - (IBAction)didEndOnExitEnteringDetail:(UITextField *)sender {
     // Quando l'utente preme "Fatto" sulla tastiera, può andare avanti.
+    self.temporaryVia = nil;
     self.via = sender.text;
     
-    if (sender == self.viaTextField) {
-    } else if (sender == self.internationalAddressTextField) {
+    if (sender == self.internationalAddressTextField) {
         self.where = nil;
         self.nextBarButtonItem.enabled = NO;
         
@@ -445,6 +450,10 @@ typedef enum tipoIndirizzo {
 - (void) viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     
+    if (self.temporaryVia) {
+        self.via = self.temporaryVia;
+        self.temporaryVia = nil;
+    }
     [self.locationManager stopUpdatingLocation];
 }
 

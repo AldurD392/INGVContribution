@@ -48,6 +48,9 @@
     localNotification.hasAction = NO;
     
     [[UIApplication sharedApplication] presentLocalNotificationNow:localNotification];
+    
+    [manager stopMonitoringSignificantLocationChanges];
+    [manager performSelector:@selector(startMonitoringSignificantLocationChanges) withObject:nil afterDelay:50*60];
 }
 
 - (void) locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {

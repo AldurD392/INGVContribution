@@ -38,8 +38,8 @@
     [self dismissViewControllerAnimated:TRUE completion:nil];
 }
 
-- (void) viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
+- (void) viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
     
     if (self.detailDelegate.value == totalFloor) {
         for (int i = 0; i < self.detailDelegate.floor.integerValue; i++) {

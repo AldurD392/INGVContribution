@@ -80,17 +80,11 @@
             [self.delegate.questionario resetBuildingAnswer];
         }
         
-        //Put this code where you want to reload your table view
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [UIView transitionWithView:self.tableView
-                              duration:0.2f
-                               options:UIViewAnimationOptionTransitionCrossDissolve
-                            animations:^(void) {
-                                [self.tableView reloadData];
-                            } completion:NULL];
+        double delayInSeconds = 0.01;
+        dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+        dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+            [self updateView];
         });
-        
-        [self updateView];
     }
 }
 

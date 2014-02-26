@@ -273,17 +273,18 @@
 }
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSMutableDictionary *returnDictionary = [[NSMutableDictionary alloc] init];
     NSString *charString = [self.alphaPlaceHolderArray objectAtIndex:indexPath.section];
     
     NSString *selected = [[self.alphaDict objectForKey:charString] objectAtIndex:indexPath.row];
     NSString *selectedKey = [[self.dataDict allKeysForObject:selected] firstObject];
     
-    [returnDictionary setValue:selected forKey:selectedKey];
-    
-    [self.whereDelegate didFinishSelectingAddress:returnDictionary];
+    [self.whereDelegate didFinishSelectingAddress:@{selectedKey: selected}];
 
-    [self dismissViewControllerAnimated:TRUE completion:Nil];
+    double delayInSeconds = 0.01;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        [self dismissViewControllerAnimated:YES completion:Nil];
+    });
 }
 
 - (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {

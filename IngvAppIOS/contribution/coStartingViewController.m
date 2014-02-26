@@ -9,6 +9,7 @@
 #import "coStartingViewController.h"
 #import "coQuestionario.h"
 #import "coQuestionTVC.h"
+#import "coWhereTVC.h"
 
 /* 
  TODO
@@ -50,7 +51,8 @@
             cqtvc.delegate.questionario.terremotoID = nil;
             cqtvc.delegate.questionario.utenteID = [NSNumber numberWithInt:3]; // TODO: Qui va inserito l'id dell'utente!
         }
-    } else if ([segue.identifier isEqualToString:@"coQuestionarioTerremotoSegue"] || [segue.identifier isEqualToString:@"coQuestionarioTerremotoSegueNoAnimation"]) {
+    } else if ([segue.identifier isEqualToString:@"coQuestionarioTerremotoSegue"] ||
+               [segue.identifier isEqualToString:@"coQuestionarioTerremotoSegueNoAnimation"]) {
         UINavigationController *nc = (UINavigationController *)[segue destinationViewController];
         if ([nc.topViewController isKindOfClass:[coQuestionTVC class]]) {
             coQuestionTVC* cqtvc = (coQuestionTVC *)nc.topViewController;
@@ -58,6 +60,11 @@
             
             cqtvc.delegate.questionario.terremotoID = self.terremotoID; //TODO: Qui va inserito l'id del terremoto!
             cqtvc.delegate.questionario.utenteID = [NSNumber numberWithInt:3]; // TODO: Qui va inserito l'id dell'utente, ma allo stato attuale non sappiamo come sarà!
+            
+            if ([nc.topViewController isKindOfClass:[coWhereTVC class]]) {
+                coWhereTVC *cwtvc = (coWhereTVC *)nc.topViewController;
+                cwtvc.push = YES;  // Per far comparire l'alert di informazione.
+            }
         }
     } else if ([segue.identifier isEqualToString:@"coTerremotoDetailSegue"]) {
 /*        TODO: immaginando che sia qui che il gruppo di information prepara la vista dei dettagli del terremoto da visualizzare,

@@ -10,4 +10,5 @@
 #import "coQuestionTVC.h"
 
 @interface coWhereTVC : coQuestionTVC
+@property (nonatomic) bool push;
 @end

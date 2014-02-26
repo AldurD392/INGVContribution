@@ -30,12 +30,6 @@
     return _questionario;
 }
 
-//TODO: Questo gettere è stato inserito soltanto per mostrare l'utilizzo dell'id del terremoto
-//#define STATIC_TERREMOTO_ID @00001
-//- (NSNumber *)terremotoID {
-//    return STATIC_TERREMOTO_ID;
-//}
-
 /* TODO
  Questo metodo dovrà essere rimpiazzato con l'opportuno metodo, in grado di
  ritornare, tra le altre cose, una stringa contenente i dettagli di un terremoto a partire dall'ID */

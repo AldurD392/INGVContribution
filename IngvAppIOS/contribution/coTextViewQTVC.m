@@ -111,6 +111,7 @@
 #pragma mark - segue
 
 - (IBAction)nextButtonPressed:(UIBarButtonItem *)sender {
+    [self.view endEditing:YES];
     [self performSwitchedSegueWithSender:sender];
 }
 

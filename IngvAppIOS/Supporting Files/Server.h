@@ -9,10 +9,10 @@
 #ifndef Project_Server_h
 #define Project_Server_h
 
-#define SERVER @"www.sapienzaapps.it/terremoti/"
+#define SERVER @"www.sapienzaapps.it/terremoti"
 
 #define LOCALIZATION @"localization.php"
 #define QUESTIONARIO @"quest.php"
-#define PUSH @"/registerDevice.php?"
+#define PUSH @"registerDevice.php?"
 
 #endif

@@ -1,4 +1,3 @@
-//
 //  coIndirizzoTVC.m
 //  Project
 //
@@ -11,7 +10,12 @@
 
 @interface coIndirizzoTVC ()
 @property (strong, nonatomic) NSDictionary* dataDict;
+
 @property (strong, nonatomic) NSArray* placeHolderArray;
+
+@property (strong, nonatomic) NSArray* indexTitle;
+@property (strong, nonatomic) NSArray* alphaPlaceHolderArray;
+@property (strong, nonatomic) NSDictionary* alphaDict;
 
 @end
 
@@ -25,6 +29,53 @@
                              [_dataDict keysSortedByValueUsingComparator: ^(NSString* obj1, NSString* obj2) {
                                     return [obj1 caseInsensitiveCompare:obj2];
     }]];
+    
+    NSMutableDictionary *mutableDictionary = [[NSMutableDictionary alloc] init];
+    for (NSString *string in [dataDict allValues]) {
+        unichar c = [string characterAtIndex:0];
+        NSString* charString = [NSString stringWithFormat:@"%c", c];
+        
+        if (![mutableDictionary objectForKey:charString]) {
+            [mutableDictionary setObject:[NSMutableArray arrayWithObject:string] forKey:charString];
+        } else {
+            NSMutableArray *stringsArray = [mutableDictionary objectForKey:charString];
+            [stringsArray addObject:string];
+        }
+    }
+    
+    self.alphaDict = [mutableDictionary copy];
+}
+
+- (void) setAlphaDict:(NSDictionary *)alphaDict {
+    _alphaDict = alphaDict;
+    
+
+    NSMutableDictionary *mutableCopy = [_alphaDict mutableCopy];
+    for (NSString *key in [mutableCopy allKeys]) {
+        NSArray *array = [mutableCopy objectForKey:key];
+        array = [array sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+        [mutableCopy setObject:array forKey:key];
+    }
+    _alphaDict = [mutableCopy copy];
+    
+    self.alphaPlaceHolderArray = [[_alphaDict allKeys] sortedArrayUsingComparator:^(NSString* obj1, NSString* obj2)
+                                        {
+                                            return [obj1 caseInsensitiveCompare:obj2];
+                                        }
+                                  ];
+}
+
+- (NSArray *)indexTitle {
+    if (!_indexTitle) {
+        NSMutableArray* temporaryArray = [[NSMutableArray alloc] init];
+        for (char a = 'A'; a <= 'Z'; a++) {
+            [temporaryArray addObject:[NSString stringWithFormat:@"%c", a]];
+        }
+        
+        _indexTitle = [temporaryArray copy];
+    }
+    
+    return _indexTitle;
 }
 
 # pragma mark - File parsing
@@ -39,7 +90,7 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void) loadContries {
+- (void) loadCountries {
     NSString* countriesPath = [[NSBundle mainBundle] pathForResource:STATILIST ofType:@"txt"];
     NSFileHandle* file = [NSFileHandle fileHandleForReadingAtPath:countriesPath];
     
@@ -202,12 +253,12 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return [[self.alphaDict allKeys] count];
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return [self.placeHolderArray count];
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    NSString *characterString = [self.alphaPlaceHolderArray objectAtIndex:section];
+    return [[self.alphaDict objectForKey:characterString] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -215,17 +266,53 @@
     static NSString *CellIdentifier = @"coBasicIndirizzoCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    cell.textLabel.text = [self.dataDict objectForKey:[self.placeHolderArray objectAtIndex:indexPath.row]];
+    NSString *characterString = [self.alphaPlaceHolderArray objectAtIndex:indexPath.section];
+    cell.textLabel.text = [[self.alphaDict objectForKey:characterString] objectAtIndex:indexPath.row];
     
     return cell;
 }
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSArray *object = @[[self.dataDict objectForKey:[self.placeHolderArray objectAtIndex:indexPath.row]]];
-    NSArray *key = @[[self.placeHolderArray objectAtIndex:indexPath.row]];
-    [self.whereDelegate didFinishSelectingAddress:[NSDictionary dictionaryWithObjects:object forKeys:key]];
+    NSMutableDictionary *returnDictionary = [[NSMutableDictionary alloc] init];
+    NSString *charString = [self.alphaPlaceHolderArray objectAtIndex:indexPath.section];
     
+    NSString *selected = [[self.alphaDict objectForKey:charString] objectAtIndex:indexPath.row];
+    NSString *selectedKey = [[self.dataDict allKeysForObject:selected] firstObject];
+    
+    [returnDictionary setValue:selected forKey:selectedKey];
+    
+    [self.whereDelegate didFinishSelectingAddress:returnDictionary];
+
     [self dismissViewControllerAnimated:TRUE completion:Nil];
+}
+
+- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
+    return self.indexTitle;
+}
+
+- (NSInteger) tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index {
+    if ([self.alphaDict objectForKey:title]) {
+        return [self.alphaPlaceHolderArray indexOfObject:title];
+    } else {
+        return -1;
+    }
+}
+
+- (NSString *) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    return [self.alphaPlaceHolderArray objectAtIndex:section];
+}
+
+# pragma mark - UITableViewController LifeCycle
+
+- (void) viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+
+    self.tableView.sectionIndexBackgroundColor = [UIColor clearColor];
+}
+
+- (void) viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self.tableView setContentOffset:self.tableView.contentOffset animated:NO];
 }
 
 @end

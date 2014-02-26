@@ -381,7 +381,7 @@ typedef enum tipoIndirizzo {
         
         dvc.whereDelegate = self;
         self.tipoIndirizzo = stato;
-        [dvc loadContries];
+        [dvc loadCountries];
         
     } else if ([segue.identifier isEqualToString:@"coRegioneSegue"]) {
         UINavigationController *nc = segue.destinationViewController;

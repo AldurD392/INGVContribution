@@ -10,14 +10,14 @@
 #import "coQuestionTVC.h"
 
 @protocol coIndirizzoTVCDelegate
-- (void)didFinishSelectingAddress:(NSDictionary *)dataDictionary;
+- (void) didFinishSelectingAddress:(NSDictionary *)dataDictionary;
 @end
 
 @interface coIndirizzoTVC : coQuestionTVC
 
 @property (nonatomic, assign) id <coIndirizzoTVCDelegate> whereDelegate;
 
-- (void) loadContries;
+- (void) loadCountries;
 - (void)loadRegions;
 - (void)loadProvince:(NSString *)regionCode;
 - (void)loadComuni:(NSString *)provinciaCode;

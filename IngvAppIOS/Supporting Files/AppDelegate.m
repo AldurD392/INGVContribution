@@ -295,7 +295,6 @@
 #if !TARGET_IPHONE_SIMULATOR
     
     // Get Bundle Info for Remote Registration (handy if you have more than one app)
-    NSString *appName = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"];
     NSString *appVersion = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];
     
     // Check what Notifications the user has turned on.  We registered for all three, but they may have manually disabled some or all of them.
@@ -331,9 +330,7 @@
                                 stringByReplacingOccurrencesOfString:@" " withString:@""];
     
     // Build URL String for Registration
-    NSString *urlString = [[[NSString alloc] init] stringByAppendingString:@"appname="];
-    urlString = [urlString stringByAppendingString:appName];
-    urlString = [urlString stringByAppendingString:@"&appversion="];
+    NSString *urlString = [[[NSString alloc] init] stringByAppendingString:@"appversion="];
     urlString = [urlString stringByAppendingString:appVersion];
     urlString = [urlString stringByAppendingString:@"&deviceuid="];
     urlString = [urlString stringByAppendingString:deviceUuid];
@@ -362,8 +359,8 @@
     
     NSURLSessionDataTask *postDataTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         if (!error) {
-//            NSString *text = [[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding];
-//            NSLog(@"Data = %@",text);
+            NSString *text = [[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding];
+            NSLog(@"Data = %@",text);
             [session invalidateAndCancel];
         } else {
             NSLog(@"%@", error);

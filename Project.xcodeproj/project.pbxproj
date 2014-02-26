@@ -143,7 +143,7 @@
 		76E379CD18B4B1E500C116DA /* coShortEndTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = coShortEndTVC.m; path = IngvAppIOS/contribution/coShortEndTVC.m; sourceTree = "<group>"; };
 		76FCFD93189034A900F72C64 /* coWhereTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = coWhereTVC.h; path = IngvAppIOS/contribution/coWhereTVC.h; sourceTree = "<group>"; };
 		76FCFD94189034A900F72C64 /* coWhereTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = coWhereTVC.m; path = IngvAppIOS/contribution/coWhereTVC.m; sourceTree = "<group>"; };
-		C95304C314FECBB400BF68B6 /* IngvAppIos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IngvAppIos.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C95304C314FECBB400BF68B6 /* terremoti.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = terremoti.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C95304C714FECBB400BF68B6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C95304C914FECBB400BF68B6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C95304CB14FECBB400BF68B6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -368,7 +368,7 @@
 		C95304C414FECBB400BF68B6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C95304C314FECBB400BF68B6 /* IngvAppIos.app */,
+				C95304C314FECBB400BF68B6 /* terremoti.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -403,7 +403,7 @@
 			);
 			name = Project;
 			productName = ScrollViews;
-			productReference = C95304C314FECBB400BF68B6 /* IngvAppIos.app */;
+			productReference = C95304C314FECBB400BF68B6 /* terremoti.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -416,6 +416,7 @@
 				ORGANIZATIONNAME = "Swipe Stack Ltd";
 				TargetAttributes = {
 					C95304C214FECBB400BF68B6 = {
+						DevelopmentTeam = 4UVHD887LG;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -579,11 +580,14 @@
 		C95304E214FECBB400BF68B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Adriano Di luzio (H72THPPW7W)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Adriano Di luzio (H72THPPW7W)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IngvAppIOS/Supporting Files/Project-Prefix.pch";
 				INFOPLIST_FILE = "IngvAppIOS/Supporting Files/Project-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_NAME = IngvAppIos;
+				PRODUCT_NAME = terremoti;
+				PROVISIONING_PROFILE = "3890480D-35D1-4E09-A791-B9CFAC7618EF";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -591,11 +595,14 @@
 		C95304E314FECBB400BF68B6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Adriano Di luzio (H72THPPW7W)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Adriano Di luzio (H72THPPW7W)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IngvAppIOS/Supporting Files/Project-Prefix.pch";
 				INFOPLIST_FILE = "IngvAppIOS/Supporting Files/Project-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_NAME = IngvAppIos;
+				PRODUCT_NAME = terremoti;
+				PROVISIONING_PROFILE = "3890480D-35D1-4E09-A791-B9CFAC7618EF";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

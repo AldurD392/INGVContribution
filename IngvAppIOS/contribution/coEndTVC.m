@@ -37,9 +37,7 @@
     request.HTTPMethod = @"POST";
     
     NSURLSessionDataTask *postDataTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-        if (!error) {
-            NSLog(@"%@", response);
-            
+        if (!error) {         
             NSString *text = [[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding];
             NSLog(@"Data = %@",text);
             [session invalidateAndCancel];

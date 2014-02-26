@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
-
 @property (strong, nonatomic) UIWindow *window;
 
+// Retrieve or create the application UUID!
++ (NSString *) getApplicationUUID;
 @end

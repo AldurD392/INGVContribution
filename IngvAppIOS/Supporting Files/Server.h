@@ -13,5 +13,6 @@
 
 #define LOCALIZATION @"localization.php"
 #define QUESTIONARIO @"quest.php"
+#define PUSH @"/registerDevice.php?"
 
 #endif

@@ -47,10 +47,10 @@
     localNotification.alertBody = [NSString stringWithFormat:@"Nuova posizione: %f, %f", location.coordinate.latitude, location.coordinate.longitude];
     localNotification.hasAction = NO;
     
-    [[UIApplication sharedApplication] presentLocalNotificationNow:localNotification];
-    
-    [manager stopMonitoringSignificantLocationChanges];
-    [manager performSelector:@selector(startMonitoringSignificantLocationChanges) withObject:nil afterDelay:50*60];
+//    [[UIApplication sharedApplication] presentLocalNotificationNow:localNotification];
+//    
+//    [manager stopMonitoringSignificantLocationChanges];
+//    [manager performSelector:@selector(startMonitoringSignificantLocationChanges) withObject:nil afterDelay:50*60];
 }
 
 - (void) locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
@@ -73,14 +73,11 @@
                   [[UIApplication sharedApplication] endBackgroundTask:self.backgroundTaskIdentifier];
                 }];
     
-    //TODO: UserID!
-#define USER_ID 41
     CLLocationCoordinate2D coordinate = location.coordinate;
-    NSString *postString = [[NSString alloc] initWithFormat:@"lat=%f&lng=%f&devid=%d",
+    NSString *postString = [[NSString alloc] initWithFormat:@"lat=%f&lng=%f&devid=%@",
                       coordinate.latitude,
                       coordinate.longitude,
-                      USER_ID
-                      ];
+                      [AppDelegate getApplicationUUID]];
     
     NSURLSessionConfiguration *sessionConfiguration = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *session = [NSURLSession sessionWithConfiguration:sessionConfiguration];
@@ -90,8 +87,8 @@
     rqst.HTTPMethod = @"POST";
     NSURLSessionDataTask *postDataTask = [session dataTaskWithRequest:rqst completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         if (error == nil) {
-            NSString * text = [[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding];
-            NSLog(@"Data = %@",text);
+//            NSString * text = [[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding];
+//            NSLog(@"Data = %@",text);
             [session invalidateAndCancel];
         } else {
             NSLog(@"%@", error);
@@ -220,11 +217,36 @@
     [self.window makeKeyAndVisible];
 }
 
+# pragma mark - Generate app UUID
+
+#define UUID_KEY @"uuid_key"
++ (NSString *) getApplicationUUID {
+//    Generiamo una volta per tutte l'uuid.
+    NSString *uuid = [[NSUserDefaults standardUserDefaults] objectForKey:UUID_KEY];
+    
+    if (!uuid) {
+        uuid = [[NSUUID UUID] UUIDString];
+        [[NSUserDefaults standardUserDefaults] setObject:uuid forKey:UUID_KEY];
+        
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
+    
+    return uuid;
+}
+
 # pragma mark - Handle remote notification
 - (void) application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    NSLog(@"Notifica remota ricevuta!");
+    
+#if !TARGET_IPHONE_SIMULATOR
+    
     if ([application applicationState] == UIApplicationStateInactive) {
+        NSLog(@"%@", [userInfo objectForKey:TERREMOTO_ID]);
         [self handleQuestionarioPushNotification:[userInfo objectForKey:TERREMOTO_ID]];
     }
+    
+#endif
+    
 }
 
 - (void) handleQuestionarioPushNotification: (NSNumber *)terremotoID {
@@ -263,9 +285,95 @@
 }
 
 # pragma mark - Remote notifications tokens
-- (void)application:(UIApplication*)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData*)deviceToken
-{
-	NSLog(@"Remote notification token is: %@", deviceToken);
+/**
+ * iOS: Fetch and Format Device Token and Register Important Information to Remote Server
+ */
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)devToken {
+    
+    NSLog(@"Device token: %@", devToken);
+    
+#if !TARGET_IPHONE_SIMULATOR
+    
+    // Get Bundle Info for Remote Registration (handy if you have more than one app)
+    NSString *appName = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"];
+    NSString *appVersion = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];
+    
+    // Check what Notifications the user has turned on.  We registered for all three, but they may have manually disabled some or all of them.
+    // Set the defaults to disabled unless we find otherwise...
+    NSString *pushBadge = @"disabled";
+    NSString *pushAlert = @"disabled";
+    NSString *pushSound = @"disabled";
+    
+    UIRemoteNotificationType enabledTypes = [[UIApplication sharedApplication] enabledRemoteNotificationTypes];
+    if (enabledTypes & UIRemoteNotificationTypeBadge) {
+        pushBadge = @"enabled";
+    }
+
+    if (enabledTypes & UIRemoteNotificationTypeSound) {
+        pushSound = @"enabled";
+    }
+    
+    if (enabledTypes & UIRemoteNotificationTypeAlert) {
+        pushAlert = @"enabled";
+    }
+    
+    // Get the users Device Model, Display Name, Unique ID (, Token & Version Number
+    UIDevice *dev = [UIDevice currentDevice];
+    NSString *deviceUuid = [AppDelegate getApplicationUUID];
+    NSString *deviceName = dev.name;
+    NSString *deviceModel = dev.model;
+    NSString *deviceSystemVersion = [dev.systemVersion stringByReplacingOccurrencesOfString:@"." withString:@"_"];
+    
+    // Prepare the Device Token for Registration (remove spaces and < >)
+    NSString *deviceToken = [[[[devToken description]
+                                stringByReplacingOccurrencesOfString:@"<" withString:@""]
+                                stringByReplacingOccurrencesOfString:@">" withString:@""]
+                                stringByReplacingOccurrencesOfString:@" " withString:@""];
+    
+    // Build URL String for Registration
+    NSString *urlString = [[[NSString alloc] init] stringByAppendingString:@"appname="];
+    urlString = [urlString stringByAppendingString:appName];
+    urlString = [urlString stringByAppendingString:@"&appversion="];
+    urlString = [urlString stringByAppendingString:appVersion];
+    urlString = [urlString stringByAppendingString:@"&deviceuid="];
+    urlString = [urlString stringByAppendingString:deviceUuid];
+    urlString = [urlString stringByAppendingString:@"&devicetoken="];
+    urlString = [urlString stringByAppendingString:deviceToken];
+    urlString = [urlString stringByAppendingString:@"&devicename="];
+    urlString = [urlString stringByAppendingString:deviceName];
+    urlString = [urlString stringByAppendingString:@"&devicemodel="];
+    urlString = [urlString stringByAppendingString:deviceModel];
+    urlString = [urlString stringByAppendingString:@"&deviceversion="];
+    urlString = [urlString stringByAppendingString:deviceSystemVersion];
+    urlString = [urlString stringByAppendingString:@"&pushbadge="];
+    urlString = [urlString stringByAppendingString:pushBadge];
+    urlString = [urlString stringByAppendingString:@"&pushalert="];
+    urlString = [urlString stringByAppendingString:pushAlert];
+    urlString = [urlString stringByAppendingString:@"&pushsound="];
+    urlString = [urlString stringByAppendingString:pushSound];
+    
+    NSURLSessionConfiguration *sessionConfiguration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:sessionConfiguration];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@/%@", SERVER, PUSH]];
+    
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    request.HTTPBody = [urlString dataUsingEncoding:NSUTF8StringEncoding];
+    request.HTTPMethod = @"POST";
+    
+    NSURLSessionDataTask *postDataTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        if (!error) {
+//            NSString *text = [[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding];
+//            NSLog(@"Data = %@",text);
+            [session invalidateAndCancel];
+        } else {
+            NSLog(@"%@", error);
+        }
+    }];
+    
+    [postDataTask resume];
+
+#endif
+    
 }
 
 - (void)application:(UIApplication*)application didFailToRegisterForRemoteNotificationsWithError:(NSError*)error

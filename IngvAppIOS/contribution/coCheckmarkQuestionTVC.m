@@ -221,11 +221,11 @@
         case -1:
             if (self.delegate.questionario.whereDetail.integerValue == 1) {  // Se si trova in un mezzo di trasporto
                 UIActionSheet *actionSheet = [[UIActionSheet alloc]
-                                              initWithTitle: @"Proseguendo non si potranno più modificare le risposte inserite. Vuoi continuare?"
+                                              initWithTitle: NSLocalizedString(@"Proseguendo non si potranno più modificare le risposte inserite. Vuoi continuare?", @"")
                                               delegate: self
-                                              cancelButtonTitle: @"Annulla"
+                                              cancelButtonTitle: NSLocalizedString(@"Annulla", @"")
                                               destructiveButtonTitle: nil
-                                              otherButtonTitles: @"Si", nil];
+                                              otherButtonTitles: NSLocalizedString(@"Si", @""), nil];
                 [actionSheet showInView:self.view];
             } else {
                 [self performSegueWithIdentifier:@"coEffectSegue" sender:sender];
@@ -316,11 +316,11 @@
         case 20:
             if (TRUE) {  // switch bug!
                 UIActionSheet *actionSheet = [[UIActionSheet alloc]
-                                              initWithTitle: @"Proseguendo non si potranno più modificare le risposte inserite. Vuoi continuare?"
+                                              initWithTitle: NSLocalizedString(@"Proseguendo non si potranno più modificare le risposte inserite. Vuoi continuare?", @"")
                                               delegate: self
-                                              cancelButtonTitle: @"Annulla"
+                                              cancelButtonTitle: NSLocalizedString(@"Annulla", @"")
                                               destructiveButtonTitle: nil
-                                              otherButtonTitles: @"Si", nil];
+                                              otherButtonTitles: NSLocalizedString(@"Si", @""), nil];
                 [actionSheet showInView:self.view];
                 [self.tableView deselectRowAtIndexPath:[NSIndexPath indexPathForItem:self.delegate.questionario.camini.integerValue inSection:0] animated:TRUE];
             }
@@ -335,7 +335,7 @@
 {
     NSString* buttonName = [actionSheet buttonTitleAtIndex:buttonIndex];
     
-    if ([buttonName isEqualToString:@"Si"]) {
+    if ([buttonName isEqualToString:NSLocalizedString(@"Si", @"")]) {
         if (self.view.tag == -1) {
             [self performSegueWithIdentifier:@"coEndThanksSegue" sender:self];
         } else {
@@ -380,15 +380,15 @@
     
     if (self.view.tag == -1 || self.view.tag == 20) {
         if (self.delegate.questionario.whereDetail.integerValue == 1) {
-            self.nextBarButton.title = @"Fine";
+            self.nextBarButton.title = NSLocalizedString(@"Fine", @"");
         }
     } else {
-        self.nextBarButton.title = @"Avanti";
+        self.nextBarButton.title = NSLocalizedString(@"Avanti", @"");
     }
     
     if (self.view.tag == 1 && self.resume) {
 //        TODO: Inserire il metodo per ottenere la stringa di dettagli per un terremoto
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Questionario esteso" message:[NSString stringWithFormat:@"Stai compilando il questionario esteso per: %@.", [coStartingViewController detailsForTerremoto:self.delegate.questionario.terremotoID]] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"quest_esteso2", "") message:[NSString stringWithFormat:@"Stai compilando il questionario esteso per: %@.", [coStartingViewController detailsForTerremoto:self.delegate.questionario.terremotoID]] delegate:self cancelButtonTitle:NSLocalizedString(@"OK", @"") otherButtonTitles:nil];
         [alert show];
         self.resume = NO;
     }

@@ -35,7 +35,7 @@
  Questo metodo dovrà essere rimpiazzato con l'opportuno metodo, in grado di
  ritornare, tra le altre cose, una stringa contenente i dettagli di un terremoto a partire dall'ID */
 + (NSString *) detailsForTerremoto: (NSNumber *) terremotoID {
-    return @"terremoto di prova";
+    return NSLocalizedString(@"terremoto di prova", @"");
 }
 
 

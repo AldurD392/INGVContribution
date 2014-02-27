@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4304CA4218832A7000539F13 /* coStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4304CA4118832A7000539F13 /* coStoryboard.storyboard */; };
 		4304CA4418832A8100539F13 /* infStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4304CA4318832A8100539F13 /* infStoryboard.storyboard */; };
 		4304CA4818832BB500539F13 /* mainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4304CA4718832BB500539F13 /* mainStoryboard.storyboard */; };
 		4304CA4B18832C4E00539F13 /* MainNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4304CA4A18832C4E00539F13 /* MainNavigationController.m */; };
@@ -24,6 +23,8 @@
 		43D4251318834829008D68F3 /* moreStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43D4251218834829008D68F3 /* moreStoryboard.storyboard */; };
 		43D8625B185E361B0000BDBE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D8625A185E361B0000BDBE /* MapKit.framework */; };
 		43E9DC00185906C2004E9491 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43E9DBFF185906C1004E9491 /* CoreLocation.framework */; };
+		573EC06E18BF91250050D493 /* coStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 573EC07018BF91250050D493 /* coStoryboard.storyboard */; };
+		5778AA9B18BF9F5900D33CF7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5778AA9918BF9F5900D33CF7 /* Localizable.strings */; };
 		76001ECF18A5185B00608083 /* coWhereDetailTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 76001ECE18A5185B00608083 /* coWhereDetailTVC.m */; };
 		76001ED218A520CF00608083 /* coFloorTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 76001ED118A520CF00608083 /* coFloorTVC.m */; };
 		76001EEB18A52D7300608083 /* -.csv in Resources */ = {isa = PBXBuildFile; fileRef = 76001ED718A52D7300608083 /* -.csv */; };
@@ -68,7 +69,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4304CA4118832A7000539F13 /* coStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = coStoryboard.storyboard; path = IngvAppIOS/contribution/coStoryboard.storyboard; sourceTree = "<group>"; };
 		4304CA4318832A8100539F13 /* infStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = infStoryboard.storyboard; path = IngvAppIOS/informazioni/infStoryboard.storyboard; sourceTree = "<group>"; };
 		4304CA4718832BB500539F13 /* mainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = mainStoryboard.storyboard; path = IngvAppIOS/mainStoryboard.storyboard; sourceTree = "<group>"; };
 		4304CA4A18832C4E00539F13 /* MainNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainNavigationController.m; path = IngvAppIOS/mainController/MainNavigationController.m; sourceTree = SOURCE_ROOT; };
@@ -89,6 +89,11 @@
 		43D4251218834829008D68F3 /* moreStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = moreStoryboard.storyboard; path = IngvAppIOS/more/moreStoryboard.storyboard; sourceTree = SOURCE_ROOT; };
 		43D8625A185E361B0000BDBE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		43E9DBFF185906C1004E9491 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		573EC06F18BF91250050D493 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/coStoryboard.storyboard; sourceTree = "<group>"; };
+		573EC07218BF914F0050D493 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/coStoryboard.strings; sourceTree = "<group>"; };
+		573EC07318BF91B60050D493 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/coStoryboard.strings; sourceTree = "<group>"; };
+		5778AA9A18BF9F5900D33CF7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = IngvAppIOS/contribution/en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5778AA9C18BF9F5F00D33CF7 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
 		76001ECD18A5185B00608083 /* coWhereDetailTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = coWhereDetailTVC.h; path = IngvAppIOS/contribution/coWhereDetailTVC.h; sourceTree = "<group>"; };
 		76001ECE18A5185B00608083 /* coWhereDetailTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = coWhereDetailTVC.m; path = IngvAppIOS/contribution/coWhereDetailTVC.m; sourceTree = "<group>"; };
 		76001ED018A520CF00608083 /* coFloorTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = coFloorTVC.h; path = IngvAppIOS/contribution/coFloorTVC.h; sourceTree = "<group>"; };
@@ -251,7 +256,8 @@
 				764C9E2618A922540048EB92 /* coModel */,
 				76765F6818A3E5200069A76C /* coResources */,
 				76FCFD921890347800F72C64 /* coViewControllers */,
-				4304CA4118832A7000539F13 /* coStoryboard.storyboard */,
+				573EC07018BF91250050D493 /* coStoryboard.storyboard */,
+				5778AA9918BF9F5900D33CF7 /* Localizable.strings */,
 			);
 			name = contribution;
 			sourceTree = "<group>";
@@ -431,6 +437,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				it,
 			);
 			mainGroup = C95304B814FECBB300BF68B6;
 			productRefGroup = C95304C414FECBB400BF68B6 /* Products */;
@@ -457,7 +464,8 @@
 				76001EEC18A52D7300608083 /* ITC1.csv in Resources */,
 				76001EED18A52D7300608083 /* ITC2.csv in Resources */,
 				76001EF618A52D7300608083 /* ITG1.csv in Resources */,
-				4304CA4218832A7000539F13 /* coStoryboard.storyboard in Resources */,
+				5778AA9B18BF9F5900D33CF7 /* Localizable.strings in Resources */,
+				573EC06E18BF91250050D493 /* coStoryboard.storyboard in Resources */,
 				76001EEF18A52D7300608083 /* ITC4.csv in Resources */,
 				76001EF318A52D7300608083 /* ITF4.csv in Resources */,
 				76001EEB18A52D7300608083 /* -.csv in Resources */,
@@ -513,6 +521,29 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		573EC07018BF91250050D493 /* coStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				573EC06F18BF91250050D493 /* Base */,
+				573EC07218BF914F0050D493 /* en */,
+				573EC07318BF91B60050D493 /* it */,
+			);
+			name = coStoryboard.storyboard;
+			path = IngvAppIOS/contribution;
+			sourceTree = "<group>";
+		};
+		5778AA9918BF9F5900D33CF7 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5778AA9A18BF9F5900D33CF7 /* en */,
+				5778AA9C18BF9F5F00D33CF7 /* it */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		C95304DF14FECBB400BF68B6 /* Debug */ = {
@@ -580,7 +611,7 @@
 		C95304E214FECBB400BF68B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Adriano Di luzio (H72THPPW7W)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Adriano Di luzio (H72THPPW7W)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IngvAppIOS/Supporting Files/Project-Prefix.pch";
@@ -595,7 +626,7 @@
 		C95304E314FECBB400BF68B6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Adriano Di luzio (H72THPPW7W)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Adriano Di luzio (H72THPPW7W)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IngvAppIOS/Supporting Files/Project-Prefix.pch";

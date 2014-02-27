@@ -1,0 +1,29 @@
+/* 
+  Localizable.strings
+  Project
+
+  Created by Fabrizio Gattuso on 27/02/14.
+  Copyright (c) 2014 Swipe Stack Ltd. All rights reserved.
+*/
+
+"quest_esteso" = "Vuoi compilare il questionario esteso? (it)";
+"quest_esteso2" = "Questionario esteso";
+"Indietro" = "Indietro";
+"Si" = "Si";
+"No" = "No";
+"Annulla" = "Annulla";
+"OK" = "OK";
+"Avanti" = "Avanti";
+"Fine" = "Fine";
+"eff01" = "Nessun effetto.";
+"eff02" = "Vibrazione appena percettibile.";
+"eff03" = "Vibrazione leggera o moderata.";
+"eff04" = "Vibrazione forte, piccoli oggetti spostati o caduti.";
+"eff05" = "Scuotimento, caduta di oggetti, spostamento mobili, possibilità danni leggeri.";
+"eff06" = "Scuotimento molto forte, danni.";
+"Proseguendo non si potranno più modificare le risposte inserite. Vuoi continuare?" = "Proseguendo non si potranno più modificare le risposte inserite. Vuoi continuare?";
+"terremoto di prova" = "terremoto di prova";
+"Scrivi qui..." = "Scrivi qui...";
+"compilare il questionario completo." = "compilare il questionario completo.";
+"Superiore al 10°" = "Superiore al 10°";
+"Oltre 10" = "Oltre 10";

@@ -30,7 +30,7 @@
 }
 
 - (NSString *)placeHolder {
-    return @"Scrivi qui...";
+    return NSLocalizedString(@"Scrivi qui...", @"");
 }
 
 # pragma mark - Notification handler
@@ -85,9 +85,9 @@
     }
     
     if (self.delegate.questionario.whereDetail.integerValue == 2) {
-        self.nextBarButtonItem.title = @"Fine";
+        self.nextBarButtonItem.title = NSLocalizedString(@"Fine", @"");
     } else {
-        self.nextBarButtonItem.title = @"Avanti";
+        self.nextBarButtonItem.title = NSLocalizedString(@"Avanti", @"");
     }
     [self upgradeBar];
 }
@@ -120,11 +120,11 @@
         [self performSegueWithIdentifier:@"coCostruzioneSegue" sender:self];
     } else if (self.delegate.questionario.whereDetail.integerValue == 2) {
         UIActionSheet *actionSheet = [[UIActionSheet alloc]
-                                      initWithTitle: @"Proseguendo non si potranno più modificare le risposte inserite. Vuoi continuare?"
+                                      initWithTitle: NSLocalizedString(@"Proseguendo non si potranno più modificare le risposte inserite. Vuoi continuare?", @"")
                                       delegate: self
-                                      cancelButtonTitle: @"Annulla"
+                                      cancelButtonTitle: NSLocalizedString(@"Annulla", @"")
                                       destructiveButtonTitle: nil
-                                      otherButtonTitles: @"Si", nil];
+                                      otherButtonTitles: NSLocalizedString(@"Si", @""), nil];
         [actionSheet showInView:self.view];
     }
 }
@@ -133,7 +133,7 @@
 {
     NSString* buttonName = [actionSheet buttonTitleAtIndex:buttonIndex];
     
-    if ([buttonName isEqualToString:@"Si"]) {
+    if ([buttonName isEqualToString:NSLocalizedString(@"Si", @"")]) {
         [self performSegueWithIdentifier:@"coEndThanksBisSegue" sender:self];
     }
 }

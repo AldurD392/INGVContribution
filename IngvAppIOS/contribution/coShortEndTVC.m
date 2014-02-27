@@ -53,7 +53,7 @@
     
 //    TODO: inserire la funzione per i dettagli del terremoto
     localNotification.alertBody = [NSString stringWithFormat:@"Vuoi compilare il questionario completo per: %@?", [coStartingViewController detailsForTerremoto:self.delegate.questionario.terremotoID]];
-    localNotification.alertAction = @"compilare il questionario completo.";
+    localNotification.alertAction = NSLocalizedString(@"compilare il questionario completo.", @"");
     
     localNotification.soundName = UILocalNotificationDefaultSoundName;
     

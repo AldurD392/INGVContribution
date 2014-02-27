@@ -112,7 +112,7 @@
             self.totalFloorsCell.hidden = YES;
         } else {
             if (self.floor.integerValue == 11) {
-                self.floorCell.detailTextLabel.text = [NSString stringWithFormat:@"Superiore al 10°"];
+                self.floorCell.detailTextLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Superiore al 10°", @"")];
             }
             else {
                 self.floorCell.detailTextLabel.text = [NSString stringWithFormat:@"%@°", self.floor];
@@ -125,7 +125,7 @@
             self.nextBarButtonItem.enabled = NO;
         } else {
             if (self.totalFloors.integerValue == 11) {
-                self.totalFloorsCell.detailTextLabel.text = [NSString stringWithFormat:@"Oltre 10"];
+                self.totalFloorsCell.detailTextLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Oltre 10", @"")];
             }
             else {
                 self.totalFloorsCell.detailTextLabel.text = [NSString stringWithFormat:@"%@", self.totalFloors];
@@ -135,7 +135,7 @@
     }
     
     if (self.floor.integerValue >= 10 || self.totalFloors.integerValue == 11) {
-        self.totalFloorsCell.detailTextLabel.text = @"Oltre 10";
+        self.totalFloorsCell.detailTextLabel.text = NSLocalizedString(@"Oltre 10", @"");
     }
     
     

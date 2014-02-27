@@ -41,11 +41,11 @@
 - (IBAction)nextButtonTapped:(id)sender
 {
     UIActionSheet *actionSheet = [[UIActionSheet alloc]
-                                  initWithTitle: @"Vuoi compilare il questionario esteso?"
+                                  initWithTitle: NSLocalizedString(@"quest_esteso", @"")
                                   delegate: self
-                                  cancelButtonTitle: @"Indietro"
+                                  cancelButtonTitle: NSLocalizedString(@"Indietro", @"")
                                   destructiveButtonTitle: nil
-                                  otherButtonTitles: @"Si", @"No", nil];
+                                  otherButtonTitles: NSLocalizedString(@"Si", @""), NSLocalizedString(@"No", @""), nil];
     [actionSheet showInView:self.view];
 }
 
@@ -53,7 +53,7 @@
 {
     NSString* buttonName = [actionSheet buttonTitleAtIndex:buttonIndex];
     
-    if ([buttonName isEqualToString:@"Si"]) {
+    if ([buttonName isEqualToString:NSLocalizedString(@"Si", @"")]) {
         [self performSegueWithIdentifier:@"coPauraSegue" sender:self];
     }
     else if ([buttonName isEqualToString:@"No"]) {
@@ -100,12 +100,12 @@
 -(void)viewDidLoad {
     [super viewDidLoad];
     
-    self.labelArray = @[@"Nessun effetto.",
-                        @"Vibrazione appena percettibile.",
-                        @"Vibrazione leggera o moderata.",
-                        @"Vibrazione forte, piccoli oggetti spostati o caduti.",
-                        @"Scuotimento, caduta di oggetti, spostamento mobili, possibilità danni leggeri.",
-                        @"Scuotimento molto forte, danni."];
+    self.labelArray = @[NSLocalizedString(@"eff01", @""),
+                        NSLocalizedString(@"eff02", @""),
+                        NSLocalizedString(@"eff03", @""),
+                        NSLocalizedString(@"eff04", @""),
+                        NSLocalizedString(@"eff05", @""),
+                        NSLocalizedString(@"eff06", @"")];
 }
 
 @end

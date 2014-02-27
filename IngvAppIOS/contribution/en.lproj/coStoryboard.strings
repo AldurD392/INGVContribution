@@ -1,0 +1,807 @@
+
+/* Class = "IBUILabel"; text = "5° piano"; ObjectID = "0Ak-Xd-r16"; */
+"0Ak-Xd-r16.text" = "5° piano";
+
+/* Class = "IBUINavigationItem"; title = "Esperienza: edificio"; ObjectID = "0OR-XH-AZM"; */
+"0OR-XH-AZM.title" = "Esperienza: edificio";
+
+/* Class = "IBUILabel"; text = "6° piano"; ObjectID = "0mK-cN-ItO"; */
+"0mK-cN-ItO.text" = "6° piano";
+
+/* Class = "IBUILabel"; text = "Non osservato"; ObjectID = "0te-73-oTu"; */
+"0te-73-oTu.text" = "Non osservato";
+
+/* Class = "IBUILabel"; text = "Dettagli vari terremoto"; ObjectID = "17J-qj-tlp"; */
+"17J-qj-tlp.text" = "Dettagli vari terremoto";
+
+/* Class = "IBUITableViewSection"; footerTitle = "Scegli tra le precedenti"; ObjectID = "1WL-bU-h6Y"; */
+"1WL-bU-h6Y.footerTitle" = "Scegli tra le precedenti";
+
+/* Class = "IBUITableViewSection"; headerTitle = "Che danni hanno riportato i muri?"; ObjectID = "1WL-bU-h6Y"; */
+"1WL-bU-h6Y.headerTitle" = "Che danni hanno riportato i muri?";
+
+/* Class = "IBUINavigationItem"; title = "Esperienza: rumore"; ObjectID = "1Yi-Vb-jRD"; */
+"1Yi-Vb-jRD.title" = "Esperienza: rumore";
+
+/* Class = "IBUILabel"; text = "Difficoltà a mantenere l'equilibrio"; ObjectID = "1fY-sb-LYh"; */
+"1fY-sb-LYh.text" = "Difficoltà a mantenere l'equilibrio";
+
+/* Class = "IBUILabel"; text = "Non ho percepito nulla"; ObjectID = "1uo-LN-ATN"; */
+"1uo-LN-ATN.text" = "Non ho percepito nulla";
+
+/* Class = "IBUILabel"; text = "Interi rami si sono spezzati"; ObjectID = "2JW-sc-jX6"; */
+"2JW-sc-jX6.text" = "Interi rami si sono spezzati";
+
+/* Class = "IBUILabel"; text = "7 piani"; ObjectID = "2bf-k2-GMw"; */
+"2bf-k2-GMw.text" = "7 piani";
+
+/* Class = "IBUITableViewSection"; headerTitle = "Dettagli edificio"; ObjectID = "3dx-lX-YGs"; */
+"3dx-lX-YGs.headerTitle" = "Dettagli edificio";
+
+/* Class = "IBUILabel"; text = "Interrato"; ObjectID = "3nW-cJ-k2k"; */
+"3nW-cJ-k2k.text" = "Interrato";
+
+/* Class = "IBUILabel"; text = "Ero in movimento"; ObjectID = "46u-Rq-9M7"; */
+"46u-Rq-9M7.text" = "Ero in movimento";
+
+/* Class = "IBUITableViewSection"; footerTitle = "Scegli tra le precedenti"; ObjectID = "4G5-IB-63Q"; */
+"4G5-IB-63Q.footerTitle" = "Scegli tra le precedenti";
+
+/* Class = "IBUITableViewSection"; headerTitle = "Di che materiale era costituito l'edificio?"; ObjectID = "4G5-IB-63Q"; */
+"4G5-IB-63Q.headerTitle" = "Di che materiale era costituito l'edificio?";
+
+/* Class = "IBUINavigationItem"; title = "Descrivi la tua esperienza"; ObjectID = "4nA-Q2-2to"; */
+"4nA-Q2-2to.title" = "Descrivi la tua esperienza";
+
+/* Class = "IBUILabel"; text = "Pietra e/o laterizio"; ObjectID = "4yz-84-mzD"; */
+"4yz-84-mzD.text" = "Pietra e/o laterizio";
+
+/* Class = "IBUILabel"; text = "Erano immobili"; ObjectID = "4zE-ue-DuP"; */
+"4zE-ue-DuP.text" = "Erano immobili";
+
+/* Class = "IBUILabel"; text = "Moltissimo"; ObjectID = "5IP-15-gVt"; */
+"5IP-15-gVt.text" = "Moltissimo";
+
+/* Class = "IBUILabel"; text = "Per nulla"; ObjectID = "5Qn-d9-4jM"; */
+"5Qn-d9-4jM.text" = "Per nulla";
+
+/* Class = "IBUILabel"; text = "Si sono spostati"; ObjectID = "5Sf-47-utI"; */
+"5Sf-47-utI.text" = "Si sono spostati";
+
+/* Class = "IBUINavigationItem"; title = "Dove ti trovavi?"; ObjectID = "5Zu-4l-dcS"; */
+"5Zu-4l-dcS.title" = "Dove ti trovavi?";
+
+/* Class = "IBUILabel"; text = "9 piani"; ObjectID = "74u-CM-DsY"; */
+"74u-CM-DsY.text" = "9 piani";
+
+/* Class = "IBUILabel"; text = "Molto"; ObjectID = "7BW-Lz-W0l"; */
+"7BW-Lz-W0l.text" = "Molto";
+
+/* Class = "IBUILabel"; text = "10 piani"; ObjectID = "7CG-Mi-YgQ"; */
+"7CG-Mi-YgQ.text" = "10 piani";
+
+/* Class = "IBUILabel"; text = "Urtavano tra di loro"; ObjectID = "7Ia-wK-tkD"; */
+"7Ia-wK-tkD.text" = "Urtavano tra di loro";
+
+/* Class = "IBUILabel"; text = "Sono caduti o si sono ribaltati"; ObjectID = "7pI-UQ-1Cd"; */
+"7pI-UQ-1Cd.text" = "Sono caduti o si sono ribaltati";
+
+/* Class = "IBUIBarButtonItem"; title = "Avanti"; ObjectID = "824-k7-Q0c"; */
+"824-k7-Q0c.title" = "Avanti";
+
+/* Class = "IBUILabel"; text = "Calcestruzzo armato"; ObjectID = "8Dd-Cl-ga2"; */
+"8Dd-Cl-ga2.text" = "Calcestruzzo armato";
+
+/* Class = "IBUINavigationItem"; title = "Dettagli: danni edificio"; ObjectID = "8Xf-U2-UQ8"; */
+"8Xf-U2-UQ8.title" = "Dettagli: danni edificio";
+
+/* Class = "IBUILabel"; text = "In un edificio"; ObjectID = "8bg-Ps-tBj"; */
+"8bg-Ps-tBj.text" = "In un edificio";
+
+/* Class = "IBUILabel"; text = "Frazione"; ObjectID = "8dr-DT-JMy"; */
+"8dr-DT-JMy.text" = "Frazione";
+
+/* Class = "IBUILabel"; text = "8 piani"; ObjectID = "8ea-i2-96G"; */
+"8ea-i2-96G.text" = "8 piani";
+
+/* Class = "IBUITableViewSection"; headerTitle = "Terremoti recenti"; ObjectID = "8rV-Bg-TVh"; */
+"8rV-Bg-TVh.headerTitle" = "Terremoti recenti (en)";
+
+/* Class = "IBUILabel"; text = "Si sono spostati"; ObjectID = "8wf-g7-Irb"; */
+"8wf-g7-Irb.text" = "Si sono spostati";
+
+/* Class = "IBUINavigationItem"; title = "Dove ti trovavi?"; ObjectID = "9C9-CJ-NBC"; */
+"9C9-CJ-NBC.title" = "Dove ti trovavi?";
+
+/* Class = "IBUITableViewSection"; footerTitle = "Scegli tra le precedenti"; ObjectID = "9V3-AY-lXK"; */
+"9V3-AY-lXK.footerTitle" = "Scegli tra le precedenti";
+
+/* Class = "IBUITableViewSection"; headerTitle = "Quanto oscillavano i lampadari?"; ObjectID = "9V3-AY-lXK"; */
+"9V3-AY-lXK.headerTitle" = "Quanto oscillavano i lampadari?";
+
+/* Class = "IBUILabel"; text = "Oscillavano o vibravano"; ObjectID = "9WG-IR-Lfq"; */
+"9WG-IR-Lfq.text" = "Oscillavano o vibravano";
+
+/* Class = "IBUILabel"; text = "1° piano"; ObjectID = "9nw-Dz-uEh"; */
+"9nw-Dz-uEh.text" = "1° piano";
+
+/* Class = "IBUILabel"; text = "I rami si scuotevano"; ObjectID = "9xA-XA-6k3"; */
+"9xA-XA-6k3.text" = "I rami si scuotevano";
+
+/* Class = "IBUITableViewSection"; footerTitle = "Scegli tra le precedenti"; ObjectID = "ATJ-Xa-vCh"; */
+"ATJ-Xa-vCh.footerTitle" = "Scegli tra le precedenti";
+
+/* Class = "IBUITableViewSection"; headerTitle = "Come era il tuo equilibrio?"; ObjectID = "ATJ-Xa-vCh"; */
+"ATJ-Xa-vCh.headerTitle" = "Come era il tuo equilibrio?";
+
+/* Class = "IBUIBarButtonItem"; title = "Avanti"; ObjectID = "AoQ-im-PaJ"; */
+"AoQ-im-PaJ.title" = "Avanti";
+
+/* Class = "IBUIBarButtonItem"; title = "Avanti"; ObjectID = "BiM-pI-ifp"; */
+"BiM-pI-ifp.title" = "Avanti";
+
+/* Class = "IBUILabel"; text = "Molti sono caduti"; ObjectID = "CHe-gt-kod"; */
+"CHe-gt-kod.text" = "Molti sono caduti";
+
+/* Class = "IBUINavigationItem"; title = "Descrivi la tua esperienza"; ObjectID = "CII-LX-5Yy"; */
+"CII-LX-5Yy.title" = "Descrivi la tua esperienza";
+
+/* Class = "IBUILabel"; text = "Erano immobili"; ObjectID = "CaJ-Db-vIb"; */
+"CaJ-Db-vIb.text" = "Erano immobili";
+
+/* Class = "IBUILabel"; text = "Non osservato"; ObjectID = "CgS-Mi-eBZ"; */
+"CgS-Mi-eBZ.text" = "Non osservato";
+
+/* Class = "IBUILabel"; text = "Non osservato"; ObjectID = "Cgo-8E-HSf"; */
+"Cgo-8E-HSf.text" = "Non osservato";
+
+/* Class = "IBUINavigationItem"; title = "Piano"; ObjectID = "Cmk-Pa-dXj"; */
+"Cmk-Pa-dXj.title" = "Piano";
+
+/* Class = "IBUITableViewSection"; headerTitle = "Fine!"; ObjectID = "Cns-bl-wmN"; */
+"Cns-bl-wmN.headerTitle" = "Fine!";
+
+/* Class = "IBUILabel"; text = "Dopo"; ObjectID = "CsQ-je-7Vh"; */
+"CsQ-je-7Vh.text" = "Dopo";
+
+/* Class = "IBUILabel"; text = "Via"; ObjectID = "Dfo-cz-uOd"; */
+"Dfo-cz-uOd.text" = "Via";
+
+/* Class = "IBUILabel"; text = "Nessun danno"; ObjectID = "DjO-RR-Fbv"; */
+"DjO-RR-Fbv.text" = "Nessun danno";
+
+/* Class = "IBUILabel"; text = "Si aprivano e chiudevano"; ObjectID = "E0B-ed-UyV"; */
+"E0B-ed-UyV.text" = "Si aprivano e chiudevano";
+
+/* Class = "IBUIBarButtonItem"; title = "Annulla"; ObjectID = "EjN-Gb-ztr"; */
+"EjN-Gb-ztr.title" = "Annulla";
+
+/* Class = "IBUIBarButtonItem"; title = "Avanti"; ObjectID = "FAJ-gW-wqC"; */
+"FAJ-gW-wqC.title" = "Avanti";
+
+/* Class = "IBUIBarButtonItem"; title = "Avanti"; ObjectID = "FoU-y3-XdP"; */
+"FoU-y3-XdP.title" = "Avanti";
+
+/* Class = "IBUIButton"; normalTitle = "Torna ai terremoti"; ObjectID = "FuS-1w-B95"; */
+"FuS-1w-B95.normalTitle" = "Torna ai terremoti";
+
+/* Class = "IBUILabel"; text = "Non osservato"; ObjectID = "GBb-n2-tid"; */
+"GBb-n2-tid.text" = "Non osservato";
+
+/* Class = "IBUIBarButtonItem"; title = "Avanti"; ObjectID = "GUQ-wg-Saj"; */
+"GUQ-wg-Saj.title" = "Avanti";
+
+/* Class = "IBUILabel"; text = "All'aperto"; ObjectID = "GV7-HG-Vez"; */
+"GV7-HG-Vez.text" = "All'aperto";
+
+/* Class = "IBUIBarButtonItem"; title = "Avanti"; ObjectID = "GZK-VX-QnI"; */
+"GZK-VX-QnI.title" = "Avanti";
+
+/* Class = "IBUILabel"; text = "Piccole spaccatura dei muri e/o caduta di grandi pezzi di intonaco"; ObjectID = "GaB-F1-27Q"; */
+"GaB-F1-27Q.text" = "Piccole spaccature dei muri e/o caduta di grandi pezzi di intonaco";
+
+/* Class = "IBUINavigationItem"; title = "Esperienza: edificio"; ObjectID = "H4u-JE-9P9"; */
+"H4u-JE-9P9.title" = "Esperienza: edificio";
+
+/* Class = "IBUITableViewSection"; footerTitle = "Scrivi quanto osservato nello spazio sovrastante"; ObjectID = "Hfc-i8-JJy"; */
+"Hfc-i8-JJy.footerTitle" = "Scrivi quanto osservato nello spazio sovrastante";
+
+/* Class = "IBUITableViewSection"; headerTitle = "Hai osservato altri fenomeni? Raccontaceli:"; ObjectID = "Hfc-i8-JJy"; */
+"Hfc-i8-JJy.headerTitle" = "Hai osservato altri fenomeni? Raccontaceli:";
+
+/* Class = "IBUITableViewSection"; footerTitle = "Scegli tra le precedenti"; ObjectID = "Hqs-6l-eK9"; */
+"Hqs-6l-eK9.footerTitle" = "Scegli tra le precedenti";
+
+/* Class = "IBUITableViewSection"; headerTitle = "Come era il comportamento di quadri, libri e vasi?"; ObjectID = "Hqs-6l-eK9"; */
+"Hqs-6l-eK9.headerTitle" = "Come era il comportamento di quadri, libri e vasi?";
+
+/* Class = "IBUILabel"; text = "4° piano"; ObjectID = "HsL-3M-23C"; */
+"HsL-3M-23C.text" = "4° piano";
+
+/* Class = "IBUINavigationItem"; title = "Esperienza: edificio"; ObjectID = "IaJ-Lf-JJH"; */
+"IaJ-Lf-JJH.title" = "Esperienza: edificio";
+
+/* Class = "IBUITableViewSection"; footerTitle = "Scegli tra le precedenti"; ObjectID = "Izq-0K-t0M"; */
+"Izq-0K-t0M.footerTitle" = "Scegli tra le precedenti";
+
+/* Class = "IBUITableViewSection"; headerTitle = "Le porcellane e le cristallerie si muovevano?"; ObjectID = "Izq-0K-t0M"; */
+"Izq-0K-t0M.headerTitle" = "Le porcellane e le cristallerie si muovevano?";
+
+/* Class = "IBUILabel"; text = "È fuoriuscito dal recipiente"; ObjectID = "J1d-NF-R0j"; */
+"J1d-NF-R0j.text" = "È fuoriuscito dal recipiente";
+
+/* Class = "IBUITableViewSection"; headerTitle = "Questionario completato!"; ObjectID = "JcL-f3-d9Z"; */
+"JcL-f3-d9Z.headerTitle" = "Questionario completato!";
+
+/* Class = "IBUILabel"; text = "Lesioni evidenti dei muri"; ObjectID = "Jou-M0-ijw"; */
+"Jou-M0-ijw.text" = "Lesioni evidenti dei muri";
+
+/* Class = "IBUILabel"; text = "Sono caduti"; ObjectID = "Jpt-vU-ktd"; */
+"Jpt-vU-ktd.text" = "Sono caduti";
+
+/* Class = "IBUILabel"; text = "Oscillavano notevolmente"; ObjectID = "K5Y-yg-yyi"; */
+"K5Y-yg-yyi.text" = "Oscillavano notevolmente";
+
+/* Class = "IBUILabel"; text = "Erano immobili"; ObjectID = "Knl-X4-PvS"; */
+"Knl-X4-PvS.text" = "Erano immobili";
+
+/* Class = "IBUIBarButtonItem"; title = "Avanti"; ObjectID = "Ku0-dT-MjC"; */
+"Ku0-dT-MjC.title" = "Avanti";
+
+/* Class = "IBUINavigationItem"; title = "Esperienza: all'aperto"; ObjectID = "L2n-1B-eNP"; */
+"L2n-1B-eNP.title" = "Esperienza: all'aperto";
+
+/* Class = "IBUILabel"; text = "Non osservato"; ObjectID = "LG4-Z1-7IU"; */
+"LG4-Z1-7IU.text" = "Non osservato";
+
+/* Class = "IBUITextField"; placeholder = "Via Salaria 113, Roma"; ObjectID = "LbW-HI-Zsz"; */
+"LbW-HI-Zsz.placeholder" = "Via Salaria 113, Roma";
+
+/* Class = "IBUILabel"; text = "Prima"; ObjectID = "LiC-8O-MS8"; */
+"LiC-8O-MS8.text" = "Prima";
+
+/* Class = "IBUILabel"; text = "9° piano"; ObjectID = "LrN-FC-zBp"; */
+"LrN-FC-zBp.text" = "9° piano";
+
+/* Class = "IBUIBarButtonItem"; title = "Avanti"; ObjectID = "M68-5P-jOg"; */
+"M68-5P-jOg.title" = "Avanti";
+
+/* Class = "IBUINavigationItem"; title = "Effetti percepiti"; ObjectID = "M7K-Xg-rqN"; */
+"M7K-Xg-rqN.title" = "Effetti percepiti";
+
+/* Class = "IBUIBarButtonItem"; title = "Avanti"; ObjectID = "MPb-r0-XMU"; */
+"MPb-r0-XMU.title" = "Avanti";
+
+/* Class = "IBUIBarButtonItem"; title = "Avanti"; ObjectID = "Mho-aq-jmN"; */
+"Mho-aq-jmN.title" = "Avanti";
+
+/* Class = "IBUILabel"; text = "4 piani"; ObjectID = "NJy-tX-Dsd"; */
+"NJy-tX-Dsd.text" = "4 piani";
+
+/* Class = "IBUITableViewSection"; footerTitle = "Scegli tra le precedenti"; ObjectID = "NMB-jm-Otq"; */
+"NMB-jm-Otq.footerTitle" = "Scegli tra le precedenti";
+
+/* Class = "IBUITableViewSection"; headerTitle = "I soprammobili si muovevano?"; ObjectID = "NMB-jm-Otq"; */
+"NMB-jm-Otq.headerTitle" = "I soprammobili si muovevano?";
+
+/* Class = "IBUILabel"; text = "Spaccature solo nell'intonaco"; ObjectID = "Nbr-ni-J6f"; */
+"Nbr-ni-J6f.text" = "Spaccature solo nell'intonaco";
+
+/* Class = "IBUILabel"; text = "Nessun danno"; ObjectID = "Noe-3p-b8D"; */
+"Noe-3p-b8D.text" = "Nessun danno";
+
+/* Class = "IBUITableViewSection"; footerTitle = "Scegli tra le precedenti"; ObjectID = "NuT-Lg-Aru"; */
+"NuT-Lg-Aru.footerTitle" = "Scegli tra le precedenti";
+
+/* Class = "IBUITableViewSection"; headerTitle = "Era udibile il rumore del terremoto?"; ObjectID = "NuT-Lg-Aru"; */
+"NuT-Lg-Aru.headerTitle" = "Era udibile il rumore del terremoto?";
+
+/* Class = "IBUILabel"; text = "Erano immobili"; ObjectID = "O19-oJ-jGg"; */
+"O19-oJ-jGg.text" = "Erano immobili";
+
+/* Class = "IBUILabel"; text = "Non ricordo"; ObjectID = "OGZ-DB-BtW"; */
+"OGZ-DB-BtW.text" = "Non ricordo";
+
+/* Class = "IBUILabel"; text = "Vibravano"; ObjectID = "OQ6-Zh-gSj"; */
+"OQ6-Zh-gSj.text" = "Vibravano";
+
+/* Class = "IBUILabel"; text = "Schizzava"; ObjectID = "OUf-kK-zm1"; */
+"OUf-kK-zm1.text" = "Schizzava";
+
+/* Class = "IBUILabel"; text = "3° piano"; ObjectID = "Orz-wl-EtE"; */
+"Orz-wl-EtE.text" = "3° piano";
+
+/* Class = "IBUILabel"; text = "Crollo dei muri"; ObjectID = "P46-n4-lb0"; */
+"P46-n4-lb0.text" = "Crollo dei muri";
+
+/* Class = "IBUILabel"; text = "Un poco"; ObjectID = "Po8-ss-dYE"; */
+"Po8-ss-dYE.text" = "Un poco";
+
+/* Class = "IBUILabel"; text = "7° piano"; ObjectID = "Pyj-Iq-1XX"; */
+"Pyj-Iq-1XX.text" = "7° piano";
+
+/* Class = "IBUIBarButtonItem"; title = "Avanti"; ObjectID = "QRv-Gu-jyG"; */
+"QRv-Gu-jyG.title" = "Avanti";
+
+/* Class = "IBUILabel"; text = "6 piani"; ObjectID = "Qxi-oC-Acp"; */
+"Qxi-oC-Acp.text" = "6 piani";
+
+/* Class = "IBUINavigationItem"; title = "Lista terremoti"; ObjectID = "RMq-b6-paE"; */
+"RMq-b6-paE.title" = "Lista terremoti";
+
+/* Class = "IBUINavigationItem"; title = "Quando l'hai sentito?"; ObjectID = "RQ9-GU-uYi"; */
+"RQ9-GU-uYi.title" = "Quando l'hai sentito?";
+
+/* Class = "IBUILabel"; text = "Dormivo e il terremoto non mi ha svegliato"; ObjectID = "Rft-KB-czs"; */
+"Rft-KB-czs.text" = "Dormivo e il terremoto non mi ha svegliato";
+
+/* Class = "IBUITableViewSection"; footerTitle = "Scegli se utilizzare la posizione corrente."; ObjectID = "RrR-sd-V7F"; */
+"RrR-sd-V7F.footerTitle" = "Scegli se utilizzare la posizione corrente.";
+
+/* Class = "IBUITableViewSection"; headerTitle = "Posizione"; ObjectID = "RrR-sd-V7F"; */
+"RrR-sd-V7F.headerTitle" = "Posizione";
+
+/* Class = "IBUILabel"; text = "2 piani"; ObjectID = "S18-g0-Whp"; */
+"S18-g0-Whp.text" = "2 piani";
+
+/* Class = "IBUINavigationItem"; title = "Dettagli: danni edificio"; ObjectID = "S5L-va-cP9"; */
+"S5L-va-cP9.title" = "Dettagli: danni edificio";
+
+/* Class = "IBUILabel"; text = "Posizione corrente"; ObjectID = "Sb9-K4-7u1"; */
+"Sb9-K4-7u1.text" = "Posizione corrente";
+
+/* Class = "IBUILabel"; text = "Ero fermo"; ObjectID = "SqF-Lx-KtS"; */
+"SqF-Lx-KtS.text" = "Ero fermo";
+
+/* Class = "IBUITableViewSection"; headerTitle = "Indirizzo"; ObjectID = "Suj-HX-3B7"; */
+"Suj-HX-3B7.headerTitle" = "Indirizzo";
+
+/* Class = "IBUITableViewSection"; headerTitle = "Inserisci la data e l'ora"; ObjectID = "Szb-Iz-qpo"; */
+"Szb-Iz-qpo.headerTitle" = "Inserisci la data e l'ora";
+
+/* Class = "IBUIBarButtonItem"; title = "Avanti"; ObjectID = "Te9-ul-Ny1"; */
+"Te9-ul-Ny1.title" = "Avanti";
+
+/* Class = "IBUILabel"; text = "Oscillavano leggermente"; ObjectID = "U3X-YA-0yW"; */
+"U3X-YA-0yW.text" = "Oscillavano leggermente";
+
+/* Class = "IBUILabel"; text = "Non osservato"; ObjectID = "URQ-64-Rm6"; */
+"URQ-64-Rm6.text" = "Non osservato";
+
+/* Class = "IBUILabel"; text = "Erano immobili"; ObjectID = "UaN-te-EMp"; */
+"UaN-te-EMp.text" = "Erano immobili";
+
+/* Class = "IBUIBarButtonItem"; title = "Avanti"; ObjectID = "Uqs-H4-FB8"; */
+"Uqs-H4-FB8.title" = "Avanti";
+
+/* Class = "IBUINavigationItem"; title = "Esperienza: edificio"; ObjectID = "Uvg-9c-Qse"; */
+"Uvg-9c-Qse.title" = "Esperienza: edificio";
+
+/* Class = "IBUIBarButtonItem"; title = "Annulla"; ObjectID = "VGm-kH-Pcx"; */
+"VGm-kH-Pcx.title" = "Annulla";
+
+/* Class = "IBUILabel"; text = "Si sono spostati"; ObjectID = "VLC-rJ-Oub"; */
+"VLC-rJ-Oub.text" = "Si sono spostati";
+
+/* Class = "IBUINavigationItem"; title = "Esperienza: altro"; ObjectID = "VQh-LH-gle"; */
+"VQh-LH-gle.title" = "Esperienza: altro";
+
+/* Class = "IBUITableViewSection"; footerTitle = "Scegli tra le precedenti"; ObjectID = "VuP-Yb-nJu"; */
+"VuP-Yb-nJu.footerTitle" = "Scegli tra le precedenti";
+
+/* Class = "IBUITableViewSection"; headerTitle = "Quando è cominciato il rumore del terremoto rispetto allo scuotimento?"; ObjectID = "VuP-Yb-nJu"; */
+"VuP-Yb-nJu.headerTitle" = "Quando è cominciato il rumore del terremoto rispetto allo scuotimento?";
+
+/* Class = "IBUILabel"; text = "Numero totale di piani"; ObjectID = "XLF-jy-KHh"; */
+"XLF-jy-KHh.text" = "Numero totale di piani";
+
+/* Class = "IBUIBarButtonItem"; title = "Annulla"; ObjectID = "Xdb-Yg-2V8"; */
+"Xdb-Yg-2V8.title" = "Annulla";
+
+/* Class = "IBUILabel"; text = "Erano immobili"; ObjectID = "XtN-LK-ypH"; */
+"XtN-LK-ypH.text" = "Erano immobili";
+
+/* Class = "IBUINavigationItem"; title = "Esperienza: edificio"; ObjectID = "Y3R-68-9TB"; */
+"Y3R-68-9TB.title" = "Esperienza: edificio";
+
+/* Class = "IBUILabel"; text = "1 piano"; ObjectID = "YFs-X0-pYe"; */
+"YFs-X0-pYe.text" = "1 piano";
+
+/* Class = "IBUILabel"; text = "8° piano"; ObjectID = "YpP-xJ-mP7"; */
+"YpP-xJ-mP7.text" = "8° piano";
+
+/* Class = "IBUILabel"; text = "Caduta"; ObjectID = "YzQ-kj-K8T"; */
+"YzQ-kj-K8T.text" = "Caduta";
+
+/* Class = "IBUILabel"; text = "Più di 10 piani"; ObjectID = "ZVK-Uw-ybn"; */
+"ZVK-Uw-ybn.text" = "Più di 10 piani";
+
+/* Class = "IBUILabel"; text = "Numero di piano"; ObjectID = "ZnW-UY-09L"; */
+"ZnW-UY-09L.text" = "Numero di piano";
+
+/* Class = "IBUILabel"; text = "Si sono rotte"; ObjectID = "ZtY-4G-R1z"; */
+"ZtY-4G-R1z.text" = "Si sono rotte";
+
+/* Class = "IBUINavigationItem"; title = "Dettagli: danni edificio"; ObjectID = "Zwc-j6-AYK"; */
+"Zwc-j6-AYK.title" = "Dettagli: danni edificio";
+
+/* Class = "IBUILabel"; text = "Stato"; ObjectID = "aV7-EM-bNF"; */
+"aV7-EM-bNF.text" = "Stato";
+
+/* Class = "IBUIBarButtonItem"; title = "Avanti"; ObjectID = "ail-el-hmk"; */
+"ail-el-hmk.title" = "Avanti";
+
+/* Class = "IBUILabel"; text = "Non osservato"; ObjectID = "b8d-aO-ukI"; */
+"b8d-aO-ukI.text" = "Non osservato";
+
+/* Class = "IBUIButton"; normalTitle = "Torna ai terremoti"; ObjectID = "bKY-ZU-4CP"; */
+"bKY-ZU-4CP.normalTitle" = "Torna ai terremoti";
+
+/* Class = "IBUILabel"; text = "Caduta di qualche tegola"; ObjectID = "br4-OD-NXY"; */
+"br4-OD-NXY.text" = "Caduta di qualche tegola";
+
+/* Class = "IBUILabel"; text = "Ti verrà riproposto di completare il questionario completo in seguito"; ObjectID = "c50-h6-mZV"; */
+"c50-h6-mZV.text" = "Ti verrà riproposto di completare il questionario completo in seguito";
+
+/* Class = "IBUILabel"; text = "Capogiro"; ObjectID = "cDk-4n-Gj4"; */
+"cDk-4n-Gj4.text" = "Capogiro";
+
+/* Class = "IBUILabel"; text = "Sbattevano"; ObjectID = "cTD-7P-1Nq"; */
+"cTD-7P-1Nq.text" = "Sbattevano";
+
+/* Class = "IBUILabel"; text = "Erano immobili"; ObjectID = "cVi-my-0Md"; */
+"cVi-my-0Md.text" = "Erano immobili";
+
+/* Class = "IBUINavigationItem"; title = "Esperienza: rumore"; ObjectID = "ccZ-QS-jNY"; */
+"ccZ-QS-jNY.title" = "Esperienza: rumore";
+
+/* Class = "IBUILabel"; text = "Non osservato"; ObjectID = "cmS-3f-DYK"; */
+"cmS-3f-DYK.text" = "Non osservato";
+
+/* Class = "IBUITextView"; text = "Scrivi qui..."; ObjectID = "crh-fa-Tyy"; */
+"crh-fa-Tyy.text" = "Scrivi qui...";
+
+/* Class = "IBUITableViewSection"; footerTitle = "Scegli tra le precedenti"; ObjectID = "d1p-kH-cSV"; */
+"d1p-kH-cSV.footerTitle" = "Scegli tra le precedenti";
+
+/* Class = "IBUITableViewSection"; headerTitle = "Le porte, finestre, sportelli sbattevano?"; ObjectID = "d1p-kH-cSV"; */
+"d1p-kH-cSV.headerTitle" = "Le porte, finestre, sportelli sbattevano?";
+
+/* Class = "IBUITableViewSection"; headerTitle = "Scegli tra le seguenti"; ObjectID = "d6N-nD-Nur"; */
+"d6N-nD-Nur.headerTitle" = "Scegli tra le seguenti";
+
+/* Class = "IBUILabel"; text = "Tintinnavano"; ObjectID = "d7J-1W-OJp"; */
+"d7J-1W-OJp.text" = "Tintinnavano";
+
+/* Class = "IBUINavigationItem"; title = "Esperienza: rumore"; ObjectID = "dhe-qm-9bO"; */
+"dhe-qm-9bO.title" = "Esperienza: rumore";
+
+/* Class = "IBUILabel"; text = "Non osservato"; ObjectID = "dnm-yC-GCQ"; */
+"dnm-yC-GCQ.text" = "Non osservato";
+
+/* Class = "IBUILabel"; text = "Danni lievi"; ObjectID = "eGG-9Y-yRm"; */
+"eGG-9Y-yRm.text" = "Danni lievi";
+
+/* Class = "IBUILabel"; text = "Crollo totale"; ObjectID = "eSR-6e-XRc"; */
+"eSR-6e-XRc.text" = "Crollo totale";
+
+/* Class = "IBUITableViewSection"; footerTitle = "Scegli tra le precedenti"; ObjectID = "eoR-LT-HOq"; */
+"eoR-LT-HOq.footerTitle" = "Scegli tra le precedenti";
+
+/* Class = "IBUITableViewSection"; headerTitle = "Come era il comportamento dei liquidi?"; ObjectID = "eoR-LT-HOq"; */
+"eoR-LT-HOq.headerTitle" = "Come era il comportamento dei liquidi?";
+
+/* Class = "IBUILabel"; text = "2° piano"; ObjectID = "epH-Am-Gie"; */
+"epH-Am-Gie.text" = "2° piano";
+
+/* Class = "IBUILabel"; text = "Nessun danno"; ObjectID = "f7m-RY-pOt"; */
+"f7m-RY-pOt.text" = "Nessun danno";
+
+/* Class = "IBUILabel"; text = "Legno"; ObjectID = "fOW-a0-p0G"; */
+"fOW-a0-p0G.text" = "Legno";
+
+/* Class = "IBUITableViewSection"; footerTitle = "Scegli tra le precedenti"; ObjectID = "fPS-6i-pSj"; */
+"fPS-6i-pSj.footerTitle" = "Scegli tra le precedenti";
+
+/* Class = "IBUITableViewSection"; headerTitle = "Che danni hanno riportato i camini?"; ObjectID = "fPS-6i-pSj"; */
+"fPS-6i-pSj.headerTitle" = "Che danni hanno riportato i camini?";
+
+/* Class = "IBUIBarButtonItem"; title = "Segnala"; ObjectID = "fVy-d1-huc"; */
+"fVy-d1-huc.title" = "Segnala";
+
+/* Class = "IBUILabel"; text = "Italia"; ObjectID = "fXQ-26-bFL"; */
+"fXQ-26-bFL.text" = "Italia";
+
+/* Class = "IBUILabel"; text = "Crollo parziale"; ObjectID = "fcl-MA-TIa"; */
+"fcl-MA-TIa.text" = "Crollo parziale";
+
+/* Class = "IBUILabel"; text = "Dall'esterno"; ObjectID = "fnT-ta-zHk"; */
+"fnT-ta-zHk.text" = "Dall'esterno";
+
+/* Class = "IBUIBarButtonItem"; title = "Avanti"; ObjectID = "gZj-2V-e9M"; */
+"gZj-2V-e9M.title" = "Avanti";
+
+/* Class = "IBUILabel"; text = "5 piani"; ObjectID = "gcs-kg-QTb"; */
+"gcs-kg-QTb.text" = "5 piani";
+
+/* Class = "IBUILabel"; text = "Era immobile"; ObjectID = "gtV-7r-Uba"; */
+"gtV-7r-Uba.text" = "Era immobile";
+
+/* Class = "IBUITableViewSection"; footerTitle = "Scegli tra le precedenti"; ObjectID = "hFk-05-Noh"; */
+"hFk-05-Noh.footerTitle" = "Scegli tra le precedenti";
+
+/* Class = "IBUITableViewSection"; headerTitle = "Durante la scossa o pochi minuti prima gli animali erano agitati?"; ObjectID = "hFk-05-Noh"; */
+"hFk-05-Noh.headerTitle" = "Durante la scossa o pochi minuti prima gli animali erano agitati?";
+
+/* Class = "IBUILabel"; text = "Nessun problema"; ObjectID = "hOn-2M-sDT"; */
+"hOn-2M-sDT.text" = "Nessun problema";
+
+/* Class = "IBUILabel"; text = "Non so"; ObjectID = "hYO-KD-PHL"; */
+"hYO-KD-PHL.text" = "Non so";
+
+/* Class = "IBUITableViewSection"; headerTitle = "Dettagli"; ObjectID = "haK-UV-ZpG"; */
+"haK-UV-ZpG.headerTitle" = "Dettagli";
+
+/* Class = "IBUILabel"; text = "10° piano"; ObjectID = "hyJ-iu-7fc"; */
+"hyJ-iu-7fc.text" = "10° piano";
+
+/* Class = "IBUIBarButtonItem"; title = "Avanti"; ObjectID = "iU0-VW-RP4"; */
+"iU0-VW-RP4.title" = "Avanti";
+
+/* Class = "IBUILabel"; text = "Non osservato"; ObjectID = "j2l-kj-gys"; */
+"j2l-kj-gys.text" = "Non osservato";
+
+/* Class = "IBUILabel"; text = "Superiore al 10° piano"; ObjectID = "j9y-Am-f3T"; */
+"j9y-Am-f3T.text" = "Superiore al 10° piano";
+
+/* Class = "IBUILabel"; text = "In un mezzo di trasporto"; ObjectID = "jY5-gb-wUn"; */
+"jY5-gb-wUn.text" = "In un mezzo di trasporto";
+
+/* Class = "IBUIBarButtonItem"; title = "Avanti"; ObjectID = "jig-Hh-dla"; */
+"jig-Hh-dla.title" = "Avanti";
+
+/* Class = "IBUILabel"; text = "Oscillavano notevolmente"; ObjectID = "joq-Sj-E73"; */
+"joq-Sj-E73.text" = "Oscillavano notevolmente";
+
+/* Class = "IBUINavigationItem"; title = "Esperienza: all'aperto"; ObjectID = "kNb-F2-1ok"; */
+"kNb-F2-1ok.title" = "Esperienza: all'aperto";
+
+/* Class = "IBUILabel"; text = "Regione"; ObjectID = "kOm-eH-Wkp"; */
+"kOm-eH-Wkp.text" = "Regione";
+
+/* Class = "IBUILabel"; text = "L'Aquila"; ObjectID = "kbr-w8-7be"; */
+"kbr-w8-7be.text" = "L'Aquila";
+
+/* Class = "IBUILabel"; text = "Non osservato"; ObjectID = "kkY-Kn-gNp"; */
+"kkY-Kn-gNp.text" = "Non osservato";
+
+/* Class = "IBUINavigationItem"; title = "Grazie! :)"; ObjectID = "koI-xT-3LS"; */
+"koI-xT-3LS.title" = "Grazie! :)";
+
+/* Class = "IBUILabel"; text = "Non ricordo"; ObjectID = "kxK-Vz-WdX"; */
+"kxK-Vz-WdX.text" = "Non ricordo";
+
+/* Class = "IBUITextView"; text = "Nessun effetto."; ObjectID = "kze-q1-qag"; */
+"kze-q1-qag.text" = "Nessun effetto.";
+
+/* Class = "IBUILabel"; text = "Dormivo e il terremoto mi ha svegliato"; ObjectID = "l2U-vu-XFL"; */
+"l2U-vu-XFL.text" = "Dormivo e il terremoto mi ha svegliato";
+
+/* Class = "IBUILabel"; text = "Danni evidenti"; ObjectID = "l32-z3-dmb"; */
+"l32-z3-dmb.text" = "Danni evidenti";
+
+/* Class = "IBUIBarButtonItem"; title = "Annulla"; ObjectID = "l4y-66-sm1"; */
+"l4y-66-sm1.title" = "Annulla";
+
+/* Class = "IBUINavigationItem"; title = "Descrivi la tua esperienza"; ObjectID = "laY-cK-lak"; */
+"laY-cK-lak.title" = "Descrivi la tua esperienza";
+
+/* Class = "IBUILabel"; text = "Nessun tipo di agitazione"; ObjectID = "m2O-qh-NWi"; */
+"m2O-qh-NWi.text" = "Nessun tipo di agitazione";
+
+/* Class = "IBUIBarButtonItem"; title = "Avanti"; ObjectID = "mEW-yT-QPN"; */
+"mEW-yT-QPN.title" = "Avanti";
+
+/* Class = "IBUIBarButtonItem"; title = "Annulla"; ObjectID = "mfa-yy-eWy"; */
+"mfa-yy-eWy.title" = "Annulla";
+
+/* Class = "IBUINavigationItem"; title = "Dettagli: danni edificio"; ObjectID = "msK-ia-zWW"; */
+"msK-ia-zWW.title" = "Dettagli: danni edificio";
+
+/* Class = "IBUITableViewSection"; footerTitle = "Scegli tra le precedenti"; ObjectID = "muL-Te-i3b"; */
+"muL-Te-i3b.footerTitle" = "Scegli tra le precedenti";
+
+/* Class = "IBUITableViewSection"; headerTitle = "Che danni ha subito l'intera costruzione?"; ObjectID = "muL-Te-i3b"; */
+"muL-Te-i3b.headerTitle" = "Che danni ha subito l'intera costruzione?";
+
+/* Class = "IBUITableViewSection"; footerTitle = "Scegli tra le precedenti"; ObjectID = "n8H-fe-45o"; */
+"n8H-fe-45o.footerTitle" = "Scegli tra le precedenti";
+
+/* Class = "IBUITableViewSection"; headerTitle = "Hai avuto paura?"; ObjectID = "n8H-fe-45o"; */
+"n8H-fe-45o.headerTitle" = "Hai avuto paura?";
+
+/* Class = "IBUILabel"; text = "Non osservato"; ObjectID = "niK-rY-e0x"; */
+"niK-rY-e0x.text" = "Non osservato";
+
+/* Class = "IBUIBarButtonItem"; title = "Avanti"; ObjectID = "oPH-OM-TKk"; */
+"oPH-OM-TKk.title" = "Avanti";
+
+/* Class = "IBUINavigationItem"; title = "Numero di piani"; ObjectID = "oZ0-XE-nTE"; */
+"oZ0-XE-nTE.title" = "Numero di piani";
+
+/* Class = "IBUILabel"; text = "Non osservato"; ObjectID = "oZd-xQ-LTV"; */
+"oZd-xQ-LTV.text" = "Non osservato";
+
+/* Class = "IBUILabel"; text = "Lesioni ed incrinature"; ObjectID = "oa9-xM-Ju2"; */
+"oa9-xM-Ju2.text" = "Lesioni ed incrinature";
+
+/* Class = "IBUIBarButtonItem"; title = "Fine"; ObjectID = "oaq-3D-6Ja"; */
+"oaq-3D-6Ja.title" = "Fine";
+
+/* Class = "IBUITableViewSection"; footerTitle = "Scegli tra le precedenti"; ObjectID = "obs-I6-axU"; */
+"obs-I6-axU.footerTitle" = "Scegli tra le precedenti";
+
+/* Class = "IBUITableViewSection"; headerTitle = "Come era il comportamento di mobili e altri oggetti pesanti?"; ObjectID = "obs-I6-axU"; */
+"obs-I6-axU.headerTitle" = "Come era il comportamento di mobili e altri oggetti pesanti?";
+
+/* Class = "IBUITableViewSection"; headerTitle = "Fine!"; ObjectID = "p1I-mq-Cgn"; */
+"p1I-mq-Cgn.headerTitle" = "Fine!";
+
+/* Class = "IBUILabel"; text = "Dal sottosuolo"; ObjectID = "p5x-HG-3VX"; */
+"p5x-HG-3VX.text" = "Dal sottosuolo";
+
+/* Class = "IBUILabel"; text = "Non osservato"; ObjectID = "pFL-AQ-L5F"; */
+"pFL-AQ-L5F.text" = "Non osservato";
+
+/* Class = "IBUILabel"; text = "Provincia"; ObjectID = "pO7-LC-dql"; */
+"pO7-LC-dql.text" = "Provincia";
+
+/* Class = "IBUILabel"; text = "Si era udibile"; ObjectID = "pec-Fa-Bz4"; */
+"pec-Fa-Bz4.text" = "Si era udibile";
+
+/* Class = "IBUINavigationItem"; title = "Dettagli: danni edificio"; ObjectID = "qLx-KW-4Gw"; */
+"qLx-KW-4Gw.title" = "Dettagli: danni edificio";
+
+/* Class = "IBUILabel"; text = "Oscillavano leggermente"; ObjectID = "qMy-UB-e5O"; */
+"qMy-UB-e5O.text" = "Oscillavano leggermente";
+
+/* Class = "IBUILabel"; text = "3 piani"; ObjectID = "qO2-av-Rz5"; */
+"qO2-av-Rz5.text" = "3 piani";
+
+/* Class = "IBUILabel"; text = "Caduta"; ObjectID = "qS9-ay-0Af"; */
+"qS9-ay-0Af.text" = "Caduta";
+
+/* Class = "IBUIBarButtonItem"; title = "Avanti"; ObjectID = "qov-Sp-OTj"; */
+"qov-Sp-OTj.title" = "Avanti";
+
+/* Class = "IBUIBarButtonItem"; title = "Avanti"; ObjectID = "rOR-X8-GNO"; */
+"rOR-X8-GNO.title" = "Avanti";
+
+/* Class = "IBUITableViewSection"; footerTitle = "Scegli tra le precedenti"; ObjectID = "rSm-B2-FNE"; */
+"rSm-B2-FNE.footerTitle" = "Scegli tra le precedenti";
+
+/* Class = "IBUITableViewSection"; headerTitle = "Qual'è stato il comportamento delle tegole sui tetti"; ObjectID = "rSm-B2-FNE"; */
+"rSm-B2-FNE.headerTitle" = "Qual'è stato il comportamento delle tegole sui tetti?";
+
+/* Class = "IBUILabel"; text = "Moderatamente"; ObjectID = "rdt-NH-hp3"; */
+"rdt-NH-hp3.text" = "Moderatamente";
+
+/* Class = "IBUINavigationItem"; title = "Esperienza: edificio"; ObjectID = "rnh-RN-EYO"; */
+"rnh-RN-EYO.title" = "Esperienza: edificio";
+
+/* Class = "IBUINavigationItem"; title = "L'Aquila - 6/4/2009"; ObjectID = "s1k-pm-li0"; */
+"s1k-pm-li0.title" = "L'Aquila - 6/4/2009";
+
+/* Class = "IBUITableViewSection"; footerTitle = "Scegli tra le precedenti"; ObjectID = "s9Z-UR-NTu"; */
+"s9Z-UR-NTu.footerTitle" = "Scegli tra le precedenti";
+
+/* Class = "IBUITableViewSection"; headerTitle = "Che effetti hai notato su piante ed alberi?"; ObjectID = "s9Z-UR-NTu"; */
+"s9Z-UR-NTu.headerTitle" = "Che effetti hai notato su piante ed alberi?";
+
+/* Class = "IBUIBarButtonItem"; title = "Avanti"; ObjectID = "sPL-xn-Eco"; */
+"sPL-xn-Eco.title" = "Avanti";
+
+/* Class = "IBUILabel"; text = "Alcuni sono caduti"; ObjectID = "sUJ-TZ-rZ1"; */
+"sUJ-TZ-rZ1.text" = "Alcuni sono caduti";
+
+/* Class = "IBUILabel"; text = "Erano immobili"; ObjectID = "sWS-SN-NfX"; */
+"sWS-SN-NfX.text" = "Erano immobili";
+
+/* Class = "IBUINavigationItem"; title = "Cosa stavi facendo?"; ObjectID = "sWi-go-z1x"; */
+"sWi-go-z1x.title" = "Cosa stavi facendo?";
+
+/* Class = "IBUINavigationItem"; title = "Esperienza: edificio"; ObjectID = "t5a-RJ-WbN"; */
+"t5a-RJ-WbN.title" = "Esperienza: edificio";
+
+/* Class = "IBUILabel"; text = "Misto (pietra e/o laterizio e calcestruzzo armato)"; ObjectID = "t66-ZI-9Ze"; */
+"t66-ZI-9Ze.text" = "Misto (pietra e/o laterizio e calcestruzzo armato)";
+
+/* Class = "IBUILabel"; text = "Traboccava"; ObjectID = "tSy-6J-ewK"; */
+"tSy-6J-ewK.text" = "Traboccava";
+
+/* Class = "IBUITableViewSection"; footerTitle = "Scegli tra le precedenti"; ObjectID = "tyh-Ry-aqh"; */
+"tyh-Ry-aqh.footerTitle" = "Scegli tra le precedenti";
+
+/* Class = "IBUITableViewSection"; headerTitle = "Quale era il comportamento dell'acqua nelle piscine?"; ObjectID = "tyh-Ry-aqh"; */
+"tyh-Ry-aqh.headerTitle" = "Quale era il comportamento dell'acqua nelle piscine?";
+
+/* Class = "IBUITableViewSection"; footerTitle = "Muovi lo slider per selezionare l'intensità"; ObjectID = "uBo-FG-rGq"; */
+"uBo-FG-rGq.footerTitle" = "Muovi lo slider per selezionare l'intensità";
+
+/* Class = "IBUITableViewSection"; headerTitle = "Effetti"; ObjectID = "uBo-FG-rGq"; */
+"uBo-FG-rGq.headerTitle" = "Effetti";
+
+/* Class = "IBUILabel"; text = "6 Aprile 2009"; ObjectID = "uT9-rP-Jba"; */
+"uT9-rP-Jba.text" = "6 Aprile 2009";
+
+/* Class = "IBUITableViewSection"; headerTitle = "Questionario breve completato!"; ObjectID = "uUZ-Ef-v8m"; */
+"uUZ-Ef-v8m.headerTitle" = "Questionario breve completato!";
+
+/* Class = "IBUILabel"; text = "Non ricordo"; ObjectID = "uip-Eu-VTc"; */
+"uip-Eu-VTc.text" = "Non ricordo";
+
+/* Class = "IBUILabel"; text = "Acciaio"; ObjectID = "uqr-na-wxj"; */
+"uqr-na-wxj.text" = "Acciaio";
+
+/* Class = "IBUIBarButtonItem"; title = "Avanti"; ObjectID = "urf-U9-SvW"; */
+"urf-U9-SvW.title" = "Avanti";
+
+/* Class = "IBUIBarButtonItem"; title = "Avanti"; ObjectID = "utY-9h-GDk"; */
+"utY-9h-GDk.title" = "Avanti";
+
+/* Class = "IBUILabel"; text = "Non osservato"; ObjectID = "vGP-Ez-cZU"; */
+"vGP-Ez-cZU.text" = "Non osservato";
+
+/* Class = "IBUIBarButtonItem"; title = "Questionario"; ObjectID = "vL1-0u-pj8"; */
+"vL1-0u-pj8.title" = "Questionario";
+
+/* Class = "IBUILabel"; text = "Caduta generale"; ObjectID = "vdp-cN-ujk"; */
+"vdp-cN-ujk.text" = "Caduta generale";
+
+/* Class = "IBUITableViewSection"; headerTitle = "Luogo"; ObjectID = "vr8-Ze-y7w"; */
+"vr8-Ze-y7w.headerTitle" = "Luogo";
+
+/* Class = "IBUILabel"; text = "Durante"; ObjectID = "wiJ-GL-cMg"; */
+"wiJ-GL-cMg.text" = "Durante";
+
+/* Class = "IBUILabel"; text = "Nessun danno"; ObjectID = "x14-07-I8T"; */
+"x14-07-I8T.text" = "Nessun danno";
+
+/* Class = "IBUILabel"; text = "Si erano agitati"; ObjectID = "xQF-cT-pfL"; */
+"xQF-cT-pfL.text" = "Si erano agitati";
+
+/* Class = "IBUILabel"; text = "Comune"; ObjectID = "xps-Mj-bRN"; */
+"xps-Mj-bRN.text" = "Comune";
+
+/* Class = "IBUILabel"; text = "Terreno"; ObjectID = "xys-03-3eG"; */
+"xys-03-3eG.text" = "Terreno";
+
+/* Class = "IBUILabel"; text = "Grazie per aver compilato il questionario!"; ObjectID = "y5W-0N-Qio"; */
+"y5W-0N-Qio.text" = "Grazie per aver compilato il questionario!";
+
+/* Class = "IBUINavigationItem"; title = "Grazie! :)"; ObjectID = "y7b-yB-JgD"; */
+"y7b-yB-JgD.title" = "Grazie! :)";
+
+/* Class = "IBUILabel"; text = "Dall'edificio"; ObjectID = "yEr-eu-zvG"; */
+"yEr-eu-zvG.text" = "Dall'edificio";
+
+/* Class = "IBUITableViewSection"; footerTitle = "Scegli tra le precedenti"; ObjectID = "yfZ-rM-B6y"; */
+"yfZ-rM-B6y.footerTitle" = "Scegli tra le precedenti";
+
+/* Class = "IBUITableViewSection"; headerTitle = "Da dove proveniva il rumore del terremoto?"; ObjectID = "yfZ-rM-B6y"; */
+"yfZ-rM-B6y.headerTitle" = "Da dove proveniva il rumore del terremoto?";
+
+/* Class = "IBUILabel"; text = "Piante e piccoli rami si muovevano"; ObjectID = "yug-pv-ye8"; */
+"yug-pv-ye8.text" = "Piante e piccoli rami si muovevano";
+
+/* Class = "IBUITextField"; placeholder = "Via Salaria, 113"; ObjectID = "z3u-Fn-1Li"; */
+"z3u-Fn-1Li.placeholder" = "Via Salaria, 113";
+
+/* Class = "IBUILabel"; text = "Title"; ObjectID = "zDY-wn-ntK"; */
+"zDY-wn-ntK.text" = "Title";
+
+/* Class = "IBUILabel"; text = "Non osservato"; ObjectID = "zke-0Z-R4F"; */
+"zke-0Z-R4F.text" = "Non osservato";
+
+/* Class = "IBUILabel"; text = "Non osservato"; ObjectID = "zmp-gU-wkr"; */
+"zmp-gU-wkr.text" = "Non osservato";

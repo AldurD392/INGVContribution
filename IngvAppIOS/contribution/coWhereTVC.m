@@ -432,6 +432,8 @@ typedef enum tipoIndirizzo {
         //        TODO: Inserire il metodo per ottenere la stringa di dettagli per un terremoto
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Questionario" message:[NSString stringWithFormat:@"Stai compilando il questionario per: %@.", [coStartingViewController detailsForTerremoto:self.delegate.questionario.terremotoID]] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
+        
+        self.push = NO;
     }
     
     if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusRestricted) {

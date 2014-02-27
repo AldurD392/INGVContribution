@@ -390,6 +390,7 @@
 //        TODO: Inserire il metodo per ottenere la stringa di dettagli per un terremoto
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Questionario esteso" message:[NSString stringWithFormat:@"Stai compilando il questionario esteso per: %@.", [coStartingViewController detailsForTerremoto:self.delegate.questionario.terremotoID]] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
+        self.resume = NO;
     }
     
     [self updateView];

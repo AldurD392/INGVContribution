@@ -36,7 +36,7 @@
 
 - (void) setFloor:(NSNumber *)floor {
     self.delegate.questionario.floor = floor;
-    if (floor.integerValue == 11) {
+    if (floor.integerValue >= 10) {
         self.totalFloors = [NSNumber numberWithInt:11];
     } else {
         self.totalFloors = nil;
@@ -111,7 +111,12 @@
             self.floorCell.detailTextLabel.text = nil;
             self.totalFloorsCell.hidden = YES;
         } else {
-            self.floorCell.detailTextLabel.text = [NSString stringWithFormat:@"%@", self.floor];
+            if (self.floor.integerValue == 11) {
+                self.floorCell.detailTextLabel.text = [NSString stringWithFormat:@"Superiore al 10°"];
+            }
+            else {
+                self.floorCell.detailTextLabel.text = [NSString stringWithFormat:@"%@°", self.floor];
+            }
             self.totalFloorsCell.hidden = NO;
         }
         
@@ -119,20 +124,22 @@
             self.totalFloorsCell.detailTextLabel.text = nil;
             self.nextBarButtonItem.enabled = NO;
         } else {
-            self.totalFloorsCell.detailTextLabel.text = [NSString stringWithFormat:@"%@", self.totalFloors];
+            if (self.totalFloors.integerValue == 11) {
+                self.totalFloorsCell.detailTextLabel.text = [NSString stringWithFormat:@"Oltre 10"];
+            }
+            else {
+                self.totalFloorsCell.detailTextLabel.text = [NSString stringWithFormat:@"%@", self.totalFloors];
+            }
             self.nextBarButtonItem.enabled = YES;
         }
     }
     
-    if (self.floor.integerValue == 11) {
-        self.totalFloorsCell.detailTextLabel.text = @"Superiore";
+    if (self.floor.integerValue >= 10 || self.totalFloors.integerValue == 11) {
+        self.totalFloorsCell.detailTextLabel.text = @"Oltre 10";
     }
     
-    if (self.totalFloors.integerValue == 11){
-        self.totalFloorsCell.detailTextLabel.text = @"Superiore";
-    }
     
-    if (self.floor.integerValue == 11){
+    if (self.floor.integerValue >= 10){
         self.totalFloorsCell.userInteractionEnabled = NO;
         self.totalFloorsCell.textLabel.enabled = NO;
         self.totalFloorsCell.accessoryType = UITableViewCellAccessoryNone;

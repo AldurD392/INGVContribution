@@ -38,6 +38,14 @@
     return @"terremoto di prova";
 }
 
+
+#define ID_TERREMOTO_SEL 3
+/* TODO
+ Questo metodo dovrà essere rimpiazzato con l'opportuno metodo per ritornare l'id del terremoto a partire dalla view in cui ci si trova. */
+- (NSNumber *) terremotoID {
+    return [NSNumber numberWithInt:ID_TERREMOTO_SEL];
+}
+
 // Al momento del prepare for segue, si setta se stessi come delegati!
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"coQuestionarioSegue"]) {
@@ -61,7 +69,7 @@
             cqtvc.delegate.questionario.terremotoID = self.terremotoID; //TODO: Qui va inserito l'id del terremoto!
             cqtvc.delegate.questionario.utenteID = [NSNumber numberWithInt:3]; // TODO: Qui va inserito l'id dell'utente, ma allo stato attuale non sappiamo come sarà!
             
-            if ([nc.topViewController isKindOfClass:[coWhereTVC class]]) {
+            if ([segue.identifier isEqualToString:@"coQuestionarioTerremotiSegueNoAnimation"]) {
                 coWhereTVC *cwtvc = (coWhereTVC *)nc.topViewController;
                 cwtvc.push = YES;  // Per far comparire l'alert di informazione.
             }

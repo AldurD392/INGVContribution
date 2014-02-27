@@ -26,6 +26,7 @@
 - (void) sendQuestionario {
 
     NSString *noteDataString = [self.delegate.questionario questionarioToPostString];
+    
     NSLog(@"Sending questionario.");
     
     NSURLSessionConfiguration *sessionConfiguration = [NSURLSessionConfiguration defaultSessionConfiguration];

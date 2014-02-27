@@ -262,9 +262,9 @@
 //        TODO: Cambiare i testi in base al corpo della notifica push scelta da chi di dovere.
         if (message) {
             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"%@", message]
-                                                                message:@"Vuoi compilare il questionario?"  delegate:self
-                                                      cancelButtonTitle:@"No"
-                                                      otherButtonTitles:@"Si", nil];
+                                                                message:NSLocalizedString(@"Vuoi compilare il questionario?", @"")  delegate:self
+                                                      cancelButtonTitle:NSLocalizedString(@"No", @"")
+                                                      otherButtonTitles:NSLocalizedString(@"Si", @""), nil];
             [alertView show];
             alertView.tag = [[userInfo objectForKey:TERREMOTO_ID] integerValue];
         }

@@ -14,7 +14,7 @@
 
 #import "Server.h"
 
-@interface AppDelegate () <CLLocationManagerDelegate>
+@interface AppDelegate () <CLLocationManagerDelegate, UIAlertViewDelegate>
 @property (strong, nonatomic) CLLocationManager* backgroundLocationManager;
 @property (nonatomic) UIBackgroundTaskIdentifier backgroundTaskIdentifier;
 
@@ -170,8 +170,7 @@
 
 - (void) application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
     if ([application applicationState] == UIApplicationStateInactive) {
-        [self handleLongQuestionarioNotification:notification.userInfo];
-
+        [self handleLongQuestionarioNotification:[notification.userInfo copy]];
         [[UIApplication sharedApplication] cancelLocalNotification:notification];
     }
 }
@@ -201,6 +200,7 @@
     
 // Da qui in poi non dovrebbe esservi bisogno di modificare nulla!
     coQuestionario *questionario = [coQuestionario dictionaryToQuestionario:questionarioDictionary];
+    
     coCheckmarkQuestionTVC *firstQuestion = [coStoryboard instantiateViewControllerWithIdentifier:@"coFirstLongQuestion"];
     
     firstQuestion.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Annulla" style:UIBarButtonSystemItemUndo target:firstQuestion action:@selector(cancelButtonPressed:)];
@@ -241,8 +241,28 @@
 #if !TARGET_IPHONE_SIMULATOR
     
     if ([application applicationState] == UIApplicationStateInactive) {
-        NSLog(@"%@", [userInfo objectForKey:TERREMOTO_ID]);
         [self handleQuestionarioPushNotification:[userInfo objectForKey:TERREMOTO_ID]];
+    } else if ([application applicationState] == UIApplicationStateActive) {
+        NSString *message = nil;
+        
+        NSDictionary *aps = [userInfo objectForKey:@"aps"];
+        id alert = [aps objectForKey:@"alert"];
+        
+        if ([alert isKindOfClass:[NSString class]]) {
+            message = alert;
+        } else if ([alert isKindOfClass:[NSDictionary class]]) {
+            message = [alert objectForKey:@"body"];
+        }
+        
+//        TODO: Cambiare i testi in base al corpo della notifica push scelta da chi di dovere.
+        if (message) {
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"%@", message]
+                                                                message:@"Vuoi compilare il questionario?"  delegate:self
+                                                      cancelButtonTitle:@"No"
+                                                      otherButtonTitles:@"Si", nil];
+            [alertView show];
+            alertView.tag = [[userInfo objectForKey:TERREMOTO_ID] integerValue];
+        }
     }
     
 #endif
@@ -290,7 +310,7 @@
  */
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)devToken {
     
-    NSLog(@"Device token: %@", devToken);
+//    NSLog(@"Device token: %@", devToken);
     
 #if !TARGET_IPHONE_SIMULATOR
     
@@ -359,8 +379,8 @@
     
     NSURLSessionDataTask *postDataTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         if (!error) {
-            NSString *text = [[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding];
-            NSLog(@"Data = %@",text);
+//            NSString *text = [[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding];
+//            NSLog(@"Data = %@", text);
             [session invalidateAndCancel];
         } else {
             NSLog(@"%@", error);
@@ -377,4 +397,10 @@
 {
 	NSLog(@"Failed to get token, error: %@", error);
 }
+
+# pragma mark - UIAlertViewDelegate methods
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    [self handleQuestionarioPushNotification:[NSNumber numberWithInt:alertView.tag]];
+}
+
 @end

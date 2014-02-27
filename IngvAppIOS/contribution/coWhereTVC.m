@@ -425,18 +425,14 @@ typedef enum tipoIndirizzo {
     [self dismissViewControllerAnimated:TRUE completion:nil];
 }
 
-- (void) viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
+- (void) viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     
     if (self.push) {
         //        TODO: Inserire il metodo per ottenere la stringa di dettagli per un terremoto
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Questionario" message:[NSString stringWithFormat:@"Stai compilando il questionario per: %@.", [coStartingViewController detailsForTerremoto:self.delegate.questionario.terremotoID]] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
     }
-}
-
-- (void) viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
     
     if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusRestricted) {
         self.currentPositionSwitch.enabled = NO;

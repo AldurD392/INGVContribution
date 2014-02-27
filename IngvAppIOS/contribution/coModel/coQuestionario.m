@@ -87,17 +87,14 @@
     
     coQuestionario* questionario = [[coQuestionario alloc] init];
     
-    if (!questionario){
-    
+    if (questionario) {
         unsigned count;
         objc_property_t *properties = class_copyPropertyList([coQuestionario class], &count);
 
         for (int i = 0; i < count; i++) {
             NSString *propertyName = [NSString stringWithUTF8String:property_getName(properties[i])];
-            
             [questionario setValue:dizionario[propertyName] forKey:propertyName];
         }
-            
     }
     
     return questionario;

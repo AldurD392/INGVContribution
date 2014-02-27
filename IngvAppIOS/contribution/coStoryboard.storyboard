@@ -1428,9 +1428,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="GFP-8U-n1b" kind="modal" identifier="coQuestionarioTerremotoSegueNoAnimation" animates="NO" id="6rH-WH-OrT"/>
-                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -1447,6 +1444,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="GFP-8U-n1b" kind="modal" identifier="coQuestionarioTerremotoSegueNoAnimation" id="WbN-Jf-mmk"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ewv-Bl-eE4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -4158,10 +4158,10 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="6rH-WH-OrT"/>
-        <segue reference="HL5-Vh-JOw"/>
-        <segue reference="IsM-oi-Ul1"/>
         <segue reference="7QD-ov-zdQ"/>
+        <segue reference="HL5-Vh-JOw"/>
+        <segue reference="YZt-Ds-UYY"/>
+        <segue reference="IsM-oi-Ul1"/>
         <segue reference="Ph7-cm-2dU"/>
     </inferredMetricsTieBreakers>
 </document>

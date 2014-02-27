@@ -7,7 +7,7 @@
 //
 
 #import "coEndTVC.h"
-#define NOTIFICATION_FIRETIME 60 * 60  // Attenti a non mandarle di notte! Tempo di default un'ora
+#define NOTIFICATION_FIRETIME 10 //60 * 60  // Attenti a non mandarle di notte! Tempo di default un'ora
 
 @interface coShortEndTVC : coEndTVC
 

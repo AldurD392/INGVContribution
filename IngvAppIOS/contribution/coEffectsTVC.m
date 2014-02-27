@@ -89,6 +89,11 @@
 # pragma mark - ViewController Life Cycle
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    
+    if (!self.effects) {
+        self.effects = [NSNumber numberWithInt:0];
+    }
+    
     [self updateView];
 }
 

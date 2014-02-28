@@ -99,6 +99,18 @@
     }
 }
 
+- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
+    if (section == 1) {
+        if (self.floor == nil) {
+            return nil;
+        } else {
+            return @"Il numero totale di piani comprende il piano terra.";
+        }
+    } else {
+        return nil;
+    }
+}
+
 - (void) updateView {
     
     [self markDetailCell:[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForItem:self.whereDetail.integerValue inSection:0               ]]];

@@ -53,7 +53,7 @@
 
 @interface coQuestionario : NSObject
 @property (strong, nonatomic) NSNumber *terremotoID;
-@property (strong, nonatomic) NSNumber *utenteID;
+@property (strong, nonatomic) NSString *deviceuid;
 @property (strong, nonatomic) NSDate *whenDetail;
 @property (strong, nonatomic) NSDate *whenCompiled;
 @property (nonatomic) NSMutableDictionary *where;

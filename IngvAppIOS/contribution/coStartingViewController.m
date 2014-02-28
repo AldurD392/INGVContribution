@@ -10,6 +10,7 @@
 #import "coQuestionario.h"
 #import "coQuestionTVC.h"
 #import "coWhereTVC.h"
+#import "AppDelegate.h"
 
 /* 
  TODO
@@ -61,7 +62,7 @@
 //            Quando il terremoto non ha ancora un ID assegnato da INGV, si utilizza il valore nil.
 //            In questo caso infatti, si sta compilando un questionario per un terremoto non in lista
             cqtvc.delegate.questionario.terremotoID = nil;
-            cqtvc.delegate.questionario.utenteID = [NSNumber numberWithInt:3]; // TODO: Qui va inserito l'id dell'utente!
+            cqtvc.delegate.questionario.deviceuid = [AppDelegate getApplicationUUID]; // TODO: Qui va inserito l'id dell'utente!
         }
     } else if ([segue.identifier isEqualToString:@"coQuestionarioTerremotoSegue"] ||
                [segue.identifier isEqualToString:@"coQuestionarioTerremotoSegueNoAnimation"]) {
@@ -71,7 +72,7 @@
             cqtvc.delegate = self;
             
             cqtvc.delegate.questionario.terremotoID = self.terremotoID; //TODO: Qui va inserito l'id del terremoto!
-            cqtvc.delegate.questionario.utenteID = [NSNumber numberWithInt:3]; // TODO: Qui va inserito l'id dell'utente, ma allo stato attuale non sappiamo come sarà!
+            cqtvc.delegate.questionario.deviceuid = [AppDelegate getApplicationUUID]; // TODO: Qui va inserito l'id dell'utente, ma allo stato attuale non sappiamo come sarà!
             
             if ([segue.identifier isEqualToString:@"coQuestionarioTerremotoSegueNoAnimation"]) {
                 coWhereTVC *cwtvc = (coWhereTVC *)nc.topViewController;

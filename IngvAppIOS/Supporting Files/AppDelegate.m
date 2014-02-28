@@ -41,11 +41,11 @@
 //    NSLog(@"%f, %f", coordinate.latitude, coordinate.longitude);
     [self sendBackgroundLocationToServer:location];
     
-    UILocalNotification *localNotification = [[UILocalNotification alloc] init];
-    
-//    Debugging purposes
-    localNotification.alertBody = [NSString stringWithFormat:@"Nuova posizione: %f, %f", location.coordinate.latitude, location.coordinate.longitude];
-    localNotification.hasAction = NO;
+//    UILocalNotification *localNotification = [[UILocalNotification alloc] init];
+//    
+////    Debugging purposes
+//    localNotification.alertBody = [NSString stringWithFormat:@"Nuova posizione: %f, %f", location.coordinate.latitude, location.coordinate.longitude];
+//    localNotification.hasAction = NO;
     
 //    [[UIApplication sharedApplication] presentLocalNotificationNow:localNotification];
 //    
